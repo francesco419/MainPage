@@ -1,0 +1,56 @@
+.tophead {
+  position: fixed;
+  width: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 1px 0 lightgray;
+  height: 60px;
+  top: 0;
+}
+
+.topheadin {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px 0 20px;
+  max-width: 1300px;
+}
+
+.topheadflex {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+}
+
+/* .tophead-menu {
+} */
+
+.menuicon {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.menuicon a img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.menulists {
+  display: flex;
+  align-items: center;
+}
+
+.menulists a {
+  margin-left: 50px;
+}
+
+.topheadprofile {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}

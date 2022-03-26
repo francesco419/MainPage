@@ -1,0 +1,41 @@
+.Skills {
+  display: flex;
+  position: relative;
+  top: 60px;
+  padding: 10px;
+  height: 110px;
+}
+
+.icon {
+  border: 1px solid pink;
+  width: 70px;
+  height: 70px;
+  border-radius: 7px;
+  background-color: white;
+}
+
+/* .icon:hover .name {
+  opacity: 1;
+}
+ */
+.icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, fantasy;
+  font-size: 50px;
+  position: relative;
+  height: 70px;
+  width: 210px;
+  border: 1px solid pink;
+  background-color: white;
+  top: -50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 7px;
+  /*   opacity: 0; */
+  text-align: center;
+}
