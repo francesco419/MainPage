@@ -1,13 +1,12 @@
 .Skills {
   display: flex;
   position: relative;
-  top: 60px;
   padding: 10px;
-  height: 110px;
+  margin-top: 20px;
 }
 
 .icon {
-  border: 1px solid pink;
+  border: 1px solid tomato;
   width: 70px;
   height: 70px;
   border-radius: 7px;
@@ -26,16 +25,13 @@
 
 .name {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, fantasy;
-  font-size: 50px;
-  position: relative;
+  font-size: 45px;
   height: 70px;
   width: 210px;
-  border: 1px solid pink;
-  background-color: white;
-  top: -50%;
-  left: 50%;
-  z-index: -1;
+  border: 1px solid blue;
   border-radius: 7px;
-  /*   opacity: 0; */
+  background-color: white;
   text-align: center;
+  margin-left: 10px;
+  /*   opacity: 0; */
 }

@@ -6,6 +6,8 @@
   box-shadow: 0 1px 0 lightgray;
   height: 60px;
   top: 0;
+  background-color: white;
+  transition: opacity 1s;
 }
 
 .topheadin {
@@ -26,7 +28,6 @@
 
 .menuicon {
   display: flex;
-  align-items: center;
   margin-right: 30px;
 }
 
@@ -34,6 +35,7 @@
   height: 50px;
   width: 50px;
   object-fit: cover;
+  align-self: center;
 }
 
 .menulists {
