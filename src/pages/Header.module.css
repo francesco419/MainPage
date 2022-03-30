@@ -1,13 +1,12 @@
 .tophead {
   position: fixed;
   width: 100%;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  box-shadow: 0 1px 0 lightgray;
   height: 60px;
   top: 0;
-  background-color: white;
-  transition: opacity 1s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  z-index: 99;
 }
 
 .topheadin {
@@ -28,7 +27,6 @@
 
 .menuicon {
   display: flex;
-  margin-right: 30px;
 }
 
 .menuicon a img {

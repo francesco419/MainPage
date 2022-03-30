@@ -23,7 +23,8 @@ function Header(){
               <a href="https://www.naver.com/">ABCDEFH</a>
             </div>
             <div className={styles.topheadprofile}>
-              <Weather/>
+              Name
+  {/*             <Weather/> */}
             </div>
           </div>
         </div>
