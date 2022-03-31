@@ -1,42 +1,17 @@
-main {
-  min-height: 1000px;
-}
-
 footer {
   background-color: blue;
   height: 500px;
 }
-.mainimg {
+
+.cover {
   width: 100%;
-  height: 600px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.mainimg img {
+.cover img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  background-color: orange;
-}
-
-.intro div {
-  border: 3px solid black;
-  width: 100px;
-  height: 100px;
-}
-
-.about {
-  height: 500px;
-  background-color: yellow;
-}
-
-.main {
-  position: relative;
-  background-color: green;
 }

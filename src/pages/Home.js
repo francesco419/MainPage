@@ -1,27 +1,18 @@
 import Header from "./Header";
-import SkillBox from "../objects/SkillBox";
 import styles from "./Home.module.css";
+import SkillBox from "../objects/SkillBox";
+import Move from "../objects/Move";
+import Intro from "../objects/Intro";
+import {useScroll} from "../objects/useScroll";
 
 
 function Home(){
+    const {y}=useScroll();
+    console.log(y);
     return(
-        <div>
-            <Header/>      
-            <main>
-                <div className={styles.mainimg}>
-                    <img src="https://picsum.photos/1000/500"/>
-                </div>
-                <div className={styles.intro}>Intro
-                    <div>a</div>
-                </div>
-                <div className={styles.about}>aoubt me....</div>
-                <div className={styles.main}>
-                    <SkillBox/>
-                </div>
-            </main>
-            <footer>
-                Footer
-            </footer>
+        <div className={styles.cover}>
+            <Header/>
+            <img src="https://picsum.photos/1000/500"/>
         </div> 
     )
 }
