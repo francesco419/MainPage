@@ -1,6 +1,9 @@
-footer {
-  background-color: blue;
-  height: 500px;
+.main{
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .cover {
@@ -8,10 +11,44 @@ footer {
   height: 100vh;
   margin: 0;
   padding: 0;
+  scroll-snap-align: start;
 }
 
 .cover img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.bodies{
+  width:100%;
+  height:100vh;
+  margin-left: auto;
+  margin-right:auto;
+  scroll-snap-align:start;
+}
+
+
+.box{
+  height:100vh;
+  width: 100%;
+}
+
+.a{
+  background-color: red;
+}
+.b{
+  background-color: orange;
+}
+.c{
+  background-color: yellow;
+}
+.d{
+  background-color: green;
+}
+.e{
+  background-color: blue;
+}
+.f{
+  background-color: purple;
 }

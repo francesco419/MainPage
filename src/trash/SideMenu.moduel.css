@@ -1,0 +1,60 @@
+.tophead {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 25%;
+    width: 50px;
+    top: 20%;
+    left: -10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: white;
+    z-index: 99;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  
+  .topheadin {
+    height: 100%;
+  }
+  
+  .topheadmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .menuicon {
+    display: block;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .menuicon img{
+    height: 30px;
+    width: 30px;
+  }
+  
+  .menulists {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .topheadprofile {
+    display: flex;
+  }
+  
+  .menulists a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  
+  @media (max-width: 800px) {
+    .menulists {
+      display: none;
+    }
+  }

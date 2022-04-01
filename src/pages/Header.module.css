@@ -1,28 +1,28 @@
 .tophead {
   display: flex;
-  flex-direction: column;
   position: fixed;
-  height: 25%;
-  width: 50px;
-  top: 20%;
-  left: -10px;
+  height: 60px;
+  width: 100%;
+  justify-content: center;
+  top: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: white;
   z-index: 99;
+}
+
+.tophead.active{
   background-color: black;
-  border: 1px solid black;
-  border-radius: 15px;
 }
 
 .topheadin {
   height: 100%;
+  width:75%;
 }
 
 .topheadmenu {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   height: 100%;
   align-items: center;
   flex-grow: 1;
@@ -30,13 +30,19 @@
 
 .menuicon {
   display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.menuicon img{
   height: 30px;
   width: 30px;
 }
 
 .menulists {
   display: flex;
-  flex-direction: column;
+  width:50%;
+  justify-content: space-between;
 }
 
 .topheadprofile {
