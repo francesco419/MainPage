@@ -1,0 +1,26 @@
+.tophead {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 25%;
+    width: 100px;
+    top: 10%;
+    right:1.5em;
+    color: white;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.226);
+    border-radius: 15px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    align-content: stretch;
+}
+
+.tophead span{
+  height:10%;
+  width: 100%;
+}
+
+.tophead div{
+  height:15%;
+  width: 100%;
+}

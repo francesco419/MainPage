@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import img from "./smile.png";
 import {Link} from "react-router-dom";
@@ -15,6 +15,12 @@ function Header(){
       }
   }
 
+  useEffect(()=>changeheadercolor,[window.scrollY])
+
+  const Moveto=(point)=>{
+    window.scroll({top:point,behavior:"smooth"}); 
+  } 
+
   window.addEventListener("scroll",changeheadercolor);
 
   return(
@@ -27,9 +33,12 @@ function Header(){
                 </Link>
               </div>
               <div className={styles.menulists}>
-                <Link to={"/skills"}>ABCDEFG</Link>
-                <a href="https://www.naver.com/">ABCDEFG</a>
-                <a href="https://www.naver.com/">ABCDEFG</a>
+                <span onClick={()=>Moveto(950)}>ABCDEFG</span>
+                <span onClick={()=>Moveto(1900)}>ABCDEFG</span>
+                <span onClick={()=>Moveto(2900)}>ABCDEFG</span>
+                <span onClick={()=>Moveto(3900)}>ABCDEFG</span>
+                <span onClick={()=>Moveto(4850)}>ABCDEFG</span>
+                <span onClick={()=>Moveto(5900)}>ABCDEFG</span>
               </div>
               <div className={styles.topheadprofile}>
                 N

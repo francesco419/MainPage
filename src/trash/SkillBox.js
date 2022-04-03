@@ -1,9 +1,5 @@
-import Skills from "./Skills";
+import Skills from "../trash/Skills";
 import styles from "./SkillBox.module.css";
-import cclogo from "./picture/Cc.png";
-import cplogo from "./picture/Cp.png";
-import cslogo from "./picture/Cs.png";
-import jvlogo from "./picture/jv.png";
 
 function SkillBox(){
  const no =[0,1,2,3];

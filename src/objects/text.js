@@ -1,4 +1,4 @@
-import "./text.css";
+import styles from "./text.module.css";
 
 function Scrolltop(){
     const OnClick=()=>{
@@ -6,7 +6,7 @@ function Scrolltop(){
     }
     return (
         <div>
-            <button onClick={OnClick}>
+            <button className={styles.scroll} onClick={OnClick}>
                 A
             </button>
         </div>

@@ -1,0 +1,53 @@
+.main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullbox{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.skillbox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftover{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+}
+
+.overbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.overbox div img {
+    width: 100px;
+    height: 100px;
+    /* transition: all 0.5s; */
+    /* transform: scale(1); */
+    animation: bigsmall 1.5s Infinite alternate;
+  }
+  
+  @keyframes bigsmall {
+    0% {
+      transform: translateY(-2px)
+    }
+    100% {
+      transform: translateY(3px)
+    }
+  }

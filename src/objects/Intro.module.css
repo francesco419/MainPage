@@ -1,5 +1,9 @@
-.box {
-  height: 90%;
-  width: 90%;
-  border: 1px solid black;
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width:100%;
+  color:white;
 }
+

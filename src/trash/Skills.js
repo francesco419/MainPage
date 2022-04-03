@@ -1,9 +1,5 @@
 import styles from "./Skills.module.css";
 import PropTypes from "prop-types";
-import ht from "./picture/HTML.png";
-import cs from "./picture/CSS.png";
-import js from "./picture/JS.png";
-import re from "./picture/React.png";
 import { useEffect, useState } from "react";
 
 function Skills({num,text}){

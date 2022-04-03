@@ -1,15 +1,19 @@
 import Header from "./Header";
 import styles from "./Home.module.css";
-import SkillBox from "../objects/SkillBox";
-import Move from "../objects/Move";
 import Intro from "../objects/Intro";
 import classNames from 'classnames'
 import Scrolltop from "../objects/text";
+import Skillpart from "../objects/Skillpart";
+import { useScroll } from "../objects/useScroll";
+import SideMenu from "../objects/SideMenu";
 
 function Home(){
+    const {y}=useScroll();
+    console.log(y);
     return(
     <div className={styles.main}>
         <Header/>
+        <SideMenu/>
         <div>
             <div className={styles.cover}>
             <img src="https://picsum.photos/1000/500"/>
@@ -19,10 +23,9 @@ function Home(){
                     <Intro/>
                 </div>
                 <div className={classNames(styles.b, styles.box)}>
-                    <Move/>
+                    <Skillpart/>
                 </div>
                 <div className={classNames(styles.c, styles.box)}>
-                    <SkillBox/>
                 </div>
                 <div className={classNames(styles.d, styles.box)}>d</div>
                 <div className={classNames(styles.e, styles.box)}>e</div>

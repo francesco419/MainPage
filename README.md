@@ -84,7 +84,7 @@ hover-unhover시에 transition 속성이 전부다 적용되는것을 알 수 �
 
 ---
 
-===5---
+===5===
 
 레이아웃 수정.
 
@@ -95,3 +95,17 @@ hover-unhover시에 transition 속성이 전부다 적용되는것을 알 수 �
     scroll-snap-align: start;
 
 type은 container에, align은 내부요소 css에 넣어주면 된다.
+
+---
+
+===6===
+
+전체적인 디자인계획 변경으로 Skills에 관한 이전 작업들을 전부 폐기하기로함.
+
+:hover 와 transform을 사용하여 뒤집히는 모션을 사용한 Skill카드를 제작.
+
+앞면에는 각각 스킬아이콘을, 뒷면에는 내가 가지고 있는 스킬에 대한 설명을 작성.
+
+스크롤에 따라 컨텐츠가 보이는 방식에 Fade-효과를 주기위해서 Aos 라이브러리를 추가하였다.
+
+왼쪽상단에 현재 위치한 섹션의 위치를 표시하는 Indicator를 추가하였다.
