@@ -36,8 +36,7 @@ function Skillpart(){
     ]);
     const [icon,setIcon]=useState([Cc,Cp,Cs,Jv]);
     return(
-        <div className={styles.main}>
-            <div className={styles.fullbox}>
+        <div className={styles.fullbox}>
                 <div data-aos="fade-up" className={styles.skillbox}>
                     {image.map((item)=>(
                         <FlipCard
@@ -46,14 +45,13 @@ function Skillpart(){
                         />
                     ))}
                 </div>
-                <div className={styles.leftover}>
-                    <div data-aos="fade-up" className={styles.overbox}>
+                <div data-aos="fade-up" className={styles.leftover}>
+                    <div className={styles.overbox}>
                         {icon.map((icons)=>(
-                            <div>
-                                <img src={icons}/>
-                            </div>
-                        ))}
-                    </div>
+                        <div>
+                            <img src={icons}/>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

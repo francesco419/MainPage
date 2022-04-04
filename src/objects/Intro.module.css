@@ -1,9 +1,13 @@
-.main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width:100%;
+.outer{
+  height: 400px;
   color:white;
+}
+
+.split{
+  height:400px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border:2px solid green;
+  background-color: white;
 }
 

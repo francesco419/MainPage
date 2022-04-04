@@ -1,38 +1,29 @@
-.main{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
 .fullbox{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px;
 }
 
 .skillbox{
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
 
 .leftover{
-    display: flex;
-    justify-content: center;
-    height: 200px;
-    width: 100%;
 }
 
 .overbox{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    height: 100%;
-    padding-top: 20px;
+    width: 70%;
+    margin:50px auto 0 auto;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 15px;
 }
 
 .overbox div img {
