@@ -1,0 +1,31 @@
+.project{
+    display: flex;
+    height:600px;
+    width: 1300px;
+    margin: 40px auto;
+  }
+  
+  .pic{
+    height: 100%;
+    width: 50%;
+    border-radius: 15px;
+    border: 1px solid;
+  }
+  
+  .pic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .intro{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .Links{
+    text-decoration-line : none;
+    color: black;
+  }

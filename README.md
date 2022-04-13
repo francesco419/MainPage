@@ -1,4 +1,4 @@
-===개인 페이지 제작===
+===포트폴리오제작===
 
 ---
 
@@ -50,9 +50,9 @@ Scroll시 각 파트에대한 애니메이션 등의 구동 Hook 생성. useScro
 
 ===4===
 
-과도하게 사용된 <div> 축소 및 제거, Header.module.css의 media요소 추가.
+과도하게 사용된 div 축소 및 제거, Header.module.css의 media요소 추가.
 
-\*div로 만든 박스에 img를 넣은 상태로 div에 hover를 주어 애니메이션을 추가하는데에 문재발생.
+div로 만든 박스에 img를 넣은 상태로 div에 hover를 주어 애니메이션을 추가하는데에 문재발생.
 
     <div className={styles.a}>
         <img src={image}/>
@@ -116,10 +116,24 @@ type은 container에, align은 내부요소 css에 넣어주면 된다.
 
 IntersectionObserver를 사용하여 본문 각 파트에 대한 visible 데이터를 통하여 각 세션이 뷰에 위치할때 해당 사이드 바의 BackgroudColor에 변화를 주어 사용자가 자신이 어느 위치에 있는 파트를 현재 보고있는지 알 수있는 컴포넌트를 제작 하였다.
 
-과도하게 사용된 <div> 엘리먼트 제거 및 축소화.
+과도하게 사용된 div 엘리먼트 제거 및 축소화.
 
-(항상 컴포넌트를 박스화 해서 생각하다 보니 과도하게 <div>를 많이 사용하는 잘못된 습관이 생긴듯함. 무분별한 사용 금지.)
+(항상 컴포넌트를 박스화 해서 생각하다 보니 과도하게 div를 많이 사용하는 잘못된 습관이 생긴듯함. 무분별한 사용 금지.)
 
 타 사이트를 통한 소개 및 연락가능한 수단들을 넣은 Contact페이지 제작.
 
 ---
+
+===8===
+
+간략화.
+
+---
+
+===9===
+
+프로젝트에대한 상세설명을 보여주는 ProjectDetail.js생성
+
+Home에서 보여지는 Project를 생성하는 Project.js생성
+
+Home에서 보여지는 Skill을 생성하는 Skill.js생성

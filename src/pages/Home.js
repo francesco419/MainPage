@@ -4,7 +4,7 @@ import Intro from "../objects/Intro";
 import classNames from 'classnames';
 import SideMenu from "../objects/SideMenu";
 import { useScroll } from "../objects/useScroll";
-import {useRef, useEffect} from "react";
+import {useRef, useEffect, useState} from "react";
 import {useOnScreen} from "../objects/useOnScreen";
 import ht from "../objects/picture/HTML.png";
 import cs from "../objects/picture/CSS.png";
@@ -12,11 +12,42 @@ import js from "../objects/picture/JS.png";
 import re from "../objects/picture/React.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Skill from "../objects/Skill";
+import Project from "../objects/Project";
 
 function Home(){
     useEffect(()=>{
         Aos.init({duration:1500 });
     },[])
+
+    const skilltext = [
+        {
+            id:1,
+            left:false,
+            text:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            imgs:js
+        },
+        {
+            id:2,
+            left:true,
+            text:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            imgs:ht
+        },
+        {
+            id:3,
+            left:false,
+            text:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            imgs:cs
+        },
+        {
+            id:4,
+            left:true,
+            text:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            imgs:re
+        }
+    ];
+
+    const prj = [0,1,2,3];
 
     //const [test,ts]=useTT();
     const ref1=useRef(null);
@@ -46,26 +77,14 @@ function Home(){
                     <div ref={ref2} className={classNames(styles.b, styles.box)}>
                         {/* <Skillpart/> */}
                         <div>
-                            <div data-aos="fade-right" className={classNames(styles.skillbox, styles.rightside)}>
-                                <img src={js}></img>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                            </div>
-                            <div data-aos="fade-left" className={classNames(styles.skillbox, styles.leftside)}>
-                            <img src={ht}></img>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                            </div>
-                            <div data-aos="fade-right" className={classNames(styles.skillbox, styles.rightside)}>
-                            <img src={cs}></img>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                            </div>
-                            <div data-aos="fade-left" className={classNames(styles.skillbox, styles.leftside)}>
-                            <img src={re}></img>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                                <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                            </div>
+                        {skilltext.map((skills)=>(
+                            <Skill
+                            id={skills.id}
+                            left={skills.left}
+                            text={skills.text}
+                            imgs={skills.imgs}
+                            />
+                            ))}
                         </div>
                         <div data-aos="fade-up" className={styles.lefto}>
                             <img src={re}></img>
@@ -77,39 +96,11 @@ function Home(){
                     <div className={classNames(styles.c, styles.box)}>
                         <div>
                             <h1>PROJECT</h1>
-                            <div className={styles.project}>
-                                <div data-aos="fade-up" className={styles.pic}>
-                                    <img src="https://picsum.photos/1000/500"/>
-                                </div>
-                                <div data-aos="fade-left" className={styles.intro}>
-                                    <h1>유투브 클론 프로젝트</h1>
-                                    <h2>React, Java Script</h2>
-                                    <h3>리엑트를 사용하여 유튜브 전반적인 기능을동일하게 구현한 프로젝트입니다.</h3>
-                                    <h3>리엑트를 사용한 페이지 전환 및 라이브러리에 대해 더욱 발전시킬 수 있었던 계기가 되었습니다.</h3>
-                                </div>
-                            </div>
-                            <div className={styles.project}>
-                                <div data-aos="fade-up" className={styles.pic}>
-                                    <img src="https://picsum.photos/1000/500"/>
-                                </div>
-                                <div data-aos="fade-left" className={styles.intro}>
-                                    <h1>유투브 클론 프로젝트</h1>
-                                    <h2>React, Java Script</h2>
-                                    <h3>리엑트를 사용하여 유튜브 전반적인 기능을동일하게 구현한 프로젝트입니다.</h3>
-                                    <h3>리엑트를 사용한 페이지 전환 및 라이브러리에 대해 더욱 발전시킬 수 있었던 계기가 되었습니다.</h3>
-                                </div>
-                            </div>
-                            <div className={styles.project}>
-                                <div data-aos="fade-up" className={styles.pic}>
-                                    <img src="https://picsum.photos/1000/500"/>
-                                </div>
-                                <div data-aos="fade-left" className={styles.intro}>
-                                    <h1>유투브 클론 프로젝트</h1>
-                                    <h2>React, Java Script</h2>
-                                    <h3>리엑트를 사용하여 유튜브 전반적인 기능을동일하게 구현한 프로젝트입니다.</h3>
-                                    <h3>리엑트를 사용한 페이지 전환 및 라이브러리에 대해 더욱 발전시킬 수 있었던 계기가 되었습니다.</h3>
-                                </div>
-                            </div>
+                            {prj.map((num)=>(
+                                <Project
+                                num={num}
+                                />
+                            ))}
                             <a href="">
                                 View All →
                             </a>
