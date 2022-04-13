@@ -9,6 +9,7 @@
 
 .circle{
     display: flex;
+    height:100%;
     width:80%;
     justify-content: space-around;
     border-radius: 50%;
@@ -20,15 +21,14 @@
 .innerCircle{
    width:100px;
    height:100px;
-   margin-top: 30px;
    border: 3px solid yellow;
    border-radius: 50%;
    background-color: mediumspringgreen;
-   animation: bigsmall 1.5s Infinite alternate;
+   margin: 20px 0 20px 0;
 }
 
 .innerCircle:hover{
-    box-shadow: 0 0 .5em, 0 0 .6em;
+    box-shadow: 0 0 1em, 0 0 1em;
 }
 
 .innerCircle img{
@@ -48,16 +48,6 @@
     width: inherit;
     border-radius: 50%;
 }
-
-@keyframes bigsmall {
-    0% {
-      transform: translateY(-2px)
-    }
-    100% {
-      transform: translateY(3px)
-    }
-  }
-
 /* 
 .a{
     background-color: mediumspringgreen;

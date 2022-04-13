@@ -20,15 +20,13 @@ function SideMenu(arr){
   window.addEventListener("scroll",showsidebar);
 
   return(
-    <div style={showbar ? null : {display:'none'}} className={styles.sidehead}>
+    <div className={styles.sidehead}>
       <div className={styles.inner}>
         <div className={styles.up} onClick={()=>Moveto(0)}>Up</div>
-        <span style={arr.arr[0] ? {backgroundColor:BACKG} : null}>ABCDEFG</span>
-        <span style={arr.arr[1] ? {backgroundColor:BACKG} : null}>ABCDEFG</span>
-        <span style={arr.arr[2] ? {backgroundColor:BACKG} : null}>ABCDEFG</span>
-        <span style={arr.arr[3] ? {backgroundColor:BACKG} : null}>ABCDEFG</span>
-        <span style={arr.arr[4] ? {backgroundColor:BACKG} : null}>ABCDEFG</span>
-        <span style={arr.arr[5] ? {backgroundColor:BACKG} : null}>ABCDEFG</span>
+        <span style={arr.arr[0] ? {backgroundColor:BACKG} : null}>Intro</span>
+        <span style={arr.arr[1] ? {backgroundColor:BACKG} : null}>Skills</span>
+        <span style={arr.arr[2] ? {backgroundColor:BACKG} : null}>Project</span>
+        <span style={arr.arr[3] ? {backgroundColor:BACKG} : null}>Comment</span>
         <div className={styles.down} onClick={()=>Moveto(5900)}>Down</div>
       </div>
     </div>

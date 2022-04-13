@@ -4,6 +4,7 @@
   /* scroll-snap-type: y mandatory;
   overflow: scroll;
   overflow-x: hidden; */
+  background-color: rgb(182, 182, 182);
 }
 
 .cover {
@@ -25,28 +26,110 @@
   height:100%;
   margin-left: auto;
   margin-right:auto;
+  max-width: 2000px;
 }
 
 .box{
   width: 100%;
-  /* scroll-snap-align: start; */
+  padding: 20px;
 }
 
-.a{
-  background-color: red;
+.b img{
+  height: 100px;
+  width: 100px;
 }
-.b{
-  background-color: rgb(34, 25, 87);
+
+.c a{
+  position: relative;
+  left: 50%;
+  text-decoration-line : none;
+  color: black;
 }
-.c{
-  background-color: navy;
+
+.d h1{
+  position: relative;
+  left: 10%;
 }
-.d{
-  background-color: green;
+
+.skillbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:300px;
+  width: 1000px;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 0 20px 0 20px;
+  font-size: 30px;
 }
-.e{
-  background-color: blue;
+
+.leftside{
+  margin: 20px auto 20px auto;
 }
-.f{
-  background-color: purple;
+
+.rightside{
+  margin: 20px auto 20px auto;
+}
+
+.lefto{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height:120px;
+  width: 500px;
+  border: 1px solid;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.project{
+  display: flex;
+  height:600px;
+  width: 1300px;
+  margin: 40px auto;
+}
+
+.pic{
+  height: 100%;
+  width: 50%;
+  border-radius: 15px;
+  border: 1px solid;
+}
+
+.pic img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.intro{
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+
+.commentbox{
+  display: flex;
+  width:800px;
+  height:250px;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.commentinfo{
+  width:25%;
+  height: 100%;
+}
+
+.comment{
+  width:75%;
+  height:100%;
+}
+
+.comment input{
+  width:90%;
+  height:50%;
 }
