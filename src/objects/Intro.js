@@ -6,7 +6,7 @@ import kakao from './picture/kakao.png';
 
 function Intro(){
 
-    const str = "이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n"
+    const str = "이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n";
     return(
         <div className={styles.split}>
             <div className={styles.intro}>

@@ -16,7 +16,7 @@ import Skill from "../objects/Skill";
 import Project from "../objects/Project";
 
 function Home(){
-    useEffect(()=>{
+     useEffect(()=>{
         Aos.init({duration:1500 });
     },[])
 
