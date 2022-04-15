@@ -3,8 +3,6 @@ import "aos/dist/aos.css";
 import styles from "./Skill.module.css";
 
 function Skill({id,left,text,imgs}){
-    const abc = false;
-
     return(
         <div>
             {left ? (

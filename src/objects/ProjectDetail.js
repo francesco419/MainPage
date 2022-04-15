@@ -1,4 +1,4 @@
-import {useRef, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import styles from "./ProjectDetail.module.css";
 import Aos from 'aos';
@@ -23,10 +23,10 @@ function ProjectDetail(){
     }//https://api.github.com/users/francesco419/repos
 
     const getnext=()=>{
-        if(parseInt(id)==0){
+        if(parseInt(id)===0){
             setIsprev(false);
         }
-        if(parseInt(id)==arr.length-1){
+        if(parseInt(id)===arr.length-1){
             setIsnext(false);
         }
     }
@@ -108,15 +108,12 @@ function ProjectDetail(){
             "value":ht
         },
     ]
-    Aos.refresh();
-
+    
     return(
         <div className={styles.page}>
             <div className={styles.intro}>
-                <div data-aos="fade-up" className={styles.name}>
-                    PROJECT INFO
+                <div data-aos="fade-up" className={styles.name}>PROJECT INFO</div>
                     <div data-aos="fade-up" className={styles.subname}>{str[id].name}
-                </div>
                 </div>
                 <div className={styles.info}>
                     <div data-aos="fade-up" data-aos-delay="1000" className={styles.text}>

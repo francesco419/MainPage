@@ -8,7 +8,7 @@ function Intro(){
 
     const str = "이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n";
     return(
-        <div className={styles.split}>
+        <div data-aos="fade-up" className={styles.split}>
             <div className={styles.intro}>
                 <h2>Intro.</h2>
                 <h1>LEE SANG HEAN</h1>

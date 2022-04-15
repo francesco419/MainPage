@@ -1,10 +1,8 @@
-import Header from "./Header";
 import styles from "./Home.module.css";
 import Intro from "../objects/Intro";
 import classNames from 'classnames';
 import SideMenu from "../objects/SideMenu";
-import { useScroll } from "../objects/useScroll";
-import {useRef, useEffect, useState} from "react";
+import {useRef, useEffect} from "react";
 import {useOnScreen} from "../objects/useOnScreen";
 import ht from "../objects/picture/HTML.png";
 import cs from "../objects/picture/CSS.png";
@@ -47,18 +45,23 @@ function Home(){
         }
     ];
 
-    const prj = [0,1,2,3];
+    const prjt = [0,1,2,3];
 
     //const [test,ts]=useTT();
     const ref1=useRef(null);
     const ref2=useRef(null);
     const ref3=useRef(null);
     const ref4=useRef(null);
+
     const visible1=useOnScreen(ref1);
     const visible2=useOnScreen(ref2);
     const visible3=useOnScreen(ref3);
-    console.log(visible3)
     const visible4=useOnScreen(ref4);
+    
+    console.log("v1 : "+visible1)
+    console.log("v2 : "+visible2)
+    console.log("v3 : "+visible3)
+    console.log("v4 : "+visible4)
 
     const visarr=[visible1,visible2,visible3,visible4];
 
@@ -70,16 +73,16 @@ function Home(){
                 <div className={styles.cover}>
                 <img src="https://picsum.photos/1000/500"/>
                 </div> 
-                <div  /* {...test} */className={styles.bodies}>
+                <div className={styles.bodies}>
                     <div ref={ref1} className={classNames(styles.a, styles.box)}>
                         <Intro/>
-                        </div>
+                    </div>
                     <div ref={ref2} className={classNames(styles.b, styles.box)}>
-                        {/* <Skillpart/> */}
+                        <h1 data-aos="fade-up">SKILLS</h1>
                         <div>
-                        {skilltext.map((skills)=>(
+                            {skilltext.map((skills)=>(
                             <Skill
-                            id={skills.id}
+                            key={skills.id}
                             left={skills.left}
                             text={skills.text}
                             imgs={skills.imgs}
@@ -94,17 +97,18 @@ function Home(){
                         </div>
                     </div>
                     <div className={classNames(styles.c, styles.box)}>
-                        <div>
-                            <h1>PROJECT</h1>
-                            {prj.map((num)=>(
-                                <Project
-                                num={num}
-                                />
+                        <h1 data-aos="fade-up">PROJECT</h1>
+                        <div ref={ref3}>
+                            {prjt.map((no)=>(
+                            <Project
+                            key={no}
+                            num={no}
+                            />
                             ))}
-                            <a href="">
-                                View All →
-                            </a>
                         </div>
+                        <a href="www.naver.com">
+                            View All →
+                        </a>
                     </div>
                     <div ref={ref4} className={classNames(styles.d, styles.box)}>
                         <h1><u>COMMENT</u></h1>

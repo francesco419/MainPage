@@ -1,10 +1,9 @@
-import {useRef, useEffect, useState} from "react";
 import styles from "./Project.module.css";
 import {Link} from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-
-function Project({num}){
-
+function Project({id,num}){
     const prj = [
         {
             id:1,
@@ -37,7 +36,7 @@ function Project({num}){
     ]
 
     return(
-        <div className={styles.project}>
+        <div id={id} className={styles.project}>
             <div data-aos="fade-up" className={styles.pic}>
                 <img src={prj[num].imgs}/>
             </div>

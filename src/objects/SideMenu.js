@@ -23,10 +23,10 @@ function SideMenu(arr){
     <div className={styles.sidehead}>
       <div className={styles.inner}>
         <div className={styles.up} onClick={()=>Moveto(0)}>Up</div>
-        <span style={arr.arr[0] ? {backgroundColor:BACKG} : null}>Intro</span>
-        <span style={arr.arr[1] ? {backgroundColor:BACKG} : null}>Skills</span>
-        <span style={arr.arr[2] ? {backgroundColor:BACKG} : null}>Project</span>
-        <span style={arr.arr[3] ? {backgroundColor:BACKG} : null}>Comment</span>
+        <span style={arr.arr[0] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Intro</span>
+        <span style={arr.arr[1] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Skills</span>
+        <span style={arr.arr[2] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Project</span>
+        <span style={arr.arr[3] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Comment</span>
         <div className={styles.down} onClick={()=>Moveto(5900)}>Down</div>
       </div>
     </div>
