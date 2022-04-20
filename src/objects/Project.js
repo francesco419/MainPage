@@ -8,32 +8,32 @@ import pf from "./picture/portfolio.PNG";
 function Project({id,num}){
     const prj = [
         {
-            id:1,
+            id:0,
             imgs:"https://picsum.photos/1000/500",
+            eng:'Insta Web Clone',
             title:"인스타웹클론",
-            skill:"HTML, CSS",
-            text:"인스타그램의 프로필 페이지를 클론한 프로젝트입니다."
+            text:"인스타그램의 프로필 페이지를 클론한\n프로젝트로 HTML과 CSS를 사용하여\n제작했습니다."
+        },
+        {
+            id:1,
+            imgs:"https://user-images.githubusercontent.com/84317858/158579317-6d81584f-6cce-435f-b6d0-e3dc2c8065a3.PNG",
+            eng:'Greeting Web Page',
+            title:"Greeting WebPage",
+            text:"시간 및 날씨 정보와 할일 들의 정보를\n기록할 수 있는 웹페이지 프로젝트로 HTML,\nCSS와 JavaScript로 제작했습니다."
         },
         {
             id:2,
-            imgs:"https://user-images.githubusercontent.com/84317858/158579317-6d81584f-6cce-435f-b6d0-e3dc2c8065a3.PNG",
-            title:"Greeting WebPage",
-            skill:"HTML, CSS, JavaScript",
-            text:"시간 및 날씨 정보와 할 일 등의 정보를 기록할 수 있는 웹페이지 프로젝트입니다."
+            imgs:mv,
+            eng:'Movie Theater',
+            title:"영화 모음집",
+            text:"영화의 간단한 내용과 러닝타임, 포스터와\n배우의 정보를 담아 다양한 영화를 소개하는\n영화 모음 프로젝트로 HTML, CSS,\nJavaScript 와 React를 사용해 제작했습니다."
         },
         {
             id:3,
-            imgs:mv,
-            title:"Movie Theater",
-            skill:"HTML, CSS, JavaScript, REACT",
-            text:"영화정보"
-        },
-        {
-            id:4,
             imgs:pf,
-            title:"포트폴리오",
-            skill:"HTML, CSS, JS, REACT",
-            text:"개인 포트폴리오를 제작한 프로젝트입니다."
+            eng:'My Portfolio',
+            title:"나의 포트폴리오",
+            text:"개인 포트폴리오를 제작한 프로젝트로\n HTML, CSS, JS와 REACT를 사용했습니다"
         }
     ]
 
@@ -43,10 +43,10 @@ function Project({id,num}){
                 <img src={prj[num].imgs}/>
             </div>
             <div data-aos="fade-left" className={styles.intro}>
-                <h1>{prj[num].title}</h1>
-                <h2>{prj[num].skill}</h2>
-                <h3>{prj[num].text}</h3>
-                <h2><Link className={styles.Links} to={`/Project/${prj[num].id}`}>Link</Link></h2>
+                <div className={styles.eng}>{prj[num].eng}</div>
+                <div className={styles.boldwhite}>{prj[num].title}</div>
+                <div>{prj[num].text}</div>
+                <div style={{margin:'30px 0'}}><Link className={styles.Links} to={`/Project/${prj[num].id}`}>view detail▷</Link></div>
             </div>
         </div>
     )

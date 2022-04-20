@@ -137,3 +137,7 @@ IntersectionObserver를 사용하여 본문 각 파트에 대한 visible 데이�
 Home에서 보여지는 Project를 생성하는 Project.js생성
 
 Home에서 보여지는 Skill을 생성하는 Skill.js생성
+
+===10th===
+
+text - 포트폴리오 내용 및 텍스트정리.

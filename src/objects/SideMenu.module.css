@@ -1,12 +1,9 @@
 .sidehead {
     position: fixed;
     width: 100px;
-    top: 10%;
-    right:1.5em;
-    color: white;
+    top: 7em;
+    right:6.9em;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.226);
-    border-radius: 15px;
   }
   
   .inner{
@@ -15,34 +12,19 @@
     text-align: center;
     width: 100%;
     height:100%;
-    transition: all 0.5 linear;
   }
 
   .inner span{
-    height: 25px;
+    height: 100px;
     width: 100%;
-    box-shadow: 0 1px 1px white;
-    vertical-align: middle;
-    padding-top: 6px;
-    transition: all 0.5 linear;
   }
 
   .down{
-    width: 100%;
+    border-radius: 50%;
+    width: 30px;
     height:30px;
-    border-radius: 0 0 15px 15px;
-    vertical-align: middle;
   }
 
-  .up{
-    width: 100%;
-    height:30px;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 1px 1px white;
-    vertical-align: middle;
-  }
-
-  .inner div:hover,
-  .inner span:hover{
-    background-color: rgba(0, 0, 0, 0.678);
+  .down:active{
+    background-color:red;
   }

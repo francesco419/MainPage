@@ -1,33 +1,48 @@
 import styles from "./SideMenu.module.css";
 import { useScroll } from "./useScroll";
 import {useEffect, useRef, useState} from "react";
+import {ReactComponent as Up} from "./picture/chevron-up.svg";
+import {ReactComponent as Down} from "./picture/chevron-down.svg";
 
-function SideMenu(arr){
-  const Moveto=(point)=>{
-    window.scroll({top:point,behavior:"smooth"}); 
-  }
-  const {y}=useScroll();
-  const BACKG = 'rgba(0, 0, 0, 0.678)'
+function SideMenu({arr}){
   const [showbar,setShowBar]=useState(false);
-
-  const showsidebar=()=>{
-    if(window.scrollY>window.innerHeight){
-      setShowBar(true);
-    }else{
-      setShowBar(false);
+  const [offset,setOffset]=useState([]);
+  const {y}=useScroll();
+  useEffect(()=>{
+    setOffset([arr[0].current.offsetTop,arr[1].current.offsetTop,arr[2].current.offsetTop]);
+  },[arr]);
+  const Moveto=(point)=>{
+    console.log(offset,y)
+    if(point===0){
+      if(y<offset[1]){
+        window.scroll({top:0,behavior:"smooth"});
+      }else if(y>=offset[0]&&y<=offset[2]){
+        window.scroll({top:offset[0],behavior:"smooth"});
+      }else if(y>=offset[2]){
+        window.scroll({top:offset[1],behavior:"smooth"});
+      }
+    }
+    if(point===1){
+      if(y<offset[0]){
+        window.scroll({top:offset[0],behavior:"smooth"});
+      }else if(y>=offset[0]&&y<=offset[2]){
+        window.scroll({top:offset[1],behavior:"smooth"});
+      }else if(y>=offset[1]){
+        window.scroll({top:offset[2],behavior:"smooth"});
+      }
     }
   }
-  window.addEventListener("scroll",showsidebar);
 
   return(
     <div className={styles.sidehead}>
       <div className={styles.inner}>
-        <div className={styles.up} onClick={()=>Moveto(0)}>Up</div>
-        <span style={arr.arr[0] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Intro</span>
-        <span style={arr.arr[1] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Skills</span>
-        <span style={arr.arr[2] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Project</span>
-        <span style={arr.arr[3] ? {backgroundColor:BACKG, fontWeight:"bold"} : null}>Comment</span>
-        <div className={styles.down} onClick={()=>Moveto(5900)}>Down</div>
+        <div onClick={()=>Moveto(0)}>
+          <Up className={styles.down}/>
+          </div>
+        <span></span>
+        <div onClick={()=>Moveto(1)}>
+          <Down className={styles.down}/>
+        </div>
       </div>
     </div>
   )

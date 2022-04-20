@@ -1,70 +1,92 @@
 .page{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height:100vh;
+    font-size: 25px;
+    white-space: pre-line;
 }
 
+.sideline{
+    position: fixed;
+    right:10em;
+    height:100%;
+    border-left: 1px solid #67F5E1;
+    background-color: #67F5E1;
+    margin:0;
+  }
+
 .intro{
-    max-width: 1200px;
+    border-bottom: 1px solid #67F5E1;
+}
+
+.pages{
+    width:81%;
     margin: 0 auto;
+    font-size: 25px;
+    padding: 20px 0 80px 100px;
+}
+
+.title{
+    font-size: 70px;
+    font-weight:bold;
+    color:#ADF53E;
+    margin-bottom: 90px;
+}
+
+.detail{
+    display: flex;
+    margin: 0 0 20px 0;
+    font-size: 23px;
 }
 
 .info{
     display: flex;
-    width: 100%;
+    align-items: center;
 }
 
-.name{
-    font-size: 90px;
-}
-
-.subname{
-    margin:0;
-    font-size:30px;
-}
 
 .text{
-    display: flex;
     font-size: 20px;
-    align-items: center;
-    width:800px;
+    line-height: 40px;
 }
 
 .pie{
-    position: relative;
-    right: 0%;
+    margin-left: 60px;
+    overflow: visible;
 }
 
 .git img{
     border-radius: 50%;
     height: 50px;
     width:50px;
-}
-
-.git img:hover{
     background-color: white;
 }
 
+.git img:hover{
+    background-color: #181818;
+}
+
 .slide{
-    margin: 0 auto;
+    margin-top: 100px;
     width:inherit;
 }
 
 .slide img{
     height: 600px;
     width: 100%;
+    object-fit: cover;
 }
 
 .button{
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    height:100px;
+    flex-direction: column;
+    position: fixed;
+    top:6em;
+    right:10em;
 }
 
 .Links{
-    position: relative;
     text-decoration-line : none;
-    color: black;
-  }
+    color: white;
+}
+
+/* .recharts-wrapper svg{
+    overflow: inherit !important;
+    } */

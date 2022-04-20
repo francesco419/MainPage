@@ -1,31 +1,37 @@
 .project{
     display: flex;
-    height:600px;
-    width: 1300px;
-    margin: 40px auto;
+    margin: 150px auto;
+    white-space: pre-line;
+    line-height: 40px;
   }
   
   .pic{
     height: 100%;
-    width: 50%;
-    border-radius: 15px;
-    border: 1px solid;
+    width: 70%;
   }
   
   .pic img{
     height: 100%;
     width: 100%;
-    object-fit:contain;
-    border-radius: 15px;
+    object-fit: cover;
   }
   
   .intro{
+    margin-left: 50px;
     width: 50%;
-    height: 100%;
-    padding: 20px;
+  }
+
+  .boldwhite{
+    font-size: 40px;
+    font-weight:bold;
+    margin:10px 0 40px 0;
   }
 
   .Links{
     text-decoration-line : none;
-    color: black;
+    color: white;
+  }
+
+  .eng{
+    font-size: 20px;
   }
