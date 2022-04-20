@@ -77,7 +77,7 @@ function Home(){
                     <div ref={ref1} className={classNames(styles.a, styles.box)}>
                         <Intro/>
                     </div>
-                    <div ref={ref2} className={classNames(styles.b, styles.box)}>
+                    <div ref={ref2} className={styles.box}>
                         <h1 data-aos="fade-up">SKILLS</h1>
                         <div>
                             {skilltext.map((skills)=>(
@@ -89,34 +89,30 @@ function Home(){
                             />
                             ))}
                         </div>
-                        <div data-aos="fade-up" className={styles.lefto}>
-                            <img src={re}></img>
-                            <img src={re}></img>
-                            <img src={re}></img>
-                            <img src={re}></img>
+                    </div>
+                    <div ref={ref3} className={classNames(styles.c, styles.box)}>
+                        <div>
+                            <h1 data-aos="fade-up">PROJECT</h1>
+                            <div>
+                                {prjt.map((no)=>(
+                                <Project
+                                key={no}
+                                num={no}
+                                />
+                                ))}
+                            </div>
+                            <a href="www.naver.com" className={styles.viewall}>
+                                View All →
+                            </a>
                         </div>
                     </div>
-                    <div className={classNames(styles.c, styles.box)}>
-                        <h1 data-aos="fade-up">PROJECT</h1>
-                        <div ref={ref3}>
-                            {prjt.map((no)=>(
-                            <Project
-                            key={no}
-                            num={no}
-                            />
-                            ))}
-                        </div>
-                        <a href="www.naver.com">
-                            View All →
-                        </a>
-                    </div>
-                    <div ref={ref4} className={classNames(styles.d, styles.box)}>
+                    <div ref={ref4} className={styles.box}>
                         <h1><u>COMMENT</u></h1>
                         <div className={styles.commentbox}>
                             <div className={styles.commentinfo}>
                                 <h2><u>Name</u></h2>
-                                <input type="text" />
-                                <h2><u>Password</u></h2>
+                                <input type="text"/>
+                                <h2><u>Passwod</u></h2>
                                 <input type="password" />
                             </div>
                             <div className={styles.comment}>

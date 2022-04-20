@@ -4,7 +4,6 @@
   /* scroll-snap-type: y mandatory;
   overflow: scroll;
   overflow-x: hidden; */
-  background-color: rgb(182, 182, 182);
 }
 
 .cover {
@@ -39,16 +38,11 @@
   width: 100px;
 }
 
-.c a{
+.viewall{
   position: relative;
   left: 50%;
   text-decoration-line : none;
   color: black;
-}
-
-.d h1{
-  position: relative;
-  left: 10%;
 }
 
 .commentbox{

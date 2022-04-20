@@ -11,3 +11,8 @@
     font-size: 30px;
     text-align: center;
 }
+
+.skillbox img{
+    height: 100px;
+    width: 100px;
+}
