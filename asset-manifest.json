@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.fceb26c8.css",
-    "main.js": "/MainPage/static/js/main.fbc0d9f5.js",
+    "main.css": "/MainPage/static/css/main.dc8a2a2d.css",
+    "main.js": "/MainPage/static/js/main.eb0f8ae7.js",
     "static/media/movie.PNG": "/MainPage/static/media/movie.02ebe55501113655bf03.PNG",
     "static/media/portfolio.PNG": "/MainPage/static/media/portfolio.a93506e28a8e987c6d4b.PNG",
     "static/media/linkedin.png": "/MainPage/static/media/linkedin.f6bf5859dad4d1a4e06d.png",
@@ -9,11 +9,13 @@
     "static/media/github.png": "/MainPage/static/media/github.44eee0c4a6c25b0d7347.png",
     "static/media/email.png": "/MainPage/static/media/email.0651a75bff08d2d2612c.png",
     "index.html": "/MainPage/index.html",
-    "main.fceb26c8.css.map": "/MainPage/static/css/main.fceb26c8.css.map",
-    "main.fbc0d9f5.js.map": "/MainPage/static/js/main.fbc0d9f5.js.map"
+    "static/media/chevron-up.svg": "/MainPage/static/media/chevron-up.4d3d196e33386b0e089f40ba84642c40.svg",
+    "static/media/chevron-down.svg": "/MainPage/static/media/chevron-down.9cec6edd25b63e6c7c9bf65ede4d98cc.svg",
+    "main.dc8a2a2d.css.map": "/MainPage/static/css/main.dc8a2a2d.css.map",
+    "main.eb0f8ae7.js.map": "/MainPage/static/js/main.eb0f8ae7.js.map"
   },
   "entrypoints": [
-    "static/css/main.fceb26c8.css",
-    "static/js/main.fbc0d9f5.js"
+    "static/css/main.dc8a2a2d.css",
+    "static/js/main.eb0f8ae7.js"
   ]
 }
