@@ -2,7 +2,6 @@ import styles from "./Intro.module.css";
 import Git from './picture/github.png';
 import Lin from './picture/linkedin.png';
 import email from './picture/email.png';
-import kakao from './picture/kakao.png';
 
 function Intro(){
 
@@ -26,8 +25,6 @@ function Intro(){
                     <div className={styles.left}>
                         <div className={styles.boldwhite}>Birthdate</div>
                         <div style={{marginBottom:'40px'}}>1994.06.07</div>
-                    </div>
-                    <div>
                         <div className={styles.boldwhite}>Education</div>
                         <div>한림대학교 / 2014-2022</div>
                         <span>전자공학과 전공</span><span style={{fontSize:'20px'}}>(춘천본교·졸업)</span>

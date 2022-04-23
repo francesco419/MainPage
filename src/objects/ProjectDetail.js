@@ -10,7 +10,7 @@ let prePath = ''; // 컴포넌트 함수 외부에 위치
 
 function ProjectDetail(){
     const {id} = useParams();
-    const arr=["MainPage","tp_Greetings","tp_Movie","WebClone_Instagram","tp_Calculator"];
+    const arr=["WebClone_Instagram","tp_Greetings","tp_Movie","MainPage","tp_Calculator"];
     const [value,setValue] = useState([]);
     const [isprev,setIsprev]=useState(true);
     const [isnext,setIsnext]=useState(true);
@@ -76,7 +76,7 @@ function ProjectDetail(){
         },
         {
             name:"Personal\nPortfolio\nProject",
-            text:'간략화한 자기소개 페이지로서 개인정보 및 보유 스킬과 작업한 프로젝트 등의\n정보들을 담은 포트폴리오 프로젝트입니다. 이 프로젝트를 진행함에 따라 외부의\n여러 다양한 라이브러리 및 hook을 사용해보게 되었고 애니메이션 사용이\n 능숙해졌으며 여러 기술들을 사용하는 만큼 발생하는 여러 가지 오류도\n 해결하고 실질적으로 모든 부분에 대해서 기획 제작을 진행한 처음의\n 프로젝트이므로, 이전 작업들을 통틀어 가장 많은 경험을 쌓게 된 프로젝트입니다.',
+            text:'간략화한 자기소개 페이지로서 개인정보 및 보유 스킬과 작업한 프로젝트 등의\n 정보들을 담은 포트폴리오 프로젝트입니다. 이 프로젝트를 진행함에 따라 외부의\n 여러 다양한 라이브러리 및 hook을 사용해보게 되었고 애니메이션 사용이\n 능숙해졌으며 여러 기술들을 사용하는 만큼 발생하는 여러 가지 오류도\n 해결하고 실질적으로 모든 부분에 대해서 기획 제작을 진행한 처음의\n 프로젝트이므로, 이전 작업들을 통틀어 가장 많은 경험을 쌓게 된 프로젝트입니다.',
             img:"c",
             url:"https://francesco419.github.io/MainPage",
             github:"https://github.com/francesco419/MainPage",
@@ -86,7 +86,7 @@ function ProjectDetail(){
         },
         {
             name:"Calculator\nProject",
-            text:'첫 프로젝트로 HTML, CSS, JavsScript의 사용 및 경험을 목표로한 프로젝트로서,\n기본적인 계산기의 외형 및 레이아웃을 HTML, CSS로 구현하고 계산식의\n 처리를 Javascript를 통하여 구현했습니다avascript를 사용한\n 계산처리방식에서 사칙연산 순서에 의한 연산을 구현하였습니다.',
+            text:'첫 프로젝트로 HTML, CSS, JavsScript의 사용 및 경험을 목표로한 프로젝트로서,\n 기본적인 계산기의 외형 및 레이아웃을 HTML, CSS로 구현하고 계산식의\n 처리를 Javascript를 통하여 구현했습니다avascript를 사용한\n 계산처리방식에서 사칙연산 순서에 의한 연산을 구현하였습니다.',
             img:"c",
             url:null,
             github:"https://github.com/francesco419/tp_Calculator",
@@ -185,6 +185,9 @@ function ProjectDetail(){
                         <Link className={styles.Links} to={'/Mainpage'}>Back</Link>
                         {isprev ? (<Link className={styles.Links} to={`/Project/${(id-1)}`}>Prev</Link>) :<div>Prev</div>}
                         {isnext ? (<Link className={styles.Links} to={`/Project/${(parseInt(id)+1)}`}>Next</Link>) :<div>Next</div>}
+                        {window.width>800 ? null : <a href={str[id].github} style={{margin:'0'}} className={styles.Links}>
+                        Github
+                        </a>}
                     </div>
             </div>
         </div>

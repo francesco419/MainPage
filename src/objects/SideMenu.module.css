@@ -4,27 +4,58 @@
     top: 7em;
     right:6.9em;
     z-index: 99;
+
   }
   
   .inner{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100%;
-    height:100%;
   }
 
-  .inner span{
-    height: 100px;
-    width: 100%;
-  }
-
-  .down{
+  .down,
+  .up{
     border-radius: 50%;
     width: 30px;
     height:30px;
   }
 
+  .low{
+    border-radius: 50%;
+    width: 30px;
+    height:30px;
+  }
+
+  .up:active{
+    transform: translateY(-5px);
+  }
+
   .down:active{
-    background-color:red;
+    transform: translateY(5px);
+  }
+
+  .ssp{
+    transition: all 0.5s;
+  }
+
+  .updown{
+    display: none;
+  }
+
+  @media (max-width: 1500px){
+    .sidehead {
+      position: fixed;
+      width:auto;
+      top:auto;
+      bottom:2em;
+      right:1em;
+      z-index: 99;
+    }
+    .inner{
+      display: none;
+    }
+    .updown{
+      display: block;
+      color:hsl(0, 0%, 53%)
+    }
   }

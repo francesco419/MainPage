@@ -59,3 +59,16 @@
   justify-content: space-between;
   margin: 0 50px;
 }
+
+@media (max-width: 768px){
+  .bottom{
+    display: flex;
+    flex-direction: column;
+  }
+  .left{
+    margin:40px 0;
+  }
+  .contact{
+    margin:40px 0;
+  }
+}

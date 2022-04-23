@@ -7,7 +7,7 @@
   
   .pic{
     height: 100%;
-    width: 70%;
+    width: 100%;
   }
   
   .pic img{
@@ -32,6 +32,22 @@
     color: white;
   }
 
+  .Links:hover{
+    font-weight: bold;
+  }
+
   .eng{
     font-size: 20px;
   }
+
+  @media (max-width: 768px){
+    .project{
+      flex-direction: column;
+      white-space: normal;
+    }
+    .intro{
+      width: 100%;
+      margin:0;
+    }
+  }
+  

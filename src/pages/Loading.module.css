@@ -1,0 +1,68 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 3vw;
+    animation: fadeout 2s linear;
+}
+
+@keyframes fadeout {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+}
+
+.box{
+    width: 300px;
+    overflow: hidden;
+}
+
+.load{
+    width: 0;
+}
+
+.lineF{
+    border-top: 3px solid white;
+    height: 30px;
+    width: 300px;
+    animation: loading 1s linear;
+    animation-fill-mode: backwards;
+}
+
+@keyframes loading {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.lineB{
+    border-top: 3px solid white;
+    height: 30px;
+    width: 300px;
+    animation: loading1 1s linear;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+}
+
+@keyframes loading1 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}

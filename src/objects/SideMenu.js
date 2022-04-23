@@ -37,11 +37,20 @@ function SideMenu({arr}){
     <div className={styles.sidehead}>
       <div className={styles.inner}>
         <div onClick={()=>Moveto(0)}>
-          <Up className={styles.down}/>
+          <Up className={styles.up}/>
           </div>
-        <span></span>
+           <span className={styles.ssp} style={y>offset[0] ? {height:'50px'} : {height:'100px'}}></span>
         <div onClick={()=>Moveto(1)}>
           <Down className={styles.down}/>
+        </div>
+      </div>
+      <div className={styles.updown}>
+        <div style={{backgroundColor:'#888888', width:'30px',height:'30px',borderRadius:'50%',border:'1px solid white'}} onClick={()=>Moveto(0)}>
+          <Up className={styles.low}/>
+        </div>
+        <div style={{height:'10px'}}></div>
+        <div style={{backgroundColor:'#888888', width:'30px',height:'30px',borderRadius:'50%',border:'1px solid white'}} onClick={()=>Moveto(1)}>
+          <Down className={styles.low}/>
         </div>
       </div>
     </div>

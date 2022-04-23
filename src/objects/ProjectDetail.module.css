@@ -80,6 +80,7 @@
     position: fixed;
     top:6em;
     right:10em;
+    width: 80px;
 }
 
 .Links{
@@ -87,6 +88,30 @@
     color: white;
 }
 
-/* .recharts-wrapper svg{
-    overflow: inherit !important;
-    } */
+.Links:hover{
+    font-weight: bold;
+}
+
+@media (max-width: 768px){
+    .sideline{
+        display: none;
+    }
+    .info{
+        flex-direction: column-reverse;
+        white-space:normal;
+    }
+    .pie{
+        margin:0;
+    }
+    .git{
+        display: none;
+    }
+    .button{
+        top:1em;
+        left: 0.5em;
+    }
+    .slide{
+        width: 90%;
+    }
+}
+  
