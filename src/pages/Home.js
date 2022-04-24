@@ -13,6 +13,9 @@ function Home(){
     const [load,setLoad]=useState(true);
      useEffect(()=>{
         Aos.init({duration:1500 });
+        setTimeout(()=>{
+            setLoad(false);
+        },8000);
     },[])
     const ref1=useRef(null);
     const ref2=useRef(null);
@@ -25,10 +28,6 @@ function Home(){
             window.scroll({top:ref1.current.offsetTop,behavior:"smooth"});
         }
     }
-
-    setTimeout(()=>{
-        setLoad(false);
-    },8000);
 
     return(
         <div className={styles.main}>

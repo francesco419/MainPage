@@ -11,3 +11,9 @@
     color:#ADF53E;
     margin-bottom: 90px;
   }
+
+  @media (max-width: 768px){
+      .title{
+          font-size: 50px;
+      }
+}

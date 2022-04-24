@@ -12,21 +12,24 @@ function SideMenu({arr}){
     setOffset([arr[0].current.offsetTop,arr[1].current.offsetTop,arr[2].current.offsetTop]);
   },[arr]);
   const Moveto=(point)=>{
-    console.log(offset,y)
     if(point===0){
-      if(y<offset[1]){
-        window.scroll({top:0,behavior:"smooth"});
-      }else if(y>=offset[0]&&y<=offset[2]){
-        window.scroll({top:offset[0],behavior:"smooth"});
-      }else if(y>=offset[2]){
+      if(y>=offset[2]){
         window.scroll({top:offset[1],behavior:"smooth"});
+      }else if(y<offset[2]&&y>(offset[1]+((offset[2]-offset[1])/2))){
+        window.scroll({top:offset[1],behavior:"smooth"});
+      }else if(y>=offset[1]&&y<(offset[1]+((offset[2]-offset[1])/2))){
+        window.scroll({top:offset[0],behavior:"smooth"});
+      }else if(y<offset[1]&&y>(offset[0]+((offset[1]-offset[0])/2))){
+        window.scroll({top:offset[0],behavior:"smooth"});
+      }else if(y>=offset[0]&&y<(offset[0]+((offset[1]-offset[0])/2))){
+        window.scroll({top:0,behavior:"smooth"});
       }
     }
     if(point===1){
       if(y<offset[0]){
         window.scroll({top:offset[0],behavior:"smooth"});
-      }else if(y>=offset[0]&&y<=offset[2]){
-        window.scroll({top:offset[1],behavior:"smooth"});
+      }else if(y>=offset[0]&&y<offset[1]){
+          window.scroll({top:offset[1],behavior:"smooth"});
       }else if(y>=offset[1]){
         window.scroll({top:offset[2],behavior:"smooth"});
       }

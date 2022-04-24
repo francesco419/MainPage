@@ -1,8 +1,11 @@
 .project{
-    display: flex;
     margin: 150px auto;
     white-space: pre-line;
     line-height: 40px;
+  }
+
+  .split{
+    display: flex;
   }
   
   .pic{
@@ -42,8 +45,11 @@
 
   @media (max-width: 768px){
     .project{
-      flex-direction: column;
       white-space: normal;
+      margin: 150px 0;
+    }
+    .split{
+      flex-direction: column;
     }
     .intro{
       width: 100%;

@@ -4,8 +4,12 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import mv from "./picture/movie.PNG";
 import pf from "./picture/portfolio.PNG";
+import {useRef, useEffect, useState} from "react";
 
 function Project({id,num}){
+    useEffect(()=>{
+        Aos.init({duration:1000 });
+    },[])
     const prj = [
         {
             id:0,
@@ -39,14 +43,16 @@ function Project({id,num}){
 
     return(
         <div id={id} className={styles.project}>
-            <div data-aos="fade-up" className={styles.pic}>
-                <img src={prj[num].imgs}/>
-            </div>
-            <div data-aos="fade-left" className={styles.intro}>
-                <div className={styles.eng}>{prj[num].eng}</div>
-                <div className={styles.boldwhite}>{prj[num].title}</div>
-                <div>{prj[num].text}</div>
-                <div style={{margin:'30px 0'}}><Link className={styles.Links} to={`/Project/${prj[num].id}`}>view detail▷</Link></div>
+            <div className={styles.split}>
+                <div className={styles.pic}>
+                    <img src={prj[num].imgs}/>
+                </div>
+                <div className={styles.intro}>
+                    <div className={styles.eng}>{prj[num].eng}</div>
+                    <div className={styles.boldwhite}>{prj[num].title}</div>
+                    <div>{prj[num].text}</div>
+                    <div style={{margin:'30px 0'}}><Link className={styles.Links} to={`/Project/${prj[num].id}`}>view detail▷</Link></div>
+                </div>
             </div>
         </div>
     )

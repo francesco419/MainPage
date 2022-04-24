@@ -6,18 +6,18 @@ import email from './picture/email.png';
 function Intro(){
 
     const str = "이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n";
-    const about = "</about>"
+    const name = "</about>"
     return(
         <div className={styles.about}>
             <div className={styles.top}>
-                <div className={styles.title}>{about}</div>
+                <div className={styles.title}>{name}</div>
                 <div>
                     <div style={{marginBottom:'20px'}}>
                         <span className={styles.title} style={{fontSize:'50px', marginRight:'20px'}}>이상현</span>
                         <span className={styles.boldwhite}>Lee Sang Hean</span>
                     </div>
-                    <div>P. 010 2922 1840</div>
-                    <div style={{marginBottom:'40px'}}>E. francesco419@naver.com</div>
+                    <div>P.010 2922 1840</div>
+                    <div style={{marginBottom:'40px'}}>E.francesco419@naver.com</div>
                 </div>
             </div>
             <div className={styles.bottom}>
