@@ -57,6 +57,9 @@
   .sideline{
     display: none;
   }
+  .title{
+    left:0;
+  }
   .indicator{
     display: none;
   }

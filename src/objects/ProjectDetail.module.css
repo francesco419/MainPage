@@ -65,11 +65,11 @@
 
 .slide{
     margin-top: 100px;
-    width:inherit;
+    padding-right: 200px;
 }
 
 .slide img{
-    height: 600px;
+    height: 80vh;
     width: 100%;
     object-fit: cover;
 }
@@ -96,9 +96,17 @@
     .sideline{
         display: none;
     }
+    .pages{
+        padding: 0;
+    }
+    .title{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
     .info{
         flex-direction: column-reverse;
         white-space:normal;
+        margin-bottom: 50px;
     }
     .pie{
         margin:0;
@@ -109,9 +117,28 @@
     .button{
         top:1em;
         left: 0.5em;
+        font-size: 20px;
     }
     .slide{
-        width: 90%;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+    .slide img{
+        height:50vh;
+    }
+}
+
+@media (max-width: 1280px){
+    .sideline{
+        display: none;
+    }
+    .git{
+        display: none;
+    }
+    .button{
+        top:1em;
+        left: 0.5em;
+        font-size: 20px;
     }
 }
   

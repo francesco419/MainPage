@@ -129,8 +129,8 @@ function ProjectDetail(){
             <div className={styles.sideline}></div>
             <div className={styles.intro}>
                 <div className={styles.pages}>
-                    <div data-aos="fade-up" className={styles.title}>{str[id].name}</div>
-                    <div data-aos="fade-up" data-aos-delay="500" className={styles.detail}>
+                    <div data-aos="fade-up" data-aos-once="true" className={styles.title}>{str[id].name}</div>
+                    <div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" className={styles.detail}>
                         <div style={{marginRight:'50px'}}>
                             <div style={{color:'#3b5210'}}>Period</div>
                             <div style={{color:'#3b5210'}}>Program</div>
@@ -144,7 +144,7 @@ function ProjectDetail(){
 
                     </div>
                     <div className={styles.info}>
-                        <div data-aos="fade-up" data-aos-delay="1000" className={styles.text}>
+                        <div data-aos="fade-up" data-aos-delay="1000" data-aos-once="true" className={styles.text}>
                             {str[id].text}
                         </div>
                         <div className={styles.pie}>
