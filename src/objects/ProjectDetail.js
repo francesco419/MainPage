@@ -165,9 +165,9 @@ function ProjectDetail(){
                             </PieChart> 
                         </div>
                     </div>
-                    <a data-aos="fade-up" data-aos-delay="1000" data-aos-once="true" href={str[id].github} className={styles.git}>
+                    {/* <a data-aos="fade-up" data-aos-delay="1000" data-aos-once="true" href={str[id].github} className={styles.git}>
                         <img src={github}/>
-                    </a>
+                    </a> */}
                 </div>
             </div>
                 <div className={styles.pages}>
@@ -185,9 +185,9 @@ function ProjectDetail(){
                         <Link className={styles.Links} to={'/Mainpage'}>Back</Link>
                         {isprev ? (<Link className={styles.Links} to={`/Project/${(id-1)}`}>Prev</Link>) :<div>Prev</div>}
                         {isnext ? (<Link className={styles.Links} to={`/Project/${(parseInt(id)+1)}`}>Next</Link>) :<div>Next</div>}
-                        {window.width>800 ? null : <a href={str[id].github} style={{margin:'0'}} className={styles.Links}>
+                        <a href={str[id].github} style={{margin:'0'}} className={styles.Links}>
                         Github
-                        </a>}
+                        </a>
                     </div>
             </div>
         </div>
