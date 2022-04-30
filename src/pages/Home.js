@@ -8,26 +8,21 @@ import Skill from "../objects/Skill";
 import Projectpage from "../objects/Projectpage";
 import { useScroll } from "../objects/useScroll";
 import Loading from "./Loading";
+import { queryAllByAltText, queryAllByRole } from "@testing-library/react";
 
 function Home(){
     const [load,setLoad]=useState(true);
-     useEffect(()=>{
-        Aos.init({duration:1500 });
-        setTimeout(()=>{
-            setLoad(false);
-        },8000);
-    },[])
     const ref1=useRef(null);
     const ref2=useRef(null);
     const ref3=useRef(null);
     const visarr=[ref1,ref2,ref3];
-    const {y} = useScroll();
 
-    const move=()=>{
-        if(y===0){
-            window.scroll({top:ref1.current.offsetTop,behavior:"smooth"});
-        }
-    }
+     useEffect(()=>{
+        Aos.init({duration:1500 });
+        setTimeout(()=>{
+            setLoad(false);
+        },4000);
+    },[])
 
     return(
         <div className={styles.main}>
@@ -52,7 +47,7 @@ function Home(){
                     </div>
                 </div> 
                 <div className={styles.bodies}>
-                    <div ref={ref1} className={styles.box}>
+                    <div class='pop' ref={ref1} className={styles.box}>
                         <Intro/>
                     </div>
                     <div ref={ref2} className={styles.box}>

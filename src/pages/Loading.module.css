@@ -6,19 +6,19 @@
     height: 100vh;
     overflow: hidden;
     font-size: 3vw;
-    animation: fadeout 2s linear;
+    animation: fadeout 1s linear;
 }
 
 @keyframes fadeout {
     0%{
-        transform: translateY(0);
+        transform: scale(100%);
         opacity: 1;
     }
     50%{
         opacity: 0.5;
     }
     100%{
-        transform: translateY(-30%);
+        transform: scale(0);
         opacity: 0;
     }
 }
@@ -36,7 +36,7 @@
     border-top: 3px solid white;
     height: 30px;
     width: 300px;
-    animation: loading 1s linear;
+    animation: loading 0.5s linear;
     animation-fill-mode: backwards;
 }
 
@@ -53,7 +53,7 @@
     border-top: 3px solid white;
     height: 30px;
     width: 300px;
-    animation: loading1 1s linear;
+    animation: loading1 0.5s linear;
     animation-fill-mode: backwards;
     animation-direction: reverse;
 }

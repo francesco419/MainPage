@@ -55,13 +55,13 @@
     position: relative;
     top:-100px;
     flex-direction: column;
-    height: 300%;
+    height: 170%;
     justify-content: space-around;
-    animation-name: moving;
+/*     animation-name: moving;
     animation-duration: 20s;
     animation-delay: 3s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 .slide div{
