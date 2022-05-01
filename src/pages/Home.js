@@ -6,9 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Skill from "../objects/Skill";
 import Projectpage from "../objects/Projectpage";
-import { useScroll } from "../objects/useScroll";
 import Loading from "./Loading";
-import { queryAllByAltText, queryAllByRole } from "@testing-library/react";
 
 function Home(){
     const [load,setLoad]=useState(true);

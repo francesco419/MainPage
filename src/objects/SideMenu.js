@@ -1,11 +1,10 @@
 import styles from "./SideMenu.module.css";
 import { useScroll } from "./useScroll";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {ReactComponent as Up} from "./picture/chevron-up.svg";
 import {ReactComponent as Down} from "./picture/chevron-down.svg";
 
 function SideMenu({arr}){
-  const [showbar,setShowBar]=useState(false);
   const [offset,setOffset]=useState([]);
   const {y}=useScroll();
   useEffect(()=>{

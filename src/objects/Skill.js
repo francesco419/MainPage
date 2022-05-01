@@ -1,7 +1,5 @@
-import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState,useRef } from "react";
-import { useSearchParams } from "react-router-dom";
 import styles from "./Skill.module.css";
 import useInterval from "./useInterval";
 import { ReactComponent as JS} from "./picture/jssvg.svg";
@@ -14,7 +12,6 @@ function Skill(){
     const text = "총 8개의 개발언어 사용이 가능하며,\n 그 중에서도 Frontend 개발관련\n HTML, CSS, JavaScript와\n React를 메인으로 사용합니다.";
     const [skillarr,setSkillarr] = useState(["C++","C","JavaScript","React","CSS","HTML","C#","Java"]);
     const ref=useRef(null);
-    console.log(ref)
     const [a,setA]=useState(0);
     const changearr =()=>{
         const LENGTH = skillarr.length-1;
@@ -24,7 +21,6 @@ function Skill(){
         }
         skillarr[0] = temp;
         setSkillarr(skillarr);
-        console.log(skillarr);
     }
     useEffect(()=>{
         changearr();
@@ -34,7 +30,6 @@ function Skill(){
     },5000);
     const aaa=()=>{
         setA(a+1);
-        console.log(a);
     }
     return(
         <div className={styles.skill}>

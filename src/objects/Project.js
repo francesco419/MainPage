@@ -4,7 +4,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import mv from "./picture/movie.PNG";
 import pf from "./picture/portfolio.PNG";
-import {useRef, useEffect, useState} from "react";
+import ins from "./picture/insta.PNG";
+import {useEffect} from "react";
 
 function Project({id,num}){
     useEffect(()=>{
@@ -13,7 +14,7 @@ function Project({id,num}){
     const prj = [
         {
             id:0,
-            imgs:"https://picsum.photos/1000/500",
+            imgs:ins,
             eng:'Insta Web Clone',
             title:"인스타웹클론",
             text:"인스타그램의 프로필 페이지를 클론한\n프로젝트로 HTML과 CSS를 사용하여\n제작했습니다."
@@ -45,7 +46,7 @@ function Project({id,num}){
         <div id={id} className={styles.project}>
             <div className={styles.split}>
                 <div className={styles.pic}>
-                    <img src={prj[num].imgs}/>
+                    <img src={prj[num].imgs} alt={prj[num].eng}/>
                 </div>
                 <div className={styles.intro}>
                     <div className={styles.eng}>{prj[num].eng}</div>

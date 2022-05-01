@@ -4,9 +4,11 @@ import Lin from './picture/linkedin.png';
 import email from './picture/email.png';
 
 function Intro(){
-
-    const str = "이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n이상현 포트폴리오에 오신 걸 환영합니다.\n";
-    const name = "</about>"
+    const name = "</about>";
+    const emailcopy=()=>{
+        navigator.clipboard.writeText('francesco419@naver.com');
+        alert('Email Copied to Users Clipboard !');
+    }
     return(
         <div className={styles.about}>
             <div className={styles.top}>
@@ -47,18 +49,16 @@ function Intro(){
                 <div className={styles.contact}>
                     <div className={styles.innerCircle}>
                         <a href={"https://github.com/francesco419"}>
-                            <img src={Git}/>
+                            <img src={Git} alt='Github'/>
                         </a>
                     </div>
                     <div className={styles.innerCircle}>
                         <a href="https://www.linkedin.com/in/sang-hean-lee-109932221/">
-                            <img src={Lin}/>
+                            <img src={Lin} alt='linkedin'/>
                         </a>
                     </div>
-                    <div className={styles.innerCircle}>
-                        <a>
-                            <img src={email}/>
-                        </a>
+                    <div onClick={emailcopy} className={styles.innerCircle}>
+                        <img src={email} alt='email'/>
                     </div>
                 </div>
             </div>
