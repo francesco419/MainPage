@@ -17,3 +17,13 @@
           font-size: 50px;
       }
 }
+
+.github{
+    font-size: 15px;
+    text-decoration-line: none;
+    color:#ADF53E;
+}
+
+.github:hover{
+    font-weight: bold;
+}

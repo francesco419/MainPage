@@ -13,6 +13,9 @@ function Projectpage(){
             num={no}
             />
             ))}
+            <a href="https://github.com/francesco419" className={styles.github}>
+                See More at Github▷
+            </a>
         </div>
     )    
 }
