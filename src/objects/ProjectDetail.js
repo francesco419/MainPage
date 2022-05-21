@@ -15,12 +15,15 @@ import greeting1 from "./picture/greeting.PNG";
 import greeting2 from "./picture/greeting1.PNG";
 import insta from "./picture/insta.PNG";
 import calc from "./picture/calc.PNG";
+import y1 from "./picture/youtube1.PNG";
+import y2 from "./picture/youtube2.PNG";
+import y3 from "./picture/youtube3.PNG";
 
 let prePath = ''; // 컴포넌트 함수 외부에 위치
 
 function ProjectDetail(){
     const {id} = useParams();
-    const arr=["WebClone_Instagram","tp_Greetings","tp_Movie","MainPage","tp_Calculator"];
+    const arr=["Youtube","tp_Greetings","tp_Movie","MainPage","tp_Calculator","WebClone_Instagram"];
     const [value,setValue] = useState([]);
     const [isprev,setIsprev]=useState(true);
     const [isnext,setIsnext]=useState(true);
@@ -51,18 +54,17 @@ function ProjectDetail(){
         getValue();
         Aos.init({duration:2000 });
     },[location])
-    
 
     const str = [
         {
-            name:"Instagram\nWeb Clone\nProject",
-            text:'이 프로젝트는 프론트엔드를 배우는 과정에서, 현재 많이 사용되고 있는\n 웹사이트에서 어떠한 방식으로 구조 및 레이아웃을 구현하는지 알아 보기위한 프로젝트로서,\n 인스타그램의 프로필 페이지의 외형적인 것에 중점을 두고 제작한 클론페이지입니다.',
-            img:[insta],
-            url:null,
-            github:"https://github.com/francesco419/WebClone_Instagram",
-            contribution:'100%',
-            program:'HTML, CSS',
-            period:'1 week'
+            name:"Youtube\nClone\nProject",
+            text:'현재 가장 많이 사용되고 있는 페이지중 하나인 유튜브를 Youtube API를 사용하여 유튜브에 있는 각각의 페이지 및 여러 기능들을 구현한 프로젝트이다.\n이 프로젝트를 통해 API data를 다루는 능력을 향상시키게 되었으며, 프로젝트를 진행하면서 이전에 작업했던 프로젝트보다\n 훨씬 더 많은 오류 및 요구사항에 부딪히게 되었고. 이를 통해 오류를 능숙하게 해결하고 여러 요구사항에 대해\n 다양한 방식으로 접근하여 조건을 만족시킬수 있는 코드를 구현하는 능력을 키운 프로젝트이다.\n프로젝트를 진행하면서 생긴 오류 및 진행상황을 깃헙 프로젝트 페이지의 README에 작성하였다.',
+            img:[y1,y2,y3],
+            url:"https://francesco419.github.io/Youtube/",
+            github:"https://github.com/francesco419/Youtube",
+            contribution:'Working on Process~',
+            program:'HTML, CSS, JS, REACT',
+            period:'Working on Process'
         },
         {
             name:"Greeting\nWeb Page\nProject",
@@ -81,7 +83,7 @@ function ProjectDetail(){
             url:"https://francesco419.github.io/tp_Movie",
             github:"https://github.com/francesco419/tp_Movie",
             contribution:'100%',
-            program:'HTML, CSS, JS,REACT',
+            program:'HTML, CSS, JS, REACT',
             period:'1 week'
         },
         {
@@ -104,6 +106,16 @@ function ProjectDetail(){
             program:'HTML, CSS, JS',
             period:'1 week'
         },
+        {
+            name:"Instagram\nWeb Clone\nProject",
+            text:'이 프로젝트는 프론트엔드를 배우는 과정에서, 현재 많이 사용되고 있는\n 웹사이트에서 어떠한 방식으로 구조 및 레이아웃을 구현하는지 알아 보기위한 프로젝트로서,\n 인스타그램의 프로필 페이지의 외형적인 것에 중점을 두고 제작한 클론페이지입니다.',
+            img:[insta],
+            url:null,
+            github:"https://github.com/francesco419/WebClone_Instagram",
+            contribution:'100%',
+            program:'HTML, CSS',
+            period:'1 week'
+        }
     ]
     
     let javascript;
@@ -150,6 +162,7 @@ function ProjectDetail(){
                             <div>{str[id].period}</div>
                             <div>{str[id].program}</div>
                             <div>{str[id].contribution}</div>
+                            {str[id].url ? <a href={str[id].url} className={styles.pagelink}>See ProjectPage</a> : null}
                         </div>
 
                     </div>

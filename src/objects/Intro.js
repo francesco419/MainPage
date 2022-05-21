@@ -9,6 +9,7 @@ function Intro(){
         navigator.clipboard.writeText('francesco419@naver.com');
         alert('Email Copied to Users Clipboard !');
     }
+    const strength="▷더 좋은 코드를 위해 끊임없이 고민하고 적극적으로 의견을 나누는 자세\n\n▷피드백을 듣고 개선하려는 노력과 변화에 민첩하게 반응하는 자세\n\n▷API Data 사용에 능숙하며 인터페이스와 결합하는 능력\n\n▷새로운 기술에 대한 빠른 적응능력";
     return(
         <div className={styles.about}>
             <div className={styles.top}>
@@ -41,9 +42,7 @@ function Intro(){
                     </div>
                     <div>
                         <div className={styles.boldwhite}>Strength</div>
-                        <div>▷더 좋은 제품과 코드를 위해 끊임없이 고민하고 실천하는 문제해결 능력</div>
-                        <div>▷피드백을 듣고 개선하려는 노력과
-    변화에 민첩하게 반응하는 자세</div>
+                        <div style={{fontSize:'20px'}}>{strength}</div>
                     </div>
                 </div>
                 <div className={styles.contact}>

@@ -9,16 +9,23 @@ import Projectpage from "../objects/Projectpage";
 import Loading from "./Loading";
 
 function Home(){
-    const [load,setLoad]=useState(true);
+    let session = window.sessionStorage.getItem("setting");
+    const [load,setLoad]=useState(session==true || session===null ? true : false);
     const ref1=useRef(null);
     const ref2=useRef(null);
     const ref3=useRef(null);
     const visarr=[ref1,ref2,ref3];
 
+    const setStorage=()=>{
+        setLoad(false);
+        const data = {setting: load};
+        sessionStorage.setItem("setting", JSON.stringify(load));
+    }
+
      useEffect(()=>{
         Aos.init({duration:1500 });
         setTimeout(()=>{
-            setLoad(false);
+            setStorage();
         },4000);
     },[])
 

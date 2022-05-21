@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import mv from "./picture/movie.PNG";
 import pf from "./picture/portfolio.PNG";
-import ins from "./picture/insta.PNG";
+import y1 from "./picture/youtube1.PNG";
 import {useEffect} from "react";
 
 function Project({id,num}){
@@ -14,10 +14,10 @@ function Project({id,num}){
     const prj = [
         {
             id:0,
-            imgs:ins,
-            eng:'Insta Web Clone',
-            title:"인스타웹클론",
-            text:"인스타그램의 프로필 페이지를 클론한\n프로젝트로 HTML과 CSS를 사용하여\n제작했습니다."
+            imgs:y1,
+            eng:'Youtube Clone',
+            title:"유튜브 클론",
+            text:"Youtube API를 사용하여 유튜브의 페이지 및 기능을 제작한 프로젝트로,\n React를 기반으로 제작하였습니다."
         },
         {
             id:1,
