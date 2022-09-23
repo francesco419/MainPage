@@ -9,13 +9,13 @@ import {ProjectDetailText} from "./ProjectText.js";
 
 let prePath = ''; // 컴포넌트 함수 외부에 위치
 
-function ProjectDetail({popup}){
-    const id = popup;
+function ProjectDetail(){
+    const {id} = useParams();
     const arr=["Youtube","tp_Greetings","tp_Movie","MainPage","tp_Calculator","WebClone_Instagram"];
     const [value,setValue] = useState([]);
     const [isprev,setIsprev]=useState(true);
     const [isnext,setIsnext]=useState(true);
-    //let location = useLocation();
+    let location = useLocation();
 
     const getValue=async()=>{
         const json = await(await fetch(`https://api.github.com/repos/francesco419/${arr[id]}/languages`)).json();
@@ -31,7 +31,7 @@ function ProjectDetail({popup}){
             setIsnext(false);
         }
     }
-    /* useEffect(()=>{
+    useEffect(()=>{
         if (prePath.indexOf('/Project/') !== -1) {
             console.log('새로고침');
             prePath = '';
@@ -41,7 +41,7 @@ function ProjectDetail({popup}){
         getnext();
         getValue();
         Aos.init({duration:2000 });
-    },[location]); */
+    },[location]);
     
     let javascript;
     let all;

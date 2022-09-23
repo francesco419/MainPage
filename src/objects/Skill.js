@@ -6,10 +6,9 @@ import { ReactComponent as JS} from "./picture/jssvg.svg";
 import { ReactComponent as CSS} from "./picture/csssvg.svg";
 import { ReactComponent as HTML} from "./picture/htmlsvg.svg";
 import { ReactComponent as REACT} from "./picture/reactsvg.svg";
+import {SkillsText} from "./ProjectText.js";
 
 function Skill(){
-    const skills = "</skills>";
-    const text = "총 8개의 개발언어 사용이 가능하며,\n 그 중에서도 Frontend 개발관련\n HTML, CSS, JavaScript와\n React를 메인으로 사용합니다.";
     const [skillarr,setSkillarr] = useState(["C++","C","JavaScript","React","CSS","HTML","C#","Java"]);
     const ref=useRef(null);
     const [a,setA]=useState(0);
@@ -33,11 +32,11 @@ function Skill(){
     }
     return(
         <div className={styles.skill}>
-            <div className={styles.title}>{skills}</div>
+            <div className={styles.title}>{SkillsText[0].text}</div>
             <div className={styles.split}>
                 <div className={styles.info}>
                     <div className={styles.boldwhite}>Best Skills</div>
-                    <div>{text}</div>
+                    <div>{SkillsText[1].text}</div>
                     <div className={styles.iconbox}>
                         <div className={styles.iconboxL}>
                             <div style={{marginBottom:'20px'}} className={styles.icon}>

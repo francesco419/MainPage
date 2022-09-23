@@ -7,9 +7,12 @@ import "aos/dist/aos.css";
 import Skill from "../objects/Skill";
 import Projectpage from "../objects/Projectpage";
 import Loading from "./Loading";
+import ProjectPopUp from "../objects/ProjectPopUp"
 
 function Home(){
     let session = window.sessionStorage.getItem("setting");
+    const [popup,setPopup]= useState(0);
+    const [display, setDisplay] = useState(false);
     const [load,setLoad]=useState(session==true || session===null ? true : false);
     const ref1=useRef(null);
     const ref2=useRef(null);
@@ -22,17 +25,32 @@ function Home(){
         sessionStorage.setItem("setting", JSON.stringify(load));
     }
 
+    const getPopUp=(popup,display)=>{
+        setPopup(popup);
+        console.log(popup);
+        getDisplay(display);
+    }
+
+    const getDisplay=(display)=>{
+        if(display===false){
+            setDisplay(true);
+        }else{
+            setDisplay(false);
+        }
+        console.log(display);
+    }
+
      useEffect(()=>{
         Aos.init({duration:1500 });
         setTimeout(()=>{
             setStorage();
         },4000);
-    },[])
+    },[]);
 
     return(
         <div className={styles.main}>
             {load ? <Loading/> : (
-            <div>
+            <div className={styles.relative}>
                 <SideMenu arr={visarr}/>
                 <div className={styles.sideline}></div>
                 <div className={styles.box}>
@@ -52,16 +70,17 @@ function Home(){
                     </div>
                 </div> 
                 <div className={styles.bodies}>
-                    <div class='pop' ref={ref1} className={styles.box}>
+                    <div ref={ref1} className={styles.box}>
                         <Intro/>
                     </div>
                     <div ref={ref2} className={styles.box}>
                         <Skill/>
                     </div>
                     <div ref={ref3} className={styles.box}>
-                        <Projectpage/>
+                        <Projectpage popup={popup} getPopUp={getPopUp} display={display}/>
                     </div>
                 </div>
+                <ProjectPopUp popup={popup} display={display} getDisplay={getDisplay}/>
             </div>
             )}
         </div>

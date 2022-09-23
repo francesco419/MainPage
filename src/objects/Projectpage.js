@@ -1,7 +1,7 @@
 import Project from "./Project.js";
 import styles from "./Projectpage.module.css";
 
-function Projectpage(){
+function Projectpage({popup, display, getPopUp}){
     const prjt = [0,1,2,3];
     const name='</projects>';
     return(
@@ -11,6 +11,9 @@ function Projectpage(){
             <Project
             key={no}
             num={no}
+            popup={popup}
+            display={display}
+            getPopUp={getPopUp}
             />
             ))}
             <a href="https://github.com/francesco419" className={styles.github}>
