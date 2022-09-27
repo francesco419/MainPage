@@ -31,6 +31,11 @@ function ProjectDetail({popup}){
             setIsnext(false);
         }
     }
+
+    useEffect(()=>{
+        getValue();
+    },[popup])
+
     /* useEffect(()=>{
         if (prePath.indexOf('/Project/') !== -1) {
             console.log('새로고침');
@@ -73,7 +78,6 @@ function ProjectDetail({popup}){
     
     return(
         <div className={styles.page}>
-            <div className={styles.sideline}></div>
             <div className={styles.intro}>
                 <div className={styles.pages}>
                     <div data-aos="fade-up" data-aos-once="true" className={styles.title}>{ProjectDetailText[id].name}</div>
@@ -126,14 +130,14 @@ function ProjectDetail({popup}){
                             ))}
                         </Carousel>
                     </div>
-                    <div className={styles.button}>
+                   {/*  <div className={styles.button}>
                         <Link className={styles.Links} to={'/Mainpage'}>Back</Link>
                         {isprev ? (<Link className={styles.Links} to={`/Project/${(id-1)}`}>Prev</Link>) :<div>Prev</div>}
                         {isnext ? (<Link className={styles.Links} to={`/Project/${(parseInt(id)+1)}`}>Next</Link>) :<div>Next</div>}
                         <a href={ProjectDetailText[id].github} style={{margin:'0'}} className={styles.Links}>
                         Github
                         </a>
-                    </div>
+                    </div> */}
             </div>
         </div>
         

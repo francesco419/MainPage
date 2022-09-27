@@ -36,7 +36,7 @@
     border-top: 3px solid white;
     height: 30px;
     width: 300px;
-    animation: loading 0.5s linear;
+    animation: loading 2s linear;
     animation-fill-mode: backwards;
 }
 
@@ -53,7 +53,7 @@
     border-top: 3px solid white;
     height: 30px;
     width: 300px;
-    animation: loading1 0.5s linear;
+    animation: loading1 2s linear;
     animation-fill-mode: backwards;
     animation-direction: reverse;
 }

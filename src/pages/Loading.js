@@ -24,10 +24,10 @@ function Loading(){
             <div className={styles.box}>
                 <div className={styles.load}>
                     <div style={{animationDelay:'0.5s'}} className={styles.lineF}></div>
-                    <div style={{animationDelay:'1.5s'}} className={styles.lineB}></div>
-                    <div style={{animationDelay:'2.5s'}} className={styles.lineF}></div>
-                    <div style={{animationDelay:'2s'}} className={styles.lineB}></div>
-                    <div style={{animationDelay:'1s'}} className={styles.lineF}></div>
+                    <div style={{animationDelay:'0.5s'}} className={styles.lineB}></div>
+                    <div style={{animationDelay:'0.5s'}} className={styles.lineF}></div>
+                    <div style={{animationDelay:'0.5s'}} className={styles.lineB}></div>
+                    <div style={{animationDelay:'0.5s'}} className={styles.lineF}></div>
                 </div>
             </div>
         </div>
