@@ -24,8 +24,12 @@ function Project({id,num,popup,display,getPopUp}){
                     <div className={styles.eng}>{ProjectTXT[num].eng}</div>
                     <div className={styles.boldwhite}>{ProjectTXT[num].title}</div>
                     <div>{ProjectTXT[num].text}</div>
-                    {/* <div style={{margin:'30px 0'}}><Link className={styles.Links} to={`/Project/${ProjectTXT[num].id}`}>view detail▷</Link></div> */}
+                    {/* {window.outerWidth<=768 ? 
+                    <div style={{margin:'30px 0'}}><Link className={styles.Links} to={`/Project/${ProjectTXT[num].id}`}>view detail▷</Link></div> 
+                    : 
                     <div style={{margin:'30px 0'}} onClick={onClick}>view detail▷</div>
+                } */}
+                <div style={{margin:'30px 0'}} onClick={onClick}>view detail▷</div>
                 </div>
             </div>
         </div>
