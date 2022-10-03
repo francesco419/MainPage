@@ -11,7 +11,6 @@ import calc from "./picture/calc.PNG";
 import y1 from "./picture/youtube1.PNG";
 import y2 from "./picture/youtube2.PNG";
 import y3 from "./picture/youtube3.PNG";
-import Skill from "./Skill";
 
 export const ProjectDetailText =[
     {

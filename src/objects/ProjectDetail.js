@@ -1,10 +1,8 @@
 import {useEffect, useState} from "react";
 import { PieChart, Pie, Cell } from 'recharts';
 import styles from "./ProjectDetail.module.css";
-import Aos from 'aos';
 import 'aos/dist/aos.css'
 import Carousel from "nuka-carousel";
-import { useParams, Link, useLocation } from "react-router-dom";
 import {ProjectDetailText} from "./ProjectText.js";
 
 let prePath = ''; // 컴포넌트 함수 외부에 위치

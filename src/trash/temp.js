@@ -5,7 +5,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import Carousel from "nuka-carousel";
 import { useParams, Link, useLocation } from "react-router-dom";
-import {ProjectDetailText} from "./ProjectText.js";
+import {ProjectDetailText} from "../objects/ProjectText.js";
 
 let prePath = ''; // 컴포넌트 함수 외부에 위치
 

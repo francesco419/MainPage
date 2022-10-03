@@ -1,5 +1,4 @@
 import styles from "./Project.module.css";
-import {Link} from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import {useEffect} from "react";

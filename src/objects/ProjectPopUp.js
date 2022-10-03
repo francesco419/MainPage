@@ -1,6 +1,4 @@
-import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 import styles from "./ProjectPopUp.module.css";
-import Aos from "aos";
 import { useEffect } from "react";
 import ProjectDetail from "./ProjectDetail";
 
