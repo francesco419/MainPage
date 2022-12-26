@@ -1,151 +1,168 @@
-.page{
-    font-size: 25px;
-    white-space: pre-line;
+.page {
+  font-size: 25px;
+  white-space: pre-line;
 }
 
-.intro{
-    border-bottom: 1px solid #67F5E1;
+.intro {
+  border-bottom: 1px solid #67f5e1;
+  padding: 0 20px;
 }
 
-.pages{
-    width:81%;
-    margin: 0 auto;
-    font-size: 25px;
-    padding: 20px 0 80px 100px;
+.pages {
+  margin: 0;
+  font-size: 25px;
+  padding: 40px 0;
 }
 
-.title{
-    font-size: 70px;
-    font-weight:bold;
-    color:#ADF53E;
-    margin-bottom: 90px;
+.title {
+  font-size: 70px;
+  font-weight: bold;
+  color: #adf53e;
+  margin-bottom: 90px;
 }
 
-.detail{
-    display: flex;
-    margin: 0 0 20px 0;
-    font-size: 23px;
+.detail {
+  display: flex;
+  margin: 0 0 20px 0;
+  font-size: 23px;
 }
 
-.pagelink{
-    font-size: 16px;
-    text-decoration: none;
-    color:#ADF53E;
+.pagelink {
+  font-size: 16px;
+  text-decoration: none;
+  color: #adf53e;
 }
 
-.pagelink:hover{
-    font-weight: bold;
+.pagelink:hover {
+  font-weight: bold;
 }
 
-.info{
-    display: flex;
-    align-items: center;
+.info {
+  display: flex;
+  align-items: center;
 }
 
+.text {
+  font-size: 20px;
+  line-height: 40px;
+}
 
-.text{
+.pie {
+  margin-left: 60px;
+  overflow: visible;
+}
+
+.Links {
+  text-decoration-line: none;
+  color: white;
+}
+
+.Links:hover {
+  font-weight: bold;
+}
+
+.imageslide {
+  display: flex;
+  position: relative;
+  min-height: 500px;
+  height: 900px;
+  max-width: 1000px;
+  border: 2px solid #ffffff;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.imageslide_LeftB {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background-color: #0000007e;
+  color: #ff0000;
+  z-index: 99;
+}
+
+.imageslide_RightB {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background-color: #0000007e;
+  color: #ff0000;
+  z-index: 99;
+}
+.imageslide_RightB:active {
+  background-color: #67f5e1;
+}
+
+.polpol {
+  position: relative;
+  transition: transform 1.5s alternate;
+  width: 100%;
+}
+
+.imageslide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .page {
+    white-space: normal;
+  }
+  .sideline {
+    display: none;
+  }
+  .pages {
+    padding: 0;
+  }
+  .title {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .info {
+    flex-direction: column-reverse;
+    white-space: normal;
+    margin-bottom: 50px;
+  }
+  .pie {
+    margin: 0;
+  }
+  .git {
+    display: none;
+  }
+  .button {
+    top: 1em;
+    left: 0.5em;
     font-size: 20px;
-    line-height: 40px;
+  }
+  .slide {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  .slide img {
+    height: 50vh;
+  }
 }
 
-.pie{
-    margin-left: 60px;
-    overflow: visible;
+@media (max-width: 1280px) {
+  .page {
+    white-space: normal;
+  }
+  .sideline {
+    display: none;
+  }
+  .git {
+    display: none;
+  }
+  .button {
+    top: 1em;
+    left: 0.5em;
+    font-size: 20px;
+  }
 }
-
-/* .git img{
-    border-radius: 50%;
-    height: 50px;
-    width:50px;
-    background-color: white;
-}
-
-.git img:hover{
-    background-color: #181818;
-} */
-
-.slide{
-    margin-top: 100px;
-    padding-right: 200px;
-}
-
-.slide img{
-    height: 80vh;
-    width: 100%;
-    object-fit: cover;
-}
-
-.button{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top:6em;
-    right:7.5em;
-    width: 80px;
-}
-
-.Links{
-    text-decoration-line : none;
-    color: white;
-}
-
-.Links:hover{
-    font-weight: bold;
-}
-
-@media (max-width: 768px){
-    .page{
-        white-space: normal;
-    }
-    .sideline{
-        display: none;
-    }
-    .pages{
-        padding: 0;
-    }
-    .title{
-        font-size: 50px;
-        margin-bottom: 30px;
-    }
-    .info{
-        flex-direction: column-reverse;
-        white-space:normal;
-        margin-bottom: 50px;
-    }
-    .pie{
-        margin:0;
-    }
-    .git{
-        display: none;
-    }
-    .button{
-        top:1em;
-        left: 0.5em;
-        font-size: 20px;
-    }
-    .slide{
-        margin-bottom: 50px;
-        padding: 0;
-    }
-    .slide img{
-        height:50vh;
-    }
-}
-
-@media (max-width: 1280px){
-    .page{
-        white-space: normal;
-    }
-    .sideline{
-        display: none;
-    }
-    .git{
-        display: none;
-    }
-    .button{
-        top:1em;
-        left: 0.5em;
-        font-size: 20px;
-    }
-}
-  
