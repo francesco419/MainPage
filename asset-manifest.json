@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.77c59a4d.css",
-    "main.js": "/MainPage/static/js/main.73e3ff70.js",
+    "main.css": "/MainPage/static/css/main.e2cbb4ca.css",
+    "main.js": "/MainPage/static/js/main.6e96a700.js",
     "static/media/greeting1.PNG": "/MainPage/static/media/greeting1.41aae3a094d0287ae21a.PNG",
     "static/media/greeting.PNG": "/MainPage/static/media/greeting.f656e5da1a084d5eed73.PNG",
     "static/media/portfolio3.PNG": "/MainPage/static/media/portfolio3.a686d986d9c6d5ccd7b5.PNG",
@@ -13,23 +13,40 @@
     "static/media/movie2.PNG": "/MainPage/static/media/movie2.d20a4436bdc2aec50691.PNG",
     "static/media/youtube1.PNG": "/MainPage/static/media/youtube1.fa587f181d4df251e3ce.PNG",
     "static/media/insta.PNG": "/MainPage/static/media/insta.86d6ea04dc23f0f2849e.PNG",
+    "static/media/travelaway_countryinfo.PNG": "/MainPage/static/media/travelaway_countryinfo.92512ce991796cd0fdb0.PNG",
+    "static/media/travelaway_listcountry.PNG": "/MainPage/static/media/travelaway_listcountry.017c11596c99763a6467.PNG",
     "static/media/portfolio.PNG": "/MainPage/static/media/portfolio.965e8cf01a9a8fa037c5.PNG",
     "static/media/calc.PNG": "/MainPage/static/media/calc.585b5da9be6f74411c0c.PNG",
+    "static/media/css-module.png": "/MainPage/static/media/css-module.4aabd776fc578dc30128.png",
+    "static/media/travelaway_intropage.PNG": "/MainPage/static/media/travelaway_intropage.a76693726ff692bd6ca2.PNG",
     "static/media/linkedin.png": "/MainPage/static/media/linkedin.f6bf5859dad4d1a4e06d.png",
     "static/media/github.png": "/MainPage/static/media/github.44eee0c4a6c25b0d7347.png",
     "static/media/email.png": "/MainPage/static/media/email.0651a75bff08d2d2612c.png",
+    "static/media/nodejs.svg": "/MainPage/static/media/nodejs.ab2cc7047fb0e9cbd129f26a319597bf.svg",
+    "static/media/react.svg": "/MainPage/static/media/react.598d90dd4f36234e376cbc6ccd571550.svg",
     "static/media/reactsvg.svg": "/MainPage/static/media/reactsvg.3c03a50d76c1fdb307a67ba7d49112d9.svg",
+    "static/media/c-sharp.svg": "/MainPage/static/media/c-sharp.6e60a2d26fb6692e5c7679af5ee8ee1d.svg",
+    "static/media/java.svg": "/MainPage/static/media/java.f5877adc7a323f67fa833603b1b8178c.svg",
+    "static/media/html.svg": "/MainPage/static/media/html.eba3e919a9c1f2e4582f908e79d6f213.svg",
+    "static/media/c-plusplus.svg": "/MainPage/static/media/c-plusplus.906d53c315ace4d244c82e736d543061.svg",
+    "static/media/css.svg": "/MainPage/static/media/css.f1823d8606e24164d5ac03b4e9b80d85.svg",
     "static/media/csssvg.svg": "/MainPage/static/media/csssvg.be8fec8ba9405f977eb1d1b0941845d9.svg",
+    "static/media/redux.svg": "/MainPage/static/media/redux.a907b9f98d324503c0c0d9ac2991eb03.svg",
+    "static/media/typescript.svg": "/MainPage/static/media/typescript.3ca8a525abd0f8887aae0089dc4ed25c.svg",
+    "static/media/git.svg": "/MainPage/static/media/git.8ee81345da1c18b6cdb4bbe93b464810.svg",
     "static/media/htmlsvg.svg": "/MainPage/static/media/htmlsvg.fec2932b27344de2fa7b2692ad88e6c1.svg",
+    "static/media/javascript.svg": "/MainPage/static/media/javascript.9682a4215faf34b58f514c61f5879cd7.svg",
+    "static/media/figma.svg": "/MainPage/static/media/figma.eea90cbdb2df47f3f9a77474d7dd244c.svg",
+    "static/media/c.svg": "/MainPage/static/media/c.fc9a59303a924a9d57498af3b468e29b.svg",
     "index.html": "/MainPage/index.html",
     "static/media/jssvg.svg": "/MainPage/static/media/jssvg.8c994ed55035875b227915d8795c68b0.svg",
     "static/media/chevron-up.svg": "/MainPage/static/media/chevron-up.4d3d196e33386b0e089f40ba84642c40.svg",
     "static/media/chevron-down.svg": "/MainPage/static/media/chevron-down.9cec6edd25b63e6c7c9bf65ede4d98cc.svg",
-    "main.77c59a4d.css.map": "/MainPage/static/css/main.77c59a4d.css.map",
-    "main.73e3ff70.js.map": "/MainPage/static/js/main.73e3ff70.js.map"
+    "main.e2cbb4ca.css.map": "/MainPage/static/css/main.e2cbb4ca.css.map",
+    "main.6e96a700.js.map": "/MainPage/static/js/main.6e96a700.js.map"
   },
   "entrypoints": [
-    "static/css/main.77c59a4d.css",
-    "static/js/main.73e3ff70.js"
+    "static/css/main.e2cbb4ca.css",
+    "static/js/main.6e96a700.js"
   ]
 }
