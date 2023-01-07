@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { PieChart, Pie, Cell } from "recharts";
 import styles from "./ProjectDetail.module.css";
 import "aos/dist/aos.css";
-import { ProjectDetailText } from "./ProjectText.js";
+import { ProjectDetailText } from "../context/ProjectText.js";
 
 let prePath = ""; // 컴포넌트 함수 외부에 위치
 
@@ -29,7 +29,6 @@ function ProjectDetail({ popup }) {
       )
     ).json();
     setValue(json);
-    console.log(json);
   }; //https://api.github.com/users/francesco419/repos
 
   const getnext = () => {
@@ -72,7 +71,6 @@ function ProjectDetail({ popup }) {
       value: ht,
     },
   ];
-  console.log(ProjectDetailText);
 
   return (
     <div className={styles.page}>

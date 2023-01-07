@@ -1,16 +1,19 @@
-import port1 from "./picture/portfolio.PNG";
-import port2 from "./picture/portfolio2.PNG";
-import port3 from "./picture/portfolio3.PNG";
-import movie1 from "./picture/movie.PNG";
-import movie2 from "./picture/movie1.PNG";
-import movie3 from "./picture/movie2.PNG";
-import greeting1 from "./picture/greeting.PNG";
-import greeting2 from "./picture/greeting1.PNG";
-import insta from "./picture/insta.PNG";
-import calc from "./picture/calc.PNG";
-import y1 from "./picture/youtube1.PNG";
-import y2 from "./picture/youtube2.PNG";
-import y3 from "./picture/youtube3.PNG";
+import port1 from "../picture/portfolio.PNG";
+import port2 from "../picture/portfolio2.PNG";
+import port3 from "../picture/portfolio3.PNG";
+import movie1 from "../picture/movie.PNG";
+import movie2 from "../picture/movie1.PNG";
+import movie3 from "../picture/movie2.PNG";
+import greeting1 from "../picture/greeting.PNG";
+import greeting2 from "../picture/greeting1.PNG";
+import insta from "../picture/insta.PNG";
+import calc from "../picture/calc.PNG";
+import y1 from "../picture/projectimg/youtube/youtube1.PNG";
+import y2 from "../picture/projectimg/youtube/youtube2.PNG";
+import y3 from "../picture/projectimg/youtube/youtube3.PNG";
+import travelaway_intropage from "../picture/projectimg/travelaway/travelaway_intropage.PNG";
+import travelaway_countryinfo from "../picture/projectimg/travelaway/travelaway_countryinfo.PNG";
+import travelaway_listcountry from "../picture/projectimg/travelaway/travelaway_listcountry.PNG";
 
 export const ProjectDetailText = [
   {
@@ -28,7 +31,7 @@ export const ProjectDetailText = [
     id: 2,
     name: "Travel\nAway\nProject",
     text: "이제 곧 코로나 시국이 끝나가는 시점에서 가장 많은 관심을 받게 될 요소는 여행이라고 생각되어, 공공데이터포털의 API를 이용해 각국의 일반정보, 여행경보, 환율 등 여러가지 정보를 간편하게 조회할 수 있는 웹페이지를 만드는 프로젝트이다.\n 이전 프로젝트들과는 클론프로젝트나 포트폴리오를 위한 프로젝트가 아닌 사이트 배포시 일반 사람들이 유용하게 사용할 수 있는 사이트를 목적으로 진행하였으며,\n 특히 간편하고 쉬운 인터페이스를 구현함으로서 복잡함 없이 남녀노소 누구나 쉽게 접근할 수 있도록 하였다.",
-    img: [null],
+    img: [travelaway_intropage, travelaway_countryinfo, travelaway_listcountry],
     url: "https://francesco419.github.io/Travel/",
     github: "https://github.com/francesco419/Travel",
     contribution: "Working on Process~",
@@ -102,7 +105,7 @@ export const ProjectTXT = [
   },
   {
     id: 1,
-    imgs: "https://user-images.githubusercontent.com/84317858/158579317-6d81584f-6cce-435f-b6d0-e3dc2c8065a3.PNG",
+    imgs: travelaway_intropage,
     eng: "TravelAway",
     title: "여행정보사이트",
     text: "여러 국가의 일반정보, 여행경보, 환율 등\n코로나 시국 이후에 여행을 준비하는 사람들을 위한\n여행정보 사이트를 제작했습니다.",
@@ -134,10 +137,12 @@ export const SkillsText = [
   },
 ];
 
-export const IntroText = [
-  {
-    id: 0,
-    name: "strength",
-    text: "▷더 좋은 코드를 위해 끊임없이 고민하고 적극적으로 의견을 나누는 자세\n\n▷피드백을 듣고 개선하려는 노력과 변화에 민첩하게 반응하는 자세\n\n▷API Data 사용에 능숙하며 인터페이스와 결합하는 능력\n\n▷새로운 기술에 대한 빠른 적응능력",
-  },
-];
+export const IntroText = {
+  id: 0,
+  name: "strength",
+  text: [
+    "더 좋은 아이디어를 위해 끊임없이 고민하고 적극적으로 의견을 나누는 자세",
+    "피드백을 듣고 개선하려는 노력과 변화에 민첩하게 반응하는 자세",
+    "항상 새로운 기술에 대해 긍정적이며 이를 통해 업무 능력을 발전시키는 자세",
+  ],
+};

@@ -1,19 +1,15 @@
 import Home from "./pages/Home";
-import ProjectDetail from "./objects/ProjectDetail";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import ScrollToTop from "./objects/ScrollToTop.js";
+import ProjectDetail from "./components/ProjectDetail";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./hook/ScrollToTop.js";
 
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
-        <Route path="/Project/:id" element={<ProjectDetail/>} />
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home/>} />
+        <Route path="/Project/:id" element={<ProjectDetail />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
