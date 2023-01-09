@@ -22,6 +22,7 @@ import CSS_MODULE_PNG from "../picture/language/css-module.png";
 import { SkillsText } from "../context/ProjectText.js";
 
 function Skill() {
+  console.log(window.innerWidth);
   /* const [skillarr, setSkillarr] = useState([
     "C++",
     "C",
@@ -106,7 +107,10 @@ function Skill() {
             <REDUX_SVG width="100px" height="100px" />
           </li>
         </ul>
-        <ul className={styles["ul-skillset-1"]} style={{ margin: "40px 20px" }}>
+        <ul
+          className={styles["ul-skillset-1"]}
+          style={window.innerWidth > 1025 ? { margin: "40px 20px" } : null}
+        >
           <li className={styles["li-skillset-absolute"]}>
             <p>Database</p>
           </li>
