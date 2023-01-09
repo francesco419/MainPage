@@ -80,7 +80,7 @@ function Intro() {
     <div className={styles.about}>
       <div className={styles.top}>
         <div className={styles.title}>
-          <p>{name}</p>
+          <p>{`</about>`}</p>
         </div>
         <div className={styles["block-top-personal"]}>
           <p className={styles["p-top-name"]} style={{ margin: "0 20px 0 0" }}>

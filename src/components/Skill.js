@@ -59,7 +59,7 @@ function Skill() {
 
   function Skillset() {
     return (
-      <ul className={styles["ul-skillset-container"]}>
+      <div className={styles["ul-skillset-container"]}>
         <ul className={styles["ul-skillset-0"]}>
           <li>
             <p>React를 기반으로 Typescript와 Redux을</p>
@@ -145,7 +145,7 @@ function Skill() {
             <JAVA_SVG width="100px" height="100px" />
           </li>
         </ul>
-      </ul>
+      </div>
     );
   }
 

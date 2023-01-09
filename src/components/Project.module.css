@@ -26,6 +26,7 @@
 
 .boldwhite {
   font-size: 40px;
+  color: #adf53e;
   font-weight: bold;
   margin: 10px 0 40px 0;
 }
@@ -41,6 +42,13 @@
 
 .eng {
   font-size: 20px;
+}
+.block-click-popup {
+  cursor: pointer;
+}
+.block-click-popup:hover {
+  transform: translateY(2px);
+  color: #adf53e;
 }
 
 @media (max-width: 768px) {

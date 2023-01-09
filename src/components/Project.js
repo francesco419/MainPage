@@ -28,7 +28,11 @@ function Project({ id, num, display, getPopUp }) {
                     : 
                     <div style={{margin:'30px 0'}} onClick={onClick}>view detail▷</div>
                 } */}
-          <div style={{ margin: "30px 0" }} onClick={onClick}>
+          <div
+            className={styles["block-click-popup"]}
+            style={{ margin: "30px 0" }}
+            onClick={onClick}
+          >
             view detail▷
           </div>
         </div>
