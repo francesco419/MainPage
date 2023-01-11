@@ -6,62 +6,31 @@
   height: 100vh;
   overflow: hidden;
   font-size: 3vw;
-  animation: fadeout 1s linear;
 }
 
 @keyframes fadeout {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 0;
   }
 }
 
-.box {
-  width: 200px;
-  overflow: hidden;
-}
-
-.load {
-  width: 0;
-}
-
-.lineF {
-  border-top: 3px solid white;
-  height: 30px;
+.progress-bar {
+  height: 10px;
   width: 300px;
-  animation: loading 2s linear;
-  animation-fill-mode: backwards;
 }
 
-@keyframes loading {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+progress {
+  appearance: none;
 }
-
-.lineB {
-  border-top: 3px solid white;
-  height: 30px;
-  width: 200px;
-  margin: 20px auto;
-  animation: loading1 2.5s linear;
-  animation-fill-mode: backwards;
-  animation-direction: reverse;
+progress::-webkit-progress-bar {
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 10px #ccc;
 }
-
-@keyframes loading1 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+progress::-webkit-progress-value {
+  border-radius: 10px;
+  background: #adf53e;
 }

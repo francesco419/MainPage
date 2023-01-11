@@ -1,29 +1,30 @@
-.project{
-    width:81%;
-    margin: 0 auto;
-    padding: 100px 0 200px 0;
-    font-size: 25px;
+.project {
+  width: 81%;
+  margin: 0 auto;
+  padding: 100px 0 200px 0;
+  font-size: 25px;
 }
 
-.title{
-    font-size: 70px;
-    font-weight:bold;
-    color:#ADF53E;
-    margin-bottom: 90px;
+.title {
+  font-size: 70px;
+  font-weight: bold;
+  color: #adf53e;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 50px;
   }
-
-  @media (max-width: 768px){
-      .title{
-          font-size: 50px;
-      }
 }
 
-.github{
-    font-size: 15px;
-    text-decoration-line: none;
-    color:#ADF53E;
+.github {
+  font-size: 15px;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  color: #adf53e;
 }
 
-.github:hover{
-    font-weight: bold;
+.github:hover {
+  font-weight: bold;
 }

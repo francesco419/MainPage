@@ -86,7 +86,7 @@ function Intro() {
           <p className={styles["p-top-name"]} style={{ margin: "0 20px 0 0" }}>
             이상현
           </p>
-          <p>Lee Sang Hyeon</p>
+          <p>Lee Sang Hean</p>
         </div>
         <p>P. 010 2922 1840</p>
         <p style={{ margin: "0 0 20px 0" }}>E. francesco419@naver.com</p>

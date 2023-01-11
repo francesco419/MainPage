@@ -223,3 +223,46 @@ Skill부분에서 텍스트스크롤링 파트 보완필요.
 - 반응형웹 작업.
 
 - Project 컴포넌트 세부 디자인 수정.
+
+  ### 12.2.2
+
+  - Loading 페이지의 로딩기능을 단순 애니메이션에서 <progress>로 교체하였고, animation-delay 및 setTimeout을 사용하여 순차적이 아닌 인위적인 수치로 인한 로딩페이지의 작동기능을 수정.
+  - <progress> 삭제 및 SVG를 이용하여 직접 프로그래스 컴포넌트를 만드는것으로 계획.
+
+    - 형태의 틀은 둥근 형태로서 중앙에 프로그래스 퍼센티지(%)를 표시, 프로그래스컴포넌트 제작.
+    - MouseDown과 MouseUP 이벤트를 사용하여 MouseDown 상태에서는 프로그래스 퍼센티지(%)가 올라가고, MouseUP일때는 프로그래스 퍼센티지(%)가 내려가는 방식의 구현을 목표.
+
+      - setInterval를 사용하여 이벤트 발생시 증가/감소되는 속도를 조절한다.
+        - setInterval 사용시 내부에서 setState를 사용하더라도 실질적으로 state의 변화가 없는것을 확인.
+          - 이유는 setInterval은 처음설정된 props/state를 사용하므로 state의 변화 및 랜더링에 영향을 주지 못한다는 것.
+        - 대체방식으로 Hook인 useInterval을 사용할 수있으나 타 함수의 내부에서 사용시 오류발생.
+          - state를 사용하여 useInterval내부에 state의 변화에 따라 작동하도록 설정.
+          ```javascript
+          useInterval(
+            () => {
+              if (trigger) {
+                if (percentage < 100) {
+                  setPercentage((percentage) => percentage + 1);
+                } else {
+                  return;
+                }
+              } else {
+                if (percentage > 0) {
+                  setPercentage((percentage) => percentage - 1);
+                }
+              }
+              setDash((CIRCUMFERENCE * percentage) / 100);
+              console.log(percentage);
+            },
+            (!trigger && percentage === 0) || percentage === 100 ? null : 30
+          );
+          ```
+          - useInterval은 delay로 null을 주게되면 작동이 멈춤으로 연산자의 조합으로 각 상황에 맞게 동작하도록 설정.(trigger변화시 / percentage가 0인 상태 / percentage가 100인 상태)
+
+    - SVG의 변화 방식은 여러 블로그를 참조, strokeDasharray를 state를 통해 변화를 주는 방식 사용.
+    - component폴더에 ProgressCircle.js를 생성하여 모듈화.
+    - ProgressCircle.js에서 Loading.js로 props를 보내는 방식으로 Loading페이지 전환 유무결정.
+      - 결과적으로 Home에서 Loading에 대한 처리를 하기때문에 Home - Loading - ProgressCircle의 props전달을 사용해야하는 불편함이 발생.
+      - Redux를 사용한 상태관리 환경구축에 대해 절실히 필요성을 느낌...
+
+  -CSS 및 애니메이션 작업. (~230111)

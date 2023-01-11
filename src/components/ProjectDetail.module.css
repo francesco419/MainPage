@@ -53,6 +53,7 @@
 }
 
 .Links {
+  -webkit-text-decoration-line: none;
   text-decoration-line: none;
   color: white;
 }
@@ -100,7 +101,11 @@
 
 .polpol {
   position: relative;
+  -webkit-transition: -webkit-transform 1.5s alternate;
+  transition: -webkit-transform 1.5s alternate;
+  -o-transition: transform 1.5s alternate;
   transition: transform 1.5s alternate;
+  transition: transform 1.5s alternate, -webkit-transform 1.5s alternate;
   width: 100%;
 }
 

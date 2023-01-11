@@ -1,0 +1,104 @@
+.progress-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #adf53e;
+  cursor: pointer;
+  animation: wiing 1s linear infinite alternate;
+}
+
+.circle-progress {
+  transform: rotate(-90deg);
+}
+.circle-progress-meter,
+.circle-progress-ing {
+  fill: none;
+}
+.circle-progress-meter {
+  stroke: #fff;
+}
+.circle-progress-ing {
+  stroke: #adf53e;
+  stroke-linecap: round;
+}
+.circle-progress-value {
+  font-size: 25px;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fadeout {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #adf53e;
+  cursor: pointer;
+  animation: fadeout 1s linear 5s;
+  animation: wiing 2s infinite alternate;
+}
+
+.fadein-1 {
+  position: absolute;
+  width: max-content;
+  font-size: 40px;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadein-out 4s forwards;
+}
+.fadein-2 {
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  width: 350px;
+  top: -90px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadein 1s linear 3s forwards;
+}
+.none {
+  display: none;
+}
+@keyframes wiing {
+  0% {
+    box-shadow: 0 0 15px #adf53e;
+  }
+  100% {
+    box-shadow: 0 0 30px #adf53e;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

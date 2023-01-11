@@ -108,13 +108,16 @@
   pointer-events: none;
   content: " ";
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   z-index: -1;
 }
 
 .innerCircle:hover .block-display-none {
   display: block;
 }
+
 .innerCircle:hover {
+  -webkit-box-shadow: 0 0 15px #adf53e;
   box-shadow: 0 0 15px #adf53e;
 }
 

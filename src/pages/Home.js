@@ -10,22 +10,16 @@ import Loading from "./Loading";
 import ProjectPopUp from "../components/ProjectPopUp";
 
 function Home() {
-  let session = window.sessionStorage.getItem("setting");
   const [popup, setPopup] = useState(0);
   const [display, setDisplay] = useState(false);
-  const [load, setLoad] = useState(
-    session == true || session === null ? true : false
+  const [progressDone, setProgressDone] = useState(
+    window.sessionStorage.getItem("setting")
   );
+
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const visarr = [ref1, ref2, ref3];
-
-  const setStorage = () => {
-    setLoad(false);
-    const data = { setting: load };
-    sessionStorage.setItem("setting", JSON.stringify(load));
-  };
 
   const getPopUp = (popup, display) => {
     setPopup(popup);
@@ -42,18 +36,18 @@ function Home() {
     console.log(display);
   };
 
+  const getProgressDone = (bool) => {
+    setProgressDone(bool);
+  };
+
   useEffect(() => {
     Aos.init({ duration: 1500 });
-    setTimeout(() => {
-      setStorage();
-    }, 4000);
+    console.log(window.sessionStorage.getItem("setting"));
   }, []);
 
   return (
     <div className={styles.main}>
-      {load ? (
-        <Loading />
-      ) : (
+      {progressDone ? (
         <div className={styles.relative}>
           <SideMenu arr={visarr} />
           <div className={styles.sideline}></div>
@@ -104,6 +98,11 @@ function Home() {
             getDisplay={getDisplay}
           />
         </div>
+      ) : (
+        <Loading
+          progressDone={progressDone}
+          getProgressDone={getProgressDone}
+        />
       )}
     </div>
   );
