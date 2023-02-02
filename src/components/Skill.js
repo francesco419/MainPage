@@ -1,24 +1,14 @@
-import { useEffect, useState } from "react";
 import styles from "./Skill.module.css";
-import useInterval from "../hook/useInterval";
-import { ReactComponent as JS } from "../picture/jssvg.svg";
-import { ReactComponent as CSS } from "../picture/csssvg.svg";
-import { ReactComponent as HTML } from "../picture/htmlsvg.svg";
-import { ReactComponent as REACT } from "../picture/reactsvg.svg";
 import { ReactComponent as JAVASCRIPT_SVG } from "../picture/language/javascript.svg";
 import { ReactComponent as CSSSVG } from "../picture/language/css.svg";
 import { ReactComponent as HTMLSVG } from "../picture/language/html.svg";
 import { ReactComponent as TYPESCRIPTSVG } from "../picture/language/typescript.svg";
-import { ReactComponent as C_SVG } from "../picture/language/c.svg";
-import { ReactComponent as CPLUSPLUS_SVG } from "../picture/language/c-plusplus.svg";
-import { ReactComponent as CSHARP_SVG } from "../picture/language/c-sharp.svg";
-import { ReactComponent as JAVA_SVG } from "../picture/language/java.svg";
 import { ReactComponent as NODEJS_SVG } from "../picture/language/nodejs.svg";
 import { ReactComponent as REACT_SVG } from "../picture/language/react.svg";
 import { ReactComponent as REDUX_SVG } from "../picture/language/redux.svg";
 import { ReactComponent as GIT_SVG } from "../picture/language/figma.svg";
 import { ReactComponent as FIGMA_SVG } from "../picture/language/git.svg";
-import CSS_MODULE_PNG from "../picture/language/css-module.png";
+import { ReactComponent as SCSS_SVG } from "../picture/language/scss.svg";
 import { SkillsText } from "../context/ProjectText.js";
 
 function Skill() {
@@ -84,16 +74,30 @@ function Skill() {
             <p>Language</p>
           </li>
           <li>
+            <HTMLSVG width="100px" height="100px" />
+          </li>
+          <li>
             <JAVASCRIPT_SVG width="100px" height="100px" />
           </li>
           <li>
-            <HTMLSVG width="100px" height="100px" />
+            <TYPESCRIPTSVG width="100px" height="100px" />
           </li>
           <li>
             <CSSSVG width="100px" height="100px" />
           </li>
           <li>
-            <TYPESCRIPTSVG width="100px" height="100px" />
+            <SCSS_SVG width="100px" height="100px" />
+          </li>
+        </ul>
+        <ul className={styles["ul-skillset-1"]}>
+          <li className={styles["li-skillset-absolute"]}>
+            <p>Library</p>
+          </li>
+          <li>
+            <REACT_SVG width="100px" height="100px" />
+          </li>
+          <li>
+            <REDUX_SVG width="100px" height="100px" />
           </li>
         </ul>
         <ul className={styles["ul-skillset-1"]}>
@@ -123,30 +127,10 @@ function Skill() {
             <p>ETC</p>
           </li>
           <li>
-            <img src={CSS_MODULE_PNG} width="100px" height="100px" />
-          </li>
-          <li>
             <GIT_SVG width="100px" height="100px" />
           </li>
           <li>
             <FIGMA_SVG width="100px" height="100px" />
-          </li>
-        </ul>
-        <ul className={styles["ul-skillset-1"]}>
-          <li className={styles["li-skillset-absolute"]}>
-            <p>Other</p>
-          </li>
-          <li>
-            <C_SVG width="100px" height="100px" />
-          </li>
-          <li>
-            <CPLUSPLUS_SVG width="100px" height="100px" />
-          </li>
-          <li>
-            <CSHARP_SVG width="100px" height="100px" />
-          </li>
-          <li>
-            <JAVA_SVG width="100px" height="100px" />
           </li>
         </ul>
       </div>

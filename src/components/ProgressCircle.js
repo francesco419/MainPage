@@ -2,22 +2,13 @@ import styles from "./ProgressCircle.module.css";
 import useInterval from "use-interval";
 import { useState } from "react";
 
-function ProgressCircle({ progressDone, getProgressDone }) {
-  let CIRCUMFERENCE = 2 * Math.PI * 54;
+function ProgressCircle({ getProgressDone }) {
+  let CIRCUMFERENCE = 2 * Math.PI * 30;
 
   const [trigger, setTrigger] = useState(false);
   const [dash, setDash] = useState(0);
   const [percentage, setPercentage] = useState(0);
   const [Tool, setTool] = useState(false);
-  const [greetText, setGreetText] = useState("");
-
-  /*  useEffect(() => {
-      setPercentage(percentage);
-    }, [percentage]); */
-
-  /* function progress() {
-      valuebar.style.strokeDashoffset = dashoffset;
-    } */
 
   const DownTrigger = () => {
     if (!trigger) {
@@ -39,9 +30,9 @@ function ProgressCircle({ progressDone, getProgressDone }) {
         } else if (percentage === 100) {
           sessionStorage.setItem("setting", JSON.stringify(false));
           setTool(true);
-          setTimeout(() => {
+          /* setTimeout(() => {
             getProgressDone(true);
-          }, 6000);
+          }, 6000); */
         }
       } else {
         if (percentage > 0) {
@@ -49,7 +40,6 @@ function ProgressCircle({ progressDone, getProgressDone }) {
         }
       }
       setDash((CIRCUMFERENCE * percentage) / 100);
-      console.log(percentage);
     },
     (!trigger && percentage === 0) || Tool ? null : 30
   );
@@ -70,24 +60,25 @@ function ProgressCircle({ progressDone, getProgressDone }) {
       </div>
       <svg
         className={styles["circle-progress"]}
-        width="120"
-        height="120"
+        width="500"
+        height="500"
         viewBox="0 0 120 120"
       >
         <circle
           className={styles["circle-progress-meter"]}
           cx="60"
           cy="60"
-          r="54"
-          strokeWidth="10"
+          r="30"
+          strokeWidth="30"
         />
         <circle
           className={styles["circle-progress-ing"]}
           cx="60"
           cy="60"
-          r="54"
+          r="30"
           strokeDasharray={[dash, CIRCUMFERENCE - (1 - dash)]}
-          strokeWidth="10"
+          strokeWidth="30"
+          style={{ stroke: percentage > 0 ? "#adf53e" : "#fff" }}
         />
       </svg>
       <p className={styles["circle-progress-value"]}>

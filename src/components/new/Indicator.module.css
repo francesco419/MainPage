@@ -1,0 +1,65 @@
+.indicator-container-stick {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50px;
+  height: 300px;
+  padding: 20px 0;
+  border: 0;
+  border-radius: 30px;
+  background-color: #c0c0c0;
+  transform: translate(0, -50%);
+}
+
+.indicator-container-stick * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.indicator-container-stick *:hover {
+  color: #000;
+  background-color: #000;
+}
+
+.indicator-container-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
+  padding: 5% 0;
+  margin: 15% 0;
+  border: 0;
+  border-radius: 30px;
+  background-color: #0c3184;
+}
+
+.indicator-container-side * {
+  color: #fff;
+  font-size: 1.5vw;
+  text-align: center;
+  padding: 5% 0;
+  z-index: 5;
+  background-color: #0c3184;
+  cursor: pointer;
+}
+
+.indicator-side-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 95%;
+  width: 50%;
+  border-right: 1px solid #edd451;
+  z-index: 1;
+}

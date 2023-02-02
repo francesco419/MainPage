@@ -47,63 +47,43 @@ function Home() {
 
   return (
     <div className={styles.main}>
-      {progressDone ? (
-        <div className={styles.relative}>
-          <SideMenu arr={visarr} />
-          <div className={styles.sideline}></div>
-          <div className={styles.box}>
-            <div className={styles.front}>
-              <div className={styles.title}>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="1000"
-                  className={styles.lee}
-                >
-                  LEE
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="2000"
-                  className={styles.sanghean}
-                >
-                  <span>SANG HEAN</span>
-                  <span style={{ color: "#ADF53E" }}>.</span>
-                </div>
+      <div className={styles.relative}>
+        <SideMenu arr={visarr} />
+        <div className={styles.sideline}></div>
+        <div className={styles.box}>
+          <div className={styles.front}>
+            <div className={styles.title}>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                className={styles.lee}
+              >
+                LEE
               </div>
-              <div className={styles.indicator}>
-                <div>Intro</div>
-                <div>Skills</div>
-                <div>Project</div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="2000"
+                className={styles.sanghean}
+              >
+                <span>SANG HEAN</span>
+                <span style={{ color: "#ADF53E" }}>.</span>
               </div>
             </div>
           </div>
-          <div className={styles.bodies}>
-            <div ref={ref1} className={styles.box}>
-              <Intro />
-            </div>
-            <div ref={ref2} className={styles.box}>
-              <Skill />
-            </div>
-            <div ref={ref3} className={styles.box}>
-              <Projectpage
-                popup={popup}
-                getPopUp={getPopUp}
-                display={display}
-              />
-            </div>
-          </div>
-          <ProjectPopUp
-            popup={popup}
-            display={display}
-            getDisplay={getDisplay}
-          />
         </div>
-      ) : (
-        <Loading
-          progressDone={progressDone}
-          getProgressDone={getProgressDone}
-        />
-      )}
+        <div className={styles.bodies}>
+          <div ref={ref1} className={styles.box}>
+            <Intro />
+          </div>
+          <div ref={ref2} className={styles.box}>
+            <Skill />
+          </div>
+          <div ref={ref3} className={styles.box}>
+            <Projectpage popup={popup} getPopUp={getPopUp} display={display} />
+          </div>
+        </div>
+        <ProjectPopUp popup={popup} display={display} getDisplay={getDisplay} />
+      </div>
     </div>
   );
 }

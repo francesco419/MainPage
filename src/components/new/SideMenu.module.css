@@ -1,0 +1,12 @@
+.second-page-left {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c3184;
+  width: 35vw;
+}
+
+.second-left-top {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+}
