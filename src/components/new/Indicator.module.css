@@ -7,12 +7,12 @@
   justify-content: space-around;
   align-items: center;
   width: 50px;
-  height: 300px;
-  padding: 20px 0;
+  padding: 20px 5px;
   border: 0;
   border-radius: 30px;
   background-color: #c0c0c0;
   transform: translate(0, -50%);
+  z-index: 99;
 }
 
 .indicator-container-stick * {
@@ -21,13 +21,8 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  margin: 10px 0;
+  margin: 20px 0;
   cursor: pointer;
-}
-
-.indicator-container-stick *:hover {
-  color: #000;
-  background-color: #000;
 }
 
 .indicator-container-side {
@@ -45,7 +40,6 @@
 }
 
 .indicator-container-side * {
-  color: #fff;
   font-size: 1.5vw;
   text-align: center;
   padding: 5% 0;
@@ -57,9 +51,8 @@
 .indicator-side-line {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   height: 95%;
-  width: 50%;
   border-right: 1px solid #edd451;
   z-index: 1;
 }

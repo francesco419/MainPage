@@ -1,15 +1,25 @@
-import { useEffect } from "react";
-import styles from "./FirstPage.module.css";
+import { useEffect, useRef } from "react";
+import styles from "./ThirdPage.module.css";
 import { ReactComponent as Arrow } from "../../picture/left-arrow.svg";
-import Indicator from "./Indicator";
+import { useOnScreen } from "../../hook/useOnScreen";
+import { useDispatch } from "react-redux";
+import { changeSide } from "../../redux/SideSlide";
 
 export default function FirstPage() {
-  useEffect(() => {}, []);
+  const dispatch = useDispatch();
+  const ref = useRef();
+  const screen = useOnScreen(ref);
+  useEffect(() => {
+    if (screen === true) {
+      dispatch(changeSide(0));
+      console.log(0);
+    }
+  }, [screen]);
   return (
     <div className={styles["first-page"]}>
       <div className={styles["first-page-left"]}>
         <div className={styles["first-page-introduce"]}>
-          <div className={styles["first-page-name"]}>
+          <div className={styles["first-page-name"]} ref={ref}>
             <p>LEE SANG HEAN</p>
           </div>
           <div className={styles["first-page-info"]}>

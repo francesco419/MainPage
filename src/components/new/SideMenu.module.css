@@ -1,11 +1,11 @@
-.second-page-left {
+.left {
   display: flex;
   flex-direction: column;
   background-color: #0c3184;
-  width: 35vw;
+  min-width: 20vw;
 }
 
-.second-left-top {
+.left-top {
   display: flex;
   align-items: center;
   height: 40vh;

@@ -7,7 +7,6 @@ import FrontPage from "./pages/FrontPage";
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
       <Routes>
         <Route path="/Project/:id" element={<ProjectDetail />} />
         <Route path={`${process.env.PUBLIC_URL}/`} element={<FrontPage />} />

@@ -4,14 +4,27 @@ import { ReactComponent as Creativity } from "../../picture/creativity.svg";
 import { ReactComponent as Growths } from "../../picture/growth.svg";
 import { ReactComponent as System } from "../../picture/system.svg";
 import SideMenu from "./SideMenu";
+import { useOnScreen } from "../../hook/useOnScreen";
+import { useDispatch } from "react-redux";
+import { changeSide } from "../../redux/SideSlide";
+import { useEffect, useRef } from "react";
 
 export default function SecondPage() {
+  const dispatch = useDispatch();
+  const ref = useRef();
+  const screen = useOnScreen(ref);
+  useEffect(() => {
+    if (screen === true) {
+      dispatch(changeSide(1));
+      console.log(1);
+    }
+  }, [screen]);
   return (
     <div className={styles["second-page"]}>
       <SideMenu />
       <div className={styles["second-page-right"]}>
         <div className={styles["second-right-box"]}>
-          <div className={styles["second-right-title"]}>
+          <div className={styles["second-right-title"]} ref={ref}>
             <div>
               <h2>{`<ABOUT ME/>`}</h2>
             </div>
@@ -42,26 +55,28 @@ export default function SecondPage() {
                 <li>Git을 통한 프로젝트 관리 경험</li>
               </ul>
               <table>
-                <tr>
-                  <td>
-                    <Communiction />
-                    <p>{`<Communiction>`}</p>
-                  </td>
-                  <td>
-                    <Creativity />
-                    <p>{`<Creativity>`}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <Growths />
-                    <p>{`<Growths>`}</p>
-                  </td>
-                  <td>
-                    <System />
-                    <p>{`<Systematic>`}</p>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>
+                      <Communiction />
+                      <p>{`<Communiction>`}</p>
+                    </td>
+                    <td>
+                      <Creativity />
+                      <p>{`<Creativity>`}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Growths />
+                      <p>{`<Growths>`}</p>
+                    </td>
+                    <td>
+                      <System />
+                      <p>{`<Systematic>`}</p>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div className={styles["second-progress"]}>
@@ -86,10 +101,10 @@ export default function SecondPage() {
               <span className={styles["progressbar"]} id="redux">
                 <div style={{ height: "8vh" }}></div>
               </span>
-              <aa className={styles["second-progress-absolute"]}>
+              <div className={styles["second-progress-absolute"]}>
                 <hr />
                 <hr />
-              </aa>
+              </div>
               <div className={styles["progress-name"]}>
                 <p>HTML</p>
                 <p>CSS</p>

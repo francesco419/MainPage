@@ -1,10 +1,10 @@
 import styles from "./FrontPage.module.css";
-import Aos from "aos";
-import { useEffect } from "react";
-import sss from "../picture/resume_photo.jpg";
 import FirstPage from "../components/new/FirstPage";
 import SecondPage from "../components/new/SecondPage";
 import Indicator from "../components/new/Indicator";
+import ThirdPage from "../components/new/ThirdPage";
+import FourthPage from "../components/new/FourthPage";
+import FifthPage from "../components/new/FifthPage";
 
 export default function FrontPage() {
   return (
@@ -12,11 +12,9 @@ export default function FrontPage() {
       <Indicator type={true} />
       <FirstPage />
       <SecondPage />
-      <div className={styles["box"]}>C</div>
-      <div className={styles["box"]}>D</div>
-      <div className={styles["box"]}>E</div>
-      <div className={styles["box"]}>F</div>
-      <div className={styles["box"]}>G</div>
+      <ThirdPage />
+      <FourthPage />
+      <FifthPage />
     </div>
   );
 }

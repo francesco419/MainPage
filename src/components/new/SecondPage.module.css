@@ -7,19 +7,6 @@
   font-size: 1vw;
 }
 
-.second-page-left {
-  display: flex;
-  flex-direction: column;
-  background-color: #0c3184;
-  width: 35vw;
-}
-
-.second-left-top {
-  display: flex;
-  align-items: center;
-  height: 40vh;
-}
-
 .second-page-right {
   box-sizing: border-box;
   padding: 3%;
@@ -45,8 +32,15 @@ h2 {
 }
 
 .second-right-section {
-  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75vw;
   margin: 50px auto;
+}
+
+.second-section-intro {
+  width: 60vw;
 }
 
 .second-section-detail {
@@ -54,7 +48,7 @@ h2 {
   margin: 5vh 0;
 }
 
-ul {
+.second-ul-first {
   width: fit-content;
   padding: 20px;
   list-style: inside;
@@ -70,7 +64,7 @@ h3 {
   margin: 0;
 }
 
-li::marker {
+.second-ul-first li::marker {
   color: yellow;
 }
 
