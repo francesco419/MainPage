@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.713bfd78.css",
-    "main.js": "/MainPage/static/js/main.cacb79a4.js",
+    "main.css": "/MainPage/static/css/main.193cbeb4.css",
+    "main.js": "/MainPage/static/js/main.7ac918fa.js",
     "static/media/greeting1.PNG": "/MainPage/static/media/greeting1.41aae3a094d0287ae21a.PNG",
     "static/media/greeting.PNG": "/MainPage/static/media/greeting.f656e5da1a084d5eed73.PNG",
     "static/media/portfolio3.PNG": "/MainPage/static/media/portfolio3.a686d986d9c6d5ccd7b5.PNG",
@@ -15,6 +15,7 @@
     "static/media/insta.PNG": "/MainPage/static/media/insta.86d6ea04dc23f0f2849e.PNG",
     "static/media/travelaway_countryinfo.PNG": "/MainPage/static/media/travelaway_countryinfo.92512ce991796cd0fdb0.PNG",
     "static/media/travelaway_listcountry.PNG": "/MainPage/static/media/travelaway_listcountry.017c11596c99763a6467.PNG",
+    "static/media/resume_photo.jpg": "/MainPage/static/media/resume_photo.21e30b85efde32135768.jpg",
     "static/media/portfolio.PNG": "/MainPage/static/media/portfolio.965e8cf01a9a8fa037c5.PNG",
     "static/media/calc.PNG": "/MainPage/static/media/calc.585b5da9be6f74411c0c.PNG",
     "static/media/travelaway_intropage.PNG": "/MainPage/static/media/travelaway_intropage.a76693726ff692bd6ca2.PNG",
@@ -48,11 +49,11 @@
     "static/media/contact.svg": "/MainPage/static/media/contact.efd9d7215a0a0ebf9e2703bc4cdd9bc8.svg",
     "static/media/chevron-up.svg": "/MainPage/static/media/chevron-up.4d3d196e33386b0e089f40ba84642c40.svg",
     "static/media/chevron-down.svg": "/MainPage/static/media/chevron-down.9cec6edd25b63e6c7c9bf65ede4d98cc.svg",
-    "main.713bfd78.css.map": "/MainPage/static/css/main.713bfd78.css.map",
-    "main.cacb79a4.js.map": "/MainPage/static/js/main.cacb79a4.js.map"
+    "main.193cbeb4.css.map": "/MainPage/static/css/main.193cbeb4.css.map",
+    "main.7ac918fa.js.map": "/MainPage/static/js/main.7ac918fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.713bfd78.css",
-    "static/js/main.cacb79a4.js"
+    "static/css/main.193cbeb4.css",
+    "static/js/main.7ac918fa.js"
   ]
 }
