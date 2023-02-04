@@ -4,19 +4,9 @@ import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";
 import SideMenu from "./SideMenu";
-
-import { ReactComponent as JAVASCRIPT_SVG } from "../../picture/language/javascript.svg";
-import { ReactComponent as CSSS_VG } from "../../picture/language/css.svg";
-import { ReactComponent as HTML_SVG } from "../../picture/language/html.svg";
-import { ReactComponent as TYPESCRIPT_SVG } from "../../picture/language/typescript.svg";
-import { ReactComponent as NODEJS_SVG } from "../../picture/language/nodejs.svg";
-import { ReactComponent as REACT_SVG } from "../../picture/language/react.svg";
-import { ReactComponent as REDUX_SVG } from "../../picture/language/redux.svg";
-import { ReactComponent as GIT_SVG } from "../../picture/language/figma.svg";
-import { ReactComponent as FIGMA_SVG } from "../../picture/language/git.svg";
-import { ReactComponent as SCSS_SVG } from "../../picture/language/scss.svg";
-
 import { skillText } from "./text";
+import { ProjectDetailText } from "../../context/ProjectText.js";
+import { useNavigate } from "react-router-dom";
 
 export default function ThirdPage() {
   const dispatch = useDispatch();
@@ -28,66 +18,83 @@ export default function ThirdPage() {
     }
   }, [screen]);
 
-  const moveBook = (classHead, classText) => {
-    const doc = document.getElementById(classHead);
-    const detail = document.getElementById(classText);
-    if (doc.classList.contains(styles["aaa"])) {
-      doc.classList.add(styles["bbb"]);
-      detail.classList.add(styles["bbq"]);
-      setTimeout(() => {
-        doc.classList.remove(styles["aaa"]);
-        detail.classList.remove(styles["aaq"]);
-        doc.classList.remove(styles["bbb"]);
-        detail.classList.remove(styles["bbq"]);
-      }, 500);
-    } else {
-      doc.classList.add(styles["aaa"]);
-      detail.classList.add(styles["aaq"]);
-    }
-  };
-
   return (
-    <div className={styles["third-page"]}>
+    <div id="third" className={styles["third-page"]}>
       <SideMenu />
       <div className={styles["third-page-right"]}>
         <div className={styles["third-right-box"]}>
+          <div className={styles["third-right-title"]} ref={ref}>
+            <div>
+              <h2>{`<PROJECT/>`}</h2>
+            </div>
+          </div>
           <div className={styles["third-right-section"]} ref={ref}>
-            <ul className={styles["third-section-book"]}>
-              <div className={styles["third-hidden"]}> a</div>
-              <OrderedList
-                bckColor={"#b9d6f2"}
-                list={"list1"}
-                detail={"detail1"}
-                arr={[skillText[0], skillText[2], skillText[3]]}
-                header={"Language"}
-              />
-              <OrderedList
-                bckColor={"#061A40"}
-                list={"list2"}
-                detail={"detail2"}
-                arr={[skillText[5], skillText[6]]}
-                header={"Library"}
-              />
-              <OrderedList
-                bckColor={"#0353A4"}
-                list={"list3"}
-                detail={"detail3"}
-                arr={[skillText[1], skillText[9]]}
-                header={"Style Sheet"}
-              />
-              <OrderedList
-                bckColor={"#006DAA"}
-                list={"list4"}
-                detail={"detail4"}
-                arr={[skillText[7], skillText[8]]}
-                header={"Extra"}
-              />
-            </ul>
+            {ProjectDetailText.map((data, index) => {
+              if (index < 4) {
+                return <Project props={data} index={index} />;
+              }
+            })}
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+function Project({ props, index }) {
+  const nav = useNavigate();
+  return (
+    <div
+      className={styles["third-section-block"]}
+      onClick={() => {
+        nav(`/ProjectNav/${index}`);
+      }}
+    >
+      <dl>
+        <dt>
+          <h1>{props.id}</h1>
+          <h2>{props.name}</h2>
+        </dt>
+        <hr />
+        <dd>
+          <p>{props.intro}</p>
+        </dd>
+      </dl>
+    </div>
+  );
+}
+
+{
+  /* <ul className={styles["third-section-book"]}>
+  <OrderedList
+    bckColor={"#b9d6f2"}
+    list={"list1"}
+    detail={"detail1"}
+    arr={[skillText[0], skillText[2], skillText[3]]}
+    header={"Language"}
+  />
+  <OrderedList
+    bckColor={"#061A40"}
+    list={"list2"}
+    detail={"detail2"}
+    arr={[skillText[5], skillText[6]]}
+    header={"Library"}
+  />
+  <OrderedList
+    bckColor={"#0353A4"}
+    list={"list3"}
+    detail={"detail3"}
+    arr={[skillText[1], skillText[9]]}
+    header={"Style Sheet"}
+  />
+  <OrderedList
+    bckColor={"#006DAA"}
+    list={"list4"}
+    detail={"detail4"}
+    arr={[skillText[7], skillText[8]]}
+    header={"Extra"}
+  />
+</ul> */
 }
 
 function Parah({ text, svg }) {
@@ -154,7 +161,7 @@ function OrderedList({ bckColor, list, detail, arr, header }) {
         <p className={styles["third-book-header"]}>{header}</p>
       </li>
       <li id={detail} style={{ backgroundColor: bckColor }}>
-        <div style={{ margin: arr.length <= 2 ? "40% 0" : "20% 0" }}>
+        <div style={{ margin: arr.length <= 2 ? "30% 0" : "15% 0" }}>
           {arr.map((data) => (
             <Parah text={data.text} svg={data.svg} />
           ))}

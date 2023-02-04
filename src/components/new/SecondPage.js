@@ -20,7 +20,7 @@ export default function SecondPage() {
     }
   }, [screen]);
   return (
-    <div className={styles["second-page"]}>
+    <div id="second" className={styles["second-page"]}>
       <SideMenu />
       <div className={styles["second-page-right"]}>
         <div className={styles["second-right-box"]}>

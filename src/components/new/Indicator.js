@@ -5,8 +5,10 @@ import { ReactComponent as About } from "../../picture/sticksvg/about.svg";
 import { ReactComponent as Skill } from "../../picture/sticksvg/skill.svg";
 import { ReactComponent as Project } from "../../picture/sticksvg/project.svg";
 import { ReactComponent as Contact } from "../../picture/sticksvg/contact.svg";
+import { ReactComponent as Navigate } from "../../picture/sticksvg/navigate.svg";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Indicator({ type }) {
   return <div>{type ? <StickForm /> : <SideForm />}</div>;
@@ -14,22 +16,31 @@ export default function Indicator({ type }) {
 
 function StickForm() {
   const side = useSelector((state) => state.side.value);
+  const nav = useNavigate();
+  const navTo = (id) => {
+    const doc = document.getElementById(id);
+    window.scrollTo({ top: doc.offsetTop, behavior: "smooth" });
+  };
   return (
     <div className={styles["indicator-container-stick"]}>
-      <div>
+      <div
+        onClick={() => {
+          nav(`/List`);
+        }}
+      >
+        <Navigate />
+      </div>
+      <div onClick={() => navTo("first")}>
         <Home fill={side === 0 ? "#fff" : "#000"} />
       </div>
-      <div>
+      <div onClick={() => navTo("second")}>
         <About fill={side === 1 ? "#fff" : "#000"} />
       </div>
-      <div>
-        <Skill fill={side === 2 ? "#fff" : "#000"} />
+      <div onClick={() => navTo("third")}>
+        <Project fill={side === 2 ? "#fff" : "#000"} />
       </div>
-      <div>
-        <Project fill={side === 3 ? "#fff" : "#000"} />
-      </div>
-      <div>
-        <Contact fill={side === 4 ? "#fff" : "#000"} />
+      <div onClick={() => navTo("fourth")}>
+        <Contact fill={side === 3 ? "#fff" : "#000"} />
       </div>
     </div>
   );
@@ -41,9 +52,8 @@ function SideForm() {
     <div className={styles["indicator-container-side"]}>
       <div style={{ color: side === 0 ? "#edd451" : "#fff" }}>HOME</div>
       <div style={{ color: side === 1 ? "#edd451" : "#fff" }}>ABOUT ME</div>
-      <div style={{ color: side === 2 ? "#edd451" : "#fff" }}>SKILL STACK</div>
-      <div style={{ color: side === 3 ? "#edd451" : "#fff" }}>PROJECTS</div>
-      <div style={{ color: side === 4 ? "#edd451" : "#fff" }}>CONTACT </div>
+      <div style={{ color: side === 2 ? "#edd451" : "#fff" }}>PROJECTS</div>
+      <div style={{ color: side === 3 ? "#edd451" : "#fff" }}>CONTACT </div>
       <span className={styles["indicator-side-line"]}></span>
     </div>
   );

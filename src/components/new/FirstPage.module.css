@@ -1,5 +1,4 @@
 .first-page {
-  scroll-snap-align: start;
   display: flex;
   height: 100%;
 }
@@ -46,7 +45,7 @@
   cursor: pointer;
 }
 
-button {
+.first-page-button button {
   width: 30px;
   height: 30px;
   padding: 6px 10px;

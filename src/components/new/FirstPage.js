@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react";
-import styles from "./ThirdPage.module.css";
+import styles from "./FirstPage.module.css";
 import { ReactComponent as Arrow } from "../../picture/left-arrow.svg";
 import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";
+import { useNavigate } from "react-router-dom";
 
 export default function FirstPage() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export default function FirstPage() {
     }
   }, [screen]);
   return (
-    <div className={styles["first-page"]}>
+    <div id="first" className={styles["first-page"]}>
       <div className={styles["first-page-left"]}>
         <div className={styles["first-page-introduce"]}>
           <div className={styles["first-page-name"]} ref={ref}>
@@ -36,7 +37,12 @@ export default function FirstPage() {
             </p>
           </div>
           <div className={styles["first-page-button"]}>
-            <button>
+            <button
+              onClick={() => {
+                const doc = document.getElementById("second");
+                window.scrollTo({ top: doc.offsetTop, behavior: "smooth" });
+              }}
+            >
               <Arrow width="15px" height="15px" fill="#4d92f1" />
             </button>
             <p>MORE ABOUT ME</p>

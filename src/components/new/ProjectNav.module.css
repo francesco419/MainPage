@@ -1,0 +1,114 @@
+.project-page {
+  background-color: #0c3184;
+  padding: 20px 2%;
+  white-space: pre-line;
+}
+
+.project-header h1 {
+  font-size: 5vh;
+  margin: 0;
+}
+
+.project-button {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 10vh;
+  right: 0;
+  width: 15vw;
+}
+
+.project-button button {
+  background-color: #00000000;
+  color: #edd451;
+  font-size: 1vw;
+  border: 0;
+  margin: 1vh 2vw;
+  width: max-content;
+  cursor: pointer;
+}
+
+.project-button button span:nth-child(2) {
+  display: none;
+}
+.project-button button:hover span:nth-child(1) {
+  display: none;
+}
+.project-button button:hover span:nth-child(2) {
+  font-weight: 700;
+  display: inline;
+}
+
+.project-section ol {
+  list-style: circle;
+  margin: 4% 0;
+}
+
+.project-section ol:last-child {
+  list-style: none;
+  padding: 0;
+}
+
+.project-section ol:last-child ol {
+  margin: 0;
+  min-width: 10vw;
+}
+
+.project-section ol:last-child a {
+  color: #edd451;
+  font-weight: 700;
+  margin: 0 1%;
+}
+
+.project-section li:first-child {
+  list-style: none;
+  margin: 2vh 0;
+  color: #edd451;
+}
+
+.project-page li h2 {
+  font-size: 2.5vh;
+}
+
+.project-page li {
+  margin: 1vh 0;
+}
+
+.project-section li::marker {
+  color: #edd451;
+}
+
+.project-img-container {
+  display: flex;
+  width: fit-content;
+  margin: 10vh auto;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: min-content;
+  height: 70vh;
+}
+
+.project-img {
+  width: 50vw;
+  height: 70vh;
+  background-color: #edd451;
+}
+
+.project-img-block {
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  border: 1px solid #edd451;
+}
+
+.img-block {
+  width: 20vw;
+  height: calc(70vh / 3);
+  box-sizing: border-box;
+  border: 1px solid #edd451;
+}

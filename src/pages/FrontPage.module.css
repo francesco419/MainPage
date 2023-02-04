@@ -1,18 +1,12 @@
 .page {
   position: relative;
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
   background-color: #fff;
   font-family: "Pretendard-Regular";
   font-weight: 500;
   white-space: pre-line;
   --blue: #4d92f1;
-}
-
-.box {
-  height: 100vh;
-  scroll-snap-align: start;
+  transition: all 2s;
 }
 
 p {

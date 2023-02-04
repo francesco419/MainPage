@@ -1,5 +1,4 @@
 .second-page {
-  scroll-snap-align: start;
   display: flex;
   height: 100vh;
   color: #000;
@@ -57,6 +56,8 @@ h2 {
   border-radius: 15px;
   color: #4d92f1;
   margin: 0 2vw 0 0;
+  font-size: 1.5vh;
+  font-weight: 700;
 }
 
 h3 {
@@ -115,7 +116,7 @@ td svg {
   display: flex;
   justify-content: center;
   bottom: -8vh;
-  left: 3vw;
+  left: 0;
   padding: 0 3vw;
 }
 

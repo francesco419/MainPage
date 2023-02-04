@@ -25,6 +25,10 @@
   cursor: pointer;
 }
 
+.indicator-container-stick div:hover svg {
+  fill: #fff;
+}
+
 .indicator-container-side {
   position: relative;
   display: flex;
