@@ -31,7 +31,9 @@ export default function ThirdPage() {
           <div className={styles["third-right-section"]} ref={ref}>
             {ProjectDetailText.map((data, index) => {
               if (index < 4) {
-                return <Project props={data} index={index} />;
+                return (
+                  <Project props={data} index={index} key={`project${index}`} />
+                );
               }
             })}
           </div>

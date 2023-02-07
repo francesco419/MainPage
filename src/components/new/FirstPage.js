@@ -13,7 +13,6 @@ export default function FirstPage() {
   useEffect(() => {
     if (screen === true) {
       dispatch(changeSide(0));
-      console.log(0);
     }
   }, [screen]);
   return (

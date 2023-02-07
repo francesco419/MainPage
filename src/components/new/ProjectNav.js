@@ -11,10 +11,12 @@ export default function ProjectNav() {
 
   useEffect(() => {
     setData(ProjectDetailText[param.id]);
+    window.scrollTo(0, 0);
   }, [param]);
 
   return (
     <div className={styles["project-page"]}>
+      {/**---title/indicator---*/}
       <div className={styles["project-header"]}>
         <h1>
           {data.id}. {data.name}
@@ -52,6 +54,7 @@ export default function ProjectNav() {
           <span>{`> Next Project <`}</span>
         </button>
       </div>
+      {/**---body section---*/}
       <div className={styles["project-section"]}>
         <ul>
           <ol>
@@ -77,8 +80,8 @@ export default function ProjectNav() {
             <li>
               <h2># 성과 및 배운점</h2>
             </li>
-            {data.result.map((data) => (
-              <li>
+            {data.result.map((data, index) => (
+              <li key={`archive${index}`}>
                 <p>{data}</p>
               </li>
             ))}
@@ -88,8 +91,8 @@ export default function ProjectNav() {
               <li>
                 <h2># 기술 스택</h2>
               </li>
-              {data.program.map((data) => (
-                <li>
+              {data.program.map((data, index) => (
+                <li key={`skills_${index}`}>
                   <p>{data}</p>
                 </li>
               ))}
@@ -98,9 +101,7 @@ export default function ProjectNav() {
               <li>
                 <h2># 링크</h2>
               </li>
-              <li>
-                <a href={data.url}>PUBLISHED URL</a>
-              </li>
+              <li>{data.url && <a href={data.url}>PUBLISHED URL</a>}</li>
               <li>
                 <a href={data.github}>GITHUB PAGE</a>
               </li>
@@ -109,6 +110,7 @@ export default function ProjectNav() {
         </ul>
         <hr />
       </div>
+      {/**---image container---*/}
       <div className={styles["project-img-container"]}>
         <div className={styles["img-container"]}>
           {data.img.map((src) => (

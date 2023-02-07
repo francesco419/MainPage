@@ -50,10 +50,38 @@ function SideForm() {
   const side = useSelector((state) => state.side.value);
   return (
     <div className={styles["indicator-container-side"]}>
-      <div style={{ color: side === 0 ? "#edd451" : "#fff" }}>HOME</div>
-      <div style={{ color: side === 1 ? "#edd451" : "#fff" }}>ABOUT ME</div>
-      <div style={{ color: side === 2 ? "#edd451" : "#fff" }}>PROJECTS</div>
-      <div style={{ color: side === 3 ? "#edd451" : "#fff" }}>CONTACT </div>
+      <div
+        style={{
+          color: side === 0 ? "#edd451" : "#fff",
+          fontWeight: side === 0 ? "bold" : "normal",
+        }}
+      >
+        HOME
+      </div>
+      <div
+        style={{
+          color: side === 1 ? "#edd451" : "#fff",
+          fontWeight: side === 1 ? "bold" : "normal",
+        }}
+      >
+        ABOUT ME
+      </div>
+      <div
+        style={{
+          color: side === 2 ? "#edd451" : "#fff",
+          fontWeight: side === 2 ? "bold" : "normal",
+        }}
+      >
+        PROJECTS
+      </div>
+      <div
+        style={{
+          color: side === 3 ? "#edd451" : "#fff",
+          fontWeight: side === 3 ? "bold" : "normal",
+        }}
+      >
+        CONTACT{" "}
+      </div>
       <span className={styles["indicator-side-line"]}></span>
     </div>
   );

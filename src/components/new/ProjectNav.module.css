@@ -86,29 +86,25 @@
 }
 
 .img-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: min-content;
-  height: 70vh;
+  margin: 0 20px;
 }
 
 .project-img {
   width: 50vw;
   height: 70vh;
-  background-color: #edd451;
 }
 
 .project-img-block {
   width: inherit;
   height: inherit;
   box-sizing: border-box;
-  border: 1px solid #edd451;
 }
 
 .img-block {
-  width: 20vw;
-  height: calc(70vh / 3);
+  width: 5vw;
+  height: 5vw;
   box-sizing: border-box;
-  border: 1px solid #edd451;
+  border: 1px solid #0c3184;
+  cursor: pointer;
 }

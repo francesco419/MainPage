@@ -4,56 +4,73 @@ import SecondPage from "../components/new/SecondPage";
 import Indicator from "../components/new/Indicator";
 import ThirdPage from "../components/new/ThirdPage";
 import FourthPage from "../components/new/FourthPage";
-import FifthPage from "../components/new/FifthPage";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function FrontPage() {
   let timer;
+  const location = useLocation();
+
+  const preventWheelEvent = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const NewWheelEvent = (e) => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      if (e.deltaY > 0) {
+        window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+      } else if (e.deltaY < 0) {
+        window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
+      }
+    }, 300);
+  };
 
   useEffect(() => {
-    window.addEventListener(
-      "wheel",
-      function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      },
-      { passive: false }
-    );
-    window.addEventListener("wheel", (e) => {
-      if (timer) {
-        clearTimeout(timer);
-      }
-      timer = setTimeout(() => {
-        if (e.deltaY > 0) {
-          window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-        } else if (e.deltaY < 0) {
-          window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
-        }
-      }, 300);
-    });
-    return () => {
-      window.addEventListener(
-        "wheel",
-        function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-        },
-        { passive: false }
-      );
-      window.addEventListener("wheel", (e) => {
-        if (timer) {
-          clearTimeout(timer);
-        }
-        timer = setTimeout(() => {
-          if (e.deltaY > 0) {
-            window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-          } else if (e.deltaY < 0) {
-            window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
-          }
-        }, 300);
+    function wheelEvent() {
+      window.addEventListener("wheel", (e) => preventWheelEvent(e), {
+        passive: false,
       });
+      window.addEventListener("wheel", (e) => NewWheelEvent(e));
+    }
+    function checkState() {
+      if (location.state) {
+        let doc;
+        console.log(location.state);
+        switch (location.state) {
+          case 1:
+            doc = document.getElementById("second");
+            doc.scrollIntoView();
+            return;
+          case 2:
+            doc = document.getElementById("third");
+            doc.scrollIntoView();
+            return;
+          case 3:
+            doc = document.getElementById("fourth");
+            doc.scrollIntoView();
+            return;
+          default:
+            return;
+        }
+      }
+    }
+
+    wheelEvent();
+    checkState();
+
+    return () => {
+      window.removeEventListener("wheel", (e) => preventWheelEvent(e), {
+        passive: false,
+      });
+      window.removeEventListener("wheel", (e) => NewWheelEvent(e));
+      console.log("remove");
     };
   }, []);
+
   return (
     <div className={styles["page"]}>
       <Indicator type={true} />

@@ -1,6 +1,3 @@
-import port1 from "../picture/portfolio.PNG";
-import port2 from "../picture/portfolio2.PNG";
-import port3 from "../picture/portfolio3.PNG";
 import movie1 from "../picture/movie.PNG";
 import movie2 from "../picture/movie1.PNG";
 import movie3 from "../picture/movie2.PNG";
@@ -8,12 +5,23 @@ import greeting1 from "../picture/greeting.PNG";
 import greeting2 from "../picture/greeting1.PNG";
 import insta from "../picture/insta.PNG";
 import calc from "../picture/calc.PNG";
-import y1 from "../picture/projectimg/youtube/youtube1.PNG";
-import y2 from "../picture/projectimg/youtube/youtube2.PNG";
-import y3 from "../picture/projectimg/youtube/youtube3.PNG";
-import travelaway_intropage from "../picture/projectimg/travelaway/travelaway_intropage.PNG";
-import travelaway_countryinfo from "../picture/projectimg/travelaway/travelaway_countryinfo.PNG";
-import travelaway_listcountry from "../picture/projectimg/travelaway/travelaway_listcountry.PNG";
+/**portfolio*/
+import port1 from "../picture/projectImgNew/portfolio/1.PNG";
+import port2 from "../picture/projectImgNew/portfolio/2.PNG";
+import port3 from "../picture/projectImgNew/portfolio/3.PNG";
+/**youtube */
+import youtube1 from "../picture/projectImgNew/youtube/youtube1.PNG";
+import youtube2 from "../picture/projectImgNew/youtube/youtube2.PNG";
+import youtube3 from "../picture/projectImgNew/youtube/youtube3.PNG";
+/**travel */
+import travel1 from "../picture/projectImgNew/travel/1.PNG";
+import travel2 from "../picture/projectImgNew/travel/2.PNG";
+import travel3 from "../picture/projectImgNew/travel/3.PNG";
+/**social */
+import social1 from "../picture/projectImgNew/sns/1.PNG";
+import social2 from "../picture/projectImgNew/sns/2.PNG";
+import social3 from "../picture/projectImgNew/sns/3.PNG";
+import social4 from "../picture/projectImgNew/sns/4.PNG";
 
 export const ProjectDetailText = [
   {
@@ -28,7 +36,7 @@ export const ProjectDetailText = [
     github: "https://github.com/francesco419/MainPage",
     contribution: "개인 프로젝트",
     date: "03/2022 ~ (update)",
-    program: ["REACT", "CSS Module", "Redux Toolkit"],
+    program: ["React", "CSS Module", "Redux Toolkit"],
     result: [
       "React와 JSX 문법을 학습하고, 이를 사용한 SPA 개발이 능숙하게 발전",
       "CSS Module을 사용한 Selector의 중첩이 없는 모듈화된 스타일링 작성",
@@ -42,12 +50,12 @@ export const ProjectDetailText = [
       "유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 유튜브 UI를 직접 구현했습니다",
     text2:
       "현재 가장 많이 사용되고 있는 페이지중 하나인 유튜브를 Youtube API를 사용하여 유튜브에 있는 각각의 페이지 및 여러 기능들을 구현한 프로젝트입니다.\n이 프로젝트를 통해 API를 다루는 능력을 향상시키게 되었으며, 프로젝트를 진행하면서 이전에 작업했던 프로젝트보다\n 훨씬 더 많은 오류 및 요구사항에 부딪히고 이를 능숙하게 해결하여 여러 요구사항에 대해\n 다양한 방식으로 접근하여 조건을 만족시킬수 있는 코드를 구현하는 능력을 키운 프로젝트입니다.",
-    img: [y1, y2, y3],
+    img: [youtube1, youtube2, youtube3],
     url: "https://francesco419.github.io/Youtube/",
     github: "https://github.com/francesco419/Youtube",
     contribution: "개인 프로젝트",
     date: "05/2022 ~ 07/2022",
-    program: ["REACT", "CSS Module"],
+    program: ["React", "CSS Module"],
     result: [
       "Axios를 적용해 Open Api를 호출하고 데이터 수정을 통한 유기적인 사용이 능숙",
       "UI에 대한 이해 및 구현하고자 하는 UI를 나만의 코드를 통해 구현 가능",
@@ -61,12 +69,12 @@ export const ProjectDetailText = [
       "코로나 이후 여행 수요의 증가로 각 국가의 기본 정보를 소개할 수 있는 웹페이지를 제작했습니다.",
     text2:
       "코로나 이후 여행 수요의 증가로 여행을 계획하는 사용자들에게 각 국가의 여러 정보를 소개 할 수 있는 웹페이지로,\n 기본 정보, 여행 경보, 환율 등 지속적으로 정보를 업데이트를 하고 있습니다.",
-    img: [travelaway_intropage, travelaway_countryinfo, travelaway_listcountry],
+    img: [travel1, travel2, travel3],
     url: "https://francesco419.github.io/Travel/",
     github: "https://github.com/francesco419/Travel",
     contribution: "개인 프로젝트",
     date: "08/2022 ~ (update)",
-    program: ["REACT", "CSS Module"],
+    program: ["React", "CSS Module"],
     result: [
       "사용자의 입장에서 생각하고 제작하려고 하는 사용자 경험을 중시하는 마인드",
       "컴포넌트 간의 props 전달 방식에 대한 효율적인 대책의 필요성을 자각",
@@ -81,12 +89,12 @@ export const ProjectDetailText = [
     text: "실제 직무에서는 프론트엔드와 백엔드의 협업이 필수적이기에 새로 학습한 기술을 사용하고, 기초적인 백엔드를 구현하여 협업에서의 기초적인 지식 및 경험을 목표로 한 SNS 웹페이지를 제작하고 있습니다.",
     text2:
       "실제 직무에서는 프론트엔드와 백엔드의 협업이 필수적이기에 기초적인 백엔드의 기술들을 학습하여 프론트엔드에서 서버로 요청,\n 백엔드에서 받은 요청을 수행, 데이터를 DB에 저장 및 읽어와서 프론트엔드에 표현하는 전체적인 통신 및 데이터 교환에 대한 학습을 목표로한 프로젝트입니다.\n 이를 바탕으로 로그인, 회원가입, 게시물 관리 등 백엔드와의 통신이 비교적 활발한 SNS형태의 프로젝트를 진행하게 되었습니다.",
-    img: [travelaway_intropage, travelaway_countryinfo, travelaway_listcountry],
-    url: "https://francesco419.github.io/Travel/",
+    img: [social1, social2, social3],
+    url: "",
     github: "https://github.com/francesco419/post_typescript_redux",
     contribution: "개인 프로젝트",
-    date: "01/2022 ~ (update)",
-    program: ["REACT", "TypeScript", "SCSS", "Redux"],
+    date: "01/2022 ~ 진행 중",
+    program: ["React", "TypeScript", "SCSS", "Redux"],
     result: [
       "Typescript로 정적 타입 언어의 코드 작성 및 타입의 오류의 수정이 능숙해짐.",
       "Redux Toolkit를 사용한 상태 관리 및 유지 보수성을 높이고 props 복잡도를 개선",
@@ -140,14 +148,14 @@ export const ProjectDetailText = [
 export const ProjectTXT = [
   {
     id: 0,
-    imgs: y1,
+    imgs: youtube1,
     eng: "Youtube Clone",
     title: "유튜브 클론",
     text: "Youtube API를 사용하여 유튜브의 페이지 및 기능을 제작한 프로젝트로,\n React를 기반으로 제작하였습니다.",
   },
   {
     id: 1,
-    imgs: travelaway_intropage,
+    imgs: travel1,
     eng: "TravelAway",
     title: "여행정보사이트",
     text: "여러 국가의 일반정보, 여행경보, 환율 등\n코로나 시국 이후에 여행을 준비하는 사람들을 위한\n여행정보 사이트를 제작했습니다.",
