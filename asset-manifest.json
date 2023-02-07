@@ -1,27 +1,25 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.193cbeb4.css",
-    "main.js": "/MainPage/static/js/main.7ac918fa.js",
+    "main.css": "/MainPage/static/css/main.a6a0fedd.css",
+    "main.js": "/MainPage/static/js/main.f3cfe1ad.js",
     "static/media/greeting1.PNG": "/MainPage/static/media/greeting1.41aae3a094d0287ae21a.PNG",
     "static/media/greeting.PNG": "/MainPage/static/media/greeting.f656e5da1a084d5eed73.PNG",
-    "static/media/portfolio3.PNG": "/MainPage/static/media/portfolio3.a686d986d9c6d5ccd7b5.PNG",
     "static/media/movie.PNG": "/MainPage/static/media/movie.02ebe55501113655bf03.PNG",
     "static/media/youtube2.PNG": "/MainPage/static/media/youtube2.220f2f950a1b2104cfb5.PNG",
-    "static/media/portfolio2.PNG": "/MainPage/static/media/portfolio2.06d606981da530d13693.PNG",
+    "static/media/3.PNG": "/MainPage/static/media/3.82006ad7bddc5465d690.PNG",
+    "static/media/1.PNG": "/MainPage/static/media/1.ce368bda12955b570ece.PNG",
     "static/media/movie1.PNG": "/MainPage/static/media/movie1.68f08f6d97128aa0bb0a.PNG",
     "static/media/youtube3.PNG": "/MainPage/static/media/youtube3.6d077d5cdf84c14adae8.PNG",
     "static/media/movie2.PNG": "/MainPage/static/media/movie2.d20a4436bdc2aec50691.PNG",
     "static/media/youtube1.PNG": "/MainPage/static/media/youtube1.fa587f181d4df251e3ce.PNG",
+    "static/media/2.PNG": "/MainPage/static/media/2.66df8c00be76e7d5db71.PNG",
     "static/media/insta.PNG": "/MainPage/static/media/insta.86d6ea04dc23f0f2849e.PNG",
-    "static/media/travelaway_countryinfo.PNG": "/MainPage/static/media/travelaway_countryinfo.92512ce991796cd0fdb0.PNG",
-    "static/media/travelaway_listcountry.PNG": "/MainPage/static/media/travelaway_listcountry.017c11596c99763a6467.PNG",
     "static/media/resume_photo.jpg": "/MainPage/static/media/resume_photo.21e30b85efde32135768.jpg",
-    "static/media/portfolio.PNG": "/MainPage/static/media/portfolio.965e8cf01a9a8fa037c5.PNG",
     "static/media/calc.PNG": "/MainPage/static/media/calc.585b5da9be6f74411c0c.PNG",
-    "static/media/travelaway_intropage.PNG": "/MainPage/static/media/travelaway_intropage.a76693726ff692bd6ca2.PNG",
     "static/media/linkedin.png": "/MainPage/static/media/linkedin.f6bf5859dad4d1a4e06d.png",
     "static/media/github.png": "/MainPage/static/media/github.44eee0c4a6c25b0d7347.png",
     "static/media/email.png": "/MainPage/static/media/email.0651a75bff08d2d2612c.png",
+    "static/media/4.PNG": "/MainPage/static/media/4.fb4fb66a612a00f8ced2.PNG",
     "static/media/nodejs.svg": "/MainPage/static/media/nodejs.ab2cc7047fb0e9cbd129f26a319597bf.svg",
     "static/media/react.svg": "/MainPage/static/media/react.598d90dd4f36234e376cbc6ccd571550.svg",
     "static/media/creativity.svg": "/MainPage/static/media/creativity.84a95c92111ab11e58a0794d5d8815a1.svg",
@@ -49,11 +47,11 @@
     "static/media/contact.svg": "/MainPage/static/media/contact.efd9d7215a0a0ebf9e2703bc4cdd9bc8.svg",
     "static/media/chevron-up.svg": "/MainPage/static/media/chevron-up.4d3d196e33386b0e089f40ba84642c40.svg",
     "static/media/chevron-down.svg": "/MainPage/static/media/chevron-down.9cec6edd25b63e6c7c9bf65ede4d98cc.svg",
-    "main.193cbeb4.css.map": "/MainPage/static/css/main.193cbeb4.css.map",
-    "main.7ac918fa.js.map": "/MainPage/static/js/main.7ac918fa.js.map"
+    "main.a6a0fedd.css.map": "/MainPage/static/css/main.a6a0fedd.css.map",
+    "main.f3cfe1ad.js.map": "/MainPage/static/js/main.f3cfe1ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.193cbeb4.css",
-    "static/js/main.7ac918fa.js"
+    "static/css/main.a6a0fedd.css",
+    "static/js/main.f3cfe1ad.js"
   ]
 }
