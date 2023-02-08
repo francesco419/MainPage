@@ -6,12 +6,14 @@ import { useState } from "react";
 export default function () {
   const [showProject, setShowProject] = useState(false);
   const nav = useNavigate();
+
   const moveBackground = (e) => {
     const doc = document.getElementById("movepoint");
     doc.style.height = `${e.target.offsetHeight + 10}px`;
     doc.style.width = `${e.target.offsetWidth + 10}px`;
     doc.style.left = `${e.target.offsetLeft - 5}px`;
   };
+
   return (
     <div className={styles["list-page"]}>
       <button

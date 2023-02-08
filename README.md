@@ -295,3 +295,11 @@ Skill부분에서 텍스트스크롤링 파트 보완필요.
 - frontpage
   - List를 통해 입장시 해당 link가 가리킨 파트로 이동.
     - List에서 받은 state를 사용하여 이동.
+
+## 23.02.09
+
+- proejctNav 레이아웃 수정.
+
+- Aos 라이브러리 추가.
+
+- list, proejctNav, thirdpage 오류 수정.

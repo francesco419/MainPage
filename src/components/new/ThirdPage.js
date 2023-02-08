@@ -1,10 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./ThirdPage.module.css";
 import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";
 import SideMenu from "./SideMenu";
-import { skillText } from "./text";
 import { ProjectDetailText } from "../../context/ProjectText.js";
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +11,10 @@ export default function ThirdPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
+  const [transitionPage, setTransitionPage] = useState(false);
+  const chageState = () => {
+    setTransitionPage((transitionPage) => !transitionPage);
+  };
   useEffect(() => {
     if (screen === true) {
       dispatch(changeSide(2));
@@ -32,24 +35,37 @@ export default function ThirdPage() {
             {ProjectDetailText.map((data, index) => {
               if (index < 4) {
                 return (
-                  <Project props={data} index={index} key={`project${index}`} />
+                  <Project
+                    props={data}
+                    index={index}
+                    chageState={chageState}
+                    key={`project${index}`}
+                  />
                 );
               }
             })}
           </div>
         </div>
       </div>
+      {transitionPage && <TransitionEffect />}
     </div>
   );
 }
 
-function Project({ props, index }) {
+function TransitionEffect() {
+  return <div className={styles["transiton-effect"]}></div>;
+}
+
+function Project({ props, index, chageState }) {
   const nav = useNavigate();
   return (
     <div
       className={styles["third-section-block"]}
       onClick={() => {
-        nav(`/ProjectNav/${index}`);
+        chageState();
+        setTimeout(() => {
+          nav(`/ProjectNav/${index}`);
+        }, 2000);
       }}
     >
       <dl>

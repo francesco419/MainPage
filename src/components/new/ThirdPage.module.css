@@ -100,6 +100,33 @@
   margin: 1vh 0 2vh;
 }
 
+.transiton-effect {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: pages 2s;
+  background-color: #0c3184;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+@keyframes pages {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100);
+  }
+}
+
 /**part*/
 
 /* .third-section-book {

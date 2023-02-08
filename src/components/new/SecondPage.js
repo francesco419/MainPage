@@ -36,7 +36,7 @@ export default function SecondPage() {
                 수강하였고, 이 전부터 조립하거나 제작하는 걸 좋아했기에
                 프로그래밍으로 무에서 유를 창조하는 개발 과정에 큰 흥미를 느끼게
                 되었습니다. 이 후 Java, C, C++ 등 프로그래밍 강의 위주로 수업을
-                들으며 개발자로서 기본 역량을 키웠고 사용자가 처음 마주하는
+                들으며 개발자로서 기본 역량을 키웠고 사용자가 처음에 마주하는
                 영역을 보다 시각적이고 직관적으로 구현하고 싶어 프론트엔드
                 개발자로 도전하게 되었습니다.
               </p>
@@ -59,7 +59,7 @@ export default function SecondPage() {
                   <tr>
                     <td>
                       <Communiction />
-                      <p>{`<Communiction>`}</p>
+                      <p>{`<Communication>`}</p>
                     </td>
                     <td>
                       <Creativity />

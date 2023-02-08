@@ -3,12 +3,17 @@ html {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
+  font-family: "Pretendard-Regular";
   color: #ffffff;
   background-color: #181818;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @media screen and (max-width: 767px) {
@@ -36,3 +41,17 @@ html {
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px white;
 }
+
+/**
+기본 파랑 5190F4
+보내준 샘플 짙은 파랑 0c3184
+보내준 샘플 연한 하늘 (내용 백그라운드) cfe3fb
+보내준 샘플 슬라이드 d5d9e2
+보내준 샘플 블랙 292929
+
+컬러 팔레트에서
+1번째 진한 파랑 005DB9
+2번째 연한 하늘 D0E9EF
+3번째 노랑 EDD451 / 블랙 353535
+4번째 틸컬러 B9EFFF / 보라 4A4499
+*/

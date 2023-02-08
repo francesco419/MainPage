@@ -9,6 +9,8 @@ import calc from "../picture/calc.PNG";
 import port1 from "../picture/projectImgNew/portfolio/1.PNG";
 import port2 from "../picture/projectImgNew/portfolio/2.PNG";
 import port3 from "../picture/projectImgNew/portfolio/3.PNG";
+import port4 from "../picture/projectImgNew/portfolio/4.PNG";
+import port5 from "../picture/projectImgNew/portfolio/5.PNG";
 /**youtube */
 import youtube1 from "../picture/projectImgNew/youtube/youtube1.PNG";
 import youtube2 from "../picture/projectImgNew/youtube/youtube2.PNG";
@@ -25,18 +27,19 @@ import social4 from "../picture/projectImgNew/sns/4.PNG";
 
 export const ProjectDetailText = [
   {
-    id: "00",
+    id: "01",
     name: "Personal Portfolio",
     intro:
       "프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.",
     text2:
       "React를 사용한 첫 번째 프로젝트로 저를 소개하는 포트폴리오 웹페이지 입니다.\n 현재 진행하고 있거나 완료된 프로젝트를 기재하고 관련 이미지와 코드, 페이지 링크를 포함했습니다.\n React Hooks 및 State, Router 등의 작동 방식을 익히고 이를 직접 사용해 보며 React에 대해 학습을 가장 많이 하게된 프로젝트입니다.\n 기록하는 웹페이지로서 주기적으로 업데이트를 진행하여 코드의 유지보수를 하고 있습니다.",
-    img: [port1, port2, port3],
+    img: [port1, port2, port3, port4, port5],
     url: "https://francesco419.github.io/MainPage",
     github: "https://github.com/francesco419/MainPage",
     contribution: "개인 프로젝트",
-    date: "03/2022 ~ (update)",
-    program: ["React", "CSS Module", "Redux Toolkit"],
+    created: "04.2022",
+    LastUpdate: "02.09.2023",
+    program: ["React", "CSS Module", "Redux Toolkit", "Javascript"],
     result: [
       "React와 JSX 문법을 학습하고, 이를 사용한 SPA 개발이 능숙하게 발전",
       "CSS Module을 사용한 Selector의 중첩이 없는 모듈화된 스타일링 작성",
@@ -44,7 +47,7 @@ export const ProjectDetailText = [
     ],
   },
   {
-    id: "01",
+    id: "02",
     name: "Youtube Clone",
     intro:
       "유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 유튜브 UI를 직접 구현했습니다",
@@ -54,8 +57,9 @@ export const ProjectDetailText = [
     url: "https://francesco419.github.io/Youtube/",
     github: "https://github.com/francesco419/Youtube",
     contribution: "개인 프로젝트",
-    date: "05/2022 ~ 07/2022",
-    program: ["React", "CSS Module"],
+    created: "05.2022",
+    LastUpdate: "06.25.2022",
+    program: ["React", "CSS Module", "Javascript"],
     result: [
       "Axios를 적용해 Open Api를 호출하고 데이터 수정을 통한 유기적인 사용이 능숙",
       "UI에 대한 이해 및 구현하고자 하는 UI를 나만의 코드를 통해 구현 가능",
@@ -63,37 +67,40 @@ export const ProjectDetailText = [
     ],
   },
   {
-    id: "02",
+    id: "03",
     name: "Travel Away",
     intro:
       "코로나 이후 여행 수요의 증가로 각 국가의 기본 정보를 소개할 수 있는 웹페이지를 제작했습니다.",
     text2:
-      "코로나 이후 여행 수요의 증가로 여행을 계획하는 사용자들에게 각 국가의 여러 정보를 소개 할 수 있는 웹페이지로,\n 기본 정보, 여행 경보, 환율 등 지속적으로 정보를 업데이트를 하고 있습니다.",
+      "코로나 이후 여행 수요의 증가로 여행을 계획하는 사용자들을 위해 제작을 계획하게 된 프로젝트로서 \n 각 국가의 여러 정보를 소개하는 웹페이지로 기본 정보, 여행 경보, 환율 등의 정보를 제공하며, 지속적으로 아이템 및 풍부한 정보를 담을 수 있는 웹 페이지가 될 수 있도록 지속적인 업데이트를 실행하고 있습니다.",
     img: [travel1, travel2, travel3],
     url: "https://francesco419.github.io/Travel/",
     github: "https://github.com/francesco419/Travel",
     contribution: "개인 프로젝트",
-    date: "08/2022 ~ (update)",
-    program: ["React", "CSS Module"],
+    created: "12.2022",
+    LastUpdate: "02.08.2023",
+    program: ["React", "CSS Module", "Javascript"],
     result: [
       "사용자의 입장에서 생각하고 제작하려고 하는 사용자 경험을 중시하는 마인드",
       "컴포넌트 간의 props 전달 방식에 대한 효율적인 대책의 필요성을 자각",
-      "Responsively 프로그램을 사용하여 반응협 웹 제작 능력",
+      "Responsively 프로그램을 사용하여 반응형 웹 제작 능력",
+      "만들고자 하는 주제에 대한 필요한 정보 수집능력 및 필요한 기능들에 대한 구현 능력",
     ],
   },
   {
-    id: "03",
+    id: "04",
     name: "Social Network",
     intro:
       "프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지 입니다.",
     text: "실제 직무에서는 프론트엔드와 백엔드의 협업이 필수적이기에 새로 학습한 기술을 사용하고, 기초적인 백엔드를 구현하여 협업에서의 기초적인 지식 및 경험을 목표로 한 SNS 웹페이지를 제작하고 있습니다.",
     text2:
       "실제 직무에서는 프론트엔드와 백엔드의 협업이 필수적이기에 기초적인 백엔드의 기술들을 학습하여 프론트엔드에서 서버로 요청,\n 백엔드에서 받은 요청을 수행, 데이터를 DB에 저장 및 읽어와서 프론트엔드에 표현하는 전체적인 통신 및 데이터 교환에 대한 학습을 목표로한 프로젝트입니다.\n 이를 바탕으로 로그인, 회원가입, 게시물 관리 등 백엔드와의 통신이 비교적 활발한 SNS형태의 프로젝트를 진행하게 되었습니다.",
-    img: [social1, social2, social3],
+    img: [social1, social2, social3, social4],
     url: "",
     github: "https://github.com/francesco419/post_typescript_redux",
     contribution: "개인 프로젝트",
-    date: "01/2022 ~ 진행 중",
+    created: "01.2023",
+    LastUpdate: "02.09.2023",
     program: ["React", "TypeScript", "SCSS", "Redux"],
     result: [
       "Typescript로 정적 타입 언어의 코드 작성 및 타입의 오류의 수정이 능숙해짐.",
@@ -104,7 +111,7 @@ export const ProjectDetailText = [
     ],
   },
   {
-    id: "04",
+    id: "05",
     name: "Greeting\nWeb Page\nProject",
     text: "NomadCoder의 강의를 수강하며 시작하게된 프로젝트로서, OpenWeatherMap API를\n 통해 위치정보에따른 날씨정보 가져오기, 할 일 정보를 입력받아 로컬스토리지에\n 저장하기 및 삭제 등의 기능을 사용하여 페이지를 제작하였습니다.\n 처음으로 API를 사용하였으며, 이를 계기로 다른 API들을 이용해 실질적으로\n 다양한 페이지를 제작하고자 하는 생각?을 하였습니다. 또한 백엔드를 사용하지 않고,\n 로컬스토리지를 사용함으로서 기본적인 데이터저장을 경험해볼 수 있어 백엔드의\n 필요성을 더욱 느끼게 된 프로젝트이다.",
     img: [greeting1, greeting2],
@@ -114,7 +121,7 @@ export const ProjectDetailText = [
     program: "HTML, CSS, JS",
   },
   {
-    id: "05",
+    id: "06",
     name: "Calculator\nProject",
     text: "첫 프로젝트로 HTML, CSS, JavsScript의 사용 및 경험을 목표로한 프로젝트로서,\n 기본적인 계산기의 외형 및 레이아웃을 HTML, CSS로 구현하고 계산식의\n 처리를 Javascript를 통하여 구현했습니다avascript를 사용한\n 계산처리방식에서 사칙연산 순서에 의한 연산을 구현하였습니다.",
     img: [calc],
@@ -124,7 +131,7 @@ export const ProjectDetailText = [
     program: "HTML, CSS, JS",
   },
   {
-    id: "06",
+    id: "07",
     name: "Instagram\nWeb Clone\nProject",
     text: "이 프로젝트는 프론트엔드를 배우는 과정에서, 현재 많이 사용되고 있는\n 웹사이트에서 어떠한 방식으로 구조 및 레이아웃을 구현하는지 알아 보기위한 프로젝트로서,\n 인스타그램의 프로필 페이지의 외형적인 것에 중점을 두고 제작한 클론페이지입니다.",
     img: [insta],
@@ -134,7 +141,7 @@ export const ProjectDetailText = [
     program: "HTML, CSS",
   },
   {
-    id: "07",
+    id: "08",
     name: "Movie Theater\nProject",
     text: "NomadCoder의 강의의 수강 결과물로서 만들게 된 프로젝트로서, React를 처음으로\n 사용한 프로젝트입니다. 현재 가장 많이 사용되고 있는 라이브러리인 만큼,\n 여러 가지 편의성 및 기능들을 사용해보면서 왜 많이 사용되고 있는지를\n 직접 알 수 있었던 프로젝트였습니다. 특히 라우트 기능을 통해서\n 페이지 로딩이 아닌 페이지전환과 같은 기능의 유용성을 알게 된 프로젝트입니다.",
     img: [movie1, movie2, movie3],

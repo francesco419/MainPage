@@ -4,8 +4,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FrontPage from "./pages/FrontPage";
 import ProjectNav from "./components/new/ProjectNav";
 import List from "./components/new/List";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh();
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
