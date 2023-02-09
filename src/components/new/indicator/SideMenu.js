@@ -4,9 +4,9 @@ import photo from "../../../assets/image/resume_photo.jpg";
 
 export default function SideMenu() {
   return (
-    <div className={styles["left"]}>
-      <div className={styles["left-top"]}>
-        <img src={photo} />
+    <div className={styles["c-sidemenu"]}>
+      <div className={styles["c-sidemenu__container"]}>
+        <img className={styles["c-sidemenu__img"]} src={photo} />
       </div>
       <Indicator type={false} />
     </div>

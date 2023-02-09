@@ -72,7 +72,7 @@ export default function FrontPage() {
   }, []);
 
   return (
-    <div className={styles["page"]}>
+    <div className={styles["frontpage"]}>
       <Indicator type={true} />
       <FirstPage />
       <SecondPage />

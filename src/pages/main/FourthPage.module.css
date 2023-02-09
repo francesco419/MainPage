@@ -1,4 +1,4 @@
-.fourth-page {
+.fourthpage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,35 +8,32 @@
   font-size: 1vw;
 }
 
-.fourth-page-right {
+.fourthpage-right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 3%;
 }
 
-.fourth-right-box {
+.fourthpage-box {
   margin: 2px;
 }
 
-.fourth-right-title {
+.fourthpage-title {
   color: #4d92f1;
   text-align: center;
   font-size: 2vw;
-}
-
-.fourth-right-title div {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 
-.fourth-page-section {
+.fourthpage-section {
   width: 75vw;
   margin: 50px auto;
 }
 
-.fourth-section-big {
+.fourthpage-big {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,14 +45,14 @@
   padding: 20vh 0;
 }
 
-.fourth-section-big svg {
+.fourthpage-big svg {
   display: block;
   width: 15vw;
   margin: 0 auto;
   fill: #353535;
 }
 
-.fourth-section-big div {
+.fourthpage-big__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,15 +68,16 @@
   cursor: pointer;
 }
 
-.fourth-section-big div:hover p {
-  display: block;
-}
-.fourth-section-big div:hover svg {
-  fill: #4d92f1;
-}
-
-.fourth-section-big div p {
+.fourthpage-big__item p {
   display: none;
   margin: 5vh 0;
   font-weight: 700;
+}
+
+.fourthpage-big__item:hover p {
+  display: block;
+}
+
+.fourthpage-big__item:hover svg {
+  fill: #4d92f1;
 }

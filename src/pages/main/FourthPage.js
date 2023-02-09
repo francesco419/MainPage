@@ -18,49 +18,41 @@ export default function FourthPage() {
       console.log(3);
     }
   }, [screen]);
+
+  function ContactBox({ text, SVG }) {
+    return (
+      <div
+        className={styles["fourthpage-big__item"]}
+        onClick={() => {
+          navigator.clipboard.writeText(text);
+          alert("Email Copied to Users Clipboard !");
+        }}
+      >
+        {SVG}
+        <p>{text}</p>
+      </div>
+    );
+  }
+
   return (
-    <div id="fourth" className={styles["fourth-page"]}>
+    <div id="fourth" className={styles["fourthpage"]}>
       <SideMenu />
-      <div className={styles["fourth-page-right"]}>
-        <div className={styles["fourth-right-box"]}>
-          <div className={styles["fourth-right-title"]} ref={ref}>
-            <div>
-              <h2>{`<CONTACT/>`}</h2>
-            </div>
+      <div className={styles["fourthpage-right"]}>
+        <div className={styles["fourthpage-box"]}>
+          <div className={styles["fourthpage-title"]} ref={ref}>
+            <h2>{`<CONTACT/>`}</h2>
           </div>
-          <div className={styles["fourth-page-section"]}>
-            <div className={styles["fourth-section-big"]}>
-              <div
-                onClick={() => {
-                  navigator.clipboard.writeText("francesco419@naver.com");
-                  alert("Email Copied to Users Clipboard !");
-                }}
-              >
-                <Email />
-                <p>francesco419@naver.com</p>
-              </div>
-              <div
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    "https://github.com/francesco419"
-                  );
-                  alert("URL Copied to Users Clipboard !");
-                }}
-              >
-                <Github />
-                <p>https://github.com/francesco419</p>
-              </div>
-              <div
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    "https://velog.io/@francesco419"
-                  );
-                  alert("URL Copied to Users Clipboard !");
-                }}
-              >
-                <Blog />
-                <p>https://velog.io/@francesco419</p>
-              </div>
+          <div className={styles["fourthpage-section"]}>
+            <div className={styles["fourthpage-big"]}>
+              <ContactBox text={"francesco419@naver.com"} SVG={<Email />} />
+              <ContactBox
+                text={"https://github.com/francesco419"}
+                SVG={<Github />}
+              />
+              <ContactBox
+                text={"https://velog.io/@francesco419"}
+                SVG={<Blog />}
+              />
             </div>
           </div>
         </div>

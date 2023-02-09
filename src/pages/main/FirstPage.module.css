@@ -1,11 +1,11 @@
-.first-page {
+.firstpage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
 
-.first-page-left {
+.firstpage-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,16 +17,16 @@
   margin: 0;
 }
 
-.first-page-introduce {
+.firstpage-introduce {
   margin: 0 auto;
 }
 
-.first-page-name p {
+.firstpage-name__paragraph {
   font-size: 5vw;
   font-weight: 700;
 }
 
-.first-page-info {
+.firstpage-info {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -37,15 +37,15 @@
   background-color: #fff;
 }
 
-.first-page-info p {
+.firstpage-info__paragraph {
   font-size: 1.3vw;
 }
 
-.first-page-text {
+.firstpage__text {
   font-size: 1vw;
 }
 
-.first-page-button {
+.firstpage-btnbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +59,7 @@
   cursor: pointer;
 }
 
-.first-page-button button {
+.firstpage-btnbox__button {
   width: 30px;
   height: 30px;
   padding: 6px 10px;
@@ -72,7 +72,7 @@
   padding: 2px 1px 0 0;
 }
 
-.first-page-right {
+.firstpage-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +85,7 @@
   overflow: hidden;
 }
 
-.first-page-righttext {
+.firstpage-right__text {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;

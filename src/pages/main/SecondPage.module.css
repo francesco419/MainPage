@@ -1,4 +1,4 @@
-.second-page {
+.secondpage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,23 +8,20 @@
   font-size: 1vw;
 }
 
-.second-page-right {
+.secondpage-right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 3%;
 }
 
-.second-right-box {
+.secondpage-box {
   margin: 2px;
 }
 
-.second-right-title {
+.secondpage-title {
   color: #4d92f1;
   text-align: center;
   font-size: 2vw;
-}
-
-.second-right-title div {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -35,7 +32,7 @@ h2 {
   margin: 0;
 }
 
-.second-right-section {
+.secondpage-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,18 +47,18 @@ h2 {
   margin: 50px auto;
 }
 
-.second-section-intro {
+.secondpage-intro {
   width: 60vw;
 }
 
-.second-section-detail {
+.secondpage-detail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5vh 0;
+  margin: 5vh 0 4vh;
 }
 
-.second-ul-first {
+.secondpage-detail_list {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -76,16 +73,17 @@ h2 {
   font-weight: 700;
 }
 
+.secondpage-detail_title {
+  color: #0c3184;
+  margin: 10px 0;
+  font-size: 2vw;
+}
+
 h3 {
-  text-align: justify;
   margin: 0;
 }
 
-.second-ul-first li::marker {
-  color: yellow;
-}
-
-td {
+.secondpage-table_data {
   border: 0;
   background-color: #5190f4;
   border-radius: 15px;
@@ -94,7 +92,7 @@ td {
   padding: 1vw;
 }
 
-td svg {
+.secondpage-table_data svg {
   width: 12vw;
   height: 12vh;
   fill: #fff;
@@ -112,7 +110,7 @@ td svg {
   border-bottom: 1px solid;
 }
 
-.progressbar {
+.second-progress__item {
   position: relative;
   display: inline;
   width: 3vw;
@@ -121,7 +119,7 @@ td svg {
   margin: 0 2vw;
 }
 
-.progressbar div {
+.second-progress__block {
   position: absolute;
   display: block;
   top: 0;
@@ -131,7 +129,7 @@ td svg {
   margin: 0 2vw;
 }
 
-.progress-name {
+.second-progress__name {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,14 +142,14 @@ td svg {
   padding: 0 3vw;
 }
 
-.progress-name p {
+.second-progress__name p {
   width: 3vw;
   margin: 2vw;
   text-align: center;
   font-weight: 700;
 }
 
-.second-progress-absolute {
+.second-progress__absolute {
   position: absolute;
   top: 0;
   left: 0;
