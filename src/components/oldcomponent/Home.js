@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import Intro from "../components/Intro";
+import Intro from "./Intro";
 import SideMenu from "../components/SideMenu";
 import { useRef, useEffect, useState } from "react";
 import Aos from "aos";

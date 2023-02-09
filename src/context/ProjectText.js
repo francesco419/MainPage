@@ -1,29 +1,22 @@
-import movie1 from "../picture/movie.PNG";
-import movie2 from "../picture/movie1.PNG";
-import movie3 from "../picture/movie2.PNG";
-import greeting1 from "../picture/greeting.PNG";
-import greeting2 from "../picture/greeting1.PNG";
-import insta from "../picture/insta.PNG";
-import calc from "../picture/calc.PNG";
 /**portfolio*/
-import port1 from "../picture/projectImgNew/portfolio/1.PNG";
-import port2 from "../picture/projectImgNew/portfolio/2.PNG";
-import port3 from "../picture/projectImgNew/portfolio/3.PNG";
-import port4 from "../picture/projectImgNew/portfolio/4.PNG";
-import port5 from "../picture/projectImgNew/portfolio/5.PNG";
+import port1 from "../assets/image/projectImgNew/portfolio/1.PNG";
+import port2 from "../assets/image/projectImgNew/portfolio/2.PNG";
+import port3 from "../assets/image/projectImgNew/portfolio/3.PNG";
+import port4 from "../assets/image/projectImgNew/portfolio/4.PNG";
+import port5 from "../assets/image/projectImgNew/portfolio/5.PNG";
 /**youtube */
-import youtube1 from "../picture/projectImgNew/youtube/youtube1.PNG";
-import youtube2 from "../picture/projectImgNew/youtube/youtube2.PNG";
-import youtube3 from "../picture/projectImgNew/youtube/youtube3.PNG";
+import youtube1 from "../assets/image/projectImgNew/youtube/youtube1.PNG";
+import youtube2 from "../assets/image/projectImgNew/youtube/youtube2.PNG";
+import youtube3 from "../assets/image/projectImgNew/youtube/youtube3.PNG";
 /**travel */
-import travel1 from "../picture/projectImgNew/travel/1.PNG";
-import travel2 from "../picture/projectImgNew/travel/2.PNG";
-import travel3 from "../picture/projectImgNew/travel/3.PNG";
+import travel1 from "../assets/image/projectImgNew/travel/1.PNG";
+import travel2 from "../assets/image/projectImgNew/travel/2.PNG";
+import travel3 from "../assets/image/projectImgNew/travel/3.PNG";
 /**social */
-import social1 from "../picture/projectImgNew/sns/1.PNG";
-import social2 from "../picture/projectImgNew/sns/2.PNG";
-import social3 from "../picture/projectImgNew/sns/3.PNG";
-import social4 from "../picture/projectImgNew/sns/4.PNG";
+import social1 from "../assets/image/projectImgNew/sns/1.PNG";
+import social2 from "../assets/image/projectImgNew/sns/2.PNG";
+import social3 from "../assets/image/projectImgNew/sns/3.PNG";
+import social4 from "../assets/image/projectImgNew/sns/4.PNG";
 
 export const ProjectDetailText = [
   {
@@ -110,46 +103,6 @@ export const ProjectDetailText = [
       "데이터 및 파일 등 백엔드와의 데이터 교환을 학습하고 교환한 데이터에 대한 처리 능력 및 이해도의 향상",
     ],
   },
-  {
-    id: "05",
-    name: "Greeting\nWeb Page\nProject",
-    text: "NomadCoder의 강의를 수강하며 시작하게된 프로젝트로서, OpenWeatherMap API를\n 통해 위치정보에따른 날씨정보 가져오기, 할 일 정보를 입력받아 로컬스토리지에\n 저장하기 및 삭제 등의 기능을 사용하여 페이지를 제작하였습니다.\n 처음으로 API를 사용하였으며, 이를 계기로 다른 API들을 이용해 실질적으로\n 다양한 페이지를 제작하고자 하는 생각?을 하였습니다. 또한 백엔드를 사용하지 않고,\n 로컬스토리지를 사용함으로서 기본적인 데이터저장을 경험해볼 수 있어 백엔드의\n 필요성을 더욱 느끼게 된 프로젝트이다.",
-    img: [greeting1, greeting2],
-    url: null,
-    github: "https://github.com/francesco419/tp_Greetings",
-    contribution: "개인 프로젝트",
-    program: "HTML, CSS, JS",
-  },
-  {
-    id: "06",
-    name: "Calculator\nProject",
-    text: "첫 프로젝트로 HTML, CSS, JavsScript의 사용 및 경험을 목표로한 프로젝트로서,\n 기본적인 계산기의 외형 및 레이아웃을 HTML, CSS로 구현하고 계산식의\n 처리를 Javascript를 통하여 구현했습니다avascript를 사용한\n 계산처리방식에서 사칙연산 순서에 의한 연산을 구현하였습니다.",
-    img: [calc],
-    url: null,
-    github: "https://github.com/francesco419/tp_Calculator",
-    contribution: "개인 프로젝트",
-    program: "HTML, CSS, JS",
-  },
-  {
-    id: "07",
-    name: "Instagram\nWeb Clone\nProject",
-    text: "이 프로젝트는 프론트엔드를 배우는 과정에서, 현재 많이 사용되고 있는\n 웹사이트에서 어떠한 방식으로 구조 및 레이아웃을 구현하는지 알아 보기위한 프로젝트로서,\n 인스타그램의 프로필 페이지의 외형적인 것에 중점을 두고 제작한 클론페이지입니다.",
-    img: [insta],
-    url: null,
-    github: "https://github.com/francesco419/WebClone_Instagram",
-    contribution: "개인 프로젝트",
-    program: "HTML, CSS",
-  },
-  {
-    id: "08",
-    name: "Movie Theater\nProject",
-    text: "NomadCoder의 강의의 수강 결과물로서 만들게 된 프로젝트로서, React를 처음으로\n 사용한 프로젝트입니다. 현재 가장 많이 사용되고 있는 라이브러리인 만큼,\n 여러 가지 편의성 및 기능들을 사용해보면서 왜 많이 사용되고 있는지를\n 직접 알 수 있었던 프로젝트였습니다. 특히 라우트 기능을 통해서\n 페이지 로딩이 아닌 페이지전환과 같은 기능의 유용성을 알게 된 프로젝트입니다.",
-    img: [movie1, movie2, movie3],
-    url: "https://francesco419.github.io/tp_Movie",
-    github: "https://github.com/francesco419/tp_Movie",
-    contribution: "개인 프로젝트",
-    program: "REACT, CSS Module",
-  },
 ];
 
 export const ProjectTXT = [
@@ -169,7 +122,7 @@ export const ProjectTXT = [
   },
   {
     id: 2,
-    imgs: movie1,
+    imgs: social1,
     eng: "Movie Theater",
     title: "영화 모음집",
     text: "영화의 간단한 내용과 러닝타임, 포스터와\n배우의 정보를 담아 다양한 영화를 소개하는\n영화 모음 프로젝트로 HTML, CSS,\nJavaScript 와 React를 사용해 제작했습니다.",

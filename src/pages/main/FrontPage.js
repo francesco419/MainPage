@@ -1,9 +1,9 @@
 import styles from "./FrontPage.module.css";
-import FirstPage from "../components/new/FirstPage";
-import SecondPage from "../components/new/SecondPage";
-import Indicator from "../components/new/Indicator";
-import ThirdPage from "../components/new/ThirdPage";
-import FourthPage from "../components/new/FourthPage";
+import FirstPage from "./FirstPage";
+import SecondPage from "./SecondPage";
+import Indicator from "../../components/new/indicator/Indicator";
+import ThirdPage from "./ThirdPage";
+import FourthPage from "./FourthPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

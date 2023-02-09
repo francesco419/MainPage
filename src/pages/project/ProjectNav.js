@@ -3,8 +3,8 @@ import { ProjectDetailText } from "../../context/ProjectText.js";
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Github } from "../../picture/contact/github.svg";
-import { ReactComponent as PublishedLink } from "../../picture/sticksvg/navigate.svg";
+import { ReactComponent as Github } from "../../assets/image/contact/github.svg";
+import { ReactComponent as PublishedLink } from "../../assets/image/sticksvg/navigate.svg";
 import Aos from "aos";
 
 export default function ProjectNav() {

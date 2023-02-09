@@ -1,9 +1,9 @@
 import styles from "./SecondPage.module.css";
-import { ReactComponent as Communiction } from "../../picture/communication.svg";
-import { ReactComponent as Creativity } from "../../picture/creativity.svg";
-import { ReactComponent as Growths } from "../../picture/growth.svg";
-import { ReactComponent as System } from "../../picture/system.svg";
-import SideMenu from "./SideMenu";
+import { ReactComponent as Communiction } from "../../assets/image/communication.svg";
+import { ReactComponent as Creativity } from "../../assets/image/creativity.svg";
+import { ReactComponent as Growths } from "../../assets/image/growth.svg";
+import { ReactComponent as System } from "../../assets/image/system.svg";
+import SideMenu from "../../components/new/indicator/SideMenu";
 import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";

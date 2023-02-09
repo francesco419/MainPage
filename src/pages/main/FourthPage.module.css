@@ -1,4 +1,6 @@
 .fourth-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
   color: #000;
@@ -7,6 +9,7 @@
 }
 
 .fourth-page-right {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 3%;
 }
@@ -22,6 +25,8 @@
 }
 
 .fourth-right-title div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
@@ -32,8 +37,13 @@
 }
 
 .fourth-section-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 20vh 0;
 }
@@ -46,8 +56,15 @@
 }
 
 .fourth-section-big div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 18vw;
   height: 40vh;

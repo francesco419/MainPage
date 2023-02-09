@@ -2,7 +2,7 @@ import styles from "./Intro.module.css";
 import Git from "../picture/github.png";
 import Lin from "../picture/linkedin.png";
 import email from "../picture/email.png";
-import { IntroText } from "../context/ProjectText.js";
+import { IntroText } from "../../context/ProjectText.js";
 
 function Intro() {
   const name = "</about>";

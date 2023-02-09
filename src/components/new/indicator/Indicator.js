@@ -1,11 +1,11 @@
 import styles from "./Indicator.module.css";
 import PropTypes from "prop-types";
-import { ReactComponent as Home } from "../../picture/sticksvg/home.svg";
-import { ReactComponent as About } from "../../picture/sticksvg/about.svg";
-import { ReactComponent as Skill } from "../../picture/sticksvg/skill.svg";
-import { ReactComponent as Project } from "../../picture/sticksvg/project.svg";
-import { ReactComponent as Contact } from "../../picture/sticksvg/contact.svg";
-import { ReactComponent as Navigate } from "../../picture/sticksvg/navigate.svg";
+import { ReactComponent as Home } from "../../../assets/image/sticksvg/home.svg";
+import { ReactComponent as About } from "../../../assets/image/sticksvg/about.svg";
+import { ReactComponent as Skill } from "../../../assets/image/sticksvg/skill.svg";
+import { ReactComponent as Project } from "../../../assets/image/sticksvg/project.svg";
+import { ReactComponent as Contact } from "../../../assets/image/sticksvg/contact.svg";
+import { ReactComponent as Navigate } from "../../../assets/image/sticksvg/navigate.svg";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

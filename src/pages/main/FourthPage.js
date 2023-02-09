@@ -3,10 +3,10 @@ import styles from "./FourthPage.module.css";
 import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";
-import SideMenu from "./SideMenu";
-import { ReactComponent as Email } from "../../picture/contact/email.svg";
-import { ReactComponent as Blog } from "../../picture/contact/blog.svg";
-import { ReactComponent as Github } from "../../picture/contact/github.svg";
+import SideMenu from "../../components/new/indicator/SideMenu";
+import { ReactComponent as Email } from "../../assets/image/contact/email.svg";
+import { ReactComponent as Blog } from "../../assets/image/contact/blog.svg";
+import { ReactComponent as Github } from "../../assets/image/contact/github.svg";
 
 export default function FourthPage() {
   const dispatch = useDispatch();

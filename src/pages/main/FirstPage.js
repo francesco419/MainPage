@@ -1,10 +1,9 @@
 import { useEffect, useRef } from "react";
 import styles from "./FirstPage.module.css";
-import { ReactComponent as Arrow } from "../../picture/left-arrow.svg";
+import { ReactComponent as Arrow } from "../../assets/image/left-arrow.svg";
 import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";
-import { useNavigate } from "react-router-dom";
 
 export default function FirstPage() {
   const dispatch = useDispatch();

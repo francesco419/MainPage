@@ -1,6 +1,6 @@
 import styles from "./SideMenu.module.css";
 import Indicator from "./Indicator";
-import photo from "../../picture/resume_photo.jpg";
+import photo from "../../../assets/image/resume_photo.jpg";
 
 export default function SideMenu() {
   return (

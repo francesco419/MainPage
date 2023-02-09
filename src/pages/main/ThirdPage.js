@@ -3,7 +3,7 @@ import styles from "./ThirdPage.module.css";
 import { useOnScreen } from "../../hook/useOnScreen";
 import { useDispatch } from "react-redux";
 import { changeSide } from "../../redux/SideSlide";
-import SideMenu from "./SideMenu";
+import SideMenu from "../../components/new/indicator/SideMenu";
 import { ProjectDetailText } from "../../context/ProjectText.js";
 import { useNavigate } from "react-router-dom";
 

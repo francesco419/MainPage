@@ -303,3 +303,5 @@ Skill부분에서 텍스트스크롤링 파트 보완필요.
 - Aos 라이브러리 추가.
 
 - list, proejctNav, thirdpage 오류 수정.
+
+- 파일 및 폴더 구조관리.
