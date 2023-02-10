@@ -18,7 +18,7 @@
   padding: 20px 5px;
   border: 0;
   border-radius: 30px;
-  background-color: #c0c0c0;
+  background-color: var(--color-gray);
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -42,7 +42,7 @@
 }
 
 .c-indicator-stick div:hover svg {
-  fill: #fff;
+  fill: var(--color-white);
 }
 
 .c-indicator-side {
@@ -65,7 +65,7 @@
   margin: 5% 0;
   border: 0;
   border-radius: 30px;
-  background-color: #0c3184;
+  background-color: var(--color-dark-blue);
 }
 
 .c-indicator-side__item {
@@ -73,7 +73,7 @@
   text-align: center;
   padding: 5% 0;
   z-index: 5;
-  background-color: #0c3184;
+  background-color: var(--color-dark-blue);
 }
 
 .c-indicator-side__line {
@@ -81,6 +81,6 @@
   top: 0;
   left: 50%;
   height: 100%;
-  border-right: 3px solid #edd451;
+  border-right: 3px solid var(--color-yellow);
   z-index: 1;
 }

@@ -3,7 +3,7 @@
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  color: #000;
+  color: var(--color-black);
   overflow: hidden;
   font-size: 1vw;
 }
@@ -19,17 +19,13 @@
 }
 
 .secondpage-title {
-  color: #4d92f1;
+  color: var(--color-base-blue);
   text-align: center;
   font-size: 2vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-}
-
-h2 {
-  margin: 0;
 }
 
 .secondpage-section {
@@ -64,30 +60,30 @@ h2 {
   width: fit-content;
   padding: 20px;
   list-style: inside;
-  background-color: #cfe3fb;
+  background-color: var(--color-light-sky-blue);
   line-height: 3vw;
   border-radius: 15px;
-  color: #4d92f1;
+  color: var(--color-base-blue);
   margin: 0 2vw 0 0;
   font-size: 1.5vh;
   font-weight: 700;
 }
 
 .secondpage-detail_title {
-  color: #0c3184;
   margin: 10px 0;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
-h3 {
-  margin: 0;
+.secondpage-detail_item {
+  font-size: 1vw;
+  color: #005db9;
 }
 
 .secondpage-table_data {
   border: 0;
-  background-color: #5190f4;
+  background-color: var(--color-base-blue);
   border-radius: 15px;
-  color: #fff;
+  color: var(--color-white);
   text-align: center;
   padding: 1vw;
 }
@@ -95,7 +91,7 @@ h3 {
 .secondpage-table_data svg {
   width: 12vw;
   height: 12vh;
-  fill: #fff;
+  fill: var(--color-white);
 }
 
 .second-progress {
@@ -115,7 +111,7 @@ h3 {
   display: inline;
   width: 3vw;
   height: 17vh;
-  background-color: #005db9;
+  background-color: var(--color-teal-blue);
   margin: 0 2vw;
 }
 
@@ -125,7 +121,7 @@ h3 {
   top: 0;
   left: -2vw;
   width: 3vw;
-  background-color: #fff;
+  background-color: var(--color-white);
   margin: 0 2vw;
 }
 
@@ -157,6 +153,6 @@ h3 {
   width: 100%;
 }
 
-hr {
+.second-progress__absolute hr {
   margin: 6vh 0 0 0;
 }

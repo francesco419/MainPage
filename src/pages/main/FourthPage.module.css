@@ -3,7 +3,6 @@
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  color: #000;
   overflow: hidden;
   font-size: 1vw;
 }
@@ -19,7 +18,7 @@
 }
 
 .fourthpage-title {
-  color: #4d92f1;
+  color: var(--color-base-blue);
   text-align: center;
   font-size: 2vw;
   width: -webkit-fit-content;
@@ -42,14 +41,14 @@
   align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  padding: 20vh 0;
+  padding: 10vh 0;
 }
 
 .fourthpage-big svg {
   display: block;
   width: 15vw;
   margin: 0 auto;
-  fill: #353535;
+  fill: #cfe3fb;
 }
 
 .fourthpage-big__item {
@@ -66,12 +65,16 @@
   width: 18vw;
   height: 40vh;
   cursor: pointer;
+  background-color: var(--color-dark-blue);
+  padding: 3em 0;
+  border-radius: 15px;
 }
 
 .fourthpage-big__item p {
   display: none;
   margin: 5vh 0;
   font-weight: 700;
+  color: var(--color-white);
 }
 
 .fourthpage-big__item:hover p {
@@ -79,5 +82,5 @@
 }
 
 .fourthpage-big__item:hover svg {
-  fill: #4d92f1;
+  fill: var(--color-yellow);
 }

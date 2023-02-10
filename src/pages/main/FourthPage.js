@@ -25,7 +25,7 @@ export default function FourthPage() {
         className={styles["fourthpage-big__item"]}
         onClick={() => {
           navigator.clipboard.writeText(text);
-          alert("Email Copied to Users Clipboard !");
+          alert("Copied to Users Clipboard !");
         }}
       >
         {SVG}

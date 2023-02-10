@@ -6,7 +6,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #0c3184;
+  background-color: var(--color-dark-blue);
   min-width: 20vw;
 }
 
@@ -26,32 +26,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .c-sidemenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: #0c3184;
-    min-width: 20vw;
-  }
-
-  .c-sidemenu__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 40vh;
-  }
-
-  .c-sidemenu__img {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media (min-width: 390px) and (max-width: 767px) {

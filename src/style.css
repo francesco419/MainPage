@@ -8,14 +8,51 @@ html {
 }
 
 :root {
-  --color-black: #000;
+  --color-black: #292929;
+  --color-light-black: #353535;
   --color-white: #fff;
+  --color-gray: #c0c0c0;
+  --color-base-blue: #5190f4;
+  --color-dark-blue: #0c3184;
+  --color-teal-blue: #005db9;
+  --color-light-sky-blue: #cfe3fb;
+  --color-light-gray: #d5d9e2;
+  --color-yellow: #edd451;
+  --color-bright-blue: #d0e9ef;
 }
+/*#d0e9ef*/
 
 a {
   text-decoration: none;
   color: var(--color-black);
 }
+
+p {
+  font-size: 1vw;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+/**
+기본 파랑 5190F4
+보내준 샘플 짙은 파랑 0c3184
+보내준 샘플 연한 하늘 (내용 백그라운드) cfe3fb
+보내준 샘플 슬라이드 d5d9e2
+보내준 샘플 블랙 292929
+
+컬러 팔레트에서
+1번째 진한 파랑 005DB9
+2번째 연한 하늘 D0E9EF
+3번째 노랑 EDD451 / 블랙 353535
+4번째 틸컬러 B9EFFF / 보라 4A4499
+*/
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -50,17 +87,3 @@ a {
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px white;
 }
-
-/**
-기본 파랑 5190F4
-보내준 샘플 짙은 파랑 0c3184
-보내준 샘플 연한 하늘 (내용 백그라운드) cfe3fb
-보내준 샘플 슬라이드 d5d9e2
-보내준 샘플 블랙 292929
-
-컬러 팔레트에서
-1번째 진한 파랑 005DB9
-2번째 연한 하늘 D0E9EF
-3번째 노랑 EDD451 / 블랙 353535
-4번째 틸컬러 B9EFFF / 보라 4A4499
-*/

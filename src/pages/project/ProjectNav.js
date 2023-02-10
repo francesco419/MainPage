@@ -168,12 +168,7 @@ function SectionFirst({ text, name }) {
         <h1 className={styles["c-project-first__title"]}>Project:</h1>
         <h1 className={styles["c-project-first__title"]}>{name}</h1>
       </div>
-      <div
-        className={styles["c-project-section__introduction"]}
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-delay="1500"
-      >
+      <div className={styles["c-project-section__introduction"]} key={name}>
         <h2 className={styles["title-blue"]}>Introduction</h2>
         <p>{text}</p>
       </div>
@@ -183,12 +178,7 @@ function SectionFirst({ text, name }) {
 
 function SectionSecond({ imgs, onChangeShow }) {
   return (
-    <div
-      className={styles["c-project-second__section"]}
-      data-aos="fade-left"
-      data-aos-duration="1500"
-      data-aos-delay="1000"
-    >
+    <div className={styles["c-project-second__section"]} key={imgs}>
       <div id="imgSlide" className={styles["c-project-second__imgbox"]}>
         {imgs.map((data, index) => (
           <img
@@ -203,7 +193,7 @@ function SectionSecond({ imgs, onChangeShow }) {
       </div>
       <div className={styles["c-project-second__project"]}>
         <div>
-          <h2 className={styles["title-blue"]}>Proejct Image</h2>
+          <h2 className={styles["title-blue"]}>Project Image</h2>
           <p>The images of the projects </p>
         </div>
       </div>
@@ -213,12 +203,7 @@ function SectionSecond({ imgs, onChangeShow }) {
 
 function SectionThird({ results }) {
   return (
-    <div
-      className={styles["c-project-third__section"]}
-      data-aos="fade-right"
-      data-aos-duration="1500"
-      data-aos-delay="2000"
-    >
+    <div className={styles["c-project-third__section"]} key={results}>
       <ul className={styles["l-project-third__list"]}>
         <li className={styles["l-project-third__item"]}>
           <h2 className={styles["title-blue"]}>Result & TakeAway</h2>
@@ -235,12 +220,7 @@ function SectionThird({ results }) {
 
 function SectionFourth({ skills }) {
   return (
-    <div
-      className={styles["c-project-fourth__section"]}
-      data-aos="fade-left"
-      data-aos-duration="1500"
-      data-aos-delay="1500"
-    >
+    <div className={styles["c-project-fourth__section"]} key={skills}>
       <ul className={styles["l-project-fourth__list"]}>
         <li className={styles["l-project-fourth__item"]}>
           <h2 className={styles["title-blue"]}>SKILL STACK :</h2>
