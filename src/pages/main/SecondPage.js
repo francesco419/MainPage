@@ -96,7 +96,7 @@ export default function SecondPage() {
               <ProgressBar height={"5vh"} id={"css"} />
               <ProgressBar height={"4vh"} id={"js"} />
               <ProgressBar height={"10vh"} id={"ts"} />
-              <ProgressBar height={"8vh"} id={"sass"} />
+              <ProgressBar height={"8vh"} id={"scss"} />
               <ProgressBar height={"5vh"} id={"react"} />
               <ProgressBar height={"8vh"} id={"redux"} />
               <div className={styles["second-progress__absolute"]}>

@@ -1,15 +1,18 @@
 import styles from "./FrontPage.module.css";
-import FirstPage from "./FirstPage";
-import SecondPage from "./SecondPage";
 import Indicator from "../../components/new/indicator/Indicator";
-import ThirdPage from "./ThirdPage";
-import FourthPage from "./FourthPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import React, { Suspense } from "react";
+import Loading from "../../components/new/Loading";
 
 export default function FrontPage() {
   let timer;
   const location = useLocation();
+
+  const FirstPage = React.lazy(() => import("./FirstPage"));
+  const SecondPage = React.lazy(() => import("./SecondPage"));
+  const ThirdPage = React.lazy(() => import("./ThirdPage"));
+  const FourthPage = React.lazy(() => import("./FourthPage"));
 
   const preventWheelEvent = (e) => {
     e.preventDefault();
@@ -73,11 +76,13 @@ export default function FrontPage() {
 
   return (
     <div className={styles["frontpage"]}>
-      <Indicator type={true} />
-      <FirstPage />
-      <SecondPage />
-      <ThirdPage />
-      <FourthPage />
+      <Suspense fallback={<Loading />}>
+        <Indicator type={true} />
+        <FirstPage />
+        <SecondPage />
+        <ThirdPage />
+        <FourthPage />
+      </Suspense>
     </div>
   );
 }
