@@ -3,7 +3,7 @@ html {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   color: var(--color-white);
 }
 
@@ -23,20 +23,25 @@ html {
 /*#d0e9ef*/
 
 a {
+  font-family: 'Pretendard-Regular';
   text-decoration: none;
   color: var(--color-black);
 }
 
-p {
+p,
+pre {
+  font-family: 'Pretendard-Regular';
   font-size: 1vw;
   margin: 0;
 }
 
 h2 {
+  font-family: 'Pretendard-Regular';
   margin: 0;
 }
 
 h3 {
+  font-family: 'Pretendard-Regular';
   margin: 0;
 }
 
@@ -55,9 +60,9 @@ h3 {
 */
 
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
   font-weight: 500;
   font-style: normal;
 }
