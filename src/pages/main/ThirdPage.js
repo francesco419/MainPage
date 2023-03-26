@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import styles from "./ThirdPage.module.css";
-import { useOnScreen } from "../../hook/useOnScreen";
-import { useDispatch } from "react-redux";
-import { changeSide } from "../../redux/SideSlide";
-import SideMenu from "../../components/new/indicator/SideMenu";
-import { ProjectDetailText } from "../../context/ProjectText.js";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from 'react';
+import styles from './ThirdPage.module.css';
+import { useOnScreen } from '../../hook/useOnScreen';
+import { useDispatch } from 'react-redux';
+import { changeSide } from '../../redux/SideSlide';
+import SideMenu from '../../components/new/indicator/SideMenu';
+import { ProjectDetailText } from '../../context/ProjectText.js';
+import { useNavigate } from 'react-router-dom';
 
 export default function ThirdPage() {
   const dispatch = useDispatch();
@@ -17,19 +17,19 @@ export default function ThirdPage() {
   };
   useEffect(() => {
     if (screen === true) {
-      dispatch(changeSide(2));
+      dispatch(changeSide(3));
     }
   }, [screen]);
 
   return (
-    <div id="third" className={styles["thirdpage"]}>
+    <div id='third' className={styles['thirdpage']}>
       <SideMenu />
-      <div className={styles["thirdpage-right"]}>
-        <div className={styles["thirdpage-box"]}>
-          <div className={styles["thirdpage-title"]} ref={ref}>
+      <div className={styles['thirdpage-right']}>
+        <div className={styles['thirdpage-box']}>
+          <div className={styles['thirdpage-title']} ref={ref}>
             <h2>{`<PROJECT/>`}</h2>
           </div>
-          <div className={styles["thirdpage-section"]} ref={ref}>
+          <div className={styles['thirdpage-section']} ref={ref}>
             {ProjectDetailText.map((data, index) => {
               if (index < 4) {
                 return (
@@ -51,14 +51,14 @@ export default function ThirdPage() {
 }
 
 function TransitionEffect() {
-  return <div className={styles["transiton-effect"]}></div>;
+  return <div className={styles['transiton-effect']}></div>;
 }
 
 function Project({ props, index, chageState }) {
   const nav = useNavigate();
   return (
     <div
-      className={styles["thirdpage-project"]}
+      className={styles['thirdpage-project']}
       onClick={() => {
         chageState();
         setTimeout(() => {
@@ -66,18 +66,18 @@ function Project({ props, index, chageState }) {
         }, 2000);
       }}
     >
-      <dl className={styles["thirdpage-description__list"]}>
-        <dt className={styles["thirdpage-description__term"]}>
-          <h1 className={styles["thirdpage-description__number"]}>
+      <dl className={styles['thirdpage-description__list']}>
+        <dt className={styles['thirdpage-description__term']}>
+          <h1 className={styles['thirdpage-description__number']}>
             {props.id}
           </h1>
-          <h2 className={styles["thirdpage-description__title"]}>
+          <h2 className={styles['thirdpage-description__title']}>
             {props.name}
           </h2>
         </dt>
         <hr />
-        <dd className={styles["thirdpage-description__description"]}>
-          <p className={styles["thirdpage-description__paragraph"]}>
+        <dd className={styles['thirdpage-description__description']}>
+          <p className={styles['thirdpage-description__paragraph']}>
             {props.intro}
           </p>
         </dd>

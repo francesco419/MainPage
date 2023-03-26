@@ -22,7 +22,7 @@ export default function SecondPage() {
   ];
 
   const introduction =
-    '사람들에게 멋진 가치를 제공 하는 것을 추구하는 개발자 이상현입니다. \n 실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 합니다. \n 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다.';
+    '사람들에게 멋진 가치를 제공 하는 것을 추구하는 개발자 이상현입니다. \n실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 합니다. \n최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다.';
 
   useEffect(() => {
     if (screen === true) {
@@ -38,6 +38,10 @@ export default function SecondPage() {
         <p>{name}</p>
       </td>
     );
+  }
+
+  function AbilityText() {
+    return <div className={styles['secondpage-description']}></div>;
   }
 
   return (
