@@ -1,13 +1,11 @@
 import styles from './SecondPage.module.css';
-import { ReactComponent as Communiction } from '../../assets/image/communication.svg';
-import { ReactComponent as Creativity } from '../../assets/image/creativity.svg';
-import { ReactComponent as Growths } from '../../assets/image/growth.svg';
-import { ReactComponent as System } from '../../assets/image/system.svg';
 import SideMenu from '../../components/new/indicator/SideMenu';
 import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
 import { changeSide } from '../../redux/SideSlide';
 import { useEffect, useRef } from 'react';
+import { useState } from 'react';
+import DropSection from '../../components/new/dragdrop/dropSection';
 
 export default function SecondPage() {
   const dispatch = useDispatch();
@@ -21,8 +19,12 @@ export default function SecondPage() {
     'Git을 통한 프로젝트 관리 경험'
   ];
 
+  /* const name =
+    '안녕하세요 저는 사람들에게 멋진 가치를 제공 하는 것을 추구하는 개발자 이상현입니다.';
+
   const introduction =
-    '사람들에게 멋진 가치를 제공 하는 것을 추구하는 개발자 이상현입니다. \n실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 합니다. \n최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다.';
+    '실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 왜? 어떻게? 라는 프로세스를 통해 문제해결에 대해 자신만의 차별화된 솔루션을 만들고자 하며, 이를위해 새로운 기술을 적극 활용하고 다양한 경험을 쌓아 폭넓은 사고를 보유하고자 합니다.';
+ */
 
   useEffect(() => {
     if (screen === true) {
@@ -30,19 +32,6 @@ export default function SecondPage() {
       console.log(1);
     }
   }, [screen]);
-
-  function AbilityBlock({ svg, name }) {
-    return (
-      <td className={styles['secondpage-table_data']}>
-        {svg}
-        <p>{name}</p>
-      </td>
-    );
-  }
-
-  function AbilityText() {
-    return <div className={styles['secondpage-description']}></div>;
-  }
 
   return (
     <div id='second' className={styles['secondpage']}>
@@ -52,28 +41,7 @@ export default function SecondPage() {
           <div className={styles['secondpage-title']} ref={ref}>
             <h2>{`<ABOUT ME/>`}</h2>
           </div>
-          <div className={styles['secondpage-section']}>
-            <div className={styles['secondpage-intro']}>
-              <pre className={styles['paragh']}>{introduction}</pre>
-            </div>
-            <div className={styles['secondpage-detail']}>
-              <table>
-                <tbody>
-                  <tr>
-                    <AbilityBlock
-                      svg={<Communiction />}
-                      name={`<Communication>`}
-                    />
-                    <AbilityBlock svg={<Creativity />} name={`<Creativity>`} />
-                  </tr>
-                  <tr>
-                    <AbilityBlock svg={<Growths />} name={`<Growths>`} />
-                    <AbilityBlock svg={<System />} name={`<Systematic>`} />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <DropSection />
         </div>
       </div>
     </div>
