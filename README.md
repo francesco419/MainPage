@@ -321,3 +321,8 @@ Skill부분에서 텍스트스크롤링 파트 보완필요.
 ## 23.02.14
 
 - `Suspence` 와 `React.lazy()`를 사용하여 자바스크립트 분할. (FrontPage)
+
+## ~ 23.03.29
+
+- skill 항목 추가
+- drag & drop을 사용한 about me 수정

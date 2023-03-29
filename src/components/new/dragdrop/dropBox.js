@@ -12,7 +12,6 @@ export default function DropBox() {
 
   const dragOverHandler = (e) => {
     e.preventDefault();
-    console.log('drag here');
   };
 
   const stateHandlerDropLayout = () => {
@@ -23,7 +22,6 @@ export default function DropBox() {
     e.preventDefault();
     stateHandlerDropLayout();
     const data = e.dataTransfer.getData('text');
-    console.log(data);
     switch (data) {
       case 'communication':
         stateHandlerDropElement('commu');

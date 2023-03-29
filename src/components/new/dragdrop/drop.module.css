@@ -1,0 +1,49 @@
+.drop_extend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13vw;
+  height: 13vh;
+  border: 1px;
+  border-style: dashed;
+  color: var(--color-gray);
+}
+
+.drop_element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.drop_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  animation: text 1s linear forwards;
+  opacity: 0;
+}
+
+.drop_text_svg {
+  margin: 30px 0;
+}
+
+.drop_text p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+@keyframes text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
