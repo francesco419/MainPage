@@ -29,6 +29,41 @@ const DRAGTEXT = [
   SYSTEMATICTEXT
 ];
 
+const COMMUNICATIONCOMP = (
+  <div>
+    <p>BACKEND</p>
+    <p>FRONTEND</p>
+  </div>
+);
+
+const CREATIVITYCOMP = (
+  <div>
+    <img src='' />
+    <p>project idea</p>
+  </div>
+);
+
+const GROWTHSCOMP = (
+  <div>
+    <p>SKILLS</p>
+    <p>SKILLS</p>
+    <p>SKILLS</p>
+  </div>
+);
+
+const SYSTEMATICCOMP = (
+  <div>
+    <p>문제해결</p>
+  </div>
+);
+
+const DRAGCOMP = [
+  COMMUNICATIONCOMP,
+  CREATIVITYCOMP,
+  GROWTHSCOMP,
+  SYSTEMATICCOMP
+];
+
 export default function DropContent({ data }) {
   useEffect(() => {}, [data]);
 
@@ -48,16 +83,27 @@ export default function DropContent({ data }) {
       <div className={styles['drop_element']} key={text}>
         <div className={styles['drop_text']}>
           <div className={styles['drop_text_svg']}>{target[num]}</div>
-          {DRAGTEXT[num].map((data) => {
-            return <p>{data}</p>;
-          })}
+          <ul>
+            {DRAGTEXT[num].map((data) => {
+              return (
+                <li>
+                  <p>{data}</p>
+                </li>
+              );
+            })}
+          </ul>
         </div>
+        <div className={styles['drop_info']}>{DRAGCOMP[num]}</div>
       </div>
     );
   };
 
   const defaultElement = (text) => {
-    return <div className={styles['drop_extend']}>{text}</div>;
+    return (
+      <div className={styles['drop_extend']}>
+        <p>위 요소를 드래그 해주세요</p>
+      </div>
+    );
   };
 
   switch (data) {
