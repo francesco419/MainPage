@@ -34,6 +34,8 @@ export default function DropBox() {
         return;
       case 'system':
         stateHandlerDropElement('sys');
+      case 'default':
+        stateHandlerDropElement('def');
       default:
         return;
     }

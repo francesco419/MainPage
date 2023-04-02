@@ -2,8 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13vw;
-  height: 13vh;
   border: 3px;
   border-style: dashed;
   color: var(--color-gray);

@@ -10,6 +10,7 @@ export default function DropSection() {
   return (
     <div className={styles['secondpage-section']}>
       <div className={styles['secondpage-detail']}>
+        <DragTarget svg={<Growths />} name={`<DEFAULT>`} id='default' />
         <DragTarget
           svg={<Communiction />}
           name={`<Communication>`}

@@ -28,9 +28,43 @@ export default function AfterSec() {
           <div className={styles['aftSec-title']} ref={ref}>
             <h2>{`<SKILLS/>`}</h2>
           </div>
-          <div className={styles['aftSec-section']}></div>
+          <div className={styles['aftSec-section']}>
+            <AfterElemet />
+            <AfterElemet />
+            <AfterElemet />
+            <AfterElemet />
+            <AfterElemet />
+            <AfterElemet />
+          </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function After() {
+  return (
+    <div>
+      <AfterElemet />
+      <AfterElemet />
+      <AfterElemet />
+    </div>
+  );
+}
+
+function AfterElemet() {
+  return (
+    <div style={{ width: '20vw', height: '30vh', margin: '20px 20px' }}>
+      <img
+        src='https://picsum.photos/200/300'
+        style={{ height: '15vh', objectFit: 'cover', margin: '0 auto' }}
+      />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare
+        volutpat fringilla. Curabitur vitae ultricies lectus, quis facilisis
+        mauris. Nunc dictum volutpat nisl, eu fermentum tellus. Duis sem sapien,
+        lobortis.
+      </p>
     </div>
   );
 }

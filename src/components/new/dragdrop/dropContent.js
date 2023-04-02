@@ -64,6 +64,12 @@ const DRAGCOMP = [
   SYSTEMATICCOMP
 ];
 
+const name =
+  '안녕하세요 저는 사람들에게 멋진 가치를 제공 하는 것을 추구하는 개발자 이상현입니다.';
+
+const introduction =
+  '실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 왜? 어떻게? 라는 프로세스를 통해 문제해결에 대해 자신만의 차별화된 솔루션을 만들고자 하며, 이를위해 새로운 기술을 적극 활용하고 다양한 경험을 쌓아 폭넓은 사고를 보유하고자 합니다.';
+
 export default function DropContent({ data }) {
   useEffect(() => {}, [data]);
 
@@ -101,7 +107,8 @@ export default function DropContent({ data }) {
   const defaultElement = (text) => {
     return (
       <div className={styles['drop_extend']}>
-        <p>위 요소를 드래그 해주세요</p>
+        <p>{name}</p>
+        <p>{introduction}</p>
       </div>
     );
   };
@@ -115,6 +122,8 @@ export default function DropContent({ data }) {
       return setElement('gt', 2);
     case 'sys':
       return setElement('st', 3);
+    case 'def':
+      return defaultElement(data);
     default:
       return defaultElement(data);
   }
