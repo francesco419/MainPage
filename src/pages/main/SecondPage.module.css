@@ -25,10 +25,29 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.secondpage-TEMP {
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.secondpage-TEMP p {
+  width: 300px;
+}
+
+.secondpage-img {
+  width: 200px;
+  height: 200px;
+  background-color: bisque;
+  margin: 0 20px 0 0;
 }
 
 .secondpage-section {
+  display: flex;
+  flex-wrap: wrap;
   height: 100%;
   width: 70vw;
   margin: 50px 0;

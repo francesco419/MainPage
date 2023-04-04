@@ -4,7 +4,7 @@ import DropContent from './dropContent';
 
 export default function DropBox() {
   const [dropLayout, setDropLayout] = useState(true);
-  const [dropElement, setDropElement] = useState('Drop Here');
+  const [dropElement, setDropElement] = useState('def');
 
   const dropBox = dropLayout
     ? { borderColor: 'var(--color-black)' }
@@ -22,6 +22,8 @@ export default function DropBox() {
     e.preventDefault();
     stateHandlerDropLayout();
     const data = e.dataTransfer.getData('text');
+    console.log(data);
+
     switch (data) {
       case 'communication':
         stateHandlerDropElement('commu');
@@ -34,8 +36,10 @@ export default function DropBox() {
         return;
       case 'system':
         stateHandlerDropElement('sys');
+        return;
       case 'default':
         stateHandlerDropElement('def');
+        return;
       default:
         return;
     }

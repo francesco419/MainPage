@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { changeSide } from '../../redux/SideSlide';
 import { useEffect, useRef } from 'react';
 import { useState } from 'react';
+import { introduction } from '../../context/ProjectText';
 import DropSection from '../../components/new/dragdrop/dropSection';
 
 export default function SecondPage() {
@@ -41,14 +42,61 @@ export default function SecondPage() {
           <div className={styles['secondpage-title']} ref={ref}>
             <h2>{`<ABOUT ME/>`}</h2>
           </div>
-          <DropSection />
+          {/* <DropSection /> */}
+          <div className={styles['secondpage-section']}>
+            <p>{introduction}</p>
+            <div className={styles['secondpage-TEMP']}>
+              <div className={styles['secondpage-img']}>a</div>
+              <p>
+                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
+                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
+                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
+                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
+                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
+                성장하며 발전하고자 합니다. \n무엇을?
+              </p>
+            </div>
+            <div className={styles['secondpage-TEMP']}>
+              <div className={styles['secondpage-img']}>a</div>
+              <p>
+                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
+                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
+                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
+                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
+                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
+                성장하며 발전하고자 합니다. \n무엇을?
+              </p>
+            </div>
+            <div className={styles['secondpage-TEMP']}>
+              <div className={styles['secondpage-img']}>a</div>
+              <p>
+                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
+                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
+                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
+                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
+                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
+                성장하며 발전하고자 합니다. \n무엇을?
+              </p>
+            </div>
+            <div className={styles['secondpage-TEMP']}>
+              <div className={styles['secondpage-img']}>a</div>
+              <p>
+                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
+                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
+                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
+                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
+                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
+                성장하며 발전하고자 합니다. \n무엇을?
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-function ProgressSkill() {
+/* function ProgressSkill() {
   function ProgressBar({ height, id }) {
     return (
       <span className={styles['second-progress__item']} id={id}>
@@ -83,4 +131,4 @@ function ProgressSkill() {
       </div>
     </div>
   );
-}
+} */

@@ -2,6 +2,7 @@ import { ReactComponent as Communiction } from '../../../assets/image/communicat
 import { ReactComponent as Creativity } from '../../../assets/image/creativity.svg';
 import { ReactComponent as Growths } from '../../../assets/image/growth.svg';
 import { ReactComponent as System } from '../../../assets/image/system.svg';
+import { ReactComponent as Me } from '../../../assets/image/person.svg';
 import styles from '../../../pages/main/SecondPage.module.css';
 import DropBox from './dropBox';
 import DragTarget from './dragTarget';
@@ -10,7 +11,7 @@ export default function DropSection() {
   return (
     <div className={styles['secondpage-section']}>
       <div className={styles['secondpage-detail']}>
-        <DragTarget svg={<Growths />} name={`<DEFAULT>`} id='default' />
+        <DragTarget svg={<Me />} name={`<ABOUT ME>`} id='default' />
         <DragTarget
           svg={<Communiction />}
           name={`<Communication>`}

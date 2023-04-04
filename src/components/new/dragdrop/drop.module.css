@@ -2,19 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px;
-  border-style: dashed;
-  color: var(--color-gray);
-  animation: borderColorChange 1s linear infinite alternate;
-}
-
-@keyframes borderColorChange {
-  from {
-    color: var(--color-gray);
-  }
-  to {
-    color: var(--color-yellow);
-  }
+  flex-direction: column;
+  padding: 0 5vw;
 }
 
 .drop_element {
