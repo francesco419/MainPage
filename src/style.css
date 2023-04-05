@@ -45,6 +45,12 @@ h3 {
   margin: 0;
 }
 
+input,
+textarea {
+  font-family: 'Pretendard-Regular';
+  font-weight: bold;
+}
+
 /**
 기본 파랑 5190F4
 보내준 샘플 짙은 파랑 0c3184

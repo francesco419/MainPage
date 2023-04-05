@@ -7,6 +7,7 @@ import SideMenu from '../../components/new/indicator/SideMenu';
 import { ReactComponent as Email } from '../../assets/image/contact/email.svg';
 import { ReactComponent as Blog } from '../../assets/image/contact/blog.svg';
 import { ReactComponent as Github } from '../../assets/image/contact/github.svg';
+import { ContactUs } from '../../components/new/contact/contact';
 
 export default function FourthPage() {
   const dispatch = useDispatch();
@@ -29,7 +30,6 @@ export default function FourthPage() {
         }}
       >
         {SVG}
-        <p>{text}</p>
       </div>
     );
   }
@@ -44,15 +44,18 @@ export default function FourthPage() {
           </div>
           <div className={styles['fourthpage-section']}>
             <div className={styles['fourthpage-big']}>
-              <ContactBox text={'francesco419@naver.com'} SVG={<Email />} />
-              <ContactBox
-                text={'https://github.com/francesco419'}
-                SVG={<Github />}
-              />
-              <ContactBox
-                text={'https://velog.io/@francesco419'}
-                SVG={<Blog />}
-              />
+              <div>
+                <ContactBox text={'francesco419@naver.com'} SVG={<Email />} />
+                <ContactBox
+                  text={'https://github.com/francesco419'}
+                  SVG={<Github />}
+                />
+                <ContactBox
+                  text={'https://velog.io/@francesco419'}
+                  SVG={<Blog />}
+                />
+              </div>
+              <ContactUs />
             </div>
           </div>
         </div>

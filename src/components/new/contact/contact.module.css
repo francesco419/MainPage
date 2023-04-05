@@ -1,0 +1,59 @@
+.emailSend {
+  color: var(--color-black);
+  width: 30vw;
+  height: 20vw;
+  padding: 0 2em;
+  border-radius: 15px;
+  color: var(--color-base-blue);
+}
+
+.emailSend label {
+  font-weight: bold;
+  margin: 3px 0;
+}
+
+.emailSend_inputs {
+  margin: 30px 0;
+  padding: 0 10px 0 0;
+  box-sizing: border-box;
+}
+
+.emailSend__name,
+.emailSend__email,
+.emailSend__message {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid;
+  background: none;
+  color: var(--color-base-blue);
+  padding: 0.5em 0;
+}
+
+.emailSend__name {
+  margin: 0 50px 0 0;
+}
+
+.emailSend__message {
+  width: 70%;
+}
+
+.emailSend__name::placeholder,
+.emailSend__email::placeholder,
+.emailSend__message::placeholder {
+  color: var(--color-gray);
+  font-weight: bold;
+}
+
+.emailSend__name:focus,
+.emailSend__email:focus,
+.emailSend__message:focus {
+  outline: none;
+}
+.emailSend__message {
+  resize: none;
+}
+
+.emailSend__send {
+  width: 100px;
+  height: 30px;
+}
