@@ -29,11 +29,13 @@
 
 .fourthpage-section {
   width: 75vw;
-  margin: 50px auto;
+  margin: 20vh auto 0;
 }
 
 .fourthpage-big {
   display: flex;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .fourthpage-big svg {
@@ -41,6 +43,15 @@
   width: 7vw;
   margin: 0 auto;
   fill: var(--color-dark-blue);
+}
+
+.fourthpage-big__svg {
+  margin: 0 5vw 0 0;
+}
+
+.fourthpage-big__container {
+  display: flex;
+  align-items: center;
 }
 
 .fourthpage-big__item {
@@ -52,8 +63,14 @@
   margin: 0 3vw;
 }
 
-.fourthpage-big__item p {
+.fourthpage-big__p {
   color: var(--color-black);
+  font-weight: bold;
+  height: min-content;
+}
+
+.fourthpage-big__container:hover svg {
+  fill: var(--color-yellow);
 }
 
 .fourthpage-big__item svg {

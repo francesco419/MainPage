@@ -8,6 +8,7 @@ import { ReactComponent as Email } from '../../assets/image/contact/email.svg';
 import { ReactComponent as Blog } from '../../assets/image/contact/blog.svg';
 import { ReactComponent as Github } from '../../assets/image/contact/github.svg';
 import { ContactUs } from '../../components/new/contact/contact';
+import Title from '../../components/new/title/title';
 
 export default function FourthPage() {
   const dispatch = useDispatch();
@@ -22,14 +23,19 @@ export default function FourthPage() {
 
   function ContactBox({ text, SVG }) {
     return (
-      <div
-        className={styles['fourthpage-big__item']}
-        onClick={() => {
-          navigator.clipboard.writeText(text);
-          alert('Copied to Users Clipboard !');
-        }}
-      >
-        {SVG}
+      <div className={styles['fourthpage-big__container']}>
+        <div
+          className={styles['fourthpage-big__item']}
+          onClick={() => {
+            navigator.clipboard.writeText(text);
+            alert('Copied to Users Clipboard !');
+          }}
+        >
+          {SVG}
+        </div>
+        <a href={text} className={styles['fourthpage-big__p']}>
+          {text}
+        </a>
       </div>
     );
   }
@@ -39,12 +45,10 @@ export default function FourthPage() {
       <SideMenu />
       <div className={styles['fourthpage-right']}>
         <div className={styles['fourthpage-box']}>
-          <div className={styles['fourthpage-title']} ref={ref}>
-            <h2>{`<CONTACT/>`}</h2>
-          </div>
+          <Title ref={ref} title='<CONTACT>' />
           <div className={styles['fourthpage-section']}>
             <div className={styles['fourthpage-big']}>
-              <div>
+              <div className={styles['fourthpage-big__svg']}>
                 <ContactBox text={'francesco419@naver.com'} SVG={<Email />} />
                 <ContactBox
                   text={'https://github.com/francesco419'}

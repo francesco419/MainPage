@@ -25,27 +25,13 @@ export const ContactUs = () => {
       );
   };
 
-  function FormAt({ className, label, type, name, placeholder, input }) {
-    return (
-      <div className={styles['emailSend_inputs']}>
-        <label>{label}</label>
-        {input ? (
-          <input
-            type={type}
-            name={name}
-            placeholder={placeholder}
-            className={styles[className]}
-          />
-        ) : (
-          <textarea
-            name={name}
-            placeholder={placeholder}
-            className={styles[className]}
-          />
-        )}
-      </div>
-    );
-  }
+  const onMouseOverHandler = (e) => {
+    e.target.value = 'Press to Send !';
+  };
+
+  const onMouseLeaveHandler = (e) => {
+    e.target.value = 'Send';
+  };
 
   return (
     <form ref={form} onSubmit={sendEmail} className={styles['emailSend']}>
@@ -72,7 +58,37 @@ export const ContactUs = () => {
         placeholder='Message...'
         input={false}
       />
-      <input type='submit' value='Send' className={styles['emailSend__send']} />
+      <input
+        type='submit'
+        value='Send'
+        onMouseOver={(e) => onMouseOverHandler(e)}
+        onMouseLeave={(e) => onMouseLeaveHandler(e)}
+        className={styles['emailSend__send']}
+      />
     </form>
   );
 };
+
+function FormAt({ className, label, type, name, placeholder, input }) {
+  return (
+    <div className={styles['emailSend_format']}>
+      <label>{label}</label>
+      {input ? (
+        <input
+          type={type}
+          name={name}
+          placeholder={placeholder}
+          className={styles[className]}
+          required
+        />
+      ) : (
+        <textarea
+          name={name}
+          placeholder={placeholder}
+          className={styles[className]}
+          required
+        />
+      )}
+    </div>
+  );
+}

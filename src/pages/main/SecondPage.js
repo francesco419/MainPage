@@ -7,6 +7,12 @@ import { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { introduction } from '../../context/ProjectText';
 import DropSection from '../../components/new/dragdrop/dropSection';
+import Title from '../../components/new/title/title';
+import DragTarget from '../../components/new/dragdrop/dragTarget';
+import { ReactComponent as Communiction } from '../../assets/image/communication.svg';
+import { ReactComponent as Creativity } from '../../assets/image/creativity.svg';
+import { ReactComponent as Growths } from '../../assets/image/growth.svg';
+import { ReactComponent as System } from '../../assets/image/system.svg';
 
 export default function SecondPage() {
   const dispatch = useDispatch();
@@ -26,7 +32,6 @@ export default function SecondPage() {
   const introduction =
     '실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 왜? 어떻게? 라는 프로세스를 통해 문제해결에 대해 자신만의 차별화된 솔루션을 만들고자 하며, 이를위해 새로운 기술을 적극 활용하고 다양한 경험을 쌓아 폭넓은 사고를 보유하고자 합니다.';
  */
-
   useEffect(() => {
     if (screen === true) {
       dispatch(changeSide(1));
@@ -34,19 +39,36 @@ export default function SecondPage() {
     }
   }, [screen]);
 
+  function Target({ svg, name }) {
+    return (
+      <div className={styles['secondpage-table_data']}>
+        {svg}
+        <p>{name}</p>
+      </div>
+    );
+  }
+
+  function Source(svg, name, text) {
+    return (
+      <div className={styles['secondpage-TEMP']}>
+        <Target svg={<Communiction />} name='Communiction' />
+        <p>{text}</p>
+      </div>
+    );
+  }
+
   return (
     <div id='second' className={styles['secondpage']}>
       <SideMenu />
       <div className={styles['secondpage-right']}>
         <div className={styles['secondpage-box']}>
-          <div className={styles['secondpage-title']} ref={ref}>
-            <h2>{`<ABOUT ME/>`}</h2>
-          </div>
-          {/* <DropSection /> */}
+          <Title ref={ref} title='<ABOUT ME>' />
           <div className={styles['secondpage-section']}>
             <p>{introduction}</p>
+          </div>
+          <div className={styles['secondpage-items']}>
             <div className={styles['secondpage-TEMP']}>
-              <div className={styles['secondpage-img']}>a</div>
+              <Target svg={<Communiction />} name='Communiction' />
               <p>
                 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
                 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
@@ -57,7 +79,7 @@ export default function SecondPage() {
               </p>
             </div>
             <div className={styles['secondpage-TEMP']}>
-              <div className={styles['secondpage-img']}>a</div>
+              <Target svg={<Creativity />} name='Creativity' />
               <p>
                 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
                 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
@@ -68,7 +90,7 @@ export default function SecondPage() {
               </p>
             </div>
             <div className={styles['secondpage-TEMP']}>
-              <div className={styles['secondpage-img']}>a</div>
+              <Target svg={<Growths />} name='Growths' />
               <p>
                 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
                 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
@@ -79,7 +101,7 @@ export default function SecondPage() {
               </p>
             </div>
             <div className={styles['secondpage-TEMP']}>
-              <div className={styles['secondpage-img']}>a</div>
+              <Target svg={<System />} name='System' />
               <p>
                 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
                 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
