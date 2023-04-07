@@ -28,12 +28,12 @@ export default function AfterSec() {
         <div className={styles['aftSec-box']}>
           <Title ref={ref} title='<SKILLS>' />
           <div className={styles['aftSec-section']}>
-            <AfterElemet />
-            <AfterElemet />
-            <AfterElemet />
-            <AfterElemet />
-            <AfterElemet />
-            <AfterElemet />
+            <AfterElement />
+            <AfterElement />
+            <AfterElement />
+            <AfterElement />
+            <AfterElement />
+            <AfterElement />
           </div>
         </div>
       </div>
@@ -41,23 +41,10 @@ export default function AfterSec() {
   );
 }
 
-function After() {
+function AfterElement() {
   return (
-    <div>
-      <AfterElemet />
-      <AfterElemet />
-      <AfterElemet />
-    </div>
-  );
-}
-
-function AfterElemet() {
-  return (
-    <div style={{ width: '20vw', height: '30vh', margin: '20px 20px' }}>
-      <img
-        src='https://picsum.photos/200/300'
-        style={{ height: '15vh', objectFit: 'cover', margin: '0 auto' }}
-      />
+    <div className={styles['aftSec-element']}>
+      <img src='https://picsum.photos/200/300' />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare
         volutpat fringilla. Curabitur vitae ultricies lectus, quis facilisis
