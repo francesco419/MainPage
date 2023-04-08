@@ -1,0 +1,31 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 20vw;
+  height: 20vw;
+  margin: 0 20px;
+}
+
+.skills__svgBOx {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.skills__name {
+  margin: 5px auto;
+  color: var(--color-gray);
+  font-weight: bold;
+}
+
+.skills__detail {
+  font-size: 0.9em;
+  margin: 20px 0 0;
+}
+
+.skills svg {
+  width: 7vw;
+  height: 7vw;
+  object-fit: cover;
+  margin: 0 auto;
+}

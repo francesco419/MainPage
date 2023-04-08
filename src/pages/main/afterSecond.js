@@ -7,6 +7,7 @@ import SideMenu from '../../components/new/indicator/SideMenu';
 import { ProjectDetailText } from '../../context/ProjectText.js';
 import { useNavigate } from 'react-router-dom';
 import Title from '../../components/new/title/title';
+import Skills from '../../components/new/skills/skills';
 
 export default function AfterSec() {
   const dispatch = useDispatch();
@@ -28,29 +29,15 @@ export default function AfterSec() {
         <div className={styles['aftSec-box']}>
           <Title ref={ref} title='<SKILLS>' />
           <div className={styles['aftSec-section']}>
-            <AfterElement />
-            <AfterElement />
-            <AfterElement />
-            <AfterElement />
-            <AfterElement />
-            <AfterElement />
+            <Skills num={0} />
+            <Skills num={1} />
+            <Skills num={2} />
+            <Skills num={3} />
+            <Skills num={4} />
+            <Skills num={5} />
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-function AfterElement() {
-  return (
-    <div className={styles['aftSec-element']}>
-      <img src='https://picsum.photos/200/300' />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare
-        volutpat fringilla. Curabitur vitae ultricies lectus, quis facilisis
-        mauris. Nunc dictum volutpat nisl, eu fermentum tellus. Duis sem sapien,
-        lobortis.
-      </p>
     </div>
   );
 }
