@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 20vw;
-  height: 20vw;
-  margin: 0 20px;
+  width: 350px;
+  height: 300px;
+  margin: 30px 20px;
 }
 
 .skills__svgBOx {
@@ -19,13 +19,14 @@
 }
 
 .skills__detail {
-  font-size: 0.9em;
-  margin: 20px 0 0;
+  font-size: 1rem;
+  margin: 10px 0 0;
+  text-align: center;
 }
 
 .skills svg {
-  width: 7vw;
-  height: 7vw;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   margin: 0 auto;
 }
