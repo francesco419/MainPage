@@ -6,7 +6,7 @@ import { changeSide } from '../../redux/SideSlide';
 import SideMenu from '../../components/new/indicator/SideMenu';
 import { ProjectDetailText } from '../../context/ProjectText.js';
 import { useNavigate } from 'react-router-dom';
-import Title from '../../components/new/title/title';
+import { Title } from '../../components/new/title/title';
 
 export default function ThirdPage() {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export default function ThirdPage() {
       <SideMenu />
       <div className={styles['thirdpage-right']}>
         <div className={styles['thirdpage-box']}>
-          <Title ref={ref} title='<PROJECT>' />
+          <Title inputref={ref} title='<PROJECT>' />
           <div className={styles['thirdpage-section']} ref={ref}>
             {ProjectDetailText.map((data, index) => {
               if (index < 4) {

@@ -45,6 +45,10 @@
   fill: var(--color-white);
 }
 
+.c-indicator-stick__nav svg {
+  fill: var(--color-bright-blue);
+}
+
 .c-indicator-side {
   position: relative;
   display: -webkit-box;

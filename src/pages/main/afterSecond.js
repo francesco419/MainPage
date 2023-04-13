@@ -6,7 +6,7 @@ import { changeSide } from '../../redux/SideSlide';
 import SideMenu from '../../components/new/indicator/SideMenu';
 import { ProjectDetailText } from '../../context/ProjectText.js';
 import { useNavigate } from 'react-router-dom';
-import Title from '../../components/new/title/title';
+import { Title } from '../../components/new/title/title';
 import Skills from '../../components/new/skills/skills';
 
 export default function AfterSec() {
@@ -27,7 +27,7 @@ export default function AfterSec() {
       <SideMenu />
       <div className={styles['aftSec-right']}>
         <div className={styles['aftSec-box']}>
-          <Title ref={ref} title='<SKILLS>' />
+          <Title inputref={ref} title='<SKILLS>' />
           <div className={styles['aftSec-section']}>
             <Skills num={0} />
             <Skills num={1} />

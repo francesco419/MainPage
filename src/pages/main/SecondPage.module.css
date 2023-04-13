@@ -22,7 +22,10 @@
   height: 100%;
   width: 70vw;
   margin: 50px auto;
-  word-break: break-all;
+}
+
+.secondpage-section__p {
+  word-break: keep-all;
 }
 
 .secondpage-items {
@@ -31,14 +34,23 @@
   justify-content: center;
 }
 
-.secondpage-TEMP {
+.secondpage-table {
   display: flex;
   align-items: center;
   margin: 30px 30px 30px 0;
 }
 
-.secondpage-TEMP p {
+.secondpage-table p {
   width: 20vw;
+}
+
+.secondpage-table__list {
+  padding: 0;
+  list-style: none;
+}
+
+.secondpage-table__list li {
+  margin: 10px 0;
 }
 
 .secondpage-table_data {

@@ -27,6 +27,7 @@ function StickForm() {
         onClick={() => {
           nav(`/List`);
         }}
+        className={styles['c-indicator-stick__nav']}
       >
         <Navigate />
       </div>

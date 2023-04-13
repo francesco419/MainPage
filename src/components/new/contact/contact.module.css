@@ -1,6 +1,9 @@
 .emailSend {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   color: var(--color-black);
-  width: 30vw;
+  width: 25vw;
   height: 20vw;
   padding: 0 2em;
   border: 1px solid var(--color-base-blue);
@@ -14,7 +17,6 @@
 }
 
 .emailSend_format {
-  margin: 50px 0;
   padding: 0 10px 0 0;
   box-sizing: border-box;
 }
@@ -50,6 +52,7 @@
 .emailSend__message:focus {
   outline: none;
 }
+
 .emailSend__message {
   resize: none;
 }

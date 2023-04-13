@@ -11,7 +11,7 @@ const SKILLINFORMATION = [
   {
     no: 0,
     svg: [<HTML />, <CSS />],
-    name: 'HTML CSS',
+    name: 'HTML / CSS',
     text: [
       '기본이라고 할 수 있는 HTML/CSS를 자유자재로 구현할 수 있습니다.',
       '프로덕트에 요구되는 적절한 애니메이션을 Keyframe / transition 등을 통해 구현할 수 있습니다.',
@@ -23,9 +23,9 @@ const SKILLINFORMATION = [
     svg: [<JS />],
     name: 'JAVASCRIPT',
     text: [
-      'ES6 이후의 JS를 사용하는것에 능숙하며,',
+      'ES6 이후의 JS를 사용하는것에 능숙합니다.',
       'JS를 사용하여 CSS보다 복잡한 애니메이션을 구현 할 수 있습니다.',
-      'DOM 조작 및 이벤트 할당을 통해 인터렉티브한 코드를 작성 할 수 있습니다.'
+      'DOM 조작 및 이벤트 할당을 통해 인터렉티브한 프로덕트를 구현할 수 있습니다.'
     ]
   },
   {
@@ -53,14 +53,18 @@ const SKILLINFORMATION = [
     svg: [<SCSS />],
     name: 'SCSS',
     text: [
-      '변수/ 중첩/ 함수 등의 문법을 사용하여 재사용성을 높이는 스타일시트 작성을 할 수 있습니다.'
+      '변수/ 중첩/ 함수 등의 문법을 적절히 사용하여 기존 CSS를 구조화한 형태로 표현할 수 있습니다.',
+      '특징을 최대한으로 살려, 가독성과 재사용성을 높여 유지보수가 쉬운 스타일시트 작성을 하고자 합니다.'
     ]
   },
   {
     no: 5,
     svg: [<TYPE />],
     name: 'TYPESCRIPT',
-    text: [`정적코드작성이 가능합니다.`]
+    text: [
+      `정적코드작성 및 타입오류로 인한 에러의 문제해결이 가능합니다..`,
+      'TS로 인해 코드량이 많아지고 복잡해지나, 유지보수 및 코드 퀄리티에서의 장점또한 이해하고 있습니다.'
+    ]
   }
 ];
 
@@ -73,9 +77,13 @@ export default function Skills({ num = 0 }) {
         })}
       </div>
       <p className={styles['skills__name']}>{SKILLINFORMATION[num].name}</p>
-      <ul>
+      <ul className={styles['skills__ul']}>
         {SKILLINFORMATION[num].text.map((data) => {
-          return <li className={styles['skills__detail']}>{data}</li>;
+          return (
+            <li className={styles['skills__li']}>
+              <p>{data}</p>
+            </li>
+          );
         })}
       </ul>
     </div>

@@ -8,7 +8,7 @@ import { ReactComponent as Email } from '../../assets/image/contact/email.svg';
 import { ReactComponent as Blog } from '../../assets/image/contact/blog.svg';
 import { ReactComponent as Github } from '../../assets/image/contact/github.svg';
 import { ContactUs } from '../../components/new/contact/contact';
-import Title from '../../components/new/title/title';
+import { Title } from '../../components/new/title/title';
 
 export default function FourthPage() {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ export default function FourthPage() {
       <SideMenu />
       <div className={styles['fourthpage-right']}>
         <div className={styles['fourthpage-box']}>
-          <Title ref={ref} title='<CONTACT>' />
+          <Title inputref={ref} title='<CONTACT>' />
           <div className={styles['fourthpage-section']}>
             <div className={styles['fourthpage-big']}>
               <div className={styles['fourthpage-big__svg']}>

@@ -4,27 +4,20 @@ import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
 import { changeSide } from '../../redux/SideSlide';
 import { useEffect, useRef } from 'react';
-import { useState } from 'react';
 import { introduction } from '../../context/ProjectText';
-import DropSection from '../../components/new/dragdrop/dropSection';
-import Title from '../../components/new/title/title';
-import DragTarget from '../../components/new/dragdrop/dragTarget';
+import { Title } from '../../components/new/title/title';
 import { ReactComponent as Communiction } from '../../assets/image/communication.svg';
 import { ReactComponent as Creativity } from '../../assets/image/creativity.svg';
 import { ReactComponent as Growths } from '../../assets/image/growth.svg';
 import { ReactComponent as System } from '../../assets/image/system.svg';
+import { TEXTARRAY } from '../../context/ProjectText';
+
+const para = `덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 무엇을? 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 무엇을`;
 
 export default function SecondPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
-  const ability = [
-    'React 라이브러리를 사용한 SPA 개발 능력',
-    'TypeScript의 정적 타입 코드 작성 및 타입 오류 문제해결 능력',
-    'Redux Toolkit을 적용해 프로젝트의 효율적인 전역 상태 관리 능력',
-    'SCSS, CSS Module의 장점을 이해한 스타일 시트 작성 능력',
-    'Git을 통한 프로젝트 관리 경험'
-  ];
 
   useEffect(() => {
     if (screen === true) {
@@ -33,20 +26,22 @@ export default function SecondPage() {
     }
   }, [screen]);
 
-  function Target({ svg, name }) {
+  function Source({ svg, name, text }) {
     return (
-      <div className={styles['secondpage-table_data']}>
-        {svg}
-        <p>{name}</p>
-      </div>
-    );
-  }
-
-  function Source(svg, name, text) {
-    return (
-      <div className={styles['secondpage-TEMP']}>
-        <Target svg={<Communiction />} name='Communiction' />
-        <p>{text}</p>
+      <div className={styles['secondpage-table']}>
+        <div className={styles['secondpage-table_data']}>
+          {svg}
+          <p>{name}</p>
+        </div>
+        <ul className={styles['secondpage-table__list']}>
+          {text.map((data) => {
+            return (
+              <li>
+                <p>{data}</p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     );
   }
@@ -56,55 +51,23 @@ export default function SecondPage() {
       <SideMenu />
       <div className={styles['secondpage-right']}>
         <div className={styles['secondpage-box']}>
-          <Title ref={ref} title='<ABOUT ME>' />
+          <Title inputref={ref} title='<ABOUT ME>' />
           <div className={styles['secondpage-section']}>
-            <p>{introduction}</p>
+            <p className={styles['secondpage-section__p']}>{introduction}</p>
           </div>
           <div className={styles['secondpage-items']}>
-            <div className={styles['secondpage-TEMP']}>
-              <Target svg={<Communiction />} name='Communiction' />
-              <p>
-                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
-                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
-                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
-                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
-                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
-                성장하며 발전하고자 합니다. \n무엇을?
-              </p>
-            </div>
-            <div className={styles['secondpage-TEMP']}>
-              <Target svg={<Creativity />} name='Creativity' />
-              <p>
-                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
-                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
-                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
-                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
-                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
-                성장하며 발전하고자 합니다. \n무엇을?
-              </p>
-            </div>
-            <div className={styles['secondpage-TEMP']}>
-              <Target svg={<Growths />} name='Growths' />
-              <p>
-                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
-                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
-                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
-                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
-                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
-                성장하며 발전하고자 합니다. \n무엇을?
-              </p>
-            </div>
-            <div className={styles['secondpage-TEMP']}>
-              <Target svg={<System />} name='System' />
-              <p>
-                덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가
-                되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며,
-                경험을 통해 성장하며 발전하고자 합니다. \n무엇을? 덕트를
-                개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며,
-                최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해
-                성장하며 발전하고자 합니다. \n무엇을?
-              </p>
-            </div>
+            <Source
+              svg={<Communiction />}
+              name='Communiction'
+              text={TEXTARRAY[0]}
+            />
+            <Source
+              svg={<Creativity />}
+              name='Creativity'
+              text={TEXTARRAY[1]}
+            />
+            <Source svg={<Growths />} name='Growths' text={TEXTARRAY[2]} />
+            <Source svg={<System />} name='System' text={TEXTARRAY[3]} />
           </div>
         </div>
       </div>

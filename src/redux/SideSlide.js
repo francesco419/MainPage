@@ -1,17 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: 0,
+  value: 0
 };
 
 export const sideSlice = createSlice({
-  name: "side",
+  name: 'side',
   initialState,
   reducers: {
     changeSide: (state, action) => {
       state.value = action.payload;
-    },
-  },
+      console.log(state.value);
+    }
+  }
 });
 
 // Action creators are generated for each case reducer function

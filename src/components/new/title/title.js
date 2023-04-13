@@ -1,9 +1,10 @@
+import { forwardRef } from 'react';
 import styles from './title.module.css';
 
-export default function Title({ ref, title }) {
+export const Title = forwardRef(function Title({ inputref, title }) {
   return (
-    <div className={styles['title']} ref={ref}>
+    <div className={styles['title']} ref={inputref}>
       <h2>{title}</h2>
     </div>
   );
-}
+});
