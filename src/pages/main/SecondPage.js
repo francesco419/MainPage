@@ -11,6 +11,7 @@ import { ReactComponent as Creativity } from '../../assets/image/creativity.svg'
 import { ReactComponent as Growths } from '../../assets/image/growth.svg';
 import { ReactComponent as System } from '../../assets/image/system.svg';
 import { TEXTARRAY } from '../../context/ProjectText';
+import MyComp from '../../components/new/myComp';
 
 const para = `덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 무엇을? 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 무엇을`;
 
@@ -26,26 +27,6 @@ export default function SecondPage() {
     }
   }, [screen]);
 
-  function Source({ svg, name, text }) {
-    return (
-      <div className={styles['secondpage-table']}>
-        <div className={styles['secondpage-table_data']}>
-          {svg}
-          <p>{name}</p>
-        </div>
-        <ul className={styles['secondpage-table__list']}>
-          {text.map((data) => {
-            return (
-              <li>
-                <p>{data}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
-
   return (
     <div id='second' className={styles['secondpage']}>
       <SideMenu />
@@ -56,18 +37,22 @@ export default function SecondPage() {
             <p className={styles['secondpage-section__p']}>{introduction}</p>
           </div>
           <div className={styles['secondpage-items']}>
-            <Source
+            <MyComp
               svg={<Communiction />}
-              name='Communiction'
+              name='< Communiction >'
               text={TEXTARRAY[0]}
             />
-            <Source
+            <MyComp
               svg={<Creativity />}
-              name='Creativity'
+              name='< Creativity >'
               text={TEXTARRAY[1]}
             />
-            <Source svg={<Growths />} name='Growths' text={TEXTARRAY[2]} />
-            <Source svg={<System />} name='System' text={TEXTARRAY[3]} />
+            <MyComp svg={<Growths />} name='< Growths >' text={TEXTARRAY[2]} />
+            <MyComp
+              svg={<System />}
+              name='< Systematic >'
+              text={TEXTARRAY[3]}
+            />
           </div>
         </div>
       </div>
