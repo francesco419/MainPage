@@ -2,23 +2,20 @@ import { useEffect, useRef } from 'react';
 import styles from './FourthPage.module.css';
 import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
-import { changeSide } from '../../redux/SideSlide';
-import SideMenu from '../../components/new/indicator/SideMenu';
 import { ReactComponent as Email } from '../../assets/image/contact/email.svg';
 import { ReactComponent as Blog } from '../../assets/image/contact/blog.svg';
 import { ReactComponent as Github } from '../../assets/image/contact/github.svg';
 import { ContactUs } from '../../components/new/contact/contact';
 import { Title } from '../../components/new/title/title';
+import { checkScreen } from '../../function/screen';
 
 export default function FourthPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
+
   useEffect(() => {
-    if (screen === true) {
-      dispatch(changeSide(4));
-      console.log(3);
-    }
+    checkScreen(4, screen, dispatch);
   }, [screen]);
 
   function ContactBox({ text, SVG }) {
@@ -33,35 +30,43 @@ export default function FourthPage() {
         >
           {SVG}
         </div>
-        <a href={text} className={styles['fourthpage-big__p']}>
-          {text}
-        </a>
+        {text.includes('https') ? (
+          <a href={text} className={styles['fourthpage-big__p']}>
+            {text}
+          </a>
+        ) : (
+          <p className={styles['fourthpage-big__p']}>{text}</p>
+        )}
       </div>
     );
   }
 
+  const titleStyle = {
+    color: 'var(--color-white)',
+    letterSpacing: '30px'
+  };
+
   return (
     <div id='fourth' className={styles['fourthpage']}>
-      <SideMenu />
-      <div className={styles['fourthpage-right']}>
-        <div className={styles['fourthpage-box']}>
-          <Title inputref={ref} title='<CONTACT>' />
-          <div className={styles['fourthpage-section']}>
-            <div className={styles['fourthpage-big']}>
-              <div className={styles['fourthpage-big__svg']}>
-                <ContactBox text={'francesco419@naver.com'} SVG={<Email />} />
-                <ContactBox
-                  text={'https://github.com/francesco419'}
-                  SVG={<Github />}
-                />
-                <ContactBox
-                  text={'https://velog.io/@francesco419'}
-                  SVG={<Blog />}
-                />
-              </div>
-              <ContactUs />
-            </div>
+      <div className={styles['fourthpage-section']}>
+        <div className={styles['newSec__title']}>
+          <Title style={titleStyle} inputref={ref} title='<CONTACT>' />
+          <hr style={{ width: '700px', margin: '30px auto' }} />
+          <hr style={{ width: '400px', margin: '30px auto' }} />
+        </div>
+        <div className={styles['fourthpage-big']}>
+          <div className={styles['fourthpage-big__svg']}>
+            <ContactBox text={'francesco419@naver.com'} SVG={<Email />} />
+            <ContactBox
+              text={'https://github.com/francesco419'}
+              SVG={<Github />}
+            />
+            <ContactBox
+              text={'https://velog.io/@francesco419'}
+              SVG={<Blog />}
+            />
           </div>
+          <ContactUs />
         </div>
       </div>
     </div>

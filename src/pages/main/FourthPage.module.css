@@ -2,34 +2,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   height: 100vh;
   overflow: hidden;
   font-size: 1vw;
-}
-
-.fourthpage-right {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 3%;
-}
-
-.fourthpage-box {
-  margin: 2px;
-}
-
-.fourthpage-title {
-  color: var(--color-base-blue);
-  text-align: center;
-  font-size: 2vw;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+  background-color: var(--color-teal-blue);
 }
 
 .fourthpage-section {
-  width: 75vw;
-  margin: 20vh auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70vw;
+  height: 75vh;
+  margin: 0 auto;
+  padding: 1%;
+  box-shadow: 0 0 20px #000;
+}
+
+.newSec__title {
+  padding: 0 0 5%;
 }
 
 .fourthpage-big {
@@ -42,11 +34,12 @@
   display: block;
   width: 7vw;
   margin: 0 auto;
-  fill: var(--color-dark-blue);
+  fill: var(--color-bright-blue);
 }
 
 .fourthpage-big__svg {
-  margin: 0 5vw 0 0;
+  width: fit-content;
+  margin: 0 6vw 0 0;
 }
 
 .fourthpage-big__container {
@@ -64,9 +57,10 @@
 }
 
 .fourthpage-big__p {
-  color: var(--color-black);
+  color: var(--color-white);
   font-weight: bold;
   height: min-content;
+  font-size: 1rem;
 }
 
 .fourthpage-big__container:hover svg {

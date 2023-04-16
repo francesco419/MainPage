@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 350px;
-  margin: 20px 20px;
-  background-color: var(--color-light-sky-blue);
-  border-radius: 15px;
-  padding: 1%;
+  width: 24vh;
+  height: 24vh;
+  margin: 1vw 1.5vw;
+  border-radius: 50%;
+  padding: 2%;
+  border: 10px solid var(--color-light-sky-blue);
 }
 
 .skills__svgBOx {
@@ -16,8 +17,9 @@
 
 .skills__name {
   margin: 5px auto;
-  color: var(--color-gray);
+  color: var(--color-yellow);
   font-weight: bold;
+  font-size: 2vh;
 }
 
 .skills__ul {
@@ -26,22 +28,37 @@
 }
 
 .skills__li {
-  padding: 5px 30px 5px;
+  padding: 5px 30px;
   text-align: center;
-  background-image: url('./check.png');
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: 30px;
 }
 
 .skills__li p {
   word-break: keep-all;
-  font-size: 0.9rem;
+  font-size: 1vh;
+  color: var(--color-white);
 }
 
 .skills svg {
-  width: 80px;
-  height: 80px;
+  width: 6vh;
+  height: 6vh;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.skills-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--color-yellow);
+  margin: 0 20px;
+}
+
+.skills-svg svg {
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   margin: 0 auto;
 }

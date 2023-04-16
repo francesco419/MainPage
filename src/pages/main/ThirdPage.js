@@ -2,11 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './ThirdPage.module.css';
 import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
-import { changeSide } from '../../redux/SideSlide';
-import SideMenu from '../../components/new/indicator/SideMenu';
 import { ProjectDetailText } from '../../context/ProjectText.js';
 import { useNavigate } from 'react-router-dom';
 import { Title } from '../../components/new/title/title';
+import { ReactComponent as Porfolio } from '../../assets/image/projects/portfolio.svg';
+import { ReactComponent as Sns } from '../../assets/image/projects/sns.svg';
+import { ReactComponent as Travel } from '../../assets/image/projects/travel.svg';
+import { ReactComponent as Youtube } from '../../assets/image/projects/youtube.svg';
+import { checkScreen } from '../../function/screen';
 
 export default function ThirdPage() {
   const dispatch = useDispatch();
@@ -17,34 +20,39 @@ export default function ThirdPage() {
     setTransitionPage((transitionPage) => !transitionPage);
   };
   useEffect(() => {
-    if (screen === true) {
-      dispatch(changeSide(3));
-    }
+    checkScreen(3, screen, dispatch);
   }, [screen]);
+
+  const titleStyle = {
+    color: '#00000099',
+    letterSpacing: '30px'
+  };
 
   return (
     <div id='third' className={styles['thirdpage']}>
-      <SideMenu />
       <div className={styles['thirdpage-right']}>
-        <div className={styles['thirdpage-box']}>
-          <Title inputref={ref} title='<PROJECT>' />
-          <div className={styles['thirdpage-section']} ref={ref}>
-            {ProjectDetailText.map((data, index) => {
-              if (index < 4) {
-                return (
-                  <Project
-                    props={data}
-                    index={index}
-                    chageState={chageState}
-                    key={`project${index}`}
-                  />
-                );
-              }
-            })}
-          </div>
+        <div className={styles['newSec__title']}>
+          <Title style={titleStyle} inputref={ref} title='<PROJECTS>' />
+          <hr style={{ width: '700px', margin: '30px auto' }} />
+          <hr style={{ width: '400px', margin: '30px auto' }} />
+        </div>
+        <div className={styles['thirdpage-section']} ref={ref}>
+          {ProjectDetailText.map((data, index) => {
+            if (index < 4) {
+              return (
+                <Project
+                  props={data}
+                  index={index}
+                  chageState={chageState}
+                  key={`project${index}`}
+                />
+              );
+            }
+          })}
         </div>
       </div>
       {transitionPage && <TransitionEffect />}
+      {/* <div className={styles['background']}></div> */}
     </div>
   );
 }
@@ -55,6 +63,8 @@ function TransitionEffect() {
 
 function Project({ props, index, chageState }) {
   const nav = useNavigate();
+  const PROJECT_SVG = [<Porfolio />, <Youtube />, <Travel />, <Sns />];
+  const NUMBER_COLOR = ['#ffdf8f', '#a3cebd', '#fbc1ad', '#a88e7a'];
   return (
     <div
       className={styles['thirdpage-project']}
@@ -67,18 +77,23 @@ function Project({ props, index, chageState }) {
     >
       <dl className={styles['thirdpage-description__list']}>
         <dt className={styles['thirdpage-description__term']}>
-          <h1 className={styles['thirdpage-description__number']}>
+          <h1
+            style={{ color: NUMBER_COLOR[index] }}
+            className={styles['thirdpage-description__number']}
+          >
             {props.id}
           </h1>
+        </dt>
+        <dd className={styles['thirdpage-description__description']}>
           <h2 className={styles['thirdpage-description__title']}>
             {props.name}
           </h2>
-        </dt>
-        <hr />
-        <dd className={styles['thirdpage-description__description']}>
           <p className={styles['thirdpage-description__paragraph']}>
             {props.intro}
           </p>
+          <div className={styles['thirdpage-description__svg']}>
+            {PROJECT_SVG[index]}
+          </div>
         </dd>
       </dl>
     </div>

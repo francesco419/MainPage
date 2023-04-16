@@ -34,46 +34,88 @@
   justify-content: center;
 }
 
-.secondpage-table {
+/*-------------------------------------------------*/
+
+.temp-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--color-black);
+  overflow: hidden;
+  font-size: 1vw;
+}
+
+.temp-sec__upperBox {
+  position: relative;
+  height: 40%;
+  border-bottom: 1px solid;
+  background-color: var(--color-dark-blue);
+  padding: 10vh 200px 0;
+}
+
+.temp-sec__collection {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.temp-sec__box {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 30px 30px 30px 0;
-}
-
-.secondpage-table p {
-  width: 20vw;
-}
-
-.secondpage-table__list {
-  padding: 0;
-  list-style: none;
-}
-
-.secondpage-table__list li {
-  margin: 10px 0;
-}
-
-.secondpage-table_data {
-  width: 9vw;
-  height: 9vw;
-  border: 0;
+  justify-content: center;
   background-color: var(--color-base-blue);
-  border-radius: 15px;
-  color: var(--color-white);
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  box-sizing: border-box;
+}
+
+.temp-sec__box svg {
+  width: 150px;
+  height: 150px;
+  fill: #fff;
+}
+
+.temp-sec__lowerBox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 60%;
+  border-bottom: 1px solid;
+  background-color: #fefefe;
+}
+
+.temp-sec__textBox {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  align-items: center;
+  padding: 150px 0;
+}
+
+.temp-sec__title {
   text-align: center;
-  padding: 1vw;
-  margin: 0 20px;
+  color: var(--color-yellow);
+  font-weight: bold;
+  margin: 20px 0 40px;
 }
 
-.secondpage-table_data svg {
-  width: 7vw;
-  height: 7vw;
-  fill: var(--color-white);
-}
-
-.secondpage-table_data p {
-  width: fit-content;
-  margin: 10px auto;
+.temp-sec__textBox p {
+  width: inherit;
+  word-wrap: break-word;
+  word-break: keep-all;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 10px 0;
 }
 
 /* .second-progress {

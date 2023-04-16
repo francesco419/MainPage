@@ -34,3 +34,35 @@
   height: 100%;
   margin: 20px auto;
 }
+
+/*---------------------------*/
+
+.newSec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--color-black);
+  overflow: hidden;
+  font-size: 1vw;
+  background-color: var(--color-dark-blue);
+  padding: 0 15vw;
+}
+
+.newSec__title {
+  padding: 5vh 0 0;
+}
+
+.skillSet {
+  border: 5px solid #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.newSec__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

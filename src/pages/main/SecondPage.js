@@ -1,19 +1,14 @@
 import styles from './SecondPage.module.css';
-import SideMenu from '../../components/new/indicator/SideMenu';
 import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
-import { changeSide } from '../../redux/SideSlide';
 import { useEffect, useRef } from 'react';
-import { introduction } from '../../context/ProjectText';
 import { Title } from '../../components/new/title/title';
 import { ReactComponent as Communiction } from '../../assets/image/communication.svg';
 import { ReactComponent as Creativity } from '../../assets/image/creativity.svg';
 import { ReactComponent as Growths } from '../../assets/image/growth.svg';
 import { ReactComponent as System } from '../../assets/image/system.svg';
 import { TEXTARRAY } from '../../context/ProjectText';
-import MyComp from '../../components/new/myComp';
-
-const para = `덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 무엇을? 덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 무엇을`;
+import { checkScreen } from '../../function/screen';
 
 export default function SecondPage() {
   const dispatch = useDispatch();
@@ -21,41 +16,78 @@ export default function SecondPage() {
   const screen = useOnScreen(ref);
 
   useEffect(() => {
-    if (screen === true) {
-      dispatch(changeSide(1));
-      console.log(1);
-    }
+    checkScreen(1, screen, dispatch);
   }, [screen]);
 
+  const titleStyle = {
+    color: 'var(--color-white)',
+    letterSpacing: '30px'
+  };
+
   return (
-    <div id='second' className={styles['secondpage']}>
-      <SideMenu />
-      <div className={styles['secondpage-right']}>
-        <div className={styles['secondpage-box']}>
-          <Title inputref={ref} title='<ABOUT ME>' />
-          <div className={styles['secondpage-section']}>
-            <p className={styles['secondpage-section__p']}>{introduction}</p>
-          </div>
-          <div className={styles['secondpage-items']}>
-            <MyComp
-              svg={<Communiction />}
-              name='< Communiction >'
-              text={TEXTARRAY[0]}
-            />
-            <MyComp
-              svg={<Creativity />}
-              name='< Creativity >'
-              text={TEXTARRAY[1]}
-            />
-            <MyComp svg={<Growths />} name='< Growths >' text={TEXTARRAY[2]} />
-            <MyComp
-              svg={<System />}
-              name='< Systematic >'
-              text={TEXTARRAY[3]}
-            />
-          </div>
+    <div id='second' className={styles['temp-sec']}>
+      <div className={styles['temp-sec__upperBox']}>
+        <Title style={titleStyle} inputref={ref} title='<ABOUT ME>' />
+        <hr style={{ width: '700px', margin: '30px auto' }} />
+        <hr style={{ width: '400px', margin: '30px auto' }} />
+        <div className={styles['temp-sec__collection']}>
+          <Box margin='right' svg={<Communiction />} />
+          <Box margin='all' svg={<Creativity />} />
+          <Box margin='all' svg={<Growths />} />
+          <Box margin='left' svg={<System />} />
         </div>
       </div>
+      <div className={styles['temp-sec__lowerBox']}>
+        <Temp margin='right' text={TEXTARRAY[0]} title='<Communication>' />
+        <Temp margin='all' text={TEXTARRAY[1]} title='< Creativity >' />
+        <Temp margin='all' text={TEXTARRAY[2]} title='< Growths >' />
+        <Temp margin='left' text={TEXTARRAY[3]} title='< Systematic >' />
+      </div>
+    </div>
+  );
+}
+
+function Box({ svg, margin }) {
+  const getMargin = (margin) => {
+    switch (margin) {
+      case 'right':
+        return { marginRight: '5vw' };
+      case 'left':
+        return { marginLeft: '5vw' };
+      case 'all':
+        return { margin: '0 5vw' };
+    }
+  };
+
+  const setMargin = getMargin(margin);
+
+  return (
+    <div style={setMargin} className={styles['temp-sec__box']}>
+      {svg}
+    </div>
+  );
+}
+
+function Temp({ text, title, margin }) {
+  const getMargin = (margin) => {
+    switch (margin) {
+      case 'right':
+        return { marginRight: '5vw' };
+      case 'left':
+        return { marginLeft: '5vw' };
+      case 'all':
+        return { margin: '0 5vw' };
+    }
+  };
+
+  const setMargin = getMargin(margin);
+
+  return (
+    <div style={setMargin} className={styles['temp-sec__textBox']}>
+      <h3 className={styles['temp-sec__title']}>{title}</h3>
+      {text.map((data) => {
+        return <p>{data}</p>;
+      })}
     </div>
   );
 }
@@ -95,4 +127,35 @@ export default function SecondPage() {
       </div>
     </div>
   );
-} */
+} 
+
+<div id='second' className={styles['secondpage']}>
+<SideMenu />
+      <div className={styles['secondpage-right']}>
+        <div className={styles['secondpage-box']}>
+          <Title inputref={ref} title='<ABOUT ME>' />
+          <div className={styles['secondpage-section']}>
+            <p className={styles['secondpage-section__p']}>{introduction}</p>
+          </div>
+          <div className={styles['secondpage-items']}>
+            <MyComp
+              svg={<Communiction />}
+              name='< Communiction >'
+              text={TEXTARRAY[0]}
+            />
+            <MyComp
+              svg={<Creativity />}
+              name='< Creativity >'
+              text={TEXTARRAY[1]}
+            />
+            <MyComp svg={<Growths />} name='< Growths >' text={TEXTARRAY[2]} />
+            <MyComp
+              svg={<System />}
+              name='< Systematic >'
+              text={TEXTARRAY[3]}
+            />
+          </div>
+        </div>
+      </div>
+</div>
+*/

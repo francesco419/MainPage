@@ -15,12 +15,7 @@ export default function Indicator({ type }) {
 }
 
 function StickForm() {
-  const side = useSelector((state) => state.side.value);
   const nav = useNavigate();
-  const navTo = (id) => {
-    const doc = document.getElementById(id);
-    window.scrollTo({ top: doc.offsetTop, behavior: 'smooth' });
-  };
   return (
     <div className={styles['c-indicator-stick']}>
       <div
@@ -31,21 +26,33 @@ function StickForm() {
       >
         <Navigate />
       </div>
-      <div onClick={() => navTo('first')}>
-        <Home fill={side === 0 ? '#fff' : '#000'} />
-      </div>
-      <div onClick={() => navTo('second')}>
-        <About fill={side === 1 ? '#fff' : '#000'} />
-      </div>
-      <div onClick={() => navTo('aftSec')}>
-        <Skill fill={side === 2 ? '#fff' : '#000'} />
-      </div>
-      <div onClick={() => navTo('third')}>
-        <Project fill={side === 3 ? '#fff' : '#000'} />
-      </div>
-      <div onClick={() => navTo('fourth')}>
-        <Contact fill={side === 4 ? '#fff' : '#000'} />
-      </div>
+      <IndicatorItem sideNum={0} svg={<Home />} to='first' />
+      <IndicatorItem sideNum={1} svg={<About />} to='second' />
+      <IndicatorItem sideNum={2} svg={<Skill />} to='aftSec' />
+      <IndicatorItem sideNum={3} svg={<Project />} to='third' />
+      <IndicatorItem sideNum={4} svg={<Contact />} to='fourth' />
+    </div>
+  );
+}
+
+function IndicatorItem({ sideNum, svg, to }) {
+  const side = useSelector((state) => state.side.value);
+
+  const navTo = (id) => {
+    const doc = document.getElementById(id);
+    window.scrollTo({ top: doc.offsetTop, behavior: 'smooth' });
+  };
+
+  return (
+    <div
+      style={
+        side === sideNum
+          ? { border: '1.5px solid #fff', borderRadius: '50%' }
+          : null
+      }
+      onClick={() => navTo(to)}
+    >
+      <div style={{ fill: side === sideNum ? '#fff' : '#000' }}>{svg}</div>
     </div>
   );
 }

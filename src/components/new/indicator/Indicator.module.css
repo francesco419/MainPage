@@ -39,6 +39,7 @@
   height: 30px;
   margin: 15px 0;
   cursor: pointer;
+  padding: 2px;
 }
 
 .c-indicator-stick div:hover svg {
