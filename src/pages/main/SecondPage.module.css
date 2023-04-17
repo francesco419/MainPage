@@ -59,7 +59,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -100px;
+  bottom: -10vh;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -71,16 +71,16 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-base-blue);
-  width: 240px;
-  height: 240px;
+  width: 20vh;
+  height: 20vh;
   border-radius: 50%;
   border: 10px solid #fff;
   box-sizing: border-box;
 }
 
 .temp-sec__box svg {
-  width: 150px;
-  height: 150px;
+  width: 12vh;
+  height: 12vh;
   fill: #fff;
 }
 
@@ -96,16 +96,15 @@
 .temp-sec__textBox {
   display: flex;
   flex-direction: column;
-  width: 240px;
+  width: 20vh;
   align-items: center;
-  padding: 150px 0;
+  padding: 12vh 0;
 }
 
 .temp-sec__title {
   text-align: center;
   color: var(--color-yellow);
-  font-weight: bold;
-  margin: 20px 0 40px;
+  margin: 1vh 0 40px;
 }
 
 .temp-sec__textBox p {
@@ -113,8 +112,8 @@
   word-wrap: break-word;
   word-break: keep-all;
   text-align: center;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 2.3vh;
   margin: 10px 0;
 }
 

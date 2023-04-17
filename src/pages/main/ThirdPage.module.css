@@ -184,6 +184,7 @@
 .thirdpage-description__paragraph {
   font-size: 1.5vh;
   line-height: 3vh;
+  word-break: keep-all;
 }
 
 .thirdpage-description__list {
