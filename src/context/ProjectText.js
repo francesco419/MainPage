@@ -97,11 +97,12 @@ export const ProjectDetailText = [
     contribution: '개인 프로젝트',
     created: '04.2022',
     LastUpdate: '02.09.2023',
-    program: ['React', 'CSS Module', 'Redux Toolkit', 'Javascript'],
+    program: ['React', 'Redux Toolkit'],
     result: [
-      'React와 JSX 문법을 학습하고, 이를 사용한 SPA 개발이 능숙하게 발전',
-      'CSS Module을 사용한 Selector의 중첩이 없는 모듈화된 스타일링 작성',
-      'React 컴포넌트의 라이프사이클 및 Hooks의 이해'
+      '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하는 계기',
+      'Virtual DOM의 작동 이해 및 이를 효과적으로 사용하기 위한 최적의 렌더링 방식에 대해 학습 및 응용',
+      '요구되는 적절한 애니메이션을 CSS의 keyframe / transition 및 자바스크립트 애니메이션을 통해 구현',
+      '다양한 사용자 행동에 따라 반응하는 JSX 이벤트 처리'
     ]
   },
   {
@@ -117,11 +118,11 @@ export const ProjectDetailText = [
     contribution: '개인 프로젝트',
     created: '05.2022',
     LastUpdate: '06.25.2022',
-    program: ['React', 'CSS Module', 'Javascript'],
+    program: ['React', 'CSS Module'],
     result: [
-      'Axios를 적용해 Open Api를 호출하고 데이터 수정을 통한 유기적인 사용이 능숙',
-      'UI에 대한 이해 및 구현하고자 하는 UI를 나만의 코드를 통해 구현 가능',
-      '중복되는 기능의 함수화 및 컴포넌트화를 통한 코드 분량 축소와 간략화'
+      '수많은 Open API 호출 및 사용을 통해, 데이터 통신 및 비동기적 처리 방식에 대해 학습',
+      '클로닝 대상 웹사이트를 분석함으로써 HTML, CSS의 구성 및 작성 이해도를 높이고, 이를 바탕으로 직접 구현',
+      'API의 데이터를 일차원적으로 표현하기보다 편집 및 가공을 통해 의도한 데이터로 새로 구성하여 표현'
     ]
   },
   {
@@ -137,12 +138,10 @@ export const ProjectDetailText = [
     contribution: '개인 프로젝트',
     created: '12.2022',
     LastUpdate: '02.08.2023',
-    program: ['React', 'CSS Module', 'Javascript'],
+    program: ['React', 'CSS Module'],
     result: [
-      '사용자의 입장에서 생각하고 제작하려고 하는 사용자 경험을 중시하는 마인드',
-      '컴포넌트 간의 props 전달 방식에 대한 효율적인 대책의 필요성을 자각',
-      'Responsively 프로그램을 사용하여 반응형 웹 제작 능력',
-      '만들고자 하는 주제에 대한 필요한 정보 수집능력 및 필요한 기능들에 대한 구현 능력'
+      '사용자에게 유용한 정보를 제공할 수 있는 UI에 대해 깊게 고민하고 구상한 기능을 직접 구현',
+      '컴포넌트 간의 상태 값 및 상태 관리 함수의 prop drilling으로 인한 코드 구성 복잡 및 가독성 저하에 대한 대체 기술 필요성으로서 이후 프로젝트에서 Redux 적극 사용 '
     ]
   },
   {
@@ -161,11 +160,10 @@ export const ProjectDetailText = [
     LastUpdate: '02.09.2023',
     program: ['React', 'TypeScript', 'SCSS', 'Redux'],
     result: [
-      'Typescript로 정적 타입 언어의 코드 작성 및 타입의 오류의 수정이 능숙해짐.',
-      'Redux Toolkit를 사용한 상태 관리 및 유지 보수성을 높이고 props 복잡도를 개선',
-      'SCSS의 중첩, 연산자 등 기술적 장점을 활용한 사용법을 학습하여 적용.',
-      'Axios Interceptor를 적용해 코드 재사용화로 복잡도 해결 및 에러 처리 방법을 학습하여 적용.',
-      '데이터 및 파일 등 백엔드와의 데이터 교환을 학습하고 교환한 데이터에 대한 처리 능력 및 이해도의 향상'
+      'Axios Interceptor를 통해 반복적인 코드 사용을 줄여 재사용화 및 공통적인 에러 처리를 담당하여 가독성 높은 코드를 작성',
+      'Redux Toolkit을 사용한 상태 관리 및 유지 보수성을 높이고 props 복잡도를 개선 및 redux persist로 사용빈도가 높은 데이터의 반복적인 데이터통신 회피',
+      'NodeJS, MySQL, Express를 사용한 백엔드를 구성 및 CORS 처리, 쿼리를 통한 DB 관리, 이미지 파일 저장 및 데이터 통신 경험',
+      'Lazy, Suspense를 적용한 코드 분할을 통해 페이지 성능 최적화 및 lighthouse를 통한 웹 페이지 평가를 통해 지속적으로 최적화 방법을 모색'
     ]
   }
 ];
