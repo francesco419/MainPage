@@ -96,7 +96,7 @@ export const ProjectDetailText = [
     github: 'https://github.com/francesco419/MainPage',
     contribution: '개인 프로젝트',
     created: '04.2022',
-    LastUpdate: '02.09.2023',
+    LastUpdate: '04.19.2023',
     program: ['React', 'Redux Toolkit'],
     result: [
       '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하는 계기',
@@ -157,7 +157,7 @@ export const ProjectDetailText = [
     github: 'https://github.com/francesco419/post_typescript_redux',
     contribution: '개인 프로젝트',
     created: '01.2023',
-    LastUpdate: '02.09.2023',
+    LastUpdate: '02.28.2023',
     program: ['React', 'TypeScript', 'SCSS', 'Redux'],
     result: [
       'Axios Interceptor를 통해 반복적인 코드 사용을 줄여 재사용화 및 공통적인 에러 처리를 담당하여 가독성 높은 코드를 작성',
