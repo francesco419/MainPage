@@ -51,11 +51,11 @@ function Box({ svg, margin }) {
   const getMargin = (margin) => {
     switch (margin) {
       case 'right':
-        return { marginRight: '5vw' };
+        return { marginRight: '3vw' };
       case 'left':
-        return { marginLeft: '5vw' };
+        return { marginLeft: '3vw' };
       case 'all':
-        return { margin: '0 5vw' };
+        return { margin: '0 3vw' };
     }
   };
 
@@ -72,11 +72,11 @@ function Temp({ text, title, margin }) {
   const getMargin = (margin) => {
     switch (margin) {
       case 'right':
-        return { marginRight: '5vw' };
+        return { marginRight: '3vw' };
       case 'left':
-        return { marginLeft: '5vw' };
+        return { marginLeft: '3vw' };
       case 'all':
-        return { margin: '0 5vw' };
+        return { margin: '0 3vw' };
     }
   };
 

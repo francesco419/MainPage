@@ -3,13 +3,14 @@ import styles from './FirstPage.module.css';
 import { ReactComponent as Arrow } from '../../assets/image/left-arrow.svg';
 import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
-import { changeSide } from '../../redux/SideSlide';
 import { checkScreen } from '../../function/screen';
+import { useNavigate } from 'react-router-dom';
 
 export default function FirstPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
+  const nav = useNavigate();
 
   useEffect(() => {
     checkScreen(0, screen, dispatch);
@@ -39,8 +40,9 @@ export default function FirstPage() {
             <button
               className={styles['firstpage-btnbox__button']}
               onClick={() => {
-                const doc = document.getElementById('second');
-                window.scrollTo({ top: doc.offsetTop, behavior: 'smooth' });
+                /*                 const doc = document.getElementById('second');
+                window.scrollTo({ top: doc.offsetTop, behavior: 'smooth' }); */
+                nav('/sec');
               }}
             >
               <Arrow width='15px' height='15px' fill='#4d92f1' />

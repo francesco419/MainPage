@@ -45,6 +45,8 @@
   color: var(--color-black);
   overflow: hidden;
   font-size: 1vw;
+  width: 1500px;
+  margin: 0 auto;
 }
 
 .temp-sec__upperBox {

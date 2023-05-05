@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FrontPage from "./pages/main/FrontPage";
-import ProjectNav from "./pages/project/ProjectNav";
-import List from "./pages/navigation/List";
-import Aos from "aos";
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import FrontPage from './pages/main/FrontPage';
+import ProjectNav from './pages/project/ProjectNav';
+import List from './pages/navigation/List';
+import Aos from 'aos';
+import { useEffect } from 'react';
+import Transition from './pages/transition';
 
 function App() {
   useEffect(() => {
@@ -13,11 +14,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
+      <Transition />
+      {/* <Routes>
         <Route path="/List" element={<List />} />
         <Route path="/ProjectNav/:id" element={<ProjectNav />} />
         <Route path={`${process.env.PUBLIC_URL}/`} element={<FrontPage />} />
-      </Routes>
+      </Routes> */}
     </BrowserRouter>
   );
 }
