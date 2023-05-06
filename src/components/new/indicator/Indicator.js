@@ -45,14 +45,14 @@ function IndicatorItem({ sideNum, svg, to }) {
 
   return (
     <div
-      style={
+      /* style={
         side === sideNum
           ? { border: '1.5px solid #fff', borderRadius: '50%' }
           : null
-      }
+      } */
       onClick={() => navTo(to)}
     >
-      <div style={{ fill: side === sideNum ? '#fff' : '#000' }}>{svg}</div>
+      <div style={{ fill: side === sideNum ? '#edd451' : '#fff' }}>{svg}</div>
     </div>
   );
 }

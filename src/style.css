@@ -8,6 +8,8 @@ html {
 }
 
 :root {
+  --color-beige: #cdbcab;
+  --color-backBlack: #0c0e0c;
   --color-black: #292929;
   --color-light-black: #353535;
   --color-white: #fff;

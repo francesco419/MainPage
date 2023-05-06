@@ -5,6 +5,8 @@ import List from './pages/navigation/List';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import Transition from './pages/transition';
+import { ReactComponent as Stick } from '../src/assets/svg/walk.svg';
+import Indicator from './components/new/indicator/Indicator';
 
 function App() {
   useEffect(() => {
@@ -15,6 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <Transition />
+      <Indicator type={true} />
       {/* <Routes>
         <Route path="/List" element={<List />} />
         <Route path="/ProjectNav/:id" element={<ProjectNav />} />

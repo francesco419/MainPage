@@ -1,42 +1,3 @@
-.aftSec {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
-  color: var(--color-black);
-  overflow: hidden;
-}
-
-.aftSec-right {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 3%;
-}
-
-.aftSec-box {
-  margin: 2px;
-}
-
-.aftSec-title {
-  color: var(--color-base-blue);
-  text-align: center;
-  font-size: 2vw;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.aftSec-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  height: 100%;
-  margin: 20px auto;
-}
-
-/*---------------------------*/
-
 .newSec {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +7,7 @@
   color: var(--color-black);
   overflow: hidden;
   font-size: 1vw;
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-beige);
   padding: 0 15vw;
 }
 

@@ -26,11 +26,7 @@ export default function AfterSec() {
 
   return (
     <div ref={ref} id='aftSec' className={styles['newSec']}>
-      <div className={styles['newSec__title']}>
-        <Title style={titleStyle} inputref={ref} title='<SKILLS>' />
-        <hr style={{ width: '700px', margin: '30px auto' }} />
-        <hr style={{ width: '400px', margin: '30px auto' }} />
-      </div>
+      <p className={styles['newSec__title']}>SKILLS</p>
       <div className={styles['newSec__inner']}>
         <div className={styles['aftSec-section']}>
           <Skills num={0} />
@@ -52,22 +48,3 @@ function SKillset() {
     </div>
   );
 }
-
-/**
- * <div id='aftSec' className={styles['aftSec']}>
-      <SideMenu />
-      <div className={styles['aftSec-right']}>
-        <div className={styles['aftSec-box']}>
-          <Title inputref={ref} title='<SKILLS>' />
-          <div className={styles['aftSec-section']}>
-            <Skills num={0} />
-            <Skills num={1} />
-            <Skills num={2} />
-            <Skills num={3} />
-            <Skills num={4} />
-            <Skills num={5} />
-          </div>
-        </div>
-      </div>
-    </div> 
-    */

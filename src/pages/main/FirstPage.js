@@ -1,22 +1,63 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './FirstPage.module.css';
 import { ReactComponent as Arrow } from '../../assets/image/left-arrow.svg';
 import { useOnScreen } from '../../hook/useOnScreen';
 import { useDispatch } from 'react-redux';
 import { checkScreen } from '../../function/screen';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as Stick } from '../../assets/svg/walk.svg';
+import Paragraph from '../../components/new/first/paragraph';
 
 export default function FirstPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
   const nav = useNavigate();
+  const [portfolio, setPortfolio] = useState('');
+  const [theEnd, setTheEnd] = useState(false);
 
   useEffect(() => {
     checkScreen(0, screen, dispatch);
   }, [screen]);
 
+  useEffect(() => {
+    setString('PORTFOLIO');
+  }, []);
+
+  function setString(text) {
+    let count = 1;
+    const inter = setInterval(() => {
+      setPortfolio(text.substr(0, count));
+      count++;
+      if (count > text.length) {
+        clearInterval(inter);
+        setTheEnd((theEnd) => true);
+      }
+    }, 500);
+  }
+
   return (
+    <div className={styles['port-first']}>
+      <div className={styles['port-first-section']}>
+        <div style={{ display: 'flex' }}>
+          <p className={styles['port-first-portfolio']}>{portfolio}</p>
+          {theEnd ? null : <Paragraph />}
+        </div>
+        <Stick />
+        <p className={styles['port-first-name']}>LEE SANG HEAN</p>
+        <button
+          className={styles['port-first-button']}
+          onClick={() => {
+            nav('/intro');
+          }}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+
+  /* return (
     <div id='first' className={styles['firstpage']}>
       <div className={styles['firstpage-left']}>
         <div className={styles['firstpage-introduce']}>
@@ -40,8 +81,6 @@ export default function FirstPage() {
             <button
               className={styles['firstpage-btnbox__button']}
               onClick={() => {
-                /*                 const doc = document.getElementById('second');
-                window.scrollTo({ top: doc.offsetTop, behavior: 'smooth' }); */
                 nav('/sec');
               }}
             >
@@ -69,5 +108,5 @@ export default function FirstPage() {
         </p>
       </div>
     </div>
-  );
+  ); */
 }

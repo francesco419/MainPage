@@ -7,6 +7,7 @@ import SecondPage from './main/SecondPage';
 import AfterSec from './main/afterSecond';
 import ThirdPage from './main/ThirdPage';
 import FourthPage from './main/FourthPage';
+import Introduction from './main/introduction';
 
 const Transition = () => {
   const location = useLocation();
@@ -14,7 +15,8 @@ const Transition = () => {
     <TransitionGroup className='transition-group'>
       <CSSTransition key={location.pathname} classNames='fade' timeout={500}>
         <Routes location={location}>
-          <Route path='/' element={<FirstPage />} />
+          <Route path={`${process.env.PUBLIC_URL}/`} element={<FirstPage />} />
+          <Route path='/intro' element={<Introduction />} />
           <Route path='/sec' element={<SecondPage />} />
           <Route path='/asec' element={<AfterSec />} />
           <Route path='/third' element={<ThirdPage />} />

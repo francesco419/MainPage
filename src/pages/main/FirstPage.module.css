@@ -112,3 +112,69 @@
   margin: 0 30px;
   line-height: 5rem;
 }
+
+/*--------------------------------------*/
+
+.port-first {
+  display: block;
+  height: 100vh;
+  background-color: #0c0e0c;
+  overflow-y: hidden;
+}
+
+.port-first-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  height: 100%;
+}
+
+.port-first-section svg {
+  width: 100px;
+  height: 100px;
+  fill: white;
+}
+
+.port-first-portfolio {
+  font-size: 1.5rem;
+  letter-spacing: 2rem;
+  text-indent: 2rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.port-first-name {
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+  text-indent: 0.5rem;
+  margin: 6rem 0 3rem;
+  animation: fadeIn 2s 5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.port-first-button {
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  animation: fadeIn 2s 7s forwards;
+  opacity: 0;
+}
+
+.port-first-button:hover {
+  color: var(--color-yellow);
+}
