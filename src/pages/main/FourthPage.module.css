@@ -6,7 +6,7 @@
   height: 100vh;
   overflow: hidden;
   font-size: 1vw;
-  background-color: var(--color-teal-blue);
+  background-color: var(--color-beige);
 }
 
 .fourthpage-section {
@@ -17,61 +17,70 @@
   height: 75vh;
   margin: 0 auto;
   padding: 1%;
-  box-shadow: 0 0 20px #000;
-}
-
-.newSec__title {
-  padding: 0 0 5%;
 }
 
 .fourthpage-big {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  width: fit-content;
 }
 
 .fourthpage-big svg {
   display: block;
   width: 7vw;
   margin: 0 auto;
-  fill: var(--color-bright-blue);
+  fill: var(--color-white);
+}
+
+.port-fourthpage-title {
+  text-align: center;
+  text-indent: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  color: var(--color-white);
+  margin: 0 0 3rem;
 }
 
 .fourthpage-big__svg {
+  display: flex;
   width: fit-content;
-  margin: 0 6vw 0 0;
+  margin: 0 auto 10rem;
 }
 
 .fourthpage-big__container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  height: fit-content;
 }
 
 .fourthpage-big__item {
-  width: 5vw;
-  height: 5vh;
   cursor: pointer;
-  padding: 2em 0;
   border-radius: 15px;
-  margin: 0 3vw;
+  margin: 0 2rem;
 }
 
 .fourthpage-big__p {
+  display: none;
   color: var(--color-white);
   font-weight: bold;
   height: min-content;
-  font-size: 1rem;
-}
-
-.fourthpage-big__container:hover svg {
-  fill: var(--color-yellow);
+  font-size: 0.8rem;
 }
 
 .fourthpage-big__item svg {
-  height: inherit;
-  width: inherit;
+  height: 30px;
+  width: 30px;
 }
 
 .fourthpage-big__item:hover svg {
-  fill: var(--color-yellow);
+  fill: var(--color-black);
+}
+
+.port-fourthpage-port {
+  text-align: center;
+  text-indent: 2rem;
+  font-size: 1rem;
+  letter-spacing: 1.5rem;
+  margin: 10rem 0 0;
 }

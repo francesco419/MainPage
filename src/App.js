@@ -19,6 +19,9 @@ function App() {
       <Transition />
       <Indicator type={true} />
       {/* <Routes>
+        <Route path='/ProjectNav/:id' element={<ProjectNav />} />
+      </Routes> */}
+      {/* <Routes>
         <Route path="/List" element={<List />} />
         <Route path="/ProjectNav/:id" element={<ProjectNav />} />
         <Route path={`${process.env.PUBLIC_URL}/`} element={<FrontPage />} />

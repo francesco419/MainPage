@@ -6,8 +6,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--color-white);
-  overflow: hidden;
+  background-color: var(--color-backBlack);
 }
 
 .listpage__button {
@@ -18,16 +17,12 @@
   height: 4vh;
   border-radius: 50%;
   border: 0;
-  color: var(--color-white);
-  background-color: var(--color-light-sky-blue);
+  color: var(--color-black);
+  background-color: var(--color-white);
   opacity: 0;
   cursor: pointer;
   -webkit-animation: fadein 1s linear 1.3s forwards;
   animation: fadein 1s linear 1.3s forwards;
-}
-
-.listpage__button:hover {
-  background-color: var(--color-dark-blue);
 }
 
 .listpage-line {
@@ -35,7 +30,7 @@
   display: none;
   top: 10%;
   left: 0;
-  border: 5px solid var(--color-dark-blue);
+  border: 5px solid var(--color-black);
   width: 150vw;
   -webkit-transform: skewY(-45deg);
   -ms-transform: skewY(-45deg);
@@ -96,70 +91,42 @@
   -webkit-animation: fadein 1s linear 1.3s forwards;
   animation: fadein 1s linear 1.3s forwards;
   opacity: 0;
-  overflow: hidden;
 }
 
+.listpage-menu__link,
 .listpage-menu__button {
-  position: relative;
-  margin: 9% 0;
-  border: 0;
-  background: none;
-  color: var(--color-light-sky-blue);
-  text-decoration: none;
-  font-size: 4vw;
-  text-align: center;
-  cursor: pointer;
-}
-
-.listpage-menu__link {
-  position: relative;
-  font-size: 4vw;
-  color: var(--color-light-sky-blue);
-  text-align: center;
-  cursor: pointer;
-  margin: 10% 0;
-  text-decoration: none;
-}
-
-.listpage-menu__button:focus {
-  outline: none;
-}
-
-.listpage-menu__link::after,
-.listpage-menu__button::after {
-  position: absolute;
-  top: 2.5vw;
-  left: 0;
-  display: none;
-  width: 22vw;
+  transition: all 0.5s;
+  padding: 1.5rem 0;
+  letter-spacing: 1rem;
+  font-size: 1rem;
   color: var(--color-white);
-  border: 4px solid;
-  -webkit-transform: skewY(5deg) translate(0, -50%);
-  -ms-transform: skewY(5deg) translate(0, -50%);
-  transform: skewY(5deg) translate(0, -50%);
-  content: "";
+  text-align: center;
+  cursor: pointer;
 }
 
 .listpage-menu__link:hover,
 .listpage-menu__button:hover {
-  color: var(--color-dark-blue);
-  -webkit-transform: skewY(7deg);
-  -ms-transform: skewY(7deg);
-  transform: skewY(7deg);
+  font-size: 1.5rem;
+  color: var(--color-beige);
 }
-.listpage-menu__link:hover::after,
-.listpage-menu__button:hover::after {
-  display: block;
-  -webkit-transition: all;
-  -o-transition: all;
-  transition: all;
+
+.listpage-menu__button {
+  border: 0;
+  background: none;
+}
+
+.listpage-menu__button:focus {
+  border: none;
+  outline: none;
 }
 
 .listpage-project__list {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: relative;
+  padding: 0;
 }
 
 .listpage-project__item {
@@ -167,13 +134,12 @@
 }
 
 .listpage-project__item:first-child {
-  list-style: none;
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
+  margin: 5px 0 0;
   border-radius: 15px;
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-beige);
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -181,13 +147,11 @@
 
 .listpage-project__link {
   position: relative;
-  font-size: 2vw;
-  color: var(--color-light-sky-blue);
+  font-size: 1rem;
+  color: var(--color-white);
   text-align: center;
   cursor: pointer;
-  margin: 10% 0;
   text-decoration: none;
-  font-weight: 1000;
 }
 
 .listpage-project__link::after {
@@ -200,43 +164,6 @@
 
 .listpage-project__link:hover {
   color: var(--color-white);
-}
-
-.listpage-front {
-  font-size: 50vw;
-  font-weight: 1000;
-  color: var(--color-dark-blue);
-  opacity: 0.7;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
-  -webkit-animation: move 2s linear;
-  animation: move 2s linear;
-}
-
-@-webkit-keyframes move {
-  0% {
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
-  100% {
-    -webkit-transform: translate(100%, 0);
-    transform: translate(100%, 0);
-  }
-}
-
-@keyframes move {
-  0% {
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
-  100% {
-    -webkit-transform: translate(100%, 0);
-    transform: translate(100%, 0);
-  }
 }
 
 @-webkit-keyframes fadein {

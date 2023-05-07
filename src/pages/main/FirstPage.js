@@ -37,7 +37,7 @@ export default function FirstPage() {
   }
 
   return (
-    <div className={styles['port-first']}>
+    <div ref={ref} className={styles['port-first']}>
       <div className={styles['port-first-section']}>
         <div style={{ display: 'flex' }}>
           <p className={styles['port-first-portfolio']}>{portfolio}</p>

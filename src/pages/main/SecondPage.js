@@ -16,7 +16,7 @@ export default function SecondPage() {
   const nav = useNavigate();
 
   useEffect(() => {
-    checkScreen(1, screen, dispatch);
+    checkScreen(2, screen, dispatch);
   }, [screen]);
 
   const box = [
@@ -26,7 +26,7 @@ export default function SecondPage() {
   ];
 
   return (
-    <div id='second' className={styles['temp-sec']}>
+    <div id='second' ref={ref} className={styles['temp-sec']}>
       <div className={styles['temp-sec__collection']}>
         <p className={styles['temp-sec-title']}>ABOUT ME</p>
         <div className={styles['temp-sec-inner']}>

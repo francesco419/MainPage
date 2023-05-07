@@ -6,40 +6,24 @@
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  font-size: 1vw;
   background-color: var(--color-backBlack);
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  border-bottom: 100vh solid transparent;
-  border-right: 100vw solid transparent;
-  border-top: 100vh solid transparent;
-  border-left: 100vw solid var(--color-white);
-  z-index: 1;
-}
-
 .thirdpage-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  z-index: 3;
-}
-
-.newSec__title {
-  padding: 5vh 0 0;
+  height: 100%;
 }
 
 .thirdpage-title {
-  color: var(--color-base-blue);
   text-align: center;
-  font-size: 2vw;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 5%;
+  text-indent: 2rem;
+  font-size: 2rem;
+  letter-spacing: 2rem;
+  color: var(--color-yellow);
+  margin: 0 0 5rem;
 }
 
 .thirdpage-section {
@@ -48,15 +32,15 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 100%;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  transition: ;
+  margin: 0 0 20rem;
 }
 
 .thirdpage-project {
+  height: fit-content;
   width: max-content;
   border: 1px solid();
   margin: 1% 2%;
@@ -66,6 +50,7 @@
   padding: 1%;
   color: #000;
   cursor: pointer;
+  /* transform: translateY(-50%); */
 }
 
 /* @media (min-width: 768px) and (max-width: 1024px) {
@@ -88,6 +73,28 @@
   color: var(--color-yellow);
 } */
 
+.post-third-button {
+  background: none;
+  width: 100px;
+  border: 0;
+  color: var(--color-white);
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  animation: fadeIn 2s 2s forwards;
+  opacity: 0;
+  margin: 4rem auto 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .thirdpage-project:hover .thirdpage-description__description {
   top: 100%;
   box-shadow: none;
@@ -95,12 +102,25 @@
 }
 
 .thirdpage-project:hover .thirdpage-description__svg svg {
-  fill: var(--color-black);
+  fill: var(--color-gray);
 }
 
-.thirdpage-project:hover .thirdpage-description__number {
-  color: var(--color-yellow);
+.thirdpage-project:nth-child(1):hover .thirdpage-description__number {
+  color: #ffdf8f;
 }
+.thirdpage-project:nth-child(2):hover .thirdpage-description__number {
+  color: #a3cebd;
+}
+.thirdpage-project:nth-child(3):hover .thirdpage-description__number {
+  color: #fbc1ad;
+}
+.thirdpage-project:nth-child(4):hover .thirdpage-description__number {
+  color: #a88e7a;
+}
+
+/* .thirdpage-project:hover .thirdpage-description__number {
+  color: var(--color-yellow);
+} */
 
 @keyframes down {
   from {
@@ -172,6 +192,7 @@
   font-size: 18vh;
   margin: 0;
   text-align: center;
+  transition: all 1s;
 }
 
 .thirdpage-description__description {
@@ -183,6 +204,10 @@
   background-color: var(--color-backBlack);
   box-shadow: 0 -15px 10px -10px #00000044;
   transition: all 1.5s;
+  color: var(--color-black);
+}
+
+.thirdpage-project:hover .thirdpage-description__description {
   color: var(--color-gray);
 }
 
@@ -191,6 +216,8 @@
   width: -moz-min-content;
   font-size: 2.5vh;
   margin: 20% 0;
+  color: var(--color-gray);
+  transition: all 0.5s;
 }
 
 .thirdpage-description__paragraph {
@@ -228,7 +255,7 @@
   border-radius: 50%;
   -webkit-animation: pages 2s;
   animation: pages 2s;
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-white);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

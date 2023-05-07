@@ -6,6 +6,7 @@ import { ReactComponent as Skill } from '../../../assets/image/sticksvg/skill.sv
 import { ReactComponent as Project } from '../../../assets/image/sticksvg/project.svg';
 import { ReactComponent as Contact } from '../../../assets/image/sticksvg/contact.svg';
 import { ReactComponent as Navigate } from '../../../assets/image/sticksvg/navigate.svg';
+import { ReactComponent as Me } from '../../../assets/image/sticksvg/me.svg';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -26,22 +27,23 @@ function StickForm() {
       >
         <Navigate />
       </div>
-      <IndicatorItem sideNum={0} svg={<Home />} to='first' />
-      <IndicatorItem sideNum={1} svg={<About />} to='second' />
-      <IndicatorItem sideNum={2} svg={<Skill />} to='aftSec' />
-      <IndicatorItem sideNum={3} svg={<Project />} to='third' />
-      <IndicatorItem sideNum={4} svg={<Contact />} to='fourth' />
+      <IndicatorItem
+        sideNum={0}
+        svg={<Home />}
+        to={`${process.env.PUBLIC_URL}/`}
+      />
+      <IndicatorItem sideNum={1} svg={<About />} to='/intro' />
+      <IndicatorItem sideNum={2} svg={<Me />} to='/sec' />
+      <IndicatorItem sideNum={3} svg={<Skill />} to='/asec' />
+      <IndicatorItem sideNum={4} svg={<Project />} to='/third' />
+      <IndicatorItem sideNum={5} svg={<Contact />} to='/fourth' />
     </div>
   );
 }
 
 function IndicatorItem({ sideNum, svg, to }) {
   const side = useSelector((state) => state.side.value);
-
-  const navTo = (id) => {
-    const doc = document.getElementById(id);
-    window.scrollTo({ top: doc.offsetTop, behavior: 'smooth' });
-  };
+  const nav = useNavigate();
 
   return (
     <div
@@ -50,7 +52,7 @@ function IndicatorItem({ sideNum, svg, to }) {
           ? { border: '1.5px solid #fff', borderRadius: '50%' }
           : null
       } */
-      onClick={() => navTo(to)}
+      onClick={() => nav(to)}
     >
       <div style={{ fill: side === sideNum ? '#edd451' : '#fff' }}>{svg}</div>
     </div>

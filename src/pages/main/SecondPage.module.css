@@ -80,7 +80,8 @@
   cursor: pointer;
   animation: fadeIn 2s 2s forwards;
   opacity: 0;
-  margin: 8rem 0 0;
+  margin: 8rem auto 0;
+  width: 100px;
 }
 
 .temp-sec-button:hover {

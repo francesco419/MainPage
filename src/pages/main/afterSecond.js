@@ -25,7 +25,7 @@ export default function AfterSec() {
     if (screen === true) {
       dispatch(changeSide(2));
     }
-    checkScreen(2, screen, dispatch);
+    checkScreen(3, screen, dispatch);
   }, [screen]);
 
   const setArray = [

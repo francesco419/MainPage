@@ -15,12 +15,13 @@ export default function ThirdPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
+  const nav = useNavigate();
   const [transitionPage, setTransitionPage] = useState(false);
   const chageState = () => {
     setTransitionPage((transitionPage) => !transitionPage);
   };
   useEffect(() => {
-    checkScreen(3, screen, dispatch);
+    checkScreen(4, screen, dispatch);
   }, [screen]);
 
   const titleStyle = {
@@ -31,6 +32,7 @@ export default function ThirdPage() {
   return (
     <div ref={ref} id='third' className={styles['thirdpage']}>
       <div className={styles['thirdpage-right']}>
+        <p className={styles['thirdpage-title']}>PROJECT</p>
         <div className={styles['thirdpage-section']} ref={ref}>
           {ProjectDetailText.map((data, index) => {
             if (index < 4) {
@@ -45,9 +47,16 @@ export default function ThirdPage() {
             }
           })}
         </div>
+        <button
+          className={styles['post-third-button']}
+          onClick={() => {
+            nav('/fourth');
+          }}
+        >
+          Next
+        </button>
       </div>
       {transitionPage && <TransitionEffect />}
-      {/* <div className={styles['background']}></div> */}
     </div>
   );
 }
@@ -73,7 +82,7 @@ function Project({ props, index, chageState }) {
       <dl className={styles['thirdpage-description__list']}>
         <dt className={styles['thirdpage-description__term']}>
           <h1
-            style={{ color: NUMBER_COLOR[index] }}
+            //style={{ color: NUMBER_COLOR[index] }}
             className={styles['thirdpage-description__number']}
           >
             {props.id}

@@ -15,7 +15,7 @@ export default function FourthPage() {
   const screen = useOnScreen(ref);
 
   useEffect(() => {
-    checkScreen(4, screen, dispatch);
+    checkScreen(5, screen, dispatch);
   }, [screen]);
 
   function ContactBox({ text, SVG }) {
@@ -49,12 +49,8 @@ export default function FourthPage() {
   return (
     <div id='fourth' className={styles['fourthpage']}>
       <div className={styles['fourthpage-section']}>
-        <div className={styles['newSec__title']}>
-          <Title style={titleStyle} inputref={ref} title='<CONTACT>' />
-          <hr style={{ width: '700px', margin: '30px auto' }} />
-          <hr style={{ width: '400px', margin: '30px auto' }} />
-        </div>
         <div className={styles['fourthpage-big']}>
+          <p className={styles['port-fourthpage-title']}>CONTACT</p>
           <div className={styles['fourthpage-big__svg']}>
             <ContactBox text={'francesco419@naver.com'} SVG={<Email />} />
             <ContactBox
@@ -67,6 +63,7 @@ export default function FourthPage() {
             />
           </div>
           <ContactUs />
+          <p className={styles['port-fourthpage-port']}>PORTFOLIO 2023</p>
         </div>
       </div>
     </div>

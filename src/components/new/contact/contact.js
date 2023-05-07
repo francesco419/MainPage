@@ -25,44 +25,48 @@ export const ContactUs = () => {
       );
   };
 
-  const onMouseOverHandler = (e) => {
+  /*   const onMouseOverHandler = (e) => {
     e.target.value = 'Press to Send !';
   };
 
   const onMouseLeaveHandler = (e) => {
     e.target.value = 'Send';
-  };
+  }; */
 
   return (
     <form ref={form} onSubmit={sendEmail} className={styles['emailSend']}>
-      <FormAt
-        className='emailSend__name'
-        label='Name'
-        type='text'
-        name='user_name'
-        placeholder='FullName'
-        input={true}
-      />
-      <FormAt
-        className='emailSend__email'
-        label='Email'
-        type='email'
-        name='user_email'
-        placeholder='yourEmail@example.com'
-        input={true}
-      />
-      <FormAt
-        className='emailSend__message'
-        label='Message'
-        name='message'
-        placeholder='Message...'
-        input={false}
-      />
+      <div className={styles['emailSend-inner']}>
+        <div>
+          <FormAt
+            className='emailSend__name'
+            label='Name'
+            type='text'
+            name='user_name'
+            placeholder='FullName'
+            input={true}
+          />
+          <FormAt
+            className='emailSend__email'
+            label='Email'
+            type='email'
+            name='user_email'
+            placeholder='yourEmail@example.com'
+            input={true}
+          />
+        </div>
+        <FormAt
+          className='emailSend__message'
+          label='Message'
+          name='message'
+          placeholder='Message...'
+          input={false}
+        />
+      </div>
       <input
         type='submit'
         value='Send'
-        onMouseOver={(e) => onMouseOverHandler(e)}
-        onMouseLeave={(e) => onMouseLeaveHandler(e)}
+        /*         onMouseOver={(e) => onMouseOverHandler(e)}
+        onMouseLeave={(e) => onMouseLeaveHandler(e)} */
         className={styles['emailSend__send']}
       />
     </form>

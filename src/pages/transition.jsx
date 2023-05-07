@@ -8,6 +8,8 @@ import AfterSec from './main/afterSecond';
 import ThirdPage from './main/ThirdPage';
 import FourthPage from './main/FourthPage';
 import Introduction from './main/introduction';
+import ProjectNav from './project/ProjectNav';
+import List from './navigation/List';
 
 const Transition = () => {
   const location = useLocation();
@@ -21,6 +23,8 @@ const Transition = () => {
           <Route path='/asec' element={<AfterSec />} />
           <Route path='/third' element={<ThirdPage />} />
           <Route path='/fourth' element={<FourthPage />} />
+          <Route path='/ProjectNav/:id' element={<ProjectNav />} />
+          <Route path='/List' element={<List />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
