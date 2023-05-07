@@ -86,7 +86,7 @@ export const introduction =
 export const ProjectDetailText = [
   {
     id: '01',
-    name: 'Personal Portfolio',
+    name: 'Portfolio',
     intro:
       '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
     text2:

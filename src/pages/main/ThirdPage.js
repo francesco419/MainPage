@@ -29,13 +29,8 @@ export default function ThirdPage() {
   };
 
   return (
-    <div id='third' className={styles['thirdpage']}>
+    <div ref={ref} id='third' className={styles['thirdpage']}>
       <div className={styles['thirdpage-right']}>
-        <div className={styles['newSec__title']}>
-          <Title style={titleStyle} inputref={ref} title='<PROJECTS>' />
-          <hr style={{ width: '700px', margin: '30px auto' }} />
-          <hr style={{ width: '400px', margin: '30px auto' }} />
-        </div>
         <div className={styles['thirdpage-section']} ref={ref}>
           {ProjectDetailText.map((data, index) => {
             if (index < 4) {

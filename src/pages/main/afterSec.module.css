@@ -1,29 +1,122 @@
-.newSec {
+.port-skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  color: var(--color-black);
   overflow: hidden;
-  font-size: 1vw;
   background-color: var(--color-beige);
-  padding: 0 15vw;
 }
 
-.newSec__title {
-  padding: 5vh 0 0;
-}
-
-.skillSet {
-  border: 5px solid #fff;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.newSec__inner {
+.port-skills-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.port-skills-title {
+  text-indent: 2rem;
+  font-size: 2rem;
+  letter-spacing: 2rem;
+  margin: 0 0 8rem;
+  color: var(--color-black);
+}
+
+.port-skills-list {
+  margin: 6rem 0 0;
+}
+
+.port-skills-list * {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 2rem;
+  color: var(--color-brown);
+  transition: all 0.5s;
+}
+
+.port-skills-list *:focus {
+  border: none;
+  outline: none;
+}
+
+.port-skills-list *:hover {
+  color: var(--color-yellow);
+}
+
+.port-skills-button {
+  background: none;
+  border: 0;
+  color: var(--color-black);
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  animation: fadeIn 2s 2s forwards;
+  opacity: 0;
+  margin: 3rem 0 0;
+}
+
+.port-skills-button:hover {
+  color: var(--color-yellow);
+}
+
+/*------------------SKILLSET------------------*/
+
+.port-skills-set {
+  animation: fadeIn 1s linear;
+  opacity: 1;
+}
+
+.port-skills-pic {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5rem;
+}
+
+.port-skills-pic svg {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 2rem;
+}
+
+.port-skills-text p {
+  width: fit-content;
+  margin: 2rem auto;
+  font-size: 1rem;
+}
+
+.port-skills-p {
+  font-size: 2rem;
+  margin: 0 0 4rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+.fadeOut {
+  animation: fadeOut 1s linear;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
