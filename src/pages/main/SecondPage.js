@@ -30,8 +30,8 @@ export default function SecondPage() {
       <div className={styles['temp-sec__collection']}>
         <p className={styles['temp-sec-title']}>ABOUT ME</p>
         <div className={styles['temp-sec-inner']}>
-          {box.map((data) => {
-            return data;
+          {box.map((data, index) => {
+            return <div key={`second_${index}`}>{data}</div>;
           })}
         </div>
         <button
@@ -58,7 +58,11 @@ function Pack({ svg, title, text }) {
       <div className={styles['temp-sec__textBox']}>
         <h3 className={styles['temp-sec__title']}>{title}</h3>
         {text.map((data, index) => {
-          return <p>{data}</p>;
+          return (
+            <div key={`${title}_${index}`}>
+              <p>{data}</p>
+            </div>
+          );
         })}
       </div>
     </div>
