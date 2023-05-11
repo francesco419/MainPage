@@ -30,7 +30,7 @@ function StickForm() {
       <IndicatorItem
         sideNum={0}
         svg={<Home />}
-        to={`${process.env.PUBLIC_URL}/`}
+        to={`${process.env.PUBLIC_URL}`}
       />
       <IndicatorItem sideNum={1} svg={<About />} to='/intro' />
       <IndicatorItem sideNum={2} svg={<Me />} to='/sec' />

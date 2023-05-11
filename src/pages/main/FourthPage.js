@@ -8,11 +8,13 @@ import { ReactComponent as Github } from '../../assets/image/contact/github.svg'
 import { ContactUs } from '../../components/new/contact/contact';
 import { Title } from '../../components/new/title/title';
 import { checkScreen } from '../../function/screen';
+import { useNavigate } from 'react-router-dom';
 
 export default function FourthPage() {
   const dispatch = useDispatch();
   const ref = useRef();
   const screen = useOnScreen(ref);
+  const nav = useNavigate();
 
   useEffect(() => {
     checkScreen(5, screen, dispatch);
@@ -63,7 +65,14 @@ export default function FourthPage() {
             />
           </div>
           <ContactUs />
-          <p className={styles['port-fourthpage-port']}>PORTFOLIO 2023</p>
+          <p
+            className={styles['port-fourthpage-port']}
+            onClick={() => {
+              nav('/hidden');
+            }}
+          >
+            PORTFOLIO 2023
+          </p>
         </div>
       </div>
     </div>

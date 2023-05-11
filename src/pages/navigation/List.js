@@ -48,7 +48,7 @@ export default function () {
         <div className={styles['listpage-menu']}>
           <Link
             className={styles['listpage-menu__link']}
-            to={`${process.env.PUBLIC_URL}/`}
+            to={`${process.env.PUBLIC_URL}`}
           >
             HOME
           </Link>

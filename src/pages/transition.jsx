@@ -18,7 +18,7 @@ const Transition = () => {
     <TransitionGroup className='transition-group'>
       <CSSTransition key={location.pathname} classNames='fade' timeout={500}>
         <Routes location={location}>
-          <Route path={`${process.env.PUBLIC_URL}/`} element={<FirstPage />} />
+          <Route path={`${process.env.PUBLIC_URL}`} element={<FirstPage />} />
           <Route path='/intro' element={<Introduction />} />
           <Route path='/sec' element={<SecondPage />} />
           <Route path='/asec' element={<AfterSec />} />
@@ -26,7 +26,7 @@ const Transition = () => {
           <Route path='/fourth' element={<FourthPage />} />
           <Route path='/ProjectNav/:id' element={<ProjectNav />} />
           <Route path='/List' element={<List />} />
-          <Route path='/Hidden' element={<Hidden />} />
+          <Route path='/hidden' element={<Hidden />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
