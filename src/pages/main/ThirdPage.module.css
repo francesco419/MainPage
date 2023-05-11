@@ -212,8 +212,6 @@
 }
 
 .thirdpage-description__title {
-  width: -webkit-min-content;
-  width: -moz-min-content;
   font-size: 2.5vh;
   margin: 20% 0;
   color: var(--color-gray);
