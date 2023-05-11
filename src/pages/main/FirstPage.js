@@ -33,7 +33,7 @@ export default function FirstPage() {
         clearInterval(inter);
         setTheEnd((theEnd) => true);
       }
-    }, 500);
+    }, 100);
   }
 
   return (

@@ -47,7 +47,7 @@ export default function FourthPage() {
   };
 
   return (
-    <div id='fourth' className={styles['fourthpage']}>
+    <div ref={ref} id='fourth' className={styles['fourthpage']}>
       <div className={styles['fourthpage-section']}>
         <div className={styles['fourthpage-big']}>
           <p className={styles['port-fourthpage-title']}>CONTACT</p>

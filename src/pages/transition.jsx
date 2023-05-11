@@ -10,6 +10,7 @@ import FourthPage from './main/FourthPage';
 import Introduction from './main/introduction';
 import ProjectNav from './project/ProjectNav';
 import List from './navigation/List';
+import Hidden from './main/hidden';
 
 const Transition = () => {
   const location = useLocation();
@@ -25,6 +26,7 @@ const Transition = () => {
           <Route path='/fourth' element={<FourthPage />} />
           <Route path='/ProjectNav/:id' element={<ProjectNav />} />
           <Route path='/List' element={<List />} />
+          <Route path='/Hidden' element={<Hidden />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
