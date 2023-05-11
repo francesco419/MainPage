@@ -6,6 +6,24 @@ import { ReactComponent as REDUX } from '../assets/image/skills/redux.svg';
 import { ReactComponent as SCSS } from '../assets/image/skills/scss.svg';
 import { ReactComponent as TYPE } from '../assets/image/skills/type.svg';
 
+export const SHORTEN = [
+  [
+    '기본이라고 할 수 있는 HTML/CSS를 자유자재로 구현할 수 있습니다. ',
+    'ES6 이후의 JS를 사용하는것에 능숙하며,',
+    ' 프로덕트에 요구되는 적절한 애니메이션을 Keyframe / transition 등을 통해 구현할 수 있습니다.'
+  ],
+  [
+    '함수형 컴포넌트 형태의 작성을 선호합니다. ',
+    '라이프 사이클을 이해하여 최적의 랜더링을 통한 최고의 프로덕트를 만들고자 합니다. ',
+    'Redux를 사용하여 props 복잡도를 해결하고, 스토어를 통한 프로젝트의 효율적인 상태관리를 할 수 있습니다.'
+  ],
+  [
+    '변수/ 중첩/ 함수 등의 문법을 적절히 사용하여 기존 CSS를 구조화한 형태로 표현할 수 있습니다. ',
+    '정적코드작성 및 타입오류로 인한 에러의 문제해결이 가능합니다. ',
+    'TS로 인해 코드량이 많아지고 복잡해지나, 유지보수 및 코드 퀄리티에서의 장점또한 이해하고 있습니다.'
+  ]
+];
+
 export const SKILLINFORMATION = [
   {
     no: 0,

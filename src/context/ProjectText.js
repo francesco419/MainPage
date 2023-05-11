@@ -17,6 +17,20 @@ import social1 from '../assets/image/projectImgNew/sns/1.PNG';
 import social2 from '../assets/image/projectImgNew/sns/2.PNG';
 import social3 from '../assets/image/projectImgNew/sns/3.PNG';
 import social4 from '../assets/image/projectImgNew/sns/4.PNG';
+/**image */
+import css from '../assets/svg/icon/css.png';
+import javascript from '../assets/svg/icon/javascript.png';
+import html from '../assets/svg/icon/html.png';
+import react from '../assets/svg/icon/react.png';
+import redux from '../assets/svg/icon/redux.png';
+import typescript from '../assets/svg/icon/typescript.png';
+import scss from '../assets/svg/icon/scss.png';
+
+export const PNGIMAGES = [
+  [javascript, html, css],
+  [react, redux],
+  [typescript, scss]
+];
 
 const COMMUNICATIONTEXT = [
   '커뮤니케이션을 통해 문제에 대하여 보다 효율적이고 신속하게 적절한 해답을 찾고자 합니다.',
@@ -25,7 +39,7 @@ const COMMUNICATIONTEXT = [
 ];
 const CREATIVITYTEXT = [
   '개발을 하고자 하는 저의 원동력은 상상하는 것을 코드를 통해 구현하고자 하는 목표입니다.',
-  '여러 아이디어롤 통해 항상 새로운것을 시도하고, 이러한 경험을 토대로 .효율적인. 프로덕트를 제작하고자 합니다.'
+  '여러 아이디어롤 통해 항상 새로운것을 시도하고, 이러한 경험을 토대로 효율적인 프로덕트를 제작하고자 합니다.'
 ];
 const GROWTHSTEXT = [
   '문제해결, 프로젝트 등의 다양한 경험을 통해 성장하고 이를 다시 발판으로 삼아 반복적인 성장을 하고자 합니다.',
