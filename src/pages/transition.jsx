@@ -10,7 +10,7 @@ import FourthPage from './main/FourthPage';
 import Introduction from './main/introduction';
 import ProjectNav from './project/ProjectNav';
 import List from './navigation/List';
-import Hidden from './main/hidden';
+import Hidden from './202305/hidden';
 
 const Transition = () => {
   const location = useLocation();
