@@ -11,6 +11,7 @@ import Introduction from './main/introduction';
 import ProjectNav from './project/ProjectNav';
 import List from './navigation/List';
 import Hidden from './202305/hidden';
+import ProjectPage from './202305/project/projectPage';
 
 const Transition = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const Transition = () => {
           <Route path='/ProjectNav/:id' element={<ProjectNav />} />
           <Route path='/List' element={<List />} />
           <Route path='/hidden' element={<Hidden />} />
+          <Route path='/project' element={<ProjectPage />} />
           <Route path={`${process.env.PUBLIC_URL}`} element={<FirstPage />} />
         </Routes>
       </CSSTransition>
