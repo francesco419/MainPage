@@ -1,0 +1,41 @@
+import styles from './footer.module.css';
+import Contact from './contact';
+
+export default function FooterContact() {
+  const myContact = [
+    {
+      letter: 'E',
+      text: 'francesco419@naver.com',
+      bool: true
+    },
+    {
+      letter: 'G',
+      text: 'https://github.com/francesco419',
+      bool: false
+    },
+    {
+      letter: 'V',
+      text: 'https://velog.io/@francesco419',
+      bool: false
+    }
+  ];
+
+  return (
+    <div className={styles['hidden-contact']}>
+      <p className={styles['hidden-rem']}>CONTACT</p>
+      <div className={styles['hidden-contact-contact']}>
+        {myContact.map((data) => {
+          return (
+            <Contact letter={data.letter} text={data.text} bool={data.bool} />
+          );
+        })}
+      </div>
+      <div className={styles['hidden-contact-csv']}>
+        <p>download my csv</p>
+      </div>
+      <p className={styles['hidden-contact-rights']}>
+        2023@LeeSangHean. All Rights Reserved
+      </p>
+    </div>
+  );
+}

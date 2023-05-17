@@ -10,7 +10,7 @@ export default function MyHeader() {
       <button>SKILL</button>
       <button
         onClick={() => {
-          nav('/project');
+          nav('/project/MainPage');
         }}
       >
         PROJECT

@@ -27,7 +27,7 @@ const Transition = () => {
           <Route path='/ProjectNav/:id' element={<ProjectNav />} />
           <Route path='/List' element={<List />} />
           <Route path='/hidden' element={<Hidden />} />
-          <Route path='/project' element={<ProjectPage />} />
+          <Route path='/project/:id' element={<ProjectPage />} />
           <Route path={`${process.env.PUBLIC_URL}`} element={<FirstPage />} />
         </Routes>
       </CSSTransition>

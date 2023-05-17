@@ -5,8 +5,9 @@ import { SHORTEN } from '../../context/SKillText';
 import About from './about';
 import Skill from './skill';
 import Project from './project';
-import Contact from './contact';
+import Contact from './contact/contact';
 import MyHeader from './myHeader';
+import FooterContact from './contact/footer';
 
 const aboutMe = [
   {
@@ -104,24 +105,6 @@ const myProjects = [
   }
 ];
 
-const myContact = [
-  {
-    letter: 'E',
-    text: 'francesco419@naver.com',
-    bool: true
-  },
-  {
-    letter: 'G',
-    text: 'https://github.com/francesco419',
-    bool: false
-  },
-  {
-    letter: 'V',
-    text: 'https://velog.io/@francesco419',
-    bool: false
-  }
-];
-
 export default function Hidden() {
   return (
     <div className={styles['back']}>
@@ -172,26 +155,7 @@ export default function Hidden() {
             })}
           </div>
         </div>
-        <div className={styles['hidden-contact']}>
-          <p className={styles['hidden-rem']}>CONTACT</p>
-          <div className={styles['hidden-contact-contact']}>
-            {myContact.map((data) => {
-              return (
-                <Contact
-                  letter={data.letter}
-                  text={data.text}
-                  bool={data.bool}
-                />
-              );
-            })}
-          </div>
-          <div className={styles['hidden-contact-csv']}>
-            <p>download my csv</p>
-          </div>
-          <p className={styles['hidden-contact-rights']}>
-            2023@LeeSangHean. All Rights Reserved
-          </p>
-        </div>
+        <FooterContact />
       </div>
     </div>
   );

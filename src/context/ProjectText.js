@@ -100,11 +100,12 @@ export const introduction =
 export const ProjectDetailText = [
   {
     id: '01',
+    param: 'MainPage',
     name: 'Portfolio',
     intro:
       '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
     text2:
-      'React를 사용한 첫 번째 프로젝트로 저를 소개하는 포트폴리오 웹페이지 입니다.\n 현재 진행하고 있거나 완료된 프로젝트를 기재하고 관련 이미지와 코드, 페이지 링크를 포함했습니다.\n React Hooks 및 State, Router 등의 작동 방식을 익히고 이를 직접 사용해 보며 React에 대해 학습을 가장 많이 하게된 프로젝트입니다.\n 기록하는 웹페이지로서 주기적으로 업데이트를 진행하여 코드의 유지보수를 하고 있습니다.',
+      'React를 사용한 첫 번째 프로젝트로 저를 소개하는 포트폴리오 웹페이지 입니다.\n현재 진행하고 있거나 완료된 프로젝트를 기재하고 관련 이미지와 코드, 페이지 링크를 포함했습니다.\nReact Hooks 및 State, Router 등의 작동 방식을 익히고 이를 직접 사용해 보며 React에 대해 \n가장 많이 학습하게된 프로젝트입니다. 기록하는 웹페이지로서 주기적으로 업데이트를 진행하여 코드의 유지보수를 하고 있습니다.',
     img: [port1, port2, port3, port4, port5],
     url: 'https://francesco419.github.io/MainPage',
     github: 'https://github.com/francesco419/MainPage',
@@ -113,7 +114,7 @@ export const ProjectDetailText = [
     LastUpdate: '04.19.2023',
     program: ['React', 'Redux Toolkit'],
     result: [
-      '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하는 계기',
+      '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하게 되는 계기',
       'Virtual DOM의 작동 이해 및 이를 효과적으로 사용하기 위한 최적의 렌더링 방식에 대해 학습 및 응용',
       '요구되는 적절한 애니메이션을 CSS의 keyframe / transition 및 자바스크립트 애니메이션을 통해 구현',
       '다양한 사용자 행동에 따라 반응하는 JSX 이벤트 처리'
@@ -121,6 +122,7 @@ export const ProjectDetailText = [
   },
   {
     id: '02',
+    param: 'Youtube',
     name: 'Youtube Clone',
     intro:
       '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 유튜브 UI를 직접 구현했습니다',
@@ -141,6 +143,7 @@ export const ProjectDetailText = [
   },
   {
     id: '03',
+    param: 'Travel',
     name: 'Travel Away',
     intro:
       '코로나 이후 여행 수요의 증가로 각 국가의 기본 정보를 소개할 수 있는 웹페이지를 제작했습니다.',
@@ -160,6 +163,7 @@ export const ProjectDetailText = [
   },
   {
     id: '04',
+    param: 'post_typescript_redux',
     name: 'Social Network',
     intro:
       '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지 입니다.',
