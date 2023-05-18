@@ -36,7 +36,7 @@
 }
 
 .my-project-stack {
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
 .my-project-skills {
@@ -61,7 +61,8 @@
 
 .my-project-img img {
   width: 1200px;
-  object-fit: cover;
+  height: 800px;
+  object-fit: fill;
 }
 
 .my-project-result {
@@ -91,6 +92,7 @@
   border: 0;
   background: none;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .my-project-next svg {

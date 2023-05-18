@@ -1,13 +1,14 @@
 .hidden-project-index {
   position: relative;
   margin: 20px 0;
-  width: 270px;
+  width: 550px;
   height: 350px;
   border-radius: 20px;
   -webkit-transition: all 1.5s;
   -o-transition: all 1.5s;
   transition: all 1.5s;
   background-color: #fff;
+  border: 1px solid #00000033;
 }
 
 .hidden-project-index img {
@@ -19,18 +20,18 @@
 }
 
 .hidden-project-index:hover {
-  -webkit-transform: translate(-10%, -20%) rotateZ(-5deg);
-  -ms-transform: translate(-10%, -20%) rotate(-5deg);
-  transform: translate(-10%, -20%) rotateZ(-5deg);
+  -webkit-transform: translate(-10%, -10%) rotateZ(-5deg);
+  -ms-transform: translate(-10%, -10%) rotate(-5deg);
+  transform: translate(-10%, -10%) rotateZ(-5deg);
 }
 
 .hidden-project-index:hover .hidden-project-front {
   border: 0;
   color: #fff;
   background-color: #424242;
-  -webkit-transform: translate(0%, 50%) rotateZ(10deg);
-  -ms-transform: translate(0%, 50%) rotate(10deg);
-  transform: translate(0%, 50%) rotateZ(10deg);
+  -webkit-transform: translate(-10%, 20%) rotateZ(5deg);
+  -ms-transform: translate(-10%, 20%) rotate(5deg);
+  transform: translate(10%, 20%) rotateZ(5deg);
 }
 
 .hidden-project-front {
@@ -46,14 +47,14 @@
   justify-content: space-between;
   padding: 20px;
   position: absolute;
-  width: 270px;
+  width: inherit;
   height: 350px;
   border: 1px solid #000;
   border-radius: 15px;
   background-color: #fff;
   -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
   color: #000;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -63,12 +64,24 @@
   font-weight: 600;
 }
 
+.hidden-project-front p:first-child {
+  font-size: 1.7rem;
+}
+
 .hidden-project-front p:nth-child(2) {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   word-break: keep-all;
 }
 
 .topleft {
   top: 0;
   left: 0;
+}
+
+.hidden-project-front a {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: none;
+  border: none;
 }

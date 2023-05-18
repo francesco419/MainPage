@@ -6,17 +6,21 @@ import { useParams } from 'react-router-dom';
 import { ProjectDetailText } from '../../../context/ProjectText';
 import FooterContact from '../contact/footer';
 import { ReactComponent as Right } from '../../../assets/svg/right.svg';
+import { useNavigate } from 'react-router-dom';
+import TopIndicator from '../top/toTop';
 
 export default function ProjectPage() {
   const param = useParams();
   const [gitRepo, setGitRepo] = useState();
   const [loading, setLoading] = useState(true);
-  const [projectText, setProjectText] = useState(
-    ProjectDetailText.filter((data) => data.param === param.id)
+  const projectText = ProjectDetailText.filter(
+    (data) => data.param === param.id
   );
+  const nav = useNavigate();
 
   useEffect(() => {
     getGithub();
+    window.scrollTo(0, 0);
   }, []);
 
   const getGithub = async () => {
@@ -29,7 +33,6 @@ export default function ProjectPage() {
       });
       setGitRepo((gitRepo) => repo);
       setLoading((loading) => false);
-      console.log(response);
     } catch {
       console.log('fetching error');
     }
@@ -42,13 +45,14 @@ export default function ProjectPage() {
   if (loading) {
     return <div>Loading</div>;
   } else {
-    console.log(gitRepo[0]);
-    console.log(projectText);
     return (
       <div>
+        <TopIndicator />
         <div className={styles['my-project']}>
-          <MyHeader />
-          <p className={styles['my-project-title']}>Project 1 : Portfolio</p>
+          <MyHeader refer={null} />
+          <p
+            className={styles['my-project-title']}
+          >{`Project ${projectText[0].id} : ${projectText[0].name}`}</p>
           <div className={styles['my-project-update']}>
             <p>{`Last Update : ${newDate(gitRepo[0].pushed_at)}`}</p>
             <p>|</p>
@@ -60,12 +64,13 @@ export default function ProjectPage() {
           <div className={styles['my-project-stack']}>
             <h1>Skill Stack</h1>
             <div className={styles['my-project-skills']}>
-              <div className={styles['my-project-skill']}>
-                <p>React</p>
-              </div>
-              <div className={styles['my-project-skill']}>
-                <p>Redux Toolkit</p>
-              </div>
+              {projectText[0].program.map((data) => {
+                return (
+                  <div className={styles['my-project-skill']}>
+                    <p>{data}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className={styles['my-project-image']}>
@@ -91,10 +96,14 @@ export default function ProjectPage() {
               })}
             </ul>
           </div>
-          <div className={styles['my-project-next']}>
-            <button>Next</button>
-            <Right />
-          </div>
+          {projectText[0].next ? (
+            <div className={styles['my-project-next']}>
+              <button onClick={() => nav(`/project/${projectText[0].next}`)}>
+                Next
+              </button>
+              <Right />
+            </div>
+          ) : null}
           <FooterContact />
         </div>
       </div>

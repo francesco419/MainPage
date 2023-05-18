@@ -7,8 +7,8 @@ export default function Skill({ title, detail, img, form, color }) {
         <h1>{title}</h1>
         <p>{detail}</p>
         <div className={styles['hidden-skill-icon']}>
-          {img.map((data) => {
-            return <img src={data} />;
+          {img.map((data, index) => {
+            return <img src={data} key={`${title}_${index}`} />;
           })}
         </div>
       </div>

@@ -9,7 +9,7 @@ import { ReactComponent as TYPE } from '../assets/image/skills/type.svg';
 export const SHORTEN = [
   [
     '기본이라고 할 수 있는 HTML/CSS를 자유자재로 구현할 수 있습니다. ',
-    'ES6 이후의 JS를 사용하는것에 능숙하며,',
+    '\nES6 이후의 JS를 사용하는것에 능숙하며,',
     ' 프로덕트에 요구되는 적절한 애니메이션을 Keyframe / transition 등을 통해 구현할 수 있습니다.'
   ],
   [

@@ -10,6 +10,7 @@
 }
 
 .hidden-header button {
+  position: relative;
   background: none;
   font-weight: bold;
   border: 0;
@@ -17,6 +18,30 @@
   margin: 0 10px;
   cursor: pointer;
   font-family: 'IBMPlexSansKR-Regular';
+}
+
+.hidden-header-link {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 5px;
+  flex-direction: column;
+  width: max-content;
+  padding: 10px 0;
+}
+
+.hidden-header-link * {
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.hidden-header-project:hover .hidden-header-link,
+.hidden-header-link:hover {
+  display: flex;
+}
+
+.hidden-header-link *:hover {
+  text-decoration: underline;
 }
 
 @font-face {

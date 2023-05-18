@@ -22,7 +22,7 @@
   border-radius: 25px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #00000055;
   color: #fff;
 }
 
@@ -30,6 +30,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   word-break: keep-all;
+  line-height: 2.5rem;
 }
 
 .hidden-skill-icon {

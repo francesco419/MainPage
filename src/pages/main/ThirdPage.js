@@ -85,7 +85,7 @@ function Project({ props, index, chageState }) {
             //style={{ color: NUMBER_COLOR[index] }}
             className={styles['thirdpage-description__number']}
           >
-            {props.id}
+            0{props.id}
           </h1>
         </dt>
         <dd className={styles['thirdpage-description__description']}>

@@ -41,8 +41,7 @@
 
 .thirdpage-project {
   height: fit-content;
-  width: max-content;
-  border: 1px solid();
+  width: fit-content;
   margin: 1% 2%;
   border-radius: 30px;
   -webkit-box-sizing: border-box;

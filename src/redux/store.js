@@ -1,8 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import sideReducer from "./SideSlide";
+import { configureStore } from '@reduxjs/toolkit';
+import sideReducer from './SideSlide';
+import aboutReducer from './aboutControl';
 
 export const store = configureStore({
   reducer: {
     side: sideReducer,
-  },
+    about: aboutReducer
+  }
 });

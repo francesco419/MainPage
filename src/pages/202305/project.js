@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom';
 import styles from './project.module.css';
 
-export default function Project({ name, text, img }) {
+export default function Project({ projects }) {
   return (
     <div className={styles['hidden-project-index']}>
-      <img src={img} />
+      <img src={projects.img} />
       <div className={`${styles['hidden-project-front']} ${styles['topleft']}`}>
-        <p>{name}</p>
-        <p>{text}</p>
+        <p>{projects.name}</p>
+        <p>{projects.text}</p>
+        <Link to={`/project/${projects.to}`} className={styles['topleft']} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import styles from './footer.module.css';
 import Contact from './contact';
 
-export default function FooterContact() {
+export default function FooterContact({ refer }) {
   const myContact = [
     {
       letter: 'E',
@@ -21,12 +21,17 @@ export default function FooterContact() {
   ];
 
   return (
-    <div className={styles['hidden-contact']}>
+    <div ref={refer} className={styles['hidden-contact']}>
       <p className={styles['hidden-rem']}>CONTACT</p>
       <div className={styles['hidden-contact-contact']}>
-        {myContact.map((data) => {
+        {myContact.map((data, index) => {
           return (
-            <Contact letter={data.letter} text={data.text} bool={data.bool} />
+            <Contact
+              letter={data.letter}
+              text={data.text}
+              bool={data.bool}
+              key={`${data.letter}_${index}`}
+            />
           );
         })}
       </div>
