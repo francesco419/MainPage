@@ -28,7 +28,7 @@
 .hidden-project-index:hover .hidden-project-front {
   border: 0;
   color: #fff;
-  background-color: #424242;
+  background-color: #000;
   -webkit-transform: translate(-10%, 20%) rotateZ(5deg);
   -ms-transform: translate(-10%, 20%) rotate(5deg);
   transform: translate(10%, 20%) rotateZ(5deg);
@@ -53,8 +53,8 @@
   border-radius: 15px;
   background-color: #fff;
   -webkit-transition: all 1s;
-  -o-transition: all 0.75s;
-  transition: all 0.75s;
+  -o-transition: all 1s;
+  transition: all 1s;
   color: #000;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

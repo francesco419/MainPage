@@ -122,7 +122,7 @@ const mySkills = [
     detail: SHORTEN[2],
     png: PNGIMAGES[2],
     color: '#9463fb',
-    form: <canvas />
+    form: <canvas id='canvas' />
   }
 ];
 
