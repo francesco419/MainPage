@@ -36,7 +36,9 @@ export default function FooterContact({ refer }) {
         })}
       </div>
       <div className={styles['hidden-contact-csv']}>
-        <p>download my csv</p>
+        <a href='./assets/portfolio/portfolio.pdf' download=''>
+          download resume
+        </a>
       </div>
       <p className={styles['hidden-contact-rights']}>
         2023@LeeSangHean. All Rights Reserved

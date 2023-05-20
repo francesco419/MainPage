@@ -8,6 +8,8 @@ import FooterContact from '../contact/footer';
 import { ReactComponent as Right } from '../../../assets/svg/right.svg';
 import { useNavigate } from 'react-router-dom';
 import TopIndicator from '../top/toTop';
+import { ReactComponent as Git } from '../../../assets/svg/project/github.svg';
+import { ReactComponent as Url } from '../../../assets/svg/project/url.svg';
 
 export default function ProjectPage() {
   const param = useParams();
@@ -57,6 +59,16 @@ export default function ProjectPage() {
             <p>{`Last Update : ${newDate(gitRepo[0].pushed_at)}`}</p>
             <p>|</p>
             <p>{`Created : ${newDate(gitRepo[0].created_at)}`}</p>
+            <div className={styles['my-project-link']}>
+              <a href={projectText[0].github}>
+                <Git />
+              </a>
+              {projectText[0].url && (
+                <a href={projectText[0].url}>
+                  <Url />
+                </a>
+              )}
+            </div>
           </div>
           <div className={styles['my-project-intro']}>
             <p>{projectText[0].text2}</p>

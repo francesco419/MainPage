@@ -21,6 +21,7 @@
 
 .my-project-update p {
   font-size: 1.5rem;
+  line-height: 2.5rem;
   color: #00000090;
 }
 
@@ -34,6 +35,28 @@
   line-height: 3rem;
   font-weight: 500;
 }
+
+/*-------------------------------------*/
+
+.my-project-link {
+  margin: 0 0 0 20px;
+}
+
+.my-project-link a {
+  margin: 0 20px;
+}
+
+.my-project-link svg {
+  height: 30px;
+  width: 30px;
+  fill: #00000090;
+}
+
+.my-project-link svg:hover {
+  fill: #000;
+}
+
+/*-------------------------------------*/
 
 .my-project-stack {
   margin: 50px 0;

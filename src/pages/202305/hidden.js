@@ -32,7 +32,7 @@ const aboutMe = [
 
 const mySkills = [
   {
-    title: 'Baics',
+    title: 'Basics',
     detail: SHORTEN[0],
     png: PNGIMAGES[0],
     color: '#ff8b2e',
