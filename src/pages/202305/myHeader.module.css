@@ -25,7 +25,12 @@
   position: absolute;
   top: 100%;
   left: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 10px 0;
 }
@@ -37,6 +42,8 @@
 
 .hidden-header-project:hover .hidden-header-link,
 .hidden-header-link:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 

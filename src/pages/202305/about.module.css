@@ -86,6 +86,8 @@
   margin: 0;
   /* animation: slideOut 0.5s linear forwards; */
   overflow: hidden;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 
