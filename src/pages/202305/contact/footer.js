@@ -36,7 +36,7 @@ export default function FooterContact({ refer }) {
         })}
       </div>
       <div className={styles['hidden-contact-csv']}>
-        <a href='./assets/portfolio/portfolio.pdf' download=''>
+        <a href={'/portfolio.pdf'} download=''>
           download resume
         </a>
       </div>

@@ -1,8 +1,0 @@
-.fifth-page {
-  scroll-snap-align: start;
-  display: flex;
-  height: 100vh;
-  color: #000;
-  overflow: hidden;
-  font-size: 1vw;
-}

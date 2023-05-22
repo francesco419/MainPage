@@ -1,11 +1,10 @@
 import styles from './hidden.module.css';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { TEXTARRAY, PNGIMAGES } from '../../context/ProjectText';
 import { SHORTEN } from '../../context/SKillText';
 import About from './about';
 import Skill from './skill';
 import Project from './project';
-import Contact from './contact/contact';
 import MyHeader from './myHeader';
 import FooterContact from './contact/footer';
 import TopIndicator from './top/toTop';
@@ -29,6 +28,8 @@ const aboutMe = [
     detail: TEXTARRAY[2]
   }
 ];
+
+const delayArray = [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7];
 
 const mySkills = [
   {
@@ -122,7 +123,19 @@ const mySkills = [
     detail: SHORTEN[2],
     png: PNGIMAGES[2],
     color: '#9463fb',
-    form: <canvas id='canvas' />
+    form: (
+      <div className={styles['hidden-skill-bb']}>
+        {delayArray.map((data) => {
+          return (
+            <div
+              className={styles['hidden-skill-aa']}
+              style={{ animationDelay: `${data}s` }}
+              key={`${data}_circle`}
+            />
+          );
+        })}
+      </div>
+    )
   }
 ];
 

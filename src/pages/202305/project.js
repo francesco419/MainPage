@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './project.module.css';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
 export default function Project({ projects }) {
   return (

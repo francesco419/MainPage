@@ -1,9 +1,0 @@
-.title {
-  color: var(--color-base-blue);
-  text-align: center;
-  font-size: 3vw;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}

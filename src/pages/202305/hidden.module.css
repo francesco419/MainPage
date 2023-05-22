@@ -323,7 +323,31 @@
   }
 }
 
-canvas {
-  width: inherit;
-  height: inherit;
+.hidden-skill-bb {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.hidden-skill-aa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 5px solid;
+  width: 200px;
+  height: 200px;
+  animation: loop 3s linear infinite;
+  transform: scale(0);
+}
+
+@keyframes loop {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
 }
