@@ -3,7 +3,7 @@ html {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Pretendard-Regular';
+  font-family: 'IBMPlexSansKR-Regular';
   color: var(--color-white);
   scroll-behavior: smooth;
 }
@@ -27,39 +27,35 @@ html {
 /*#d0e9ef*/
 
 a {
-  font-family: 'Pretendard-Regular';
+  font-family: 'IBMPlexSansKR-Regular';
   text-decoration: none;
   color: var(--color-black);
 }
 
 p,
 pre {
-  font-family: 'Pretendard-Regular';
+  font-family: 'IBMPlexSansKR-Regular';
   font-size: 1vw;
   margin: 0;
 }
 
-h2 {
-  font-family: 'Pretendard-Regular';
-  margin: 0;
-}
-
+h2,
 h3 {
-  font-family: 'Pretendard-Regular';
+  font-family: 'IBMPlexSansKR-Regular';
   margin: 0;
 }
 
 input,
 textarea {
-  font-family: 'Pretendard-Regular';
+  font-family: 'IBMPlexSansKR-Regular';
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
     format('woff');
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
 }
 

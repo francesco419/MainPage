@@ -76,9 +76,12 @@ export default function ProjectPage() {
           <div className={styles['my-project-stack']}>
             <h1>Skill Stack</h1>
             <div className={styles['my-project-skills']}>
-              {projectText[0].program.map((data) => {
+              {projectText[0].program.map((data, index) => {
                 return (
-                  <div className={styles['my-project-skill']}>
+                  <div
+                    className={styles['my-project-skill']}
+                    key={`skill_${index}`}
+                  >
                     <p>{data}</p>
                   </div>
                 );
@@ -89,7 +92,10 @@ export default function ProjectPage() {
             {projectText[0].img.map((data, index) => {
               if (index < 3) {
                 return (
-                  <div className={styles['my-project-img']}>
+                  <div
+                    className={styles['my-project-img']}
+                    key={`img_${index}`}
+                  >
                     <img src={data} />
                   </div>
                 );
@@ -99,9 +105,9 @@ export default function ProjectPage() {
           <div className={styles['my-project-result']}>
             <h1>Result & Take Away</h1>
             <ul>
-              {projectText[0].result.map((data) => {
+              {projectText[0].result.map((data, index) => {
                 return (
-                  <li>
+                  <li key={`result_${index}`}>
                     <p>{data}</p>
                   </li>
                 );

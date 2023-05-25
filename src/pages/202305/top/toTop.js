@@ -6,6 +6,9 @@ export default function TopIndicator() {
 
   useEffect(() => {
     window.addEventListener('scroll', yScroll);
+    return () => {
+      window.removeEventListener('scroll', yScroll);
+    };
   }, []);
 
   function yScroll() {

@@ -4,6 +4,7 @@
   right: 50px;
   color: #000;
   overflow: hidden;
+  z-index: 99;
 }
 
 .top-container button {

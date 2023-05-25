@@ -176,12 +176,12 @@ export default function Hidden() {
         <div ref={about} className={styles['hidden-about']}>
           <p className={styles['hidden-rem']}>ABOUT ME</p>
           {aboutMe.map((data, index) => {
-            return <About about={data} count={index} />;
+            return <About about={data} count={index} key={`about_${index}`} />;
           })}
         </div>
         <div ref={skill} className={styles['hidden-skill']}>
           <p className={styles['hidden-rem']}>SKILL</p>
-          {mySkills.map((data) => {
+          {mySkills.map((data, index) => {
             return (
               <Skill
                 title={data.title}
@@ -189,6 +189,7 @@ export default function Hidden() {
                 img={data.png}
                 form={data.form}
                 color={data.color}
+                key={`skill_${index}`}
               />
             );
           })}
@@ -196,8 +197,8 @@ export default function Hidden() {
         <div ref={project} className={styles['hidden-project']}>
           <p className={styles['hidden-rem']}>PROJECT</p>
           <div className={styles['hidden-project-container']}>
-            {myProjects.map((data) => {
-              return <Project projects={data} />;
+            {myProjects.map((data, index) => {
+              return <Project projects={data} key={`project_${index}`} />;
             })}
           </div>
         </div>

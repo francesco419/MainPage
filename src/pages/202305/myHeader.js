@@ -13,7 +13,7 @@ export default function MyHeader({ refer }) {
   if (refer === null) {
     return (
       <div className={styles['hidden-header']}>
-        <button onClick={() => nav('/hidden')}>MAIN</button>
+        <button onClick={() => nav(`${process.env.PUBLIC_URL}`)}>MAIN</button>
         <button className={styles['hidden-header-project']}>
           PROJECT
           <div className={styles['hidden-header-link']}>
