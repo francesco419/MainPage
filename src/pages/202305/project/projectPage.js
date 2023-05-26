@@ -2,17 +2,21 @@ import { useEffect, useState } from 'react';
 import MyHeader from '../myHeader';
 import styles from './projectPage.module.css';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ProjectDetailText } from '../../../context/ProjectText';
 import FooterContact from '../contact/footer';
 import { ReactComponent as Right } from '../../../assets/svg/right.svg';
-import { useNavigate } from 'react-router-dom';
 import TopIndicator from '../top/toTop';
 import { ReactComponent as Git } from '../../../assets/svg/project/github.svg';
 import { ReactComponent as Url } from '../../../assets/svg/project/url.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { saveProject, setProject } from '../../../redux/project';
 
 export default function ProjectPage() {
   const param = useParams();
+  const dispatch = useDispatch();
+  const projectRedux = useSelector((state) => state.project.value);
+  const [params, setParams] = useState();
   const [gitRepo, setGitRepo] = useState();
   const [loading, setLoading] = useState(true);
   const projectText = ProjectDetailText.filter(
@@ -21,20 +25,26 @@ export default function ProjectPage() {
   const nav = useNavigate();
 
   useEffect(() => {
-    getGithub();
+    if (param.id) {
+      dispatch(setProject(param.id));
+      getGithub(param.id);
+    } else {
+      getGithub(projectRedux);
+    }
     window.scrollTo(0, 0);
   }, []);
 
-  const getGithub = async () => {
+  const getGithub = async (title) => {
     try {
       const response = await axios.get(
         'https://api.github.com/users/francesco419/repos'
       );
       const repo = response.data.filter((data) => {
-        return data.name === param.id;
+        return data.name === title;
       });
       setGitRepo((gitRepo) => repo);
       setLoading((loading) => false);
+      dispatch(setProject(title));
     } catch {
       console.log('fetching error');
     }
@@ -48,7 +58,7 @@ export default function ProjectPage() {
     return <div>Loading</div>;
   } else {
     return (
-      <div>
+      <div className={styles['my-container']}>
         <TopIndicator />
         <div className={styles['my-project']}>
           <MyHeader refer={null} />
