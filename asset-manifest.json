@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.621a401b.css",
-    "main.js": "/MainPage/static/js/main.fa0642a4.js",
+    "main.css": "/MainPage/static/css/main.9b71cd52.css",
+    "main.js": "/MainPage/static/js/main.202cd522.js",
     "static/media/youtube1.PNG": "/MainPage/static/media/youtube1.9ffae279a2ad3014c7dd.PNG",
     "static/media/2.PNG": "/MainPage/static/media/2.547275bcf17ba27fd4f1.PNG",
     "static/media/1.PNG": "/MainPage/static/media/1.518be18cb2a0274af962.PNG",
     "static/media/youtube2.PNG": "/MainPage/static/media/youtube2.220f2f950a1b2104cfb5.PNG",
     "static/media/youtube3.PNG": "/MainPage/static/media/youtube3.6d077d5cdf84c14adae8.PNG",
     "static/media/3.PNG": "/MainPage/static/media/3.0fd3e95c717ab45474ab.PNG",
+    "static/media/PortfolioPDF.pdf": "/MainPage/static/media/PortfolioPDF.c2ca3d7b30df213aa0e1.pdf",
     "static/media/5.PNG": "/MainPage/static/media/5.764cfdc51dd99f67aa9d.PNG",
     "static/media/4.PNG": "/MainPage/static/media/4.fb4fb66a612a00f8ced2.PNG",
     "static/media/html.png": "/MainPage/static/media/html.611c874567fe2fb46409.png",
@@ -21,11 +22,11 @@
     "static/media/github.svg": "/MainPage/static/media/github.aa281485ccabe42c46c9ee9911d706c8.svg",
     "index.html": "/MainPage/index.html",
     "static/media/right.svg": "/MainPage/static/media/right.0d939e791bf467a12359014f5cbdc677.svg",
-    "main.621a401b.css.map": "/MainPage/static/css/main.621a401b.css.map",
-    "main.fa0642a4.js.map": "/MainPage/static/js/main.fa0642a4.js.map"
+    "main.9b71cd52.css.map": "/MainPage/static/css/main.9b71cd52.css.map",
+    "main.202cd522.js.map": "/MainPage/static/js/main.202cd522.js.map"
   },
   "entrypoints": [
-    "static/css/main.621a401b.css",
-    "static/js/main.fa0642a4.js"
+    "static/css/main.9b71cd52.css",
+    "static/js/main.202cd522.js"
   ]
 }
