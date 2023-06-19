@@ -1,5 +1,7 @@
 import styles from './footer.module.css';
 import Contact from './contact';
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
+import portfolio from './PortfolioPDF.pdf';
 
 export default function FooterContact({ refer }) {
   const myContact = [
@@ -20,6 +22,21 @@ export default function FooterContact({ refer }) {
     }
   ];
 
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch('PortfolioPDF.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'PortfolioPDF.pdf';
+        alink.click();
+      });
+    });
+  };
+
   return (
     <div ref={refer} className={styles['hidden-contact']}>
       <p className={styles['hidden-rem']}>CONTACT</p>
@@ -36,8 +53,14 @@ export default function FooterContact({ refer }) {
         })}
       </div>
       <div className={styles['hidden-contact-csv']}>
-        <a href={'/portfolio.pdf'} download=''>
-          download resume
+        {/* <button onClick={onButtonClick}>download resume</button> */}
+        <a
+          href={portfolio}
+          download='PortFolio'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <button>Download resume</button>
         </a>
       </div>
       <p className={styles['hidden-contact-rights']}>

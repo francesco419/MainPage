@@ -28,6 +28,17 @@
   font-weight: 600;
 }
 
+.hidden-contact-csv button {
+  border: 0;
+  background: none;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+.hidden-contact-csv:hover {
+  filter: brightness(0.8);
+}
+
 .hidden-contact-rights {
   position: absolute;
   bottom: 20px;

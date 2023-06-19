@@ -326,3 +326,11 @@ Skill부분에서 텍스트스크롤링 파트 보완필요.
 
 - skill 항목 추가
 - drag & drop을 사용한 about me 수정
+
+## - 230526
+
+- HashRouter vs BrowserRouter
+
+## - 230619
+
+- 이력서 다운로드 오류 수정
