@@ -17,6 +17,10 @@ import social1 from '../assets/image/projectImgNew/sns/1.PNG';
 import social2 from '../assets/image/projectImgNew/sns/2.PNG';
 import social3 from '../assets/image/projectImgNew/sns/3.PNG';
 import social4 from '../assets/image/projectImgNew/sns/4.PNG';
+/**mindmap */
+import mindmap1 from '../assets/image/projectImgNew/mindmap/mindmap1.png';
+import mindmap2 from '../assets/image/projectImgNew/mindmap/mindmap2.png';
+import mindmap3 from '../assets/image/projectImgNew/mindmap/mindmap3.png';
 /**image */
 import css from '../assets/svg/icon/css.png';
 import javascript from '../assets/svg/icon/javascript.png';
@@ -102,6 +106,7 @@ export const ProjectDetailText = [
     id: '1',
     param: 'MainPage',
     name: 'Portfolio',
+    show: false,
     intro:
       '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
     text2:
@@ -125,6 +130,7 @@ export const ProjectDetailText = [
     id: '2',
     param: 'Youtube',
     name: 'Youtube Clone',
+    show: true,
     intro:
       '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 유튜브 UI를 직접 구현했습니다',
     text2:
@@ -147,6 +153,7 @@ export const ProjectDetailText = [
     id: '3',
     param: 'Travel',
     name: 'Travel Away',
+    show: true,
     intro:
       '코로나 이후 여행 수요의 증가로 각 국가의 기본 정보를 소개할 수 있는 웹페이지를 제작했습니다.',
     text2:
@@ -168,6 +175,7 @@ export const ProjectDetailText = [
     id: '4',
     param: 'post_typescript_redux',
     name: 'Social Network',
+    show: true,
     intro:
       '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS 형태의 웹페이지입니다.',
     text2:
@@ -185,9 +193,57 @@ export const ProjectDetailText = [
       'NodeJS, MySQL, Express를 사용한 백엔드를 구성 및 CORS 처리, 쿼리를 통한 DB 관리, 이미지 파일 저장 및 데이터 통신 경험',
       'Lazy, Suspense를 적용한 코드 분할을 통해 페이지 성능 최적화 및 lighthouse를 통한 웹 페이지 평가를 통해 지속적으로 최적화 방법을 모색'
     ],
+    next: 'BrainBomb'
+  },
+  {
+    id: '5',
+    param: 'BrainBomb',
+    name: 'MindMap',
+    show: true,
+    intro:
+      '사용자와 보다 더 상호작용을 할 수 있는 기능을 가진 마인드맵을 구성할 수 있는 웹사이트 제작, 서로 상관관계에 있는 여러 코드들의 복잡한 구성과 이에대한 연쇄적인 오류 해결능력',
+    text2:
+      '기존 마인드맵 웹사이트의 회원가입,로그인과 복잡한 가이드 등의 불편함을 해소하고자 남녀노소 누구나 보기에 직관적이고 쉽게 마인드맵을 구성할 수 있도록 해당 프로젝트를 시작하였습니다. 서버통신없이 오직 기능적인 부분만을 고려하여 제작하게 되었고, 이 프로젝트를 진행하면서 일반적인 웹사이트와 다른 기능적인 면을 제공하는 분야에 관심을 가지게 되었고 특히 발생하는 연쇄적인 오류에 문제를 파악하고 능숙하게 해결하는 실력을 크게 향상하는 계기가 되었습니다.',
+    img: [mindmap1, mindmap2, mindmap3],
+    url: 'https://keen-nasturtium-541fc9.netlify.app',
+    github: 'https://github.com/francesco419/BrainBomb',
+    contribution: '개인 프로젝트',
+    created: '03.2022',
+    LastUpdate: '04.19.2023',
+    program: ['React', 'TypeScript', 'SCSS', 'Lodash', 'Redux Toolkit'],
+    result: [
+      'Style-in-component를 통해 재사용성이 높은 컴포넌트의 일관성있고 통일된 스타일을 제공할 수 있도록 하였습니다.',
+      'Redux를 통해 단순 상태관리보다 해당 상태에 관한 복잡한 연계기능을 효율적으로 풀어내어 프로젝트 전반의 사용자경험의 향상을 야기시켰습니다',
+      'Lodash 라이브러리의 적즉적인 사용을 통해 기존 바닐라JS에서 따로 제공하지 않는 다양한 함수를 효과적으로 사용하여 복잡한 연계성이 있는 데이터들을 보다 효율적으로 가공할수 있었습니다.',
+      '마인드맵의 여러 요소들로 인해 발생하는 연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결하는 문제해결 능력을 키우게 되었습니다.'
+    ],
     next: false
   }
 ];
+
+/* {
+  id: '1',
+  param: 'MainPage',
+  name: 'Portfolio',
+  intro:
+    '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
+  text2:
+    'React를 사용한 첫 번째 프로젝트로 저를 소개하는 포트폴리오 웹페이지입니다.\n현재 진행하고 있거나 완료된 프로젝트를 기재하고 관련 이미지와 코드, 페이지 링크를 포함했습니다.\nReact Hooks 및 State, Router 등의 작동 방식을 익히고 이를 직접 사용해 보며 React에 대해 \n가장 많이 학습하게 된 프로젝트이며, 기록하는 웹페이지로서 주기적으로 업데이트를 진행하여 코드의 유지보수를 하고 있습니다.',
+  img: [port1, port2, port3, port4, port5],
+  url: 'https://francesco419.github.io/MainPage',
+  github: 'https://github.com/francesco419/MainPage',
+  contribution: '개인 프로젝트',
+  created: '04.2022',
+  LastUpdate: '04.19.2023',
+  program: ['React', 'Redux Toolkit'],
+  result: [
+    '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하게 되는 계기',
+    'Virtual DOM의 작동 이해 및 이를 효과적으로 사용하기 위한 최적의 렌더링 방식에 대해 학습 및 응용',
+    '요구되는 적절한 애니메이션을 CSS의 keyframe / transition 및 자바스크립트 애니메이션을 통해 구현',
+    '다양한 사용자 행동에 따라 반응하는 JSX 이벤트 처리'
+  ],
+  next: 'Youtube'
+}, */
 
 export const ProjectTXT = [
   {
@@ -221,15 +277,15 @@ export const ProjectTXT = [
 ];
 
 export const myProjects = [
-  {
+  /* {
     name: 'Portfolio',
     text: '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
     img: port1,
     to: 'MainPage'
-  },
+  }, */
   {
     name: 'YouTube',
-    text: '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 유튜브 UI를 직접 구현했습니다',
+    text: '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 API를 활용한 기능 및 UI를 직접 구현했습니다.',
     img: youtube1,
     to: 'Youtube'
   },
@@ -244,6 +300,12 @@ export const myProjects = [
     text: '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지입니다.',
     img: social1,
     to: 'post_typescript_redux'
+  },
+  {
+    name: 'MindMap',
+    text: '사용자와 보다 더 상호작용을 할 수 있는 기능을 가진 마인드맵을 구성할 수 있는 웹사이트 제작했습니다.',
+    img: mindmap1,
+    to: 'BrainBomb'
   }
 ]; //new
 

@@ -2,6 +2,7 @@ import styles from './myHeader.module.css';
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { ProjectDetailText } from '../../context/ProjectText';
 
 export default function MyHeader({ refer }) {
   const nav = useNavigate();
@@ -17,10 +18,10 @@ export default function MyHeader({ refer }) {
         <button className={styles['hidden-header-project']}>
           PROJECT
           <div className={styles['hidden-header-link']}>
-            <Link to={`/project/MainPage`}>Porfolio</Link>
-            <Link to={`/project/Youtube`}>YouTube Clone</Link>
-            <Link to={`/project/Travel`}>Travel Away</Link>
-            <Link to={`/project/post_typescript_redux`}>Social Network</Link>
+            {ProjectDetailText.map((o) => {
+              if (o.show === true)
+                return <Link to={`/project/${o.param}`}>{o.name}</Link>;
+            })}
           </div>
         </button>
       </div>
@@ -36,10 +37,10 @@ export default function MyHeader({ refer }) {
         >
           PROJECT
           <div className={styles['hidden-header-link']}>
-            <Link to={`/project/MainPage`}>Porfolio</Link>
-            <Link to={`/project/Youtube`}>YouTube Clone</Link>
-            <Link to={`/project/Travel`}>Travel Away</Link>
-            <Link to={`/project/post_typescript_redux`}>Social Network</Link>
+            {ProjectDetailText.map((o) => {
+              if (o.show === true)
+                return <Link to={`/project/${o.param}`}>{o.name}</Link>;
+            })}
           </div>
         </button>
         <button onClick={() => onClickHandler(refer.contact)}>CONTACT</button>
