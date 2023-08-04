@@ -1,22 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MyHeader from '../myHeader';
 import styles from './projectPage.module.css';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ProjectDetailText } from '../../../context/ProjectText';
 import FooterContact from '../contact/footer';
-import { ReactComponent as Right } from '../../../assets/svg/right.svg';
 import TopIndicator from '../top/toTop';
-import { ReactComponent as Git } from '../../../assets/svg/project/github.svg';
-import { ReactComponent as Url } from '../../../assets/svg/project/url.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { saveProject, setProject } from '../../../redux/project';
+import project, { saveProject, setProject } from '../../../redux/project';
+import ProjectImage from './projectImage';
+import ProjectSkill from './projectSkill';
+import ProjectUpdate from './projectUpdate';
+import { newDate } from '../../../function/newDate';
+import ProjectResult from './projectResult';
+import ProjectNext from './projectNext';
 
 export default function ProjectPage() {
   const param = useParams();
   const dispatch = useDispatch();
   const projectRedux = useSelector((state) => state.project.value);
-  const [params, setParams] = useState();
   const [gitRepo, setGitRepo] = useState();
   const [loading, setLoading] = useState(true);
   const projectText = ProjectDetailText.filter(
@@ -42,16 +44,12 @@ export default function ProjectPage() {
       const repo = response.data.filter((data) => {
         return data.name === title;
       });
+      dispatch(setProject(title));
       setGitRepo((gitRepo) => repo);
       setLoading((loading) => false);
-      dispatch(setProject(title));
     } catch {
       console.log('fetching error');
     }
-  };
-
-  const newDate = (date) => {
-    return date.substr(0, 10).replaceAll('-', '.');
   };
 
   if (loading) {
@@ -65,75 +63,16 @@ export default function ProjectPage() {
           <p
             className={styles['my-project-title']}
           >{`Project ${projectText[0].id} : ${projectText[0].name}`}</p>
-          <div className={styles['my-project-update']}>
-            <p>{`Last Update : ${newDate(gitRepo[0].pushed_at)}`}</p>
-            <p>|</p>
-            <p>{`Created : ${newDate(gitRepo[0].created_at)}`}</p>
-            <div className={styles['my-project-link']}>
-              <a href={projectText[0].github}>
-                <Git />
-              </a>
-              {projectText[0].url && (
-                <a href={projectText[0].url}>
-                  <Url />
-                </a>
-              )}
-            </div>
-          </div>
+          <ProjectUpdate git={gitRepo[0]} project={projectText[0]} />
           <div className={styles['my-project-intro']}>
             <p>{projectText[0].text2}</p>
           </div>
-          <div className={styles['my-project-stack']}>
-            <h1>Skill Stack</h1>
-            <div className={styles['my-project-skills']}>
-              {projectText[0].program.map((data, index) => {
-                return (
-                  <div
-                    className={styles['my-project-skill']}
-                    key={`skill_${index}`}
-                  >
-                    <p>{data}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className={styles['my-project-image']}>
-            {projectText[0].img.map((data, index) => {
-              if (index < 3) {
-                return (
-                  <div
-                    className={styles['my-project-img']}
-                    key={`img_${index}`}
-                  >
-                    <img src={data} />
-                  </div>
-                );
-              }
-            })}
-          </div>
-          <div className={styles['my-project-result']}>
-            <h1>Result & Take Away</h1>
-            <ul>
-              {projectText[0].result.map((data, index) => {
-                return (
-                  <li key={`result_${index}`}>
-                    <p>{data}</p>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          {projectText[0].next ? (
-            <div className={styles['my-project-next']}>
-              <button onClick={() => nav(`/project/${projectText[0].next}`)}>
-                Next
-              </button>
-              <Right />
-            </div>
-          ) : null}
+          <ProjectSkill project={projectText[0]} />
+          <ProjectImage project={projectText[0]} />
+          <ProjectResult project={projectText[0]} />
           <FooterContact />
         </div>
+        <ProjectNext project={projectText[0]} />
       </div>
     );
   }

@@ -124,6 +124,7 @@ export const ProjectDetailText = [
       '요구되는 적절한 애니메이션을 CSS의 keyframe / transition 및 자바스크립트 애니메이션을 통해 구현',
       '다양한 사용자 행동에 따라 반응하는 JSX 이벤트 처리'
     ],
+    prev: false,
     next: 'Youtube'
   },
   {
@@ -147,6 +148,7 @@ export const ProjectDetailText = [
       '클로닝 대상 웹사이트를 분석함으로써 HTML, CSS의 구성 및 작성 이해도를 높이고, 이를 바탕으로 직접 구현',
       'API의 데이터를 일차원적으로 표현하기보다 편집 및 가공을 통해 의도한 데이터로 새로 구성하여 표현'
     ],
+    prev: 'MainPage',
     next: 'Travel'
   },
   {
@@ -169,6 +171,7 @@ export const ProjectDetailText = [
       '사용자에게 유용한 정보를 제공할 수 있는 UI에 대해 깊게 고민하고 구상한 기능을 직접 구현',
       '컴포넌트 간의 상태 값 및 상태 관리 함수의 prop drilling으로 인한 코드 구성 복잡 및 가독성 저하에 대한 대체 기술 필요성으로서 이후 프로젝트에서 Redux 적극 사용 '
     ],
+    prev: 'Youtube',
     next: 'post_typescript_redux'
   },
   {
@@ -193,6 +196,7 @@ export const ProjectDetailText = [
       'NodeJS, MySQL, Express를 사용한 백엔드를 구성 및 CORS 처리, 쿼리를 통한 DB 관리, 이미지 파일 저장 및 데이터 통신 경험',
       'Lazy, Suspense를 적용한 코드 분할을 통해 페이지 성능 최적화 및 lighthouse를 통한 웹 페이지 평가를 통해 지속적으로 최적화 방법을 모색'
     ],
+    prev: 'Travel',
     next: 'BrainBomb'
   },
   {
@@ -217,6 +221,7 @@ export const ProjectDetailText = [
       'Lodash 라이브러리의 적즉적인 사용을 통해 기존 바닐라JS에서 따로 제공하지 않는 다양한 함수를 효과적으로 사용하여 복잡한 연계성이 있는 데이터들을 보다 효율적으로 가공할수 있었습니다.',
       '마인드맵의 여러 요소들로 인해 발생하는 연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결하는 문제해결 능력을 키우게 되었습니다.'
     ],
+    prev: 'post_typescript_redux',
     next: false
   }
 ];

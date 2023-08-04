@@ -6,6 +6,7 @@ html {
   font-family: 'IBMPlexSansKR-Regular';
   color: var(--color-white);
   scroll-behavior: smooth;
+  background-color: #f8f8f8;
 }
 
 :root {

@@ -1,5 +1,5 @@
 .my-container {
-  background-color: #f8f8f8;
+  background: none;
 }
 
 .my-project {
@@ -86,8 +86,50 @@
   font-size: 1.5rem;
 }
 
+.my-project-image {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  border: 1px solid #000;
+  overflow: hidden;
+  animation: opc 1s linear forwards;
+}
+
+@keyframes opc {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.my-project-image-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: min-content;
+  z-index: 90;
+}
+
+.my-project-image-button button {
+  width: 50px;
+  height: 100px;
+  background-color: #00000020;
+  border: none;
+  cursor: pointer;
+}
+
+.my-project-image-button button:hover {
+  background-color: #00000060;
+}
+
 .my-project-img {
-  margin: 40px 0;
+  display: flex;
+  transition: all 1s;
 }
 
 .my-project-img img {
@@ -112,18 +154,37 @@
   word-break: keep-all;
   line-height: 3rem;
 }
+/* transform: translateY(-50%);
+top: 50%; */
 
 .my-project-next {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0 5%;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 50px 0;
+  transition: all 1s;
+}
+
+.my-project-next div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .my-project-next button {
