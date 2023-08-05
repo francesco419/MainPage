@@ -116,10 +116,10 @@
 }
 
 .my-project-image-button button {
+  border: 1px solid #fff;
   width: 50px;
   height: 100px;
   background-color: #00000020;
-  border: none;
   cursor: pointer;
 }
 
