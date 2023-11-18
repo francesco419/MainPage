@@ -232,6 +232,44 @@ export const ProjectDetailText = [
   }
 ];
 
+const tempFinedition = {
+  id: '5',
+  param: 'FINEDITION_WORK',
+  name: 'Finedition',
+  show: true,
+  intro:
+    '현직 디자이너와 협업하여 창업을 준비하는 사람의 요구에 맞춰 사업의 기반이 될 수 있는 웹페이지의 프로토타입을 제작, 한국 관광공사에서 진행하는 공모전에서 수상',
+  text2:
+    '현재까지 익힌 기술들을 토대로 현직 디자이너와 협업하여 의뢰자의 요구에 맞게 디자인, 기능 등 웹페이지의 모든 요소를 제작하였습니다. 프로젝트 진행과정에 있어 협업에 대한 경험과 이해를 쌓고, 요구사항에 대해서는 이를 어떻게 구현할지에 대한 문제를 토의를 통해 만족할 수 있는 해결책을 찾고, 다양한 오류들을 해결해가는 시간들을 통해 풀어야할 다양한 형태의 문제에 보다 능숙한 처리 능력을 가지고자 임했습니다.',
+  mission: null,
+  img: [mindmap1, mindmap2, mindmap3],
+  url: 'https://finedition.kr/',
+  github: 'https://github.com/francesco419/FINEDITION_WORK',
+  contribution: '팀 프로젝트',
+  created: '03.2022',
+  LastUpdate: '04.19.2023',
+  program: [
+    'React',
+    'TypeScript',
+    'SCSS',
+    'Lodash',
+    'Redux Toolkit',
+    'NodeJs',
+    'Express',
+    'AWS S3',
+    'AWS RDS',
+    'Figma'
+  ],
+  result: [
+    '서버와 페이지의 분리배포',
+    'Google 로그인',
+    'SCSS를 사용하여 보다 더 Interactive한 기능 사용가능',
+    '마인드맵의 여러 요소들로 인해 발생하는 연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결하는 문제해결 능력을 키우게 되었습니다.'
+  ],
+  prev: '',
+  next: false
+};
+
 /* {
   id: '1',
   param: 'MainPage',
