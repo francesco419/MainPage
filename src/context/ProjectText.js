@@ -21,6 +21,9 @@ import social4 from '../assets/image/projectImgNew/sns/4.PNG';
 import mindmap1 from '../assets/image/projectImgNew/mindmap/mindmap1.png';
 import mindmap2 from '../assets/image/projectImgNew/mindmap/mindmap2.png';
 import mindmap3 from '../assets/image/projectImgNew/mindmap/mindmap3.png';
+/**finedition */
+import finedition1 from '../assets/image/projectImgNew/finedition/finedition1.png';
+
 /**image */
 import css from '../assets/svg/icon/css.png';
 import javascript from '../assets/svg/icon/javascript.png';
@@ -229,6 +232,43 @@ export const ProjectDetailText = [
     ],
     prev: 'post_typescript_redux',
     next: false
+  },
+  {
+    id: '5',
+    param: 'FINEDITION_WORK',
+    name: 'Finedition',
+    show: true,
+    intro:
+      '현직 디자이너와 협업하여 창업을 준비하는 사람의 요구에 맞춰 사업의 기반이 될 수 있는 웹페이지의 프로토타입을 제작, 한국 관광공사에서 진행하는 공모전에서 수상',
+    text2:
+      '현재까지 익힌 기술들을 토대로 현직 디자이너와 협업하여 의뢰자의 요구에 맞게 디자인, 기능 등 웹페이지의 모든 요소를 제작하였습니다. 프로젝트 진행과정에 있어 협업에 대한 경험과 이해를 쌓고, 요구사항에 대해서는 이를 어떻게 구현할지에 대한 문제를 토의를 통해 만족할 수 있는 해결책을 찾고, 다양한 오류들을 해결해가는 시간들을 통해 풀어야할 다양한 형태의 문제에 보다 능숙한 처리 능력을 가지고자 임했습니다.',
+    mission: null,
+    img: [finedition1],
+    url: 'https://finedition.kr/',
+    github: 'https://github.com/francesco419/FINEDITION_WORK',
+    contribution: '팀 프로젝트',
+    created: '03.2022',
+    LastUpdate: '04.19.2023',
+    program: [
+      'React',
+      'TypeScript',
+      'SCSS',
+      'Lodash',
+      'Redux Toolkit',
+      'NodeJs',
+      'Express',
+      'AWS S3',
+      'AWS RDS',
+      'Figma'
+    ],
+    result: [
+      '서버와 페이지의 분리배포',
+      'Google 로그인',
+      'SCSS를 사용하여 보다 더 Interactive한 기능 사용가능',
+      '마인드맵의 여러 요소들로 인해 발생하는 연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결하는 문제해결 능력을 키우게 되었습니다.'
+    ],
+    prev: '',
+    next: false
   }
 ];
 
@@ -333,18 +373,6 @@ export const myProjects = [
     to: 'MainPage'
   }, */
   {
-    name: 'YouTube',
-    text: '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 API를 활용한 기능 및 UI를 직접 구현했습니다.',
-    img: youtube1,
-    to: 'Youtube'
-  },
-  {
-    name: 'Travel Away',
-    text: '코로나 이후 여행 수요의 증가로 각 국가의 기본 정보를 소개할 수 있는 웹페이지를 제작했습니다.',
-    img: travel1,
-    to: 'Travel'
-  },
-  {
     name: 'Social Network',
     text: '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지입니다.',
     img: social1,
@@ -355,6 +383,18 @@ export const myProjects = [
     text: '사용자와 보다 더 상호작용을 할 수 있는 기능을 가진 마인드맵을 구성할 수 있는 웹사이트 제작했습니다.',
     img: mindmap1,
     to: 'BrainBomb'
+  },
+  {
+    name: 'YouTube',
+    text: '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 API를 활용한 기능 및 UI를 직접 구현했습니다.',
+    img: youtube1,
+    to: 'Youtube'
+  },
+  {
+    name: 'Finedition',
+    text: '예비 창업자의 요구에 맞춰 현직 디자이너와 협업하여 프로토타입을 제작, 관광공사 공모전에 참여하여 최우수상을 수상 하게 되었습니다.',
+    img: finedition1,
+    to: 'FINEDITION_WORK'
   }
 ]; //new
 

@@ -198,7 +198,9 @@ export default function Hidden() {
           <p className={styles['hidden-rem']}>PROJECT</p>
           <div className={styles['hidden-project-container']}>
             {myProjects.map((data, index) => {
-              return <Project projects={data} key={`project_${index}`} />;
+              return (
+                <Project projects={data} num={index} key={`project_${index}`} />
+              );
             })}
           </div>
         </div>

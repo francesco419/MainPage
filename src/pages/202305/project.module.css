@@ -7,8 +7,7 @@
   -webkit-transition: all 1.5s;
   -o-transition: all 1.5s;
   transition: all 1.5s;
-  background-color: #fff;
-  border: 1px solid #00000033;
+  background-color: #00000000;
 }
 
 .hidden-project-index img {
@@ -19,19 +18,19 @@
   border-radius: 20px;
 }
 
-.hidden-project-index:hover {
+/* .hidden-project-index:hover {
   -webkit-transform: translate(-10%, -10%) rotateZ(-5deg);
   -ms-transform: translate(-10%, -10%) rotate(-5deg);
   transform: translate(-10%, -10%) rotateZ(-5deg);
-}
+} */
 
 .hidden-project-index:hover .hidden-project-front {
   border: 0;
   color: #fff;
   background-color: #00000088;
-  -webkit-transform: translate(-10%, 20%) rotateZ(5deg);
+  /*   -webkit-transform: translate(-10%, 20%) rotateZ(5deg);
   -ms-transform: translate(-10%, 20%) rotate(5deg);
-  transform: translate(10%, 20%) rotateZ(5deg);
+  transform: translate(10%, 20%) rotateZ(5deg); */
 }
 
 .hidden-project-front {
@@ -49,9 +48,8 @@
   position: absolute;
   width: inherit;
   height: 350px;
-  border: 1px solid #000;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: #e9e6e6;
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;

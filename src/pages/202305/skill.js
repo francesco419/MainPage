@@ -14,7 +14,7 @@ export default function Skill({ title, detail, img, form, color }) {
       </div>
       <div
         className={`${styles['hidden-skill-img']}`}
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: '#00000010' }}
       >
         {form}
       </div>

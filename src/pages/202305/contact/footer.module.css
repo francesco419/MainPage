@@ -7,7 +7,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 40px 40px 20px;
-  height: 250px;
+  height: 150px;
   margin: 100px 0 0;
   background-color: #000;
   color: #fff;
@@ -42,11 +42,12 @@
 .hidden-contact-rights {
   position: absolute;
   bottom: 20px;
-  font-size: 1px;
+  font-size: 10px;
   color: #cfcfcfcc;
 }
 
 .hidden-rem {
+  line-height: 1;
   font-size: 3rem;
   font-weight: 600;
 }

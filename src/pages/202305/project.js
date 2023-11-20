@@ -3,7 +3,7 @@ import styles from './project.module.css';
 import Aos from 'aos';
 import { useEffect } from 'react';
 
-export default function Project({ projects }) {
+export default function Project({ projects, num }) {
   return (
     <div className={styles['hidden-project-index']}>
       <img src={projects.img} />

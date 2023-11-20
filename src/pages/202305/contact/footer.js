@@ -63,9 +63,9 @@ export default function FooterContact({ refer }) {
           <button>Download resume</button>
         </a>
       </div>
-      <p className={styles['hidden-contact-rights']}>
+      {/*       <p className={styles['hidden-contact-rights']}>
         2023@LeeSangHean. All Rights Reserved
-      </p>
+      </p> */}
     </div>
   );
 }

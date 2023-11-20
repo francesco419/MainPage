@@ -14,6 +14,7 @@ import ProjectUpdate from './projectUpdate';
 import { newDate } from '../../../function/newDate';
 import ProjectResult from './projectResult';
 import ProjectNext from './projectNext';
+import Aos from 'aos';
 
 export default function ProjectPage() {
   const param = useParams();
@@ -34,6 +35,7 @@ export default function ProjectPage() {
       getGithub(projectRedux);
     }
     window.scrollTo(0, 0);
+    Aos.init();
   }, []);
 
   const getGithub = async (title) => {
