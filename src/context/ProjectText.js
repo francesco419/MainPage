@@ -307,12 +307,6 @@ export const ProjectTXT = [
 ];
 
 export const myProjects = [
-  /* {
-    name: 'Portfolio',
-    text: '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
-    img: port1,
-    to: 'MainPage'
-  }, */
   {
     name: 'Social Network',
     text: '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지입니다.',
@@ -337,7 +331,7 @@ export const myProjects = [
     img: finedition1,
     to: 'FINEDITION_WORK'
   }
-]; //new
+];
 
 export const SkillsText = [
   {
