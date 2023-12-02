@@ -243,7 +243,7 @@ export const ProjectDetailText = [
     text2:
       '현재까지 익힌 기술들을 토대로 현직 디자이너와 협업하여 의뢰자의 요구에 맞게 디자인, 기능 등 웹페이지의 모든 요소를 제작하였습니다. 프로젝트 진행과정에 있어 협업에 대한 경험과 이해를 쌓고, 요구사항에 대해서는 이를 어떻게 구현할지에 대한 문제를 토의를 통해 만족할 수 있는 해결책을 찾고, 다양한 오류들을 해결해가는 시간들을 통해 풀어야할 다양한 형태의 문제에 보다 능숙한 처리 능력을 가지고자 임했습니다.',
     mission: null,
-    img: [finedition1],
+    img: [finedition1, mindmap2, mindmap3],
     url: 'https://finedition.kr/',
     github: 'https://github.com/francesco419/FINEDITION_WORK',
     contribution: '팀 프로젝트',
