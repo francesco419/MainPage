@@ -72,7 +72,8 @@ export default function About({ about, count }) {
     <div
       ref={refContainer}
       className={styles['hidden-about-index']}
-      onClick={onClickHandler}
+      onMouseEnter={onClickHandler}
+      onMouseLeave={onClickHandler}
     >
       <div ref={ref} className={styles['hidden-about-abs']} />
       <div className={styles['hidden-about-titles']}>

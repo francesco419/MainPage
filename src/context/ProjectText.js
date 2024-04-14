@@ -22,7 +22,10 @@ import mindmap1 from '../assets/image/projectImgNew/mindmap/mindmap1.png';
 import mindmap2 from '../assets/image/projectImgNew/mindmap/mindmap2.png';
 import mindmap3 from '../assets/image/projectImgNew/mindmap/mindmap3.png';
 /**finedition */
-import finedition1 from '../assets/image/projectImgNew/finedition/finedition1.png';
+import finedition_home from '../assets/image/projectImgNew/finedition/finedition-home.png';
+import finedition_food from '../assets/image/projectImgNew/finedition/finedition-food.png';
+import finedition_place from '../assets/image/projectImgNew/finedition/finedition-place.png';
+import finedition_seoul from '../assets/image/projectImgNew/finedition/finedition-seoul.png';
 
 /**image */
 import css from '../assets/svg/icon/css.png';
@@ -231,7 +234,7 @@ export const ProjectDetailText = [
       '마인드맵의 여러 요소들로 인해 발생하는 연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결하는 문제해결 능력을 키우게 되었습니다.'
     ],
     prev: 'post_typescript_redux',
-    next: false
+    next: 'FINEDITION_WORK'
   },
   {
     id: '5',
@@ -243,7 +246,7 @@ export const ProjectDetailText = [
     text2:
       '현재까지 익힌 기술들을 토대로 현직 디자이너와 협업하여 의뢰자의 요구에 맞게 디자인, 기능 등 웹페이지의 모든 요소를 제작하였습니다. 프로젝트 진행과정에 있어 협업에 대한 경험과 이해를 쌓고, 요구사항에 대해서는 이를 어떻게 구현할지에 대한 문제를 토의를 통해 만족할 수 있는 해결책을 찾고, 다양한 오류들을 해결해가는 시간들을 통해 풀어야할 다양한 형태의 문제에 보다 능숙한 처리 능력을 가지고자 임했습니다.',
     mission: null,
-    img: [finedition1, mindmap2, mindmap3],
+    img: [finedition_home, finedition_food, finedition_place, finedition_seoul],
     url: 'https://finedition.kr/',
     github: 'https://github.com/francesco419/FINEDITION_WORK',
     contribution: '팀 프로젝트',
@@ -257,8 +260,7 @@ export const ProjectDetailText = [
       'Redux Toolkit',
       'NodeJs',
       'Express',
-      'AWS S3',
-      'AWS RDS',
+      'AWS',
       'Figma'
     ],
     result: [
@@ -270,7 +272,7 @@ export const ProjectDetailText = [
       '정규표현식을 사용한 검증을 통해 입력 데이터의 유효성을 강화했습니다. 사용자의 입력이 지정한 양식과 일치하는지 확인하여 데이터의 정확성을 보장하고, 보안 측면에서도 적절한 검증을 수행하여 안전한 데이터 처리를 실현했습니다.',
       '디자이너와 Figma를 통한 협업을 통해 시각적 웹 개발을 원활하게 진행했습니다. Figma를 활용하여 디자인 파일을 공유하고 실시간으로 협업하며, 개발과 디자인 간의 원활한 의사소통을 도모하여 프로젝트의 일관성과 효율성을 높였습니다.'
     ],
-    prev: '',
+    prev: 'BrainBomb',
     next: false
   }
 ];
@@ -328,7 +330,7 @@ export const myProjects = [
   {
     name: 'Finedition',
     text: '예비 창업자의 요구에 맞춰 현직 디자이너와 협업하여 프로토타입을 제작, 관광공사 공모전에 참여하여 최우수상을 수상 하게 되었습니다.',
-    img: finedition1,
+    img: finedition_home,
     to: 'FINEDITION_WORK'
   }
 ];

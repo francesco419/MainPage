@@ -83,7 +83,7 @@
 }
 
 .my-project-skills div p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .my-project-image {
@@ -121,6 +121,7 @@
   height: 100px;
   background-color: #00000020;
   cursor: pointer;
+  color: white;
 }
 
 .my-project-image-button button:hover {

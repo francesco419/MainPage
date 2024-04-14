@@ -20,8 +20,8 @@ export default function ProjectImage({ project }) {
   return (
     <div className={styles['my-project-image']}>
       <div className={styles['my-project-image-button']}>
-        <button onClick={() => buttonClick(false)}>{`<`}</button>
-        <button onClick={() => buttonClick(true)}>{`>`}</button>
+        <button onClick={() => buttonClick(false)}>A</button>
+        <button onClick={() => buttonClick(true)}>B</button>
       </div>
       <div
         className={styles['my-project-img']}
