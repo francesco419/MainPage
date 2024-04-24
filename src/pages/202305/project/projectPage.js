@@ -25,7 +25,6 @@ export default function ProjectPage() {
   const projectText = ProjectDetailText.filter(
     (data) => data.param === param.id
   );
-  const nav = useNavigate();
 
   useEffect(() => {
     if (param.id) {

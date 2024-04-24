@@ -37,14 +37,6 @@ export default function ProjectNext({ project }) {
     }
   };
 
-  /*   useEffect(() => {
-    window.addEventListener('mousemove', move);
-  }, []);
-
-  const move = (e) => {
-    console.log(window.innerWidth);
-  }; */
-
   return (
     <div className={styles['my-project-next']} ref={container}>
       <div>
