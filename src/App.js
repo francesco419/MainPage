@@ -1,4 +1,3 @@
-import Transition from './pages/transition';
 import { Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom';
 import React from 'react';
 import Hidden from './pages/202305/hidden';
