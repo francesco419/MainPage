@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.32983f84.css",
+    "main.css": "/MainPage/static/css/main.7f3d1d44.css",
     "main.js": "/MainPage/static/js/main.c2d94eab.js",
     "static/media/youtube1.PNG": "/MainPage/static/media/youtube1.9ffae279a2ad3014c7dd.PNG",
     "static/media/finedition-home.png": "/MainPage/static/media/finedition-home.8d6f402c136734268ae2.png",
@@ -30,11 +30,11 @@
     "static/media/left.svg": "/MainPage/static/media/left.84157cbcc3eed8c42ab8c256c6b44a30.svg",
     "index.html": "/MainPage/index.html",
     "static/media/right.svg": "/MainPage/static/media/right.3bb8881387ba1854521886642af76dbe.svg",
-    "main.32983f84.css.map": "/MainPage/static/css/main.32983f84.css.map",
+    "main.7f3d1d44.css.map": "/MainPage/static/css/main.7f3d1d44.css.map",
     "main.c2d94eab.js.map": "/MainPage/static/js/main.c2d94eab.js.map"
   },
   "entrypoints": [
-    "static/css/main.32983f84.css",
+    "static/css/main.7f3d1d44.css",
     "static/js/main.c2d94eab.js"
   ]
 }
