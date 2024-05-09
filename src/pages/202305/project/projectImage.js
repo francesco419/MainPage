@@ -1,12 +1,14 @@
 import { useRef, useEffect, useState } from 'react';
 import styles from './projectPage.module.css';
+import { ReactComponent as Right } from './assets/right.svg';
+import { ReactComponent as Left } from './assets/left.svg';
+import ImageZoom from './imageZoom';
 
 export default function ProjectImage({ project }) {
   const [slideCount, setSlideCount] = useState(0);
-  const [animation, setAnimation] = useState(false);
+  const [zoomImage, setZoomImage] = useState(false);
 
   useEffect(() => {
-    setAnimation((animation) => true);
     setSlideCount((slideCount) => 0);
   }, [project]);
 
@@ -17,20 +19,42 @@ export default function ProjectImage({ project }) {
     if (!bool && slideCount < 0) setSlideCount((slideCount) => slideCount + 1);
   };
 
+  const changeZoomImage = () => {
+    setZoomImage((zoomImage) => !zoomImage);
+  };
+
   return (
     <div className={styles['my-project-image']}>
-      <div className={styles['my-project-image-button']}>
-        <button onClick={() => buttonClick(false)}>A</button>
-        <button onClick={() => buttonClick(true)}>B</button>
-      </div>
+      {zoomImage && (
+        <ImageZoom
+          slideCount={slideCount}
+          buttonClick={buttonClick}
+          image={project.img}
+          changeZoom={changeZoomImage}
+        />
+      )}
+      <button
+        className={styles['my-project-image-button']}
+        onClick={() => buttonClick(false)}
+      >
+        <Left />
+      </button>
       <div
         className={styles['my-project-img']}
         style={{ transform: `translateX(${slideCount * 100}%)` }}
+        onClick={changeZoomImage}
       >
         {project.img.map((data, index) => {
           return <img src={data} key={`img_${index}`} />;
         })}
       </div>
+      <button
+        className={styles['my-project-image-button']}
+        style={{ right: 0 }}
+        onClick={() => buttonClick(true)}
+      >
+        <Right />
+      </button>
     </div>
   );
 }

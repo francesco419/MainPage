@@ -19,6 +19,7 @@
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 20px;
+  opacity: 0.5;
 }
 
 /* .hidden-project-index:hover {
@@ -29,8 +30,7 @@
 
 .hidden-project-index:hover .hidden-project-front {
   border: 0;
-  color: #fff;
-  background-color: #00000088;
+  background-color: #ffffff99;
   /*   -webkit-transform: translate(-10%, 20%) rotateZ(5deg);
   -ms-transform: translate(-10%, 20%) rotate(5deg);
   transform: translate(10%, 20%) rotateZ(5deg); */

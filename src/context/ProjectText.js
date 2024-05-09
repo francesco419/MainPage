@@ -52,13 +52,15 @@ const CREATIVITYTEXT = [
   '여러 아이디어를 통해 항상 새로운 것을 시도하고, 이러한 경험을 토대로 효율적인 프로덕트를 제작하고자 합니다.'
 ];
 const GROWTHSTEXT = [
-  '문제 해결, 프로젝트 등의 다양한 경험을 통해 성장하고 이를 다시 발판으로 삼아 반복적인 성장을 하고자 합니다.',
-  '매번 새로운 기술을 학습하고 적용하는 것에 익숙하며, 사용법보다는 작동원리와 구현 방식을 이해하고자 노력합니다.'
+  '문제 해결 등의 다양한 경험을 통해 성장하고 이를 다시 발판으로 삼아 반복적인 성장을 하고자 합니다.',
+  '지속적인 학습과 적용을 통해 기술에 익숙해지며, 사용 이유와 작동 원리를 이해하고자 노력합니다.',
+  '새로운 기술에 접근시, 필요성 및 사용방식 등의 구체적인 의미를 가져 기술사용에 정확한 이유를 가지고자 합니다.'
 ];
 const SYSTEMATICTEXT = [
-  '문제해결을 위해 절차적 순서를를 정하고 이를 통해 구체적인 해결 방안을 모색하고자 합니다.',
+  '문제해결을 위해 절차적 순서를 정하고 이를 통해 구체적인 해결 방안을 모색하고자 합니다.',
   '새로운 기술에 대해 접근시, 필요성 및 사용방식 등의 구체적인 의미를 가져 기술사용에 정확한 이유를 가지고자 합니다.'
 ];
+
 export const TEXTARRAY = [
   COMMUNICATIONTEXT,
   CREATIVITYTEXT,
@@ -310,10 +312,10 @@ export const ProjectTXT = [
 
 export const myProjects = [
   {
-    name: 'Social Network',
-    text: '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지입니다.',
-    img: social1,
-    to: 'post_typescript_redux'
+    name: 'Finedition',
+    text: '예비 창업자의 요구에 맞춰 현직 디자이너와 협업하여 프로토타입을 제작, 관광공사 공모전에 참여하여 최우수상을 수상 하게 되었습니다.',
+    img: finedition_home,
+    to: 'FINEDITION_WORK'
   },
   {
     name: 'MindMap',
@@ -322,16 +324,16 @@ export const myProjects = [
     to: 'BrainBomb'
   },
   {
+    name: 'Social Network',
+    text: '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS형태의 웹페이지입니다.',
+    img: social1,
+    to: 'post_typescript_redux'
+  },
+  {
     name: 'YouTube',
     text: '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 API를 활용한 기능 및 UI를 직접 구현했습니다.',
     img: youtube1,
     to: 'Youtube'
-  },
-  {
-    name: 'Finedition',
-    text: '예비 창업자의 요구에 맞춰 현직 디자이너와 협업하여 프로토타입을 제작, 관광공사 공모전에 참여하여 최우수상을 수상 하게 되었습니다.',
-    img: finedition_home,
-    to: 'FINEDITION_WORK'
   }
 ];
 

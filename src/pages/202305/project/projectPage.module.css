@@ -110,13 +110,8 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: min-content;
   z-index: 90;
-}
-
-.my-project-image-button button {
-  border: 1px solid #fff;
+  border: 0;
   width: 50px;
   height: 100px;
   background-color: #00000020;
@@ -124,13 +119,17 @@
   color: white;
 }
 
-.my-project-image-button button:hover {
-  background-color: #00000060;
+.my-project-image-button svg {
+  fill: white;
 }
 
 .my-project-img {
   display: flex;
   transition: all 1s;
+}
+
+.my-project-img :hover {
+  cursor: zoom-in;
 }
 
 .my-project-img img {
@@ -163,6 +162,7 @@ top: 50%; */
   width: 100%;
   left: 0;
   padding: 0 5%;
+  min-width: 1680px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
