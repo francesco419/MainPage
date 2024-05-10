@@ -160,27 +160,30 @@ export default function Hidden() {
             contact: contact
           }}
         />
-        <div className={styles['hidden-title']}>
-          <p>
-            {
-              '상상에 멈추지 않고 코드를 통해\n현실로 만들어내는 개발자,\n이상현입니다.'
-            }
-          </p>
-        </div>
-        <div className={styles['hidden-img']}>
-          <img src={front} />
-          {/*  //src='https://picsum.photos/1200/600' /> */}
-        </div>
-        <div className={styles['hidden-intro']}>
-          <p>{intro}</p>
-        </div>
-        <div ref={about} className={styles['hidden-about']}>
-          <p className={styles['hidden-rem']}>ABOUT ME</p>
-          {aboutMe.map((data, index) => {
-            return <About about={data} count={index} key={`about_${index}`} />;
-          })}
-        </div>
-        {/* <div ref={skill} className={styles['hidden-skill']}>
+        <main>
+          <div className={styles['hidden-title']}>
+            <p>
+              {
+                '상상에 멈추지 않고 코드를 통해\n현실로 만들어내는 개발자,\n이상현입니다.'
+              }
+            </p>
+          </div>
+          <div className={styles['hidden-img']}>
+            <img src={front} />
+            {/*  //src='https://picsum.photos/1200/600' /> */}
+          </div>
+          <div className={styles['hidden-intro']}>
+            <p>{intro}</p>
+          </div>
+          <div ref={about} className={styles['hidden-about']}>
+            <p className={styles['hidden-rem']}>ABOUT ME</p>
+            {aboutMe.map((data, index) => {
+              return (
+                <About about={data} count={index} key={`about_${index}`} />
+              );
+            })}
+          </div>
+          {/* <div ref={skill} className={styles['hidden-skill']}>
           <p className={styles['hidden-rem']}>SKILL</p>
           {mySkills.map((data, index) => {
             return (
@@ -195,18 +198,23 @@ export default function Hidden() {
             );
           })}
         </div> */}
-        <OutBoxSkill reference={skill} />
-        <div ref={skill} className={styles['skillpart']}></div>
-        <div ref={project} className={styles['hidden-project']}>
-          <p className={styles['hidden-rem']}>PROJECT</p>
-          <div className={styles['hidden-project-container']}>
-            {myProjects.map((data, index) => {
-              return (
-                <Project projects={data} num={index} key={`project_${index}`} />
-              );
-            })}
+          <OutBoxSkill reference={skill} />
+          <div ref={skill} className={styles['skillpart']}></div>
+          <div ref={project} className={styles['hidden-project']}>
+            <p className={styles['hidden-rem']}>PROJECT</p>
+            <div className={styles['hidden-project-container']}>
+              {myProjects.map((data, index) => {
+                return (
+                  <Project
+                    projects={data}
+                    num={index}
+                    key={`project_${index}`}
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </main>
         <FooterContact refer={contact} />
       </div>
     </div>

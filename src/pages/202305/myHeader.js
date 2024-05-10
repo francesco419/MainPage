@@ -13,7 +13,7 @@ export default function MyHeader({ refer }) {
 
   if (refer === null) {
     return (
-      <div className={styles['hidden-header']}>
+      <header className={styles['hidden-header']}>
         <button onClick={() => nav(`/`)}>MAIN</button>
         <button className={styles['hidden-header-project']}>
           PROJECT
@@ -24,11 +24,11 @@ export default function MyHeader({ refer }) {
             })}
           </div>
         </button>
-      </div>
+      </header>
     );
   } else {
     return (
-      <div className={styles['hidden-header']}>
+      <header className={styles['hidden-header']}>
         <button onClick={() => onClickHandler(refer.about)}>ABOUT</button>
         <button onClick={() => onClickHandler(refer.skill)}>SKILL</button>
         <button
@@ -44,7 +44,7 @@ export default function MyHeader({ refer }) {
           </div>
         </button>
         <button onClick={() => onClickHandler(refer.contact)}>CONTACT</button>
-      </div>
+      </header>
     );
   }
 }

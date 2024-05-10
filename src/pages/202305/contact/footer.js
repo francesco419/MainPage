@@ -38,7 +38,7 @@ export default function FooterContact({ refer }) {
   };
 
   return (
-    <div ref={refer} className={styles['hidden-contact']}>
+    <footer ref={refer} className={styles['hidden-contact']}>
       <p className={styles['hidden-rem']}>CONTACT</p>
       <div className={styles['hidden-contact-contact']}>
         {myContact.map((data, index) => {
@@ -66,6 +66,6 @@ export default function FooterContact({ refer }) {
       {/*       <p className={styles['hidden-contact-rights']}>
         2023@LeeSangHean. All Rights Reserved
       </p> */}
-    </div>
+    </footer>
   );
 }
