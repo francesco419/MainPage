@@ -15,3 +15,28 @@ export const SHORTEN = [
     'TS로 인해 코드량이 많아지고 복잡해지나, 유지보수 및 코드 퀄리티에서의 장점또한 이해하고 있습니다.'
   ]
 ];
+
+/**
+ * MarkUP/Styling Language = HTML, Css
+ * Package Managers = npm
+ * scc Preprocessor = Sass
+ * css Framworks =
+ * javascript framwork = react
+ * programming Language = js, ts
+ * tool = git,github,netlify,vs code,aws
+ */
+
+export const skillDescription = [
+  {
+    name: 'Lodash',
+    extra: '',
+    description:
+      'Lodash의 특장점을 잘 이해하고 능숙하게 활용 할 수 있습니다. 배열과 객체를 다루는데 필요한 다양한 함수들을 숙지하고 있으며, 이를 통해 코드를 더 간결하고 효율적으로 작성할 수 있습니다. 또한, Lodash의 성능을 최대한 활용하여 대용량 데이터 처리와 같은 작업을 신속하게 수행할 수 있습니다.'
+  },
+  {
+    name: 'TypeScript',
+    extra: '',
+    description:
+      '타입스크립트를 능숙하게 활용하여 안정적이고 효율적인 코드를 작성할 수 있습니다. 특징인 정적 타입을 통해 코드의 가독성을 향상시키고 유지 보수성을 높일 수 있으며, 또한, 정적 타입 검사를 통해 코드를 작성하는 과정에서 발생할 수 있는 오류를 사전에 예방하고 수정하여 프로젝트의 안정성을 유지하고자 합니다.'
+  }
+];

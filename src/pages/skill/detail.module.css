@@ -1,0 +1,27 @@
+.skill_detail {
+  padding: 40px;
+  margin: 0 auto;
+  animation: fadeIn 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill_detail p {
+  font-size: 1.2em;
+  line-height: calc(1ex / 0.32);
+  margin: calc(1ex / 0.32) 0;
+}
+
+.skill_detail h2 {
+  margin: 100px 0 20px;
+}

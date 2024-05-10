@@ -10,6 +10,7 @@ import FooterContact from './contact/footer';
 import TopIndicator from './top/toTop';
 import front from '../../assets/image/front.PNG';
 import { myProjects } from '../../context/ProjectText';
+import OutBoxSkill from '../skill/outBoxSkill';
 
 const aboutMe = [
   {
@@ -179,7 +180,7 @@ export default function Hidden() {
             return <About about={data} count={index} key={`about_${index}`} />;
           })}
         </div>
-        <div ref={skill} className={styles['hidden-skill']}>
+        {/* <div ref={skill} className={styles['hidden-skill']}>
           <p className={styles['hidden-rem']}>SKILL</p>
           {mySkills.map((data, index) => {
             return (
@@ -193,7 +194,9 @@ export default function Hidden() {
               />
             );
           })}
-        </div>
+        </div> */}
+        <OutBoxSkill reference={skill} />
+        <div ref={skill} className={styles['skillpart']}></div>
         <div ref={project} className={styles['hidden-project']}>
           <p className={styles['hidden-rem']}>PROJECT</p>
           <div className={styles['hidden-project-container']}>
