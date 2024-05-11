@@ -1,0 +1,13 @@
+.front {
+  position: relative;
+  display: flex;
+  height: 600px;
+  background-color: #292929;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.front_cover {
+  display: flex;
+  transition: all 2s;
+}

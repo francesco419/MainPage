@@ -76,14 +76,19 @@ const temp = [
 ];
 
 export default function OutBoxSkill({ reference }) {
-  console.log(_.shuffle(temp));
-
   return (
     <div ref={reference} className={styles['skill_section']}>
       <p className={styles['skill_title']}>SKILL</p>
       <div className={styles['skill_cardBox']}>
         {_.map(_.shuffle(temp), (o, index) => {
-          return <SkillBox name={o.name} svg={o.svg} index={index + 1} />;
+          return (
+            <SkillBox
+              name={o.name}
+              svg={o.svg}
+              index={index + 1}
+              key={o.name}
+            />
+          );
         })}
       </div>
     </div>

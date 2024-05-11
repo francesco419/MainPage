@@ -20,7 +20,11 @@ export default function MyHeader({ refer }) {
           <div className={styles['hidden-header-link']}>
             {ProjectDetailText.map((o) => {
               if (o.show === true)
-                return <Link to={`/project/${o.param}`}>{o.name}</Link>;
+                return (
+                  <Link to={`/project/${o.param}`} key={o.name}>
+                    {o.name}
+                  </Link>
+                );
             })}
           </div>
         </button>
@@ -39,7 +43,11 @@ export default function MyHeader({ refer }) {
           <div className={styles['hidden-header-link']}>
             {ProjectDetailText.map((o) => {
               if (o.show === true)
-                return <Link to={`/project/${o.param}`}>{o.name}</Link>;
+                return (
+                  <Link to={`/project/${o.param}`} key={o.name}>
+                    {o.name}
+                  </Link>
+                );
             })}
           </div>
         </button>

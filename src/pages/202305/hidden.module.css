@@ -25,6 +25,8 @@
 }
 
 .hidden-img {
+  display: flex;
+  overflow-x: hidden;
   height: 600px;
   background-color: #292929;
   border-radius: 25px;
