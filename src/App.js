@@ -1,14 +1,23 @@
-import { Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom';
-import React from 'react';
+import { Route, Routes, HashRouter } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
 import Hidden from './pages/202305/hidden';
-import ProjectPage from './pages/202305/project/projectPage';
-import { Canvas } from '@react-three/fiber';
+
+const ProjectPage = lazy(
+  async () => await import('./pages/202305/project/projectPage')
+);
 
 function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path={`/project/:id`} element={<ProjectPage />} />
+        <Route
+          path={`/project/:id`}
+          element={
+            <Suspense>
+              <ProjectPage />
+            </Suspense>
+          }
+        />
         <Route path={`/`} element={<Hidden />} />
       </Routes>
     </HashRouter>

@@ -13,6 +13,7 @@ import { myProjects } from '../../context/ProjectText';
 import OutBoxSkill from '../skill/outBoxSkill';
 import Three from './front/frontThree';
 import Front from './front/front';
+import SKillContainer from '../skill/skillContainer';
 
 const aboutMe = [
   {
@@ -89,8 +90,9 @@ export default function Hidden() {
             );
           })}
         </div> */}
-          <OutBoxSkill reference={skill} />
-          <div ref={skill} className={styles['skillpart']}></div>
+          <div ref={skill}>
+            <SKillContainer />
+          </div>
           <div ref={project} className={styles['hidden-project']}>
             <p className={styles['hidden-rem']}>PROJECT</p>
             <div className={styles['hidden-project-container']}>

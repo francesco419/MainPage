@@ -9,6 +9,7 @@ export default function MyHeader({ refer }) {
 
   const onClickHandler = (ref) => {
     window.scrollTo(0, ref.current.offsetTop);
+    console.log(ref.current);
   };
 
   if (refer === null) {

@@ -51,6 +51,9 @@ export default function Front() {
       onMouseEnter={changeMouseEnter}
       onMouseLeave={changeMouseLeave}
     >
+      <div className={styles['front_buttons']}>
+        <button>hello</button>
+      </div>
       <div
         id='po'
         ref={ref}

@@ -1,4 +1,5 @@
 import styles from './projectPage.module.css';
+import ReactMarkdown from 'react-markdown';
 
 export default function ProjectResult({ project }) {
   return (
@@ -8,7 +9,7 @@ export default function ProjectResult({ project }) {
         {project.result.map((data, index) => {
           return (
             <li key={`result_${index}`}>
-              <p>{data}</p>
+              <ReactMarkdown>{data}</ReactMarkdown>
             </li>
           );
         })}

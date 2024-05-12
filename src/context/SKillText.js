@@ -1,3 +1,18 @@
+import { ReactComponent as NodeJS } from '../pages/skill/asset/svg/nodejs.svg';
+import { ReactComponent as CSS } from '../pages/skill/asset/svg/css.svg';
+import { ReactComponent as Git } from '../pages/skill/asset/svg/git.svg';
+import { ReactComponent as Github } from '../pages/skill/asset/svg/github.svg';
+import { ReactComponent as JavaScript } from '../pages/skill/asset/svg/js.svg';
+import { ReactComponent as Notion } from '../pages/skill/asset/svg/notion.svg';
+import { ReactComponent as Npm } from '../pages/skill/asset/svg/npm.svg';
+import { ReactComponent as ReactSVG } from '../pages/skill/asset/svg/react.svg';
+import { ReactComponent as Redux } from '../pages/skill/asset/svg/redux.svg';
+import { ReactComponent as SASS } from '../pages/skill/asset/svg/sass.svg';
+import { ReactComponent as TS } from '../pages/skill/asset/svg/typescript.svg';
+import { ReactComponent as AWS } from '../pages/skill/asset/svg/aws.svg';
+import { ReactComponent as HTML } from '../pages/skill/asset/svg/html.svg';
+import { ReactComponent as Lodash } from '../pages/skill/asset/svg/lodash.svg';
+
 export const SHORTEN = [
   [
     '기본이라고 할 수 있는 HTML/CSS를 자유자재로 구현할 수 있습니다. ',
@@ -38,6 +53,65 @@ const temp = [
   },
   {
     name: 'NodeJs'
+  }
+];
+
+export const skillListSVG = [
+  {
+    name: 'HTML',
+    svg: <HTML />
+  },
+  {
+    name: 'CSS',
+    svg: <CSS />
+  },
+  {
+    name: 'Sass',
+    svg: <SASS />
+  },
+  {
+    name: 'JavaScript',
+    svg: <JavaScript />
+  },
+  {
+    name: 'TypeScript',
+    svg: <TS />
+  },
+  {
+    name: 'Redux',
+    svg: <Redux />
+  },
+  {
+    name: 'React',
+    svg: <ReactSVG />
+  },
+  {
+    name: 'Git',
+    svg: <Git />
+  },
+  {
+    name: 'Github',
+    svg: <Github />
+  },
+  {
+    name: 'AWS',
+    svg: <AWS />
+  },
+  {
+    name: 'Lodash',
+    svg: <Lodash />
+  },
+  {
+    name: 'Notion',
+    svg: <Notion />
+  },
+  {
+    name: 'Npm',
+    svg: <Npm />
+  },
+  {
+    name: 'NodeJs',
+    svg: <NodeJS />
   }
 ];
 
@@ -97,21 +171,15 @@ export const skillDescription = [
       'Git을 통한 프로젝트 작업 전반의 효율을 높이고, 브랜치 전략, 코드 리뷰, 충돌 최소화 등의 긍정적인 효과를 경험하며 버전 관리 시스템 사용의 중요성을 알아가게 되었습니다.'
   },
   {
-    name: 'GitHub',
+    name: 'Github',
     extra: '',
-    description: (
-      <a
-        href='https://github.com/francesco419'
-        style={{ textDecoration: 'none', color: '#000' }}
-      >
-        GitHub Link
-      </a>
-    )
+    description: 'https://github.com/francesco419'
   },
   {
     name: 'AWS',
     extra: '',
-    description: ''
+    description:
+      'AWS를 이용하여 프로젝트의 인프라를 구축한 경험을 가지고 있습니다. RDS를 이용하여 데이터베이스를 관리하며, S3를 활용하여 파일 스토리지를 구축하는 등 다양한 서비스를 효과적으로 활용했습니다.'
   },
   {
     name: 'Notion',
@@ -121,11 +189,13 @@ export const skillDescription = [
   {
     name: 'Npm',
     extra: '',
-    description: ''
+    description:
+      'npm을 이용하여 프로젝트에 필요한 다양한 라이브러리와 패키지를 쉽게 설치하고 관리합니다.'
   },
   {
     name: 'NodeJs',
     extra: '',
-    description: ''
+    description:
+      'Node.js를 이용하여 웹 서버를 구성하는 등 백엔드 개발 경험을 가지고있습니다. 프론트와의 원활한 통신을 위해 CORS 설정하고, Express.js를 비롯한 프레임워크를 활용하여 빠르고 안정적인 웹 애플리케이션을 개발하였습니다.'
   }
 ];

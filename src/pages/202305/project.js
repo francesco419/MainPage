@@ -3,6 +3,7 @@ import styles from './project.module.css';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import { ReactComponent as Open } from '../../assets/svg/open.svg';
+import { motion } from 'framer-motion';
 
 export default function Project({ projects, num }) {
   return (

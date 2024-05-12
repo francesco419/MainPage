@@ -9,12 +9,10 @@ export default function Three({ model, speed, lightType }) {
 
   const handleMousePosition = (e) => {
     setXY({
-      x: e.clientX - ref.current.getBoundingClientRect().left,
+      x: e.clientX - Math.floor(ref.current.getBoundingClientRect().left),
       y: e.clientY
     });
     console.warn = console.error = () => {};
-    //console.log((xy.x * 13981).toString(16));
-    //console.log(e.clientX);
   };
 
   const handleRotateStateTrue = () => {
@@ -50,7 +48,7 @@ export default function Three({ model, speed, lightType }) {
         ) : (
           <ambientLight
             intensity={lightType ? 10 : 100}
-            color={`#${(xy.x * 13981).toString(16)}`}
+            color={xy.x ? `#${(xy.x * 13981).toString(16)}` : '#ffffff'}
           />
         )}
         {model}

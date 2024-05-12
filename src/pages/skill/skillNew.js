@@ -1,12 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './new.module.css';
 import DetailSkill from './detailSkill';
+import { motion } from 'framer-motion';
 
-export default function SkillBox({ name, svg, index }) {
+export default function SkillBox({ name, svg, index, handler, node }) {
   const [click, setClick] = useState(false);
+  /*   const ref = useRef(null);
+  const isInView = useInView(ref); */
+
   const changeClick = () => {
+    if (!click) {
+      handler(name);
+    }
     setClick((click) => !click);
   };
+
+  useEffect(() => {
+    if (node !== name && click) {
+      changeClick();
+    }
+  }, [node]);
 
   const setStyleByIndex = (index) => {
     return {
@@ -17,7 +30,22 @@ export default function SkillBox({ name, svg, index }) {
   };
 
   return (
-    <div className={`${styles['skill_content']}`} onClick={changeClick}>
+    <motion.div
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+      variants={{
+        hidden: { scale: 0 },
+        visible: { scale: 1 }
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 20
+      }}
+      className={`${styles['skill_content']}`}
+      onClick={changeClick}
+    >
       {svg}
       <p className={styles['skill_content-name']}>{name}</p>
       {click && (
@@ -33,7 +61,7 @@ export default function SkillBox({ name, svg, index }) {
           <DetailSkill name={name} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
