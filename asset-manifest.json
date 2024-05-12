@@ -1,7 +1,10 @@
 {
   "files": {
-    "main.css": "/MainPage/static/css/main.2c5cf4d7.css",
-    "main.js": "/MainPage/static/js/main.681bc41c.js",
+    "main.css": "/MainPage/static/css/main.7d133956.css",
+    "main.js": "/MainPage/static/js/main.061803c1.js",
+    "static/css/962.fef22659.chunk.css": "/MainPage/static/css/962.fef22659.chunk.css",
+    "static/js/962.4e63c6ef.chunk.js": "/MainPage/static/js/962.4e63c6ef.chunk.js",
+    "static/js/463.19108ad1.chunk.js": "/MainPage/static/js/463.19108ad1.chunk.js",
     "static/media/youtube1.PNG": "/MainPage/static/media/youtube1.9ffae279a2ad3014c7dd.PNG",
     "static/media/finedition-home.png": "/MainPage/static/media/finedition-home.8d6f402c136734268ae2.png",
     "static/media/2.PNG": "/MainPage/static/media/2.547275bcf17ba27fd4f1.PNG",
@@ -45,11 +48,14 @@
     "static/media/html.svg": "/MainPage/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
     "static/media/close.svg": "/MainPage/static/media/close.bcb0ee6a3ad2efa273a55c5c40a0135a.svg",
     "static/media/open.svg": "/MainPage/static/media/open.e7c9e41913c1125d38767fb54a38882e.svg",
-    "main.2c5cf4d7.css.map": "/MainPage/static/css/main.2c5cf4d7.css.map",
-    "main.681bc41c.js.map": "/MainPage/static/js/main.681bc41c.js.map"
+    "main.7d133956.css.map": "/MainPage/static/css/main.7d133956.css.map",
+    "main.061803c1.js.map": "/MainPage/static/js/main.061803c1.js.map",
+    "962.fef22659.chunk.css.map": "/MainPage/static/css/962.fef22659.chunk.css.map",
+    "962.4e63c6ef.chunk.js.map": "/MainPage/static/js/962.4e63c6ef.chunk.js.map",
+    "463.19108ad1.chunk.js.map": "/MainPage/static/js/463.19108ad1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c5cf4d7.css",
-    "static/js/main.681bc41c.js"
+    "static/css/main.7d133956.css",
+    "static/js/main.061803c1.js"
   ]
 }
