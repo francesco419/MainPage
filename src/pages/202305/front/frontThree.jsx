@@ -2,9 +2,15 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useEffect, useRef, useState } from 'react';
 
-export default function Three({ model, speed, lightType }) {
+export default function Three({
+  autoR = true,
+  model,
+  speed,
+  lightType,
+  camera = [5, 5, 5]
+}) {
   const [xy, setXY] = useState({ x: 0, y: 0 });
-  const [rotate, setRotate] = useState(true);
+  const [rotate, setRotate] = useState(autoR);
   const ref = useRef();
 
   const handleMousePosition = (e) => {
@@ -31,9 +37,9 @@ export default function Three({ model, speed, lightType }) {
         ref={ref}
         onMouseMove={lightType ? null : handleMousePosition}
         style={{ cursor: 'pointer', width: '1200px' }}
-        camera={{ fov: 60, near: 0.1, far: 100, position: [5, 5, 5] }}
-        onMouseEnter={handleRotateStateFalse}
-        onMouseLeave={handleRotateStateTrue}
+        camera={{ fov: 60, near: 0.1, far: 100, position: camera }}
+        onMouseEnter={autoR ? handleRotateStateFalse : null}
+        onMouseLeave={autoR ? handleRotateStateTrue : null}
       >
         <Environment preset='apartment' />
         <OrbitControls

@@ -8,14 +8,25 @@
 }
 
 .front_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 20px;
+  z-index: 79;
 }
 
 .front_buttons button {
   border: 0;
   background: none;
+  color: #f8f8f8;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.front_buttons button:hover {
+  color: #ff4000;
 }
 
 .front_cover {

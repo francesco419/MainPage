@@ -5,6 +5,9 @@ import useInterval from 'use-interval';
 import { ModelCar } from './Scene';
 import { PoolBall } from './pollBall';
 import { EightBall } from './eightBall';
+import { Marine } from './marin';
+import { Reaper } from './reap';
+import ControlButton from './controlButton';
 
 const damn = [
   <Three
@@ -18,10 +21,13 @@ const damn = [
     lightType={false}
   />,
   <Three
-    model={<ModelCar position={[0, -0.5, 0]} />}
+    model={<Reaper position={[0, -3, 0]} />}
+    camera={[7, 0, 7]}
     speed={2}
+    autoR={false}
     lightType={true}
   />
+  /*  <Three model={<Marine position={[0, -2, 0]} />} speed={2} lightType={true} /> */
 ];
 
 export default function Front() {
@@ -45,15 +51,17 @@ export default function Front() {
     setMouseOver((mouseOver) => false);
   };
 
+  const swipeHandler = (number) => {
+    setSwipe((swipe) => number);
+  };
+
   return (
     <div
       className={styles['front']}
       onMouseEnter={changeMouseEnter}
       onMouseLeave={changeMouseLeave}
     >
-      <div className={styles['front_buttons']}>
-        <button>hello</button>
-      </div>
+      <ControlButton swipe={swipe} swipeHandler={swipeHandler} />
       <div
         id='po'
         ref={ref}
