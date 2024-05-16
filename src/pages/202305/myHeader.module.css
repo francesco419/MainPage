@@ -38,6 +38,7 @@
 .hidden-header-link * {
   margin-bottom: 10px;
   text-align: start;
+  color: #bbbbbb;
 }
 
 .hidden-header-project:hover .hidden-header-link,
@@ -48,6 +49,7 @@
 }
 
 .hidden-header-link *:hover {
+  color: #000;
   text-decoration: underline;
 }
 

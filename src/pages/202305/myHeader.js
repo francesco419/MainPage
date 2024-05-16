@@ -1,15 +1,14 @@
 import styles from './myHeader.module.css';
-import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { ProjectDetailText } from '../../context/ProjectText';
+import _ from 'lodash';
 
 export default function MyHeader({ refer }) {
   const nav = useNavigate();
 
   const onClickHandler = (ref) => {
     window.scrollTo(0, ref.current.offsetTop);
-    console.log(ref.current);
   };
 
   if (refer === null) {
@@ -19,7 +18,7 @@ export default function MyHeader({ refer }) {
         <button className={styles['hidden-header-project']}>
           PROJECT
           <div className={styles['hidden-header-link']}>
-            {ProjectDetailText.map((o) => {
+            {_.reverse(ProjectDetailText).map((o) => {
               if (o.show === true)
                 return (
                   <Link to={`/project/${o.param}`} key={o.name}>
@@ -42,7 +41,7 @@ export default function MyHeader({ refer }) {
         >
           PROJECT
           <div className={styles['hidden-header-link']}>
-            {ProjectDetailText.map((o) => {
+            {_.reverse(ProjectDetailText).map((o) => {
               if (o.show === true)
                 return (
                   <Link to={`/project/${o.param}`} key={o.name}>
